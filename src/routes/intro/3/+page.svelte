@@ -11,6 +11,6 @@
 	den vorgegebenen Lebenslauf, sondern Lebensrealitäten, die sich je nach Ort und getroffenem
 	Entscheid voneinander unterscheiden.
 </p>
-<button>Heilmann_intro</button>
-<button>Neuhaus_intro</button>
-<button>Biel_intro</button>
+<a>Heilmann_intro</a>
+<a>Neuhaus_intro</a>
+<a>Biel_intro</a>
