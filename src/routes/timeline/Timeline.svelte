@@ -2,7 +2,7 @@
 	import * as d3 from 'd3';
 	import data from '$lib/data/main.json';
 
-	let { width, height, topic, year } = $props();
+	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
 	const colors = ['#FF5733', '#33FF57', '#3357FF'];
 
