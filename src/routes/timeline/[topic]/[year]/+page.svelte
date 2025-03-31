@@ -15,4 +15,4 @@ timeline page Title Content Karte Component Gleichzeitig anderswo component Bild
 <p>
 	{@html data.content?.Text}
 </p>
-<img src={images['$lib/images/timeline/' + data.content?.Bild + '.jpg']} alt="Detailbild" />
+<img src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']} alt="Detailbild" />
