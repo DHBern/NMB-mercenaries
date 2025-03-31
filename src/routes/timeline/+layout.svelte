@@ -12,7 +12,7 @@
 
 {@render children()}
 <div
-	class="mx-[calc(50%-50vw+2rem)] h-[90vh] w-[calc(100vw-4rem)]"
+	class="mx-[calc(50%-50vw+2rem)] mt-4 h-48 w-[calc(100vw-4rem)]"
 	bind:clientWidth={width}
 	bind:clientHeight={height}
 >
