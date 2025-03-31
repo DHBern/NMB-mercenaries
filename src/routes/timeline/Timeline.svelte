@@ -20,10 +20,15 @@
 		.range([0, height])
 		.padding(0.2);
 
-	// const lineGenerator = d3
-	// 	.line()
-	// 	.x((d) => x(d.Jahr))
-	// 	.y((d) => (d.Ort === 'Biel' ? y('Up') : y('Down')));
+	const lineGeneratorGenerator = (topic: 'Heilmann' | 'Brunnen' | 'Neuhaus') =>
+		d3
+			.line()
+			.x((d) => x(d.Jahr))
+			.y((d) => {
+				if (d.Ort === 'Biel') return y(topic);
+				if (topic === 'Heilmann') return y('Up');
+				if (topic === 'Neuhaus') return y('Down');
+			});
 
 	let svgElement;
 </script>
@@ -34,6 +39,13 @@
 			<foreignObject x="1" y={i * 100 + 1} width="100" height="100">
 				<div class="text-xs text-gray-500">{topic}</div>
 			</foreignObject>
+			<path
+				d={lineGeneratorGenerator(topic)(content)}
+				stroke={colors[i]}
+				stroke-width="2"
+				fill="none"
+				stroke-linecap="round"
+			/>
 			{#each content as datapoint, j}
 				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<a href="/timeline/{topic}/{datapoint.Jahr}">
