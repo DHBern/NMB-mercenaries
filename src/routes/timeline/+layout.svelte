@@ -6,8 +6,6 @@
 
 	let { data, children }: { data: LayoutData; children: Snippet } = $props();
 
-	let { topic, year } = data;
-
 	let width = $state(0);
 	let height = $state(0);
 </script>
@@ -18,5 +16,5 @@
 	bind:clientWidth={width}
 	bind:clientHeight={height}
 >
-	<Timeline {width} {height} {topic} {year} />
+	<Timeline {width} {height} topic={data.topic} year={data.year} />
 </div>

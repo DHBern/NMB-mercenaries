@@ -22,7 +22,6 @@
 			.padding(0.2)
 			.round(true)
 	);
-
 	let svgElement;
 </script>
 
