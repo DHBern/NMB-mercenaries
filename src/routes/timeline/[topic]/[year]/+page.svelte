@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages.js';
 	import type { PageData } from './$types';
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -15,7 +16,7 @@ timeline page Title Content Karte Component Gleichzeitig anderswo component Bild
 <p>
 	{@html data.content?.Text}
 </p>
-<h2 class="h2">Gleichzeitig anderswo</h2>
+<h2 class="h2">{m.close_livid_lemur_pull()}</h2>
 <ul>
 	{#each data.anderswo as item}
 		<li><a href="/detail/{data.year}/{encodeURIComponent(item)}">{item}</a></li>
