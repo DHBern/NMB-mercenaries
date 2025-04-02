@@ -1,8 +1,5 @@
 <script lang="ts">
-	import type { PageData } from '../$types';
 	import Map_all from './Map_all.svelte';
-
-	let { data }: { data: PageData } = $props();
 
 	const nMaps = 5
 	let toggle = 0;
