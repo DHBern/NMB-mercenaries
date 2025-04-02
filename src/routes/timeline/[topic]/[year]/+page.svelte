@@ -14,47 +14,53 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<div class="grid grid-cols-[1fr_1fr_1fr] gap-4">
+<div class="grid grid-cols-[1fr_2fr_1fr] gap-4">
 	<div>
 		<Map region={data.content?.MapRegion} place={data.content?.MapPlace} />
-		<div>
+		<div class="my-12">
 			<span class="h1 mr-4 font-bold">{data.content?.Ort}</span>
 			<span class="h2 font-bold">{data.content?.Jahr}</span>
 		</div>
 		<!-- Navigation along timeline -->
-		{#if data.prevYear}
-			<a
-				class={['btn-icon', colors['preset-filled'][data.topic]]}
-				href="/timeline/{data.topic}/{data.prevYear}"
-			>
-				<ArrowLeft />
-			</a>
-		{/if}
-		{#if data.nextYear}
-			<a
-				class={['btn-icon', colors['preset-filled'][data.topic]]}
-				href="/timeline/{data.topic}/{data.nextYear}"
-			>
-				<ArrowRight />
-			</a>
-		{/if}
+		<div class="flex items-center justify-center gap-4">
+			{#if data.prevYear}
+				<a
+					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg']}
+					href="/timeline/{data.topic}/{data.prevYear}"
+				>
+					<ArrowLeft />
+				</a>
+			{/if}
+			{#if data.nextYear}
+				<a
+					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg']}
+					href="/timeline/{data.topic}/{data.nextYear}"
+				>
+					<ArrowRight />
+				</a>
+			{/if}
+		</div>
 	</div>
 
 	<div>
 		<!-- Content -->
-		<h1 class="h1">{data.content?.Titel}</h1>
+		<h1 class="h1 mb-4">{data.content?.Titel}</h1>
 		<p>
 			{@html data.content?.Text}
 		</p>
 		<!-- Gleichzeitig anderswo -->
-		<h2 class="h2">{m.close_livid_lemur_pull()}</h2>
-		<ul>
+		<h2 class="h2 mt-6 mb-4">{m.close_livid_lemur_pull()}</h2>
+		<ul class="list-inside list-disc space-y-2">
 			{#each data.anderswo as item}
-				<li><a href="/detail/{data.year}/{encodeURIComponent(item)}">{item}</a></li>
+				<li><a class="anchor" href="/detail/{data.year}/{encodeURIComponent(item)}">{item}</a></li>
 			{/each}
 		</ul>
 	</div>
 
 	<!-- Image -->
-	<img src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']} alt="Detailbild" />
+	<img
+		class="h-full max-h-96 w-full object-contain object-right"
+		src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
+		alt="Detailbild"
+	/>
 </div>
