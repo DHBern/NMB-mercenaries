@@ -5,8 +5,8 @@
 	let { children } = $props();
 </script>
 
-<div class="h-screen">
-	<header class="flex h-1/12 justify-between gap-4 p-4">
+<div class="h-screen max-h-screen grid grid-[1fr-11fr]">
+	<header class="flex justify-between gap-4 p-4 max-h-20">
 		<a class="btn btn-lg preset-filled-primary-500" href="/intro/1">Zum Start</a>
 		<div class="flex gap-4">
 			{#each locales as locale}
@@ -16,7 +16,7 @@
 			{/each}
 		</div>
 	</header>
-	<div class="h-11/12">
+	<div class="">
 		{@render children()}
 	</div>
 </div>
