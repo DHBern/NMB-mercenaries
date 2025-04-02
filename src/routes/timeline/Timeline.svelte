@@ -20,9 +20,10 @@
 		scalePoint()
 			.domain(['Up', 'Heilmann', 'Brunnen', 'Neuhaus', 'Down'])
 			.range([0, height])
-			.padding(0.2)
+			.padding(0.4)
 	);
 	let svgElement;
+	$inspect(currentyear);
 </script>
 
 <svg {width} {height} bind:this={svgElement}>
@@ -58,9 +59,10 @@
 				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<a href="/timeline/{topic}/{datapoint.Jahr}">
 					<circle
+						class:animate-pulse={datapoint.Jahr === currentyear}
 						cx={x(datapoint.Jahr)}
 						cy={(datapoint.Ort === 'Biel' ? y(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
-						r="5"
+						r={datapoint.Jahr === currentyear ? 12 : 6}
 						fill={colors[i]}
 					/>
 				</a>
