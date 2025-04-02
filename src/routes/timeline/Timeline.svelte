@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { scaleLinear, scalePoint, line } from 'd3';
+	import { scaleLinear, scalePoint, line, axisBottom, select } from 'd3';
 	import data from '$lib/data/main.json';
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
@@ -19,11 +19,16 @@
 	let y = $derived(
 		scalePoint()
 			.domain(['Up', 'Heilmann', 'Brunnen', 'Neuhaus', 'Down'])
-			.range([0, height])
+			.range([0, height - PADDING])
 			.padding(0.4)
 	);
-	let svgElement;
-	$inspect(currentyear);
+	let svgElement: SVGSVGElement;
+	let gx: SVGGElement;
+	$effect(() => {
+		if (gx) {
+			select(gx).call(axisBottom(x).tickFormat((d) => `${d}`));
+		}
+	});
 </script>
 
 <svg {width} {height} bind:this={svgElement}>
@@ -69,4 +74,5 @@
 			{/each}
 		</g>
 	{/each}
+	<g bind:this={gx} transform="translate(0,{height - PADDING})" class="x-axis" />
 </svg>
