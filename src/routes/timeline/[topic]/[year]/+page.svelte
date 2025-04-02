@@ -10,11 +10,6 @@
 	});
 	let { data }: { data: PageData } = $props();
 	// let image = $derived(import(`$lib/images/timeline/${data.content?.Bild}.jpg`));
-
-	function handleNavigate(direction){
-		//! todo
-	}
-
 </script>
 
 timeline page Title Content Karte Component Gleichzeitig anderswo component Bild
@@ -22,13 +17,13 @@ timeline page Title Content Karte Component Gleichzeitig anderswo component Bild
 <h1 class="h1">{data.content?.Titel}</h1>
 
 <!-- Year, Place, Map -->
-<h2 class="h2">{data.content.Jahr}</h2>
-<h3 class="h3">{data.content.Ort}</h3>
+<h2 class="h2">{data.content?.Jahr}</h2>
+<h3 class="h3">{data.content?.Ort}</h3>
 <Map_java />
 
 <!-- Navigation along timeline -->
-<button onclick={()=>handleNavigate('prev')}>Prev</button>
-<button onclick={()=>handleNavigate('next')}>Next</button>
+<a href="/timeline/{data.topic}/{data.prevYear}">Prev</a>
+<a href="/timeline/{data.topic}/{data.nextYear}">Next</a>
 
 <!-- Content -->
 <p>
