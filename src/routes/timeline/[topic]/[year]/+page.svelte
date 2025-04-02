@@ -15,14 +15,18 @@
 </script>
 
 <div class="grid grid-cols-[1fr_3fr] gap-4">
+	<!-- Orientation Box -->
 	<div>
 		<Map region={data.content?.MapRegion} place={data.content?.MapPlace} />
 		<div class="my-12">
+			<span class={["h3 mr-4 font-bold", colors['text'][data.topic]]}>{data.topic_label}</span>
+			<br/>
 			<span class="h1 mr-4 font-bold">{data.content?.Ort}</span>
 			<span class="h2 font-bold">{data.content?.Jahr}</span>
 		</div>
 	</div>
 
+	<!-- Content Box -->
 	<div class="grid grid-cols-[2fr_1fr] grid-rows-[auto-90px] h-full gap-4">
 		<div class="max-h-full overflow-y-auto">
 			<!-- Content -->

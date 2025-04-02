@@ -9,6 +9,20 @@ export const load = (async ({ params }) => {
 		| 'Heilmann'
 		| 'Brunnen'
 		| 'Neuhaus';
+
+	let topic_label;
+	switch (topic) {
+		case 'Heilmann':
+			topic_label = 'G. F. Heilmann';
+			break;
+		case 'Brunnen':
+			topic_label = '';
+			break;
+		case 'Neuhaus':
+			topic_label = 'F. E. Neuhaus';
+			break;
+	}
+
 	const contentIndex = data[params.topic as 'Heilmann' | 'Brunnen' | 'Neuhaus'].findIndex(
 		(item) => item.Jahr === year
 	);
@@ -24,6 +38,7 @@ export const load = (async ({ params }) => {
 
 	return {
 		topic,
+		topic_label,
 		year,
 		nextYear,
 		prevYear,
