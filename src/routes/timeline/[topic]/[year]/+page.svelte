@@ -52,15 +52,19 @@
 		<h2 class="h2 mt-6 mb-4">{m.close_livid_lemur_pull()}</h2>
 		<ul class="list-inside list-disc space-y-2">
 			{#each data.anderswo as item}
-				<li><a class="anchor" href="/detail/{data.year}/{encodeURIComponent(item)}">{item}</a></li>
+				<li><a class="anchor" href="/detail/{encodeURIComponent(item)}_{data.year}">{item}</a></li>
 			{/each}
 		</ul>
 	</div>
 
 	<!-- Image -->
-	<img
-		class="h-full max-h-96 w-full object-contain object-right"
-		src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
-		alt="Detailbild"
-	/>
+	{#if data.content?.Bild}
+		<a href="/detail/{data.content?.Bild}">
+			<img
+				class="h-full max-h-96 w-full object-contain object-right"
+				src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
+				alt="Detailbild"
+			/>
+		</a>
+	{/if}
 </div>
