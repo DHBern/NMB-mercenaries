@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages.js';
 	import type { PageData } from './$types';
-	import Map_java from './Map_java.svelte';
+	import Map from './Map.svelte';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -19,7 +19,7 @@ timeline page Title Content Karte Component Gleichzeitig anderswo component Bild
 <!-- Year, Place, Map -->
 <h2 class="h2">{data.content?.Jahr}</h2>
 <h3 class="h3">{data.content?.Ort}</h3>
-<Map_java />
+<Map region={data.content?.MapRegion} place={data.content?.MapPlace} />
 
 <!-- Navigation along timeline -->
 <a href="/timeline/{data.topic}/{data.prevYear}">Prev</a>
