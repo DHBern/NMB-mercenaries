@@ -4,4 +4,4 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<h1>Militärdienst in der Fremde?</h1>
+<h1 class="h1">Militärdienst in der Fremde?</h1>

@@ -20,15 +20,19 @@
 	});
 </script>
 
-<div class="">
+<div class="grid h-full grid-cols-[1fr_14fr_1fr] place-items-center gap-4">
 	{#if slide > 1}
-		<a href="/intro/{slide - 1}"><ArrowLeft /></a>
+		<a class="btn-icon btn-icon-lg preset-filled-primary-500" href="/intro/{slide - 1}"
+			><ArrowLeft /></a
+		>
 	{/if}
-	<div>
+	<div class="col-start-2 flex flex-col items-center justify-center gap-4">
 		{@render children()}
 	</div>
 	{#if slide < 3}
-		<a href="/intro/{slide + 1}"><ArrowRight /></a>
+		<a class="btn-icon btn-icon-lg preset-filled-primary-500 col-start-3" href="/intro/{slide + 1}"
+			><ArrowRight /></a
+		>
 	{/if}
 </div>
 
