@@ -5,12 +5,16 @@ import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
 	const year = Number(params.year);
+	const topic: 'Heilmann' | 'Brunnen' | 'Neuhaus' = params.topic as
+		| 'Heilmann'
+		| 'Brunnen'
+		| 'Neuhaus';
 	const contentIndex = data[params.topic as 'Heilmann' | 'Brunnen' | 'Neuhaus'].findIndex(
 		(item) => item.Jahr === year
 	);
-	const content = data[params.topic as 'Heilmann' | 'Brunnen' | 'Neuhaus'][contentIndex];
-	const nextYear = data[params.topic as 'Heilmann' | 'Brunnen' | 'Neuhaus'][contentIndex + 1]?.Jahr;
-	const prevYear = data[params.topic as 'Heilmann' | 'Brunnen' | 'Neuhaus'][contentIndex - 1]?.Jahr;
+	const content = data[topic][contentIndex];
+	const nextYear = data[topic][contentIndex + 1]?.Jahr;
+	const prevYear = data[topic][contentIndex - 1]?.Jahr;
 
 	const anderswo = anderswoAll.filter((item) => item.Jahr === year).map((item) => item.Titel);
 
@@ -19,8 +23,8 @@ export const load = (async ({ params }) => {
 	}
 
 	return {
-		topic: params.topic,
-		year: params.year,
+		topic,
+		year,
 		nextYear,
 		prevYear,
 		content,

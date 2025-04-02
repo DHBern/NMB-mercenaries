@@ -10,7 +10,9 @@
 	let height = $state(0);
 </script>
 
-{@render children()}
+<div class="mx-6 mt-4">
+	{@render children()}
+</div>
 <div
 	class="mx-[calc(50%-50vw+2rem)] mt-4 h-48 w-[calc(100vw-4rem)]"
 	bind:clientWidth={width}

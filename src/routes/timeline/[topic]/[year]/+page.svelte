@@ -2,6 +2,9 @@
 	import { m } from '$lib/paraglide/messages.js';
 	import type { PageData } from './$types';
 	import Map from './Map.svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
+	import colors from '$lib/colors.json';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -12,13 +15,29 @@
 </script>
 
 <div class="grid grid-cols-[1fr_1fr_1fr] gap-4">
-	
 	<div>
 		<Map region={data.content?.MapRegion} place={data.content?.MapPlace} />
 		<div>
-			<span>{data.content?.Ort}</span>
-			<span>{data.content?.Jahr}</span>
+			<span class="h1 mr-4 font-bold">{data.content?.Ort}</span>
+			<span class="h2 font-bold">{data.content?.Jahr}</span>
 		</div>
+		<!-- Navigation along timeline -->
+		{#if data.prevYear}
+			<a
+				class={['btn-icon', colors['preset-filled'][data.topic]]}
+				href="/timeline/{data.topic}/{data.prevYear}"
+			>
+				<ArrowLeft />
+			</a>
+		{/if}
+		{#if data.nextYear}
+			<a
+				class={['btn-icon', colors['preset-filled'][data.topic]]}
+				href="/timeline/{data.topic}/{data.nextYear}"
+			>
+				<ArrowRight />
+			</a>
+		{/if}
 	</div>
 
 	<div>
@@ -34,10 +53,6 @@
 				<li><a href="/detail/{data.year}/{encodeURIComponent(item)}">{item}</a></li>
 			{/each}
 		</ul>
-
-		<!-- Navigation along timeline -->
-		<a href="/timeline/{data.topic}/{data.prevYear}">Prev</a>
-		<a href="/timeline/{data.topic}/{data.nextYear}">Next</a>
 	</div>
 
 	<!-- Image -->
