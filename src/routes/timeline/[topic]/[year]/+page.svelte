@@ -25,18 +25,20 @@
 		<div class="flex items-center justify-center gap-4">
 			{#if data.prevYear}
 				<a
-					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg']}
+					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg', 'w-50']}
 					href="/timeline/{data.topic}/{data.prevYear}"
 				>
-					<ArrowLeft />
+				<ArrowLeft class="mr-3"/>
+				<span>Vorherige Station</span>
 				</a>
 			{/if}
 			{#if data.nextYear}
 				<a
-					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg']}
+					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg', 'w-50']}
 					href="/timeline/{data.topic}/{data.nextYear}"
 				>
-					<ArrowRight />
+				<ArrowRight class="mr-3"/>
+				<span>Nächste Station</span>
 				</a>
 			{/if}
 		</div>
