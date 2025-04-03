@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import colors from '$lib/colors.json';
 
 	let { data }: { data: PageData } = $props();
 </script>
@@ -12,7 +13,11 @@
 		nicht den vorgegebenen Lebenslauf, sondern Lebensrealitäten, die sich je nach Ort und
 		getroffenem Entscheid voneinander unterscheiden.
 	</p>
-	<a>Heilmann_intro</a>
-	<a>Neuhaus_intro</a>
-	<a>Biel_intro</a>
+	<div class="pt-10">
+		<a class={["text-xl ml-50 my-5 inline-block btn btn-lg", colors['preset-filled']['Heilmann']]} href="../timeline/Heilmann/1785">Biografie von Georg Friedrich Heilmann</a>
+		<br />
+		<a class={["text-xl ml-10 my-5 inline-block btn btn-lg", colors['preset-filled']['Neuhaus']]} href="../timeline/Neuhaus/1794">Biografie von François Emile Neuhaus</a>
+		<br />
+		<a class={["text-xl ml-40 my-5 inline-block btn btn-lg", colors['preset-filled']['Brunnen']]} href="../timeline/Brunnen/1798">Ich bleibe in Biel</a>
+	</div>
 </div>
