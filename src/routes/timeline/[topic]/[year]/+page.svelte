@@ -4,6 +4,7 @@
 	import Map from './Map.svelte';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
+	import { Dot } from '@lucide/svelte';
 	import colors from '$lib/colors.json';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
@@ -42,9 +43,11 @@
 			<h2 class="h2 mt-6 mb-4">{m.close_livid_lemur_pull()}</h2>
 			<ul class="list-inside list-disc space-y-2">
 				{#each data.anderswo as item}
-					<li>
+					<div class="block m-0 p-0 h-10">
+						<Dot class="inline" size="120px" />
 						<a class="anchor" href="/detail/{encodeURIComponent(item)}_{data.year}">{item}</a>
-					</li>
+						
+					</div>
 				{/each}
 			</ul>
 		</div>
