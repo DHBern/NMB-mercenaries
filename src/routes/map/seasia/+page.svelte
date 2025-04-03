@@ -11,7 +11,7 @@
 		<Map_seasia />
 
         <foreignObject x="0" y="0" width="140" height="40">
-			<a href="/map" class="bg-white px-4 py-1">Weltkarte</a>
+			<a href="/map" class="bg-white px-4 py-1">zur Weltkarte</a>
 		</foreignObject>
 
 		<foreignObject x="600" y="550" width="100" height="40">

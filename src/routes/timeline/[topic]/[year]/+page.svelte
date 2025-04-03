@@ -45,7 +45,7 @@
 				{#each data.anderswo as item}
 					<div class="block m-0 p-0 h-10">
 						<Dot class="inline" size="120px" />
-						<a class="anchor" href="/detail/{encodeURIComponent(item)}_{data.year}">{item}</a>
+						<a class="anchor" href="/detail/{encodeURIComponent(item)}_{data.year}">{@html item}</a>
 						
 					</div>
 				{/each}
