@@ -6,11 +6,21 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<div class="flex h-[calc(100vh/12*11)] max-h-[calc(100vh/12*11)] items-center justify-center">
-	<Map_full />
-	<a href="../timeline/Heilmann/1829" class={['btn absolute font-bold left-180 top-80', colors['preset-filled']['Heilmann']]}>Neapel</a>
-	<a href="../timeline/Neuhaus/1829" class={['btn absolute font-bold left-250 top-110', colors['preset-filled']['Neuhaus']]}>Java</a>
-	<a href="../timeline/Brunnen/1798" class={['btn absolute font-bold left-140 top-150', colors['preset-filled']['Brunnen']]}>Biel</a>
+<div class="flex h-screen justify-center items-center">
+	<svg class="absolute top-0 left-0 max-h-[calc(100vh/12*10)]" viewBox="0 0 800 800">
+		
+		<Map_full />
+
+		<foreignObject x="200" y="355" width="100" height="40">
+			<a href="../timeline/Heilmann/1829" class={["btn font-bold", colors['preset-filled']['Heilmann']]}>Neapel</a>
+		</foreignObject>
+		<foreignObject x="645" y="585" width="100" height="40">
+			<a href="../timeline/Neuhaus/1829" class={["btn font-bold", colors['preset-filled']['Neuhaus']]}>Java</a>
+		</foreignObject>
+		<foreignObject x="185" y="325" width="100" height="40">
+			<a href="../timeline/Brunnen/1798" class={["btn font-bold", colors['preset-filled']['Brunnen']]}>Biel</a>
+		</foreignObject>
+	</svg>
 </div>
 
 <style>
