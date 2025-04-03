@@ -32,7 +32,7 @@
 			</a>
 		{/if}
 	</div>
-	
+
 	<!-- Content -->
 	<div class="max-h-full overflow-y-auto">
 		<h1 class="h1 mb-4">{data.topic} {data.year}</h1>
@@ -41,5 +41,3 @@
 		</p>
 	</div>
 </div>
-
-<button class="btn btn-lg preset-filled" onclick={() => history.back()}>Zurück</button>
