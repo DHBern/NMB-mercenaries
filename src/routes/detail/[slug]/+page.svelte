@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { m } from '$lib/paraglide/messages.js';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -9,7 +8,6 @@
 		query: '?url',
 		import: 'default'
 	});
-	console.log(images);
 </script>
 
 <!-- Content Box -->

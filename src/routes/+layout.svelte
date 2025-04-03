@@ -1,11 +1,10 @@
 <script lang="ts">
 	import '../app.css';
 	import { locales, setLocale } from '$lib/paraglide/runtime';
-	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	
 	function handleGoBack() {
-		goto(document.referrer);
+		history.back();
 	}
 
 	let isDark = $derived(page.url.pathname.includes('/map') || page.url.pathname.includes('/detail') ? true : false)
