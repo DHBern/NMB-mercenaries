@@ -14,11 +14,13 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<div class="grid grid-cols-[1fr_3fr] gap-4">
+<div class="grid grid-cols-[1fr_3fr] gap-10">
 	<!-- Orientation Box -->
 	<div>
 		<a href="/map?region={data.content?.MapRegion}&place={data.content?.MapPlace}">
-			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} />
+			
+			<div class=""><Map region={data.content?.MapRegion} place={data.content?.MapPlace} /></div>
+
 		</a>
 		<div class="my-12">
 			<span class={["h3 mr-4 font-bold", colors['text'][data.topic]]}>{data.topic_label}</span>

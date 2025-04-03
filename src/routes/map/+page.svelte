@@ -6,7 +6,9 @@
 
 </script>
 
-<Map_full />
+<div class="h-full w-full">
+	<Map_full />
+</div>
 
 <style>
 	img.hidden {
