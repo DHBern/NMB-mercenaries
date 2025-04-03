@@ -1,22 +1,22 @@
 {
 	"preset-filled": {
-		"Heilmann": "preset-filled-tertiary-500",
-		"Brunnen": "preset-filled-secondary-500",
+		"Heilmann": "preset-filled-warning-500",
+		"Brunnen": "preset-filled-error-500",
 		"Neuhaus": "preset-filled-success-500"
 	},
 	"stroke": {
-		"Heilmann": "stroke-tertiary-500",
-		"Brunnen": "stroke-secondary-500",
+		"Heilmann": "stroke-warning-500",
+		"Brunnen": "stroke-error-500",
 		"Neuhaus": "stroke-success-500"
 	},
 	"fill": {
-		"Heilmann": "fill-tertiary-500",
-		"Brunnen": "fill-secondary-500",
+		"Heilmann": "fill-warning-500",
+		"Brunnen": "fill-error-500",
 		"Neuhaus": "fill-success-500"
 	},
 	"text": {
-		"Heilmann": "text-tertiary-500",
-		"Brunnen": "text-secondary-500",
+		"Heilmann": "text-warning-500",
+		"Brunnen": "text-error-500",
 		"Neuhaus": "text-success-500"
 	}
 }
