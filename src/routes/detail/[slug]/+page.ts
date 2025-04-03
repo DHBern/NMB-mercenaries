@@ -4,7 +4,7 @@ import imgInfo from '$lib/data/img_info.json';
 
 export const load = (async ({ params }) => {
 	const { slug } = params;
-	const [yearString, topic] = slug.split('_');
+	const [topic, yearString] = slug.split('_');
 	const year = Number(yearString);
 	const anderswoData = anderswo.find((item) => item.Jahr === year && item.Titel === topic);
 	if (anderswoData) {
