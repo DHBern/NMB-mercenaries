@@ -17,7 +17,9 @@
 <div class="grid grid-cols-[1fr_3fr] gap-4">
 	<!-- Orientation Box -->
 	<div>
-		<Map region={data.content?.MapRegion} place={data.content?.MapPlace} />
+		<a href="/map?region={data.content?.MapRegion}&place={data.content?.MapPlace}">
+			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} />
+		</a>
 		<div class="my-12">
 			<span class={["h3 mr-4 font-bold", colors['text'][data.topic]]}>{data.topic_label}</span>
 			<br/>
