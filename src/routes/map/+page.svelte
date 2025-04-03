@@ -4,6 +4,7 @@
 	import colors from '$lib/colors.json';
 
 	let { data }: { data: PageData } = $props();
+
 </script>
 
 <div class="flex h-screen items-center justify-center">
@@ -18,7 +19,7 @@
 				height="300"
 				fill="none"
 				stroke="white"
-				stroke-width="8"
+				stroke-width="4"
 				class="cursor-pointer"
 			/>
 		</a>
@@ -34,7 +35,7 @@
 				height="140"
 				fill="none"
 				stroke="white"
-				stroke-width="8"
+				stroke-width="4"
 				class="cursor-pointer"
 			/>
 		</a>
