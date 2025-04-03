@@ -1,4 +1,4 @@
-<svg class="" viewBox="0 0 800 600">
+<svg class="max-h-[calc(100vh/12*10)]" viewBox="0 0 800 600">
 	<circle class="circle-0-0" cx="5" cy="5" fill="black" r="4.3961" /><circle
 		class="circle-0-1"
 		cx="15"
