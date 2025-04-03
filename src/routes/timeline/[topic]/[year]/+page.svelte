@@ -12,12 +12,13 @@
 		import: 'default'
 	});
 	let { data }: { data: PageData } = $props();
+
 </script>
 
 <div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-10">
 	<!-- Orientation Box -->
 	<div>
-		<a href="/map?region={data.content?.MapRegion}&place={data.content?.MapPlace}">
+		<a href="/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
 			<div class=""><Map region={data.content?.MapRegion} place={data.content?.MapPlace} /></div>
 		</a>
 		<div class="my-12">
