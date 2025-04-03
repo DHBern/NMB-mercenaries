@@ -12,6 +12,7 @@
 <div class="grid grid-rows-[auto_192px] h-full max-h-full p-4 gap-4">
 	
 	{@render children()}
+	
 	<div
 		class="mx-[calc(50%-50vw+2rem)] w-[calc(100vw-4rem)]"
 		bind:clientWidth={width}

@@ -14,7 +14,7 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<div class="grid grid-cols-[1fr_3fr] gap-10">
+<div class="grid grid-cols-[1fr_3fr] gap-10 h-full max-h-full overflow-scroll">
 	<!-- Orientation Box -->
 	<div>
 		<a href="/map?region={data.content?.MapRegion}&place={data.content?.MapPlace}">
