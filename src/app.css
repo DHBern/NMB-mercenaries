@@ -8,3 +8,7 @@
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 @custom-variant dark (&:where(.dark, .dark *));
+
+p {
+    margin-top: 15px;
+}
