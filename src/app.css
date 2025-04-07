@@ -4,10 +4,11 @@
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
 /* @import '@skeletonlabs/skeleton/themes/cerberus'; */
-@import '../nmb-theme';
+@import '../nmbtheme';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 @custom-variant dark (&:where(.dark, .dark *));
+
 
 p {
     margin-top: 15px;
@@ -15,4 +16,14 @@ p {
 
 .anchor {
     color: black;
+}
+
+.map[data-topic='Neuhaus'] circle {
+    fill: var(--color-success-400);
+}
+.map[data-topic='Heilmann'] circle {
+    fill: var(--color-warning-400);
+}
+.map[data-topic='Brunnen'] circle {
+    fill: var(--color-error-400);
 }

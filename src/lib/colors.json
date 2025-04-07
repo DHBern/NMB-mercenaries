@@ -1,0 +1,27 @@
+{
+	"preset-filled": {
+		"Heilmann": "preset-filled-warning-500",
+		"Brunnen": "preset-filled-error-500",
+		"Neuhaus": "preset-filled-success-500"
+	},
+	"stroke": {
+		"Heilmann": "stroke-warning-500",
+		"Brunnen": "stroke-error-500",
+		"Neuhaus": "stroke-success-500"
+	},
+	"outlined": {
+		"Heilmann": "preset-outlined-warning-500",
+		"Brunnen": "preset-outlined-error-500",
+		"Neuhaus": "preset-outlined-success-500"
+	},
+	"fill": {
+		"Heilmann": "fill-warning-500",
+		"Brunnen": "fill-error-500",
+		"Neuhaus": "fill-success-500"
+	},
+	"text": {
+		"Heilmann": "text-warning-500",
+		"Brunnen": "text-error-500",
+		"Neuhaus": "text-success-500"
+	}
+}
