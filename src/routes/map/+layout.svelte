@@ -3,6 +3,12 @@
 	let { children }: { children: Snippet } = $props();
 </script>
 
-<div class="bg-surface-400 h-full w-full">
+<div class="bg-surface-900 text-surface-50 h-full w-full">
 	{@render children()}
+
+	<button
+	class="absolute bottom-10 right-20 btn btn-lg preset-filled-primary-50 h-12 text-lg font-semibold"
+	onclick={handleGoBack}>Zurück</button
+	>
+
 </div>

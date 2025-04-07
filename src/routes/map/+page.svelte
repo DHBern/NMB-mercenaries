@@ -8,58 +8,46 @@
 </script>
 
 <div class="flex h-screen items-center justify-center">
-	<svg class="max-h-[calc(100vh/12*10)]" viewBox="0 0 800 800">
-		<Map_full />
+	<svg class="map max-h-[calc(100vh/12*10)]" viewBox="0 0 1000 840">
+		<!-- Rectangle for fill color -->
+		<rect x="70" y="250" width="210" height="170" fill="var(--color-secondary-950)" class="cursor-pointer" />
+		<rect x="550" y="510" width="130" height="110" fill="var(--color-secondary-950)" class="cursor-pointer" />
 
-		<a href="{base}europe" class="btn">
+		<!-- Circles -->
+		<Circles_full />
+
+		<!-- Rectangle for frame and link (must be over circles with transparent color) -->
+		<a href="{base}map/europe" class="">
 			<rect
-				x="50"
-				y="130"
-				width="300"
-				height="300"
-				fill="none"
+				x="70"
+				y="250"
+				width="210"
+				height="170"
+				fill="#ffffff00"
 				stroke="white"
 				stroke-width="4"
 				class="cursor-pointer"
 			/>
 		</a>
-		<foreignObject x="50" y="130" width="140" height="40">
-			<a href="{base}map/europe" class="bg-white px-4 py-1">Europa</a>
-		</foreignObject>
-
-		<a href="{base}seasia" class="btn">
+		<a href="{base}map/seasia" class="">
 			<rect
 				x="550"
-				y="530"
-				width="200"
-				height="140"
-				fill="none"
+				y="510"
+				width="130"
+				height="110"
+				fill="#ffffff00"
 				stroke="white"
 				stroke-width="4"
 				class="cursor-pointer"
 			/>
 		</a>
-		<foreignObject x="550" y="530" width="140" height="40">
-			<a href="{base}map/seasia" class="bg-white px-4 py-1">Südostasien</a>
+
+		<foreignObject x="70" y="250" width="90" height="28">
+			<a href="{base}map/europe" class="bg-white px-2 py-1 text-surface-900 font-semibold">Europa</a>
 		</foreignObject>
 
-		<foreignObject x="200" y="355" width="100" height="40">
-			<a
-				href="../timeline/Heilmann/1829"
-				class={['btn font-bold', colors['preset-filled']['Heilmann']]}>Neapel</a
-			>
-		</foreignObject>
-		<foreignObject x="645" y="585" width="100" height="40">
-			<a
-				href="../timeline/Neuhaus/1829"
-				class={['btn font-bold', colors['preset-filled']['Neuhaus']]}>Java</a
-			>
-		</foreignObject>
-		<foreignObject x="185" y="325" width="100" height="40">
-			<a
-				href="../timeline/Brunnen/1798"
-				class={['btn font-bold', colors['preset-filled']['Brunnen']]}>Biel</a
-			>
+		<foreignObject x="550" y="510" width="140" height="28">
+			<a href="{base}map/seasia" class="bg-white px-2 py-1 text-surface-900 font-semibold">Südostasien</a>
 		</foreignObject>
 	</svg>
 </div>
@@ -68,7 +56,7 @@
 	img.hidden {
 		display: none;
 	}
-	:root {
-		--state: 3; /* 1 = java, 2 = rivers, 3 = europe */
+	.map :global(circle) {
+		fill: #d9d9d9;
 	}
 </style>

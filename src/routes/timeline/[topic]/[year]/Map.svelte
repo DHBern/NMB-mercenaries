@@ -48,24 +48,22 @@
 			case 'hulst':
 				elPlace = document.querySelector('#europe-hulst');
 				break;
-			case 'rotterdam			':
+			case 'rotterdam':
 				elPlace = document.querySelector('#europe-rotterdam');
 				break;
 		}
 
 		// Style circles
 		elPlace?.classList.add('marked');
+		elPlace?.style.setProperty('r', '12px');
 		switch (topic) {
 			case 'Heilmann':
-				elPlace?.style.setProperty('r', '12px');
 				elPlace?.style.setProperty('fill', 'var(--color-warning-900)');
 				break;
 			case 'Neuhaus':
-				elPlace?.style.setProperty('r', '12px');
 				elPlace?.style.setProperty('fill', 'var(--color-success-900)');
 				break;
 			case 'Brunnen':
-				elPlace?.style.setProperty('r', '12px');
 				elPlace?.style.setProperty('fill', 'var(--color-error-900)');
 				break;
 		}
@@ -125,7 +123,8 @@
 			<CirclesEurope />
 		{/if}
 	{/if}
-	_ <!-- Pull marked circles to front -->
+	
+	<!-- Pull marked circles to front -->
 	<use xlink:href="#seasia-batavia" />
 	<use xlink:href="#seasia-banjarmasin" />
 	<use xlink:href="#seasia-padangse" />
@@ -158,17 +157,5 @@
 			fill: 'red'
 			opacity: 1;
 		}
-	}
-	:global(.map circle.marked){
-		animation: pulse 2s infinite ease-in-out;
-	}
-	:global(.map[data-topic='Neuhaus'] circle) {
-		fill: var(--color-success-400);
-	}
-	:global(.map[data-topic='Heilmann'] circle) {
-		fill: var(--color-warning-400);
-	}
-	:global(.map[data-topic='Brunnen'] circle) {
-		fill: var(--color-error-400);
 	}
 </style>
