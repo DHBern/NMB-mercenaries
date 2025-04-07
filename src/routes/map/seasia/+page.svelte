@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from '../$types';
+	import { base } from '$app/paths';
 	import Map_seasia from './Map_seasia.svelte';
 	import colors from '$lib/colors.json';
 
@@ -10,8 +11,8 @@
 	<svg class="max-h-[calc(100vh/12*10)]" viewBox="0 0 800 800">
 		<Map_seasia />
 
-        <foreignObject x="0" y="0" width="140" height="40">
-			<a href="/map" class="bg-white px-4 py-1">zur Weltkarte</a>
+		<foreignObject x="0" y="0" width="140" height="40">
+			<a href="{base}/map" class="bg-white px-4 py-1">zur Weltkarte</a>
 		</foreignObject>
 
 		<foreignObject x="600" y="550" width="100" height="40">
@@ -26,8 +27,7 @@
 				class={['btn font-bold', colors['preset-filled']['Neuhaus']]}>Batavia, Java</a
 			>
 		</foreignObject>
-
-    </svg>
+	</svg>
 </div>
 
 <style>

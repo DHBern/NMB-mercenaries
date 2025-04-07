@@ -2,6 +2,7 @@
 	import { scaleLinear, scalePoint, line, axisBottom, select } from 'd3';
 	import data from '$lib/data/main.json';
 	import colors from '$lib/colors.json';
+	import { base } from '$app/paths';
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
@@ -63,7 +64,7 @@
 			{#each content as datapoint, j}
 				{@const current = datapoint.Jahr === currentyear && topic === currenttopic}
 				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href="/timeline/{topic}/{datapoint.Jahr}">
+				<a href="{base}/timeline/{topic}/{datapoint.Jahr}">
 					<circle
 						class:animate-pulse={current}
 						cx={x(datapoint.Jahr)}

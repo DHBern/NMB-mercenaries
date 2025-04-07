@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { base } from '$app/paths';
 
 	let { data }: { data: PageData } = $props();
 
@@ -15,7 +16,7 @@
 	<!-- Image -->
 	<div class="">
 		{#if data.content?.Bild}
-			<a href="#">
+			<a href="{base}#">
 				{#if data.type === 'anderswo'}
 					<img
 						class="h-full max-h-96 w-full object-contain object-right"

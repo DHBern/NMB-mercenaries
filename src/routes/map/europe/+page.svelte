@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from '../$types';
 	import Map_europe from './Map_europe.svelte';
+	import { base } from '$app/paths';
 	import colors from '$lib/colors.json';
 
 	let { data }: { data: PageData } = $props();
@@ -10,8 +11,8 @@
 	<svg class="max-h-[calc(100vh/12*10)]" viewBox="0 0 800 800">
 		<Map_europe />
 
-        <foreignObject x="0" y="0" width="140" height="40">
-			<a href="/map" class="bg-white px-4 py-1">zur Weltkarte</a>
+		<foreignObject x="0" y="0" width="140" height="40">
+			<a href="{base}/map" class="bg-white px-4 py-1">zur Weltkarte</a>
 		</foreignObject>
 
 		<foreignObject x="500" y="600" width="100" height="40">
@@ -20,8 +21,7 @@
 				class={['btn font-bold', colors['preset-filled']['Heilmann']]}>Neapel</a
 			>
 		</foreignObject>
-
-    </svg>
+	</svg>
 </div>
 
 <style>

@@ -1,17 +1,17 @@
 <script lang="ts">
 	import type { PageData } from '../$types';
+	import { base } from '$app/paths';
 	import Map_full from './Map_full.svelte';
 	import colors from '$lib/colors.json';
 
 	let { data }: { data: PageData } = $props();
-
 </script>
 
 <div class="flex h-screen items-center justify-center">
 	<svg class="max-h-[calc(100vh/12*10)]" viewBox="0 0 800 800">
 		<Map_full />
 
-		<a href="europe" class="btn">
+		<a href="{base}europe" class="btn">
 			<rect
 				x="50"
 				y="130"
@@ -24,10 +24,10 @@
 			/>
 		</a>
 		<foreignObject x="50" y="130" width="140" height="40">
-			<a href="map/europe" class="bg-white px-4 py-1">Europa</a>
+			<a href="{base}map/europe" class="bg-white px-4 py-1">Europa</a>
 		</foreignObject>
-		
-		<a href="seasia" class="btn">
+
+		<a href="{base}seasia" class="btn">
 			<rect
 				x="550"
 				y="530"
@@ -40,7 +40,7 @@
 			/>
 		</a>
 		<foreignObject x="550" y="530" width="140" height="40">
-			<a href="map/seasia" class="bg-white px-4 py-1">Südostasien</a>
+			<a href="{base}map/seasia" class="bg-white px-4 py-1">Südostasien</a>
 		</foreignObject>
 
 		<foreignObject x="200" y="355" width="100" height="40">

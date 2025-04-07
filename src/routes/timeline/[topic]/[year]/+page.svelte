@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages.js';
+	import { base } from '$app/paths';
 	import type { PageData } from './$types';
 	import Map from './Map.svelte';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
@@ -13,13 +14,12 @@
 		import: 'default'
 	});
 	let { data }: { data: PageData } = $props();
-
 </script>
 
 <div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-10">
 	<!-- Orientation Box -->
 	<div>
-		<a href="/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
+		<a href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
 			<div class=""><Map region={data.content?.MapRegion} place={data.content?.MapPlace} /></div>
 		</a>
 		<div class="my-12">
@@ -43,10 +43,9 @@
 			<h2 class="h2 mt-6 mb-4">{m.close_livid_lemur_pull()}</h2>
 			<ul class="list-inside list-disc space-y-2">
 				{#each data.anderswo as item}
-					<div class="block m-0 p-0 h-10">
+					<div class="m-0 block h-10 p-0">
 						<Dot class="inline" size="120px" />
 						<a class="anchor" href="/detail/{encodeURIComponent(item)}_{data.year}">{@html item}</a>
-						
 					</div>
 				{/each}
 			</ul>
@@ -55,7 +54,7 @@
 		<!-- Image -->
 		<div class="col-start-2">
 			{#if data.content?.Bild}
-				<a href="/detail/{data.content?.Bild}">
+				<a href="{base}/detail/{data.content?.Bild}">
 					<img
 						class="h-full max-h-96 w-full object-contain object-right"
 						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
