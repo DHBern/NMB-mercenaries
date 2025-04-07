@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { PageData } from '../$types';
 	import { base } from '$app/paths';
-	import Map_seasia from './Map_seasia.svelte';
+	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
+	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
 	import colors from '$lib/colors.json';
 
 	let { data }: { data: PageData } = $props();

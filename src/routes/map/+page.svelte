@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from '../$types';
 	import { base } from '$app/paths';
-	import Map_full from './Map_full.svelte';
+	import Circles_full from '$lib/circle-components/Circles-full.svelte';
 	import colors from '$lib/colors.json';
 
 	let { data }: { data: PageData } = $props();

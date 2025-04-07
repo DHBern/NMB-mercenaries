@@ -1,15 +1,15 @@
 <script lang="ts">
 	import type { Action } from 'svelte/action';
-	import CirclesSeasia from './Circles-seasia.svelte';
-	import CirclesEurope from './Circles-europe.svelte';
-	import CirclesJava from './Circles-java.svelte';
+	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
+	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
+	import CirclesJava from '$lib/circle-components/Circles-java.svelte';
 
 	let { region, place, topic } = $props();
 	let elPlace = $state();
+	console.log(region, place, topic)
 
 	// Style highlighted circles
 	$effect(() => {
-		console.log(region, place);
 		// Get marked circles of place
 		switch (place) {
 			case 'batavia':

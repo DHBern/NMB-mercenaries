@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from '../$types';
-	import Map_europe from './Map_europe.svelte';
+	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
+	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
 	import { base } from '$app/paths';
 	import colors from '$lib/colors.json';
 
