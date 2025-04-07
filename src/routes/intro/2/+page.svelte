@@ -1,8 +1,6 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import colors from '$lib/colors.json';
 
-	let { data }: { data: PageData } = $props();
 </script>
 
 <div class="mx-auto max-w-2xl">

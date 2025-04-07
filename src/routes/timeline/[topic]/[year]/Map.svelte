@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { Action } from 'svelte/action';
 	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
 	import CirclesJava from '$lib/circle-components/Circles-java.svelte';
