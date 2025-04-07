@@ -20,7 +20,7 @@
 	<!-- Orientation Box -->
 	<div>
 		<a href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
-			<div class=""><Map region={data.content?.MapRegion} place={data.content?.MapPlace} /></div>
+			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} topic={data.topic}/>
 		</a>
 		<div class="my-12">
 			<span class={['h3 mr-4 font-bold', colors['text'][data.topic]]}>{data.topic_label}</span>
