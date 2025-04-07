@@ -20,7 +20,7 @@
 
 <div class="grid h-screen max-h-screen grid-rows-[1fr_11fr]">
 	<header class={['flex justify-between gap-4 p-4', isDark && 'bg-surface-400']}>
-		<a class="btn btn-lg preset-filled-primary-500 h-16" href="/intro/1">Zum Start</a>
+		<a class="btn btn-lg preset-filled-primary-500 h-16" href="{base}/intro/1">Zum Start</a>
 		{#if isMap || isDetail}
 			<button class="btn btn-lg preset-filled-primary-500 h-16" onclick={handleGoBack}
 				>Zurück</button
