@@ -3,10 +3,9 @@
 	import CirclesHeilmann from '$lib/circle-components/Circles-heilmann.svelte';
 	import CirclesNeuhaus from '$lib/circle-components/Circles-neuhaus.svelte';
 	import CirclesBrunnen from '$lib/circle-components/Circles-brunnen.svelte';
-	// import heilmann from '$lib/images/timeline/portrait-heilmann-70-1-0.svg';
-	// import neuhaus from '$lib/images/timeline/portrait-neuhaus-70-1-0.svg';
-	// import brunnen from '$lib/images/timeline/portrait-brunnen-70-1-0.svg';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import { onMount } from 'svelte';
+
 </script>
 
 <div class="mx-auto">
@@ -18,13 +17,13 @@
 		</p>
 		<div class="flex-cols-3 my-5 mb-15 flex justify-around gap-10">
 			<div class="flex flex-col items-center gap-3">
-				<svg class="max-h-50 max-w-50" viewBox="0 0 700 880">
+				<svg class="max-h-50 max-w-50" viewBox="0 0 700 880" data-topic="heilmann">
 					<CirclesHeilmann />
 					<a href="../timeline/Heilmann/1785">
 						<rect x="0" y="0" width="700" height="880" fill="#ffffff00"></rect>
 					</a>
 				</svg>
-				<!-- <img class="max-h-50 max-w-50" src={heilmann} data-topic="heilmann" alt="bild" /> -->
+				<!-- <img class="max-h-50 max-w-50" src={heilmann} alt="bild" /> -->
 				<a
 					class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Heilmann']]}
 					href="../timeline/Heilmann/1785"
@@ -34,8 +33,8 @@
 				</a>
 			</div>
 			<div class="flex flex-col items-center gap-3">
-				<!-- <img class="max-h-50 max-w-50" src={neuhaus} data-topic="neuhaus" alt="bild" /> -->
-				<svg class="max-h-50 max-w-50" viewBox="0 0 700 880">
+				<!-- <img class="max-h-50 max-w-50" src={neuhaus} alt="bild" /> -->
+				<svg class="max-h-50 max-w-50" viewBox="0 0 700 880" data-topic="neuhaus">
 					<CirclesNeuhaus />
 					<a href="../timeline/Neuhaus/1794">
 						<rect x="0" y="0" width="700" height="880" fill="#ffffff00"></rect>
@@ -49,13 +48,13 @@
 				>
 			</div>
 			<div class="flex flex-col items-center gap-3">
-				<svg class="max-h-50 max-w-50" viewBox="0 0 700 880">
+				<svg class="max-h-50 max-w-50" viewBox="0 0 700 880" data-topic="brunnen">
 					<CirclesBrunnen />
 					<a href="../timeline/Brunnen/1798">
 						<rect x="0" y="0" width="700" height="880" fill="#ffffff00"></rect>
 					</a>
 				</svg>
-				<!-- <img class="max-h-50 max-w-50" src={brunnen} data-topic="brunnen" alt="bild" /> -->
+				<!-- <img class="max-h-50 max-w-50" src={brunnen} alt="bild" /> -->
 				<a
 					class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Brunnen']]}
 					href="../timeline/Brunnen/1798"
@@ -70,9 +69,3 @@
 		unterscheiden.
 	</p>
 </div>
-
-<style>
-	:global([data-topic='brunnen'] circle) {
-		fill: aqua;
-	}
-</style>
