@@ -45,7 +45,9 @@
 				{#each data.anderswo as item}
 					<div class="m-0 block h-10 p-0">
 						<Dot class="inline" size="120px" />
-						<a class="anchor" href="/detail/{encodeURIComponent(item)}_{data.year}">{@html item}</a>
+						<a class="anchor" href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
+							>{@html item}</a
+						>
 					</div>
 				{/each}
 			</ul>
@@ -69,7 +71,7 @@
 			{#if data.prevYear}
 				<a
 					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg', 'w-50']}
-					href="/timeline/{data.topic}/{data.prevYear}"
+					href="{base}/timeline/{data.topic}/{data.prevYear}"
 				>
 					<ArrowLeft class="mr-3" />
 					<span>Vorherige Station</span>
@@ -78,7 +80,7 @@
 			{#if data.nextYear}
 				<a
 					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg', 'w-50']}
-					href="/timeline/{data.topic}/{data.nextYear}"
+					href="{base}/timeline/{data.topic}/{data.nextYear}"
 				>
 					<ArrowRight class="mr-3" />
 					<span>Nächste Station</span>
