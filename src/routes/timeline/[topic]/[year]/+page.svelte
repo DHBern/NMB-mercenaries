@@ -72,7 +72,7 @@
 					href="/timeline/{data.topic}/{data.prevYear}"
 				>
 					<ArrowLeft class="mr-3" />
-					<span>Vorherige Station</span>
+					<span class="font-semibold">Vorherige Station</span>
 				</a>
 			{/if}
 			{#if data.nextYear}
@@ -81,7 +81,7 @@
 					href="/timeline/{data.topic}/{data.nextYear}"
 				>
 					<ArrowRight class="mr-3" />
-					<span>Nächste Station</span>
+					<span class="font-semibold">Nächste Station</span>
 				</a>
 			{/if}
 		</div>
