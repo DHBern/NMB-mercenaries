@@ -55,7 +55,6 @@
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Padangse Bovenlanden, Sumatra</a
 			>
 		</foreignObject>
-<<<<<<< HEAD
 		<foreignObject x="500" y="420" width="300" height="40">
 			<a
 				href="../timeline/Neuhaus/1836"
@@ -65,8 +64,8 @@
 		<foreignObject x="390" y="630" width="150" height="40">
 			<a
 				href="../timeline/Neuhaus/1829"
-				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia, Java</a
-=======
+				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia, Java</a>
+		</foreignObject>
 
 		<foreignObject x="170" y="520" width="300" height="40">
 			<a
