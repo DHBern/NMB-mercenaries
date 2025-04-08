@@ -9,8 +9,14 @@
 	}
 </script>
 
-<div class="bg-white">
+<button
+	onclick={() => {
+		toggleState();
+	}}>Toggle</button
+>
+<div class="bg-white max-h-200 max-w-200">
 	<Map_all />
+
 
 	<!--
 	<img alt="full" href="./full-100-2.2-0.svg" class="hidden full w-[800px]" />
@@ -21,11 +27,6 @@
 	-->
 </div>
 
-<button
-	onclick={() => {
-		toggleState();
-	}}>Toggle</button
->
 
 <style>
 	img.hidden {
