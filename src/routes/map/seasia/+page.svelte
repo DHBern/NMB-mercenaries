@@ -84,7 +84,6 @@
 			<a
 				href="../timeline/Neuhaus/1829"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia</a
->>>>>>> ef9b0e0 (text (map): remove country-labels on seasia map)
 			>
 		</foreignObject>
 
