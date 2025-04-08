@@ -6,7 +6,7 @@
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
-	const PADDING = 20;
+	const PADDING = 30;
 	const GUTTER = 220;
 
 	const years = [
@@ -15,7 +15,7 @@
 	let x = $derived(
 		scaleLinear()
 			.domain([years[0], years[years.length - 1]])
-			.range([PADDING + GUTTER, width - PADDING])
+			.range([GUTTER, width - PADDING])
 	);
 	let y = $derived(
 		scalePoint()
@@ -25,14 +25,44 @@
 	);
 	let svgElement: SVGSVGElement;
 	let gx: SVGGElement;
+	const generateTickValues = (current: number) => {
+		let returnvalues = [];
+		for (
+			let activeyear = Math.ceil(years[0] / 10) * 10;
+			!(activeyear >= years[years.length - 1]);
+			activeyear += 10
+		) {
+			if (activeyear < current - 3 || activeyear > current + 3) {
+				returnvalues.push(activeyear);
+			}
+		}
+		console.log(returnvalues);
+		return returnvalues;
+	};
 	$effect(() => {
 		if (gx) {
-			select(gx).call(axisBottom(x).tickFormat((d) => `${d}`));
+			select(gx).call(
+				axisBottom(x)
+					.tickFormat((d) => `${d}`)
+					.tickValues(generateTickValues(currentyear))
+			);
 		}
 	});
 </script>
 
 <svg {width} {height} bind:this={svgElement}>
+	<g bind:this={gx} transform="translate(0,{height - PADDING})" class="x-axis" />
+	<text class="translate-x-[-2ch] font-sans text-xl font-black" x={x(currentyear)} y={height - 5}>
+		{currentyear}
+	</text>
+	<line
+		x1={x(currentyear)}
+		y1={0}
+		x2={x(currentyear)}
+		y2={height - PADDING + 6}
+		stroke="black"
+		stroke-width="1"
+	/>
 	{#each ['Up', 'Down'] as wrapper}
 		<foreignObject x="1" y={(y(wrapper) || 0) - 11} width="100" height="22">
 			<div class={['text-sm', 'text-gray-500']}>Andernorts</div>
@@ -76,5 +106,4 @@
 			{/each}
 		</g>
 	{/each}
-	<g bind:this={gx} transform="translate(0,{height - PADDING})" class="x-axis" />
 </svg>

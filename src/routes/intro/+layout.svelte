@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import { base } from '$app/paths';
 	import type { LayoutData } from './$types';
 	import { onNavigate } from '$app/navigation';
 	import { ArrowLeft, ArrowRight } from '@lucide/svelte';
@@ -22,16 +23,18 @@
 
 <div class="grid h-full grid-cols-[1fr_14fr_1fr] place-items-center gap-4">
 	{#if slide > 1}
-		<a class="btn-icon m-15 w-20 h-20 rounded-full preset-filled-primary-500" href="/intro/{slide - 1}"
-			><ArrowLeft class="w-10 h-10"/></a
+		<a
+			class="btn-icon preset-filled-primary-500 m-15 h-20 w-20 rounded-full"
+			href="{base}/intro/{slide - 1}"><ArrowLeft class="h-10 w-10" /></a
 		>
 	{/if}
 	<div class="col-start-2 flex flex-col items-center justify-center gap-4">
 		{@render children()}
 	</div>
 	{#if slide < 3}
-		<a class="btn-icon m-15 w-20 h-20 rounded-full preset-filled-primary-500 col-start-3" href="/intro/{slide + 1}"
-			><ArrowRight class="w-10 h-10"/></a
+		<a
+			class="btn-icon preset-filled-primary-500 col-start-3 m-15 h-20 w-20 rounded-full"
+			href="{base}/intro/{slide + 1}"><ArrowRight class="h-10 w-10" /></a
 		>
 	{/if}
 </div>
