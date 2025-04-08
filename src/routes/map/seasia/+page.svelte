@@ -33,7 +33,7 @@
 <div class="flex h-screen items-center justify-center">
 		<!-- Full Map -->
 		<svg
-		class="fullmap absolute top-[15.2vh] left-[21.2vw] max-h-50 border-4 border-white"
+		class="fullmap absolute top-[19vh] left-[20vw] max-h-50 border-4 border-white"
 		viewBox="0 0 1000 840"
 	>
 		<a href="{base}/map" class="">

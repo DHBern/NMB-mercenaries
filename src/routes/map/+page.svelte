@@ -42,12 +42,12 @@
 			/>
 		</a>
 
-		<foreignObject x="70" y="250" width="90" height="28">
-			<a href="{base}map/europe" class="bg-white px-2 py-1 text-surface-900 font-semibold">Europa</a>
+		<foreignObject x="60" y="240" width="90" height="36">
+			<a href="{base}map/europe" class="btn btn-lg bg-white px-2 py-1 text-surface-900 font-semibold">Europa</a>
 		</foreignObject>
 
-		<foreignObject x="550" y="510" width="140" height="28">
-			<a href="{base}map/seasia" class="bg-white px-2 py-1 text-surface-900 font-semibold">Südostasien</a>
+		<foreignObject x="540" y="500" width="140" height="36">
+			<a href="{base}map/seasia" class="btn btn-lg bg-white px-2 py-1 text-surface-900 font-semibold">Südostasien</a>
 		</foreignObject>
 	</svg>
 </div>
