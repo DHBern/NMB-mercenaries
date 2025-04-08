@@ -55,6 +55,7 @@
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Padangse Bovenlanden, Sumatra</a
 			>
 		</foreignObject>
+<<<<<<< HEAD
 		<foreignObject x="500" y="420" width="300" height="40">
 			<a
 				href="../timeline/Neuhaus/1836"
@@ -65,6 +66,25 @@
 			<a
 				href="../timeline/Neuhaus/1829"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia, Java</a
+=======
+
+		<foreignObject x="170" y="520" width="300" height="40">
+			<a
+				href="../timeline/Neuhaus/1840"
+				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Padangse Bovenlanden</a
+			>
+		</foreignObject>
+		<foreignObject x="565" y="420" width="300" height="40">
+			<a
+				href="../timeline/Neuhaus/1836"
+				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Banjarmasin</a
+			>
+		</foreignObject>
+		<foreignObject x="440" y="630" width="150" height="40">
+			<a
+				href="../timeline/Neuhaus/1829"
+				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia</a
+>>>>>>> ef9b0e0 (text (map): remove country-labels on seasia map)
 			>
 		</foreignObject>
 
