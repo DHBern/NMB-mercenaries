@@ -4,7 +4,7 @@ import svgwrite
 def image_to_svg(image_name, grid_width, brightness_factor, cutoff_radius=0):
 
     r_scale = 5
-    image_path = f'{image_name}.png'
+    image_path = f'{image_name}.jpg'
     output_svg = f'{image_name}-{grid_width}-{brightness_factor}-{cutoff_radius}.svg'
 
     # Load the image and convert it to grayscale
@@ -35,8 +35,11 @@ def image_to_svg(image_name, grid_width, brightness_factor, cutoff_radius=0):
     print(f'SVG saved to {output_svg}')
 
 # Example usage
-image_to_svg("full", 100, 2.2)
-image_to_svg("seasia", 100, 2.2)
-image_to_svg("europe", 100, 2.2)
-image_to_svg("java", 100, 2.2)
-image_to_svg("rivers", 100, 7, 0.54)
+image_to_svg("portrait-brunnen", 70, 1)
+image_to_svg("portrait-neuhaus", 70, 1)
+image_to_svg("portrait-heilmann", 70, 1)
+#image_to_svg("full", 100, 2.2)
+#image_to_svg("seasia", 100, 2.2)
+#image_to_svg("europe", 100, 2.2)
+#image_to_svg("java", 100, 2.2)
+#image_to_svg("rivers", 100, 7, 0.54)
