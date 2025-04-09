@@ -1,9 +1,9 @@
 [data-theme='nmbtheme'] {
-	--text-scaling: 1.067;
+	--text-scaling: 1.25;
 	--base-font-color: var(--color-surface-950);
 	--base-font-color-dark: var(--color-surface-50);
 	--base-font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-	--base-font-size: inherit;
+	--base-font-size: 20px;
 	--base-line-height: inherit;
 	--base-font-weight: normal;
 	--base-font-style: normal;
