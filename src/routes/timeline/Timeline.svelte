@@ -20,7 +20,7 @@
 	let y = $derived(
 		scalePoint()
 			.domain(['Up', 'Heilmann', 'Brunnen', 'Neuhaus', 'Down'])
-			.range([0, height - PADDING])
+			.range([PADDING, height - PADDING])
 			.padding(0.4)
 	);
 	let svgElement: SVGSVGElement;
@@ -48,6 +48,21 @@
 			);
 		}
 	});
+
+	const lineGenerator = (topic: string, content: any[], index: number) => {
+		let coords = content.map((datapoint) => [
+			x(datapoint.Jahr),
+			(datapoint.Ort === 'Biel' ? y(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
+		]);
+		if (topic === 'Brunnen') {
+			coords = [
+				[x(x.domain()[0]), y(topic) as number],
+				...coords,
+				[x(x.domain()[x.domain().length - 1]), y(topic) as number]
+			];
+		}
+		return line()(coords);
+	};
 </script>
 
 <svg {width} {height} bind:this={svgElement}>
@@ -75,17 +90,18 @@
 	{#each Object.entries(data) as [topic, content], i}
 		<g>
 			<foreignObject x="70" y={(y(topic) || 0) - 11} width="100" height="22">
-				<div class={['text-sm', topic === currenttopic ? colors.text[topic] : 'text-gray-500']}>
+				<div
+					class={[
+						'text-sm',
+						colors.text[topic],
+						topic === currenttopic && 'animate-pulse font-bold'
+					]}
+				>
 					{topic}
 				</div>
 			</foreignObject>
 			<path
-				d={line()(
-					content.map((datapoint) => [
-						x(datapoint.Jahr),
-						(datapoint.Ort === 'Biel' ? y(topic) : y(i === 0 ? 'Up' : 'Down')) || 0
-					])
-				)}
+				d={lineGenerator(topic, content, i)}
 				class={[colors.stroke[topic]]}
 				stroke-width="2"
 				fill="none"
@@ -99,7 +115,7 @@
 						class:animate-pulse={current}
 						cx={x(datapoint.Jahr)}
 						cy={(datapoint.Ort === 'Biel' ? y(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
-						r={current ? 12 : 6}
+						r={current ? 18 : 6}
 						class={[colors.fill[topic]]}
 					/>
 				</a>
