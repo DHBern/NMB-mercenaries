@@ -21,7 +21,13 @@
 		scalePoint()
 			.domain(['Up', 'Heilmann', 'Brunnen', 'Neuhaus', 'Down'])
 			.range([PADDING, height - PADDING])
-			.padding(0.4)
+			.padding(0.2)
+	);
+	let yLocal = $derived(
+		scalePoint()
+			.domain(['Up', 'Heilmann', 'Brunnen', 'Neuhaus', 'Down'])
+			.range([PADDING, height - PADDING])
+			.padding(2)
 	);
 	let svgElement: SVGSVGElement;
 	let gx: SVGGElement;
@@ -36,7 +42,6 @@
 				returnvalues.push(activeyear);
 			}
 		}
-		console.log(returnvalues);
 		return returnvalues;
 	};
 	$effect(() => {
@@ -52,13 +57,13 @@
 	const lineGenerator = (topic: string, content: any[], index: number) => {
 		let coords = content.map((datapoint) => [
 			x(datapoint.Jahr),
-			(datapoint.Ort === 'Biel' ? y(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
+			(datapoint.Ort === 'Biel' ? yLocal(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
 		]);
 		if (topic === 'Brunnen') {
 			coords = [
 				[x(x.domain()[0]), y(topic) as number],
 				...coords,
-				[x(x.domain()[x.domain().length - 1]), y(topic) as number]
+				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
 			];
 		}
 		return line()(coords);
@@ -66,6 +71,21 @@
 </script>
 
 <svg {width} {height} bind:this={svgElement}>
+	<defs>
+		<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+			<stop offset="0%" style="stop-color: #fff; stop-opacity: 1" />
+			<stop offset="5%" style="stop-color: var(--color-error-50); stop-opacity: 1" />
+			<stop offset="98%" style="stop-color: var(--color-error-50); stop-opacity: 1" />
+			<stop offset="100%" style="stop-color: #fff; stop-opacity: 1" />
+		</linearGradient>
+	</defs>
+	<rect
+		x={0}
+		y={(yLocal('Heilmann') as number) - 13}
+		width={width - PADDING + 18}
+		height={yLocal.step() * 3}
+		fill="url(#gradient)"
+	/>
 	<g bind:this={gx} transform="translate(0,{height - PADDING})" class="x-axis" />
 	<text class="translate-x-[-2ch] font-sans text-xl font-black" x={x(currentyear)} y={height - 5}>
 		{currentyear}
@@ -89,7 +109,7 @@
 
 	{#each Object.entries(data) as [topic, content], i}
 		<g>
-			<foreignObject x="70" y={(y(topic) || 0) - 11} width="100" height="22">
+			<foreignObject x="70" y={(yLocal(topic) || 0) - 11} width="100" height="22">
 				<div
 					class={[
 						'text-sm',
@@ -114,8 +134,8 @@
 					<circle
 						class:animate-pulse={current}
 						cx={x(datapoint.Jahr)}
-						cy={(datapoint.Ort === 'Biel' ? y(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
-						r={current ? 18 : 6}
+						cy={(datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
+						r={current ? 18 : 8}
 						class={[colors.fill[topic]]}
 					/>
 				</a>
