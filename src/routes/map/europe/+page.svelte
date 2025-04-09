@@ -2,7 +2,7 @@
 	import type { PageData } from '../$types';
 	import Map_europe from './Map_europe.svelte';
 	import { base } from '$app/paths';
-	import colors from '$lib/colors.json';
+	import { colors } from '$lib/metadata.json';
 
 	let { data }: { data: PageData } = $props();
 </script>

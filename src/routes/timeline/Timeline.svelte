@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { scaleLinear, scalePoint, line, axisBottom, select } from 'd3';
 	import data from '$lib/data/main.json';
-	import colors from '$lib/colors.json';
+	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
@@ -80,11 +80,11 @@
 	/>
 	{#each ['Up', 'Down'] as wrapper}
 		<foreignObject x="1" y={(y(wrapper) || 0) - 11} width="100" height="22">
-			<div class={['text-sm', 'text-gray-500']}>Andernorts</div>
+			<div class={['text-sm', 'text-gray-500']}>Global</div>
 		</foreignObject>
 	{/each}
 	<foreignObject x="1" y={(y('Brunnen') || 0) - 11} width="100" height="22">
-		<div class={['text-sm', 'text-gray-500']}>Biel</div>
+		<div class={['text-sm', 'text-gray-500']}>Lokal</div>
 	</foreignObject>
 
 	{#each Object.entries(data) as [topic, content], i}
@@ -97,7 +97,7 @@
 						topic === currenttopic && 'animate-pulse font-bold'
 					]}
 				>
-					{topic}
+					{labels[topic]}
 				</div>
 			</foreignObject>
 			<path
