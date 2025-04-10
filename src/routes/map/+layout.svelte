@@ -7,7 +7,7 @@
 	}
 </script>
 
-<div class="bg-surface-900 text-surface-50 h-full w-full">
+<div class="dark h-full w-full">
 	{@render children()}
 
 	<button
