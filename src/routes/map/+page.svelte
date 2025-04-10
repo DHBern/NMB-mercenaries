@@ -57,6 +57,6 @@
 		display: none;
 	}
 	.map :global(circle) {
-		fill: #d9d9d9;
+		fill: var(--color-primary-500);
 	}
 </style>
