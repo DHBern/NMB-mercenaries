@@ -33,13 +33,9 @@
 	let gx: SVGGElement;
 	const generateTickValues = (current: number) => {
 		let returnvalues = [];
-		for (
-			let activeyear = Math.ceil(years[0] / 10) * 10;
-			!(activeyear >= years[years.length - 1]);
-			activeyear += 10
-		) {
-			if (Math.abs(activeyear - current) > 3) {
-				returnvalues.push(activeyear);
+		for (let i = Math.ceil(years[0] / 10) * 10; i <= years[years.length - 1]; i += 10) {
+			if (Math.abs(i - current) > 3) {
+				returnvalues.push(i);
 			}
 		}
 		return returnvalues;
