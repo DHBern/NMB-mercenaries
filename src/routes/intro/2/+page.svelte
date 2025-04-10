@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import colors from '$lib/colors.json';
 
 	let { data }: { data: PageData } = $props();
 </script>
@@ -10,10 +11,14 @@
 		Bieler Oberschicht waren diese grösser, als bei Menschen tieferer Schichten.
 	</p>
 	<p class="text-2xl">
-		Georg Friedrich Heilmann und Francois Emil Neuhaus entschieden sich für Militärkarrieren im
-		Ausland. Diese bietet den beiden Vertreter der Bieler Oberschicht die Möglichkeit, die Welt zu
-		sehen, lukrative Pensionen, den Aufbau von weltweiten Netzwerken und nicht zuletzt auch soziale
-		Prestige. Doch dieser Weg ist auch mit der tödlichen Gefahr durch Kampfhandlungen und
+		<span class={['font-bold', colors.text['Heilmann']]}>Georg Friedrich Heilmann</span> und
+		<span class={['font-bold', colors.text['Neuhaus']]}>Francois Emil Neuhaus</span>
+		entschieden sich für Militärkarrieren im Ausland.
+	</p>
+	<p class="text-2xl">
+		Die beiden Vertretern der Bieler Oberschicht hatten dadurch die Möglichkeit, die Welt zu sehen. Sie profitierten von
+		lukrativen Pensionen, dem Aufbau weltweiter Netzwerke und nicht zuletzt von sozialem
+		Prestige. Doch der Söldnerdienst war auch mit der tödlichen Gefahr durch Kampfhandlungen und
 		Krankheiten verbunden.
 	</p>
 </div>
