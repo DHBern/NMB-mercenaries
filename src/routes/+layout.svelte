@@ -3,7 +3,6 @@
 	import { locales, setLocale } from '$lib/paraglide/runtime';
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
-	export const prerender = true;
 
 	function handleGoBack() {
 		history.back();
@@ -18,8 +17,13 @@
 	let { children } = $props();
 </script>
 
-<div class={["bg-surface-50 grid h-screen max-h-screen grid-rows-[1fr_11fr]",isDark && 'bg-surface-900 text-surface-50']}>
-	<header class='flex justify-between gap-4 p-4'>
+<div
+	class={[
+		'bg-surface-50 grid h-screen max-h-screen grid-rows-[1fr_11fr]',
+		isDark && 'bg-surface-900 text-surface-50'
+	]}
+>
+	<header class="flex justify-between gap-4 p-4">
 		<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="/intro/1"
 			>Zum Start</a
 		>
