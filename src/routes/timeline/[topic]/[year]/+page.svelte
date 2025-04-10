@@ -20,7 +20,7 @@
 	<!-- Orientation Box -->
 	<div>
 		<a href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
-			<div class=""><Map region={data.content?.MapRegion} place={data.content?.MapPlace} /></div>
+			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} topic={data.topic}/>
 		</a>
 		<div class="my-12">
 			<span class={['h3 mr-4 font-bold', colors['text'][data.topic]]}>{data.topic_label}</span>
@@ -74,7 +74,7 @@
 					href="{base}/timeline/{data.topic}/{data.prevYear}"
 				>
 					<ArrowLeft class="mr-3" />
-					<span>Vorherige Station</span>
+					<span class="font-semibold">Vorherige Station</span>
 				</a>
 			{/if}
 			{#if data.nextYear}
@@ -83,7 +83,7 @@
 					href="{base}/timeline/{data.topic}/{data.nextYear}"
 				>
 					<ArrowRight class="mr-3" />
-					<span>Nächste Station</span>
+					<span class="font-semibold">Nächste Station</span>
 				</a>
 			{/if}
 		</div>

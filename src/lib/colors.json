@@ -9,6 +9,11 @@
 		"Brunnen": "stroke-error-500",
 		"Neuhaus": "stroke-success-500"
 	},
+	"outlined": {
+		"Heilmann": "preset-outlined-warning-500",
+		"Brunnen": "preset-outlined-error-500",
+		"Neuhaus": "preset-outlined-success-500"
+	},
 	"fill": {
 		"Heilmann": "fill-warning-500",
 		"Brunnen": "fill-error-500",
