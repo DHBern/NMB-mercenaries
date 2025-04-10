@@ -38,7 +38,7 @@
 			!(activeyear >= years[years.length - 1]);
 			activeyear += 10
 		) {
-			if (activeyear < current - 3 || activeyear > current + 3) {
+			if (Math.abs(activeyear - current) > 3) {
 				returnvalues.push(activeyear);
 			}
 		}
