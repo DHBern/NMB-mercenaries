@@ -32,7 +32,7 @@
 		display: none;
 	}
 	:root {
-		--state: 3; /* 1 = java, 2 = rivers, 3 = europe */
+		--state: 3;
 	}
 	:global(.animated-svg circle) {
 		/* r: calc(
