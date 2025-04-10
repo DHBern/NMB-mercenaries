@@ -48,26 +48,6 @@
 	<!-- Region Map -->
 	<svg class="map max-h-[calc(100vh/12*10)]" viewBox="0 0 1000 840">
 		<CirclesSeasia />
-
-		<foreignObject x="100" y="520" width="300" height="40">
-			<a
-				href="../timeline/Neuhaus/1840"
-				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Padangse Bovenlanden, Sumatra</a
-			>
-		</foreignObject>
-<<<<<<< HEAD
-		<foreignObject x="500" y="420" width="300" height="40">
-			<a
-				href="../timeline/Neuhaus/1836"
-				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Banjarmasin, Borneo</a
-			>
-		</foreignObject>
-		<foreignObject x="390" y="630" width="150" height="40">
-			<a
-				href="../timeline/Neuhaus/1829"
-				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia, Java</a
-=======
-
 		<foreignObject x="170" y="520" width="300" height="40">
 			<a
 				href="../timeline/Neuhaus/1840"
@@ -84,7 +64,6 @@
 			<a
 				href="../timeline/Neuhaus/1829"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia</a
->>>>>>> ef9b0e0 (text (map): remove country-labels on seasia map)
 			>
 		</foreignObject>
 
@@ -103,7 +82,7 @@
 	fill: var(--color-surface-600);
 	}
 	.map :global(circle) {
-		fill: #d9d9d9;
+		fill: var(--color-primary-500);
 	}
 
 </style>
