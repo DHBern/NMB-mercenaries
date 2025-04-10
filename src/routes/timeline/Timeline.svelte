@@ -69,10 +69,10 @@
 <svg {width} {height} bind:this={svgElement}>
 	<defs>
 		<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-			<stop offset="0%" style="stop-color: #fff; stop-opacity: 1" />
-			<stop offset="5%" style="stop-color: var(--color-error-50); stop-opacity: 1" />
-			<stop offset="98%" style="stop-color: var(--color-error-50); stop-opacity: 1" />
-			<stop offset="100%" style="stop-color: #fff; stop-opacity: 1" />
+			<stop offset="0%" style="stop-color: #fff; stop-opacity: 0" />
+			<stop offset="5%" style="stop-color: var(--color-error-500); stop-opacity: 0.3" />
+			<stop offset="98%" style="stop-color: var(--color-error-500); stop-opacity: 0.3" />
+			<stop offset="100%" style="stop-color: #fff; stop-opacity: 0" />
 		</linearGradient>
 	</defs>
 	<rect
@@ -105,17 +105,15 @@
 
 	{#each Object.entries(data) as [topic, content], i}
 		<g>
-			<foreignObject x="70" y={(yLocal(topic) || 0) - 11} width="100" height="22">
-				<div
-					class={[
-						'text-sm',
-						colors.text[topic],
-						topic === currenttopic && 'animate-pulse font-bold'
-					]}
-				>
-					{labels[topic]}
-				</div>
-			</foreignObject>
+			<text
+				x="70"
+				y={(yLocal(topic) || 0) + 5}
+				class={[
+					'stroke-error-contrast-50 stroke-[0.2] text-sm',
+					colors.fill[topic],
+					topic === currenttopic && 'animate-pulse font-bold'
+				]}>{labels[topic]}</text
+			>
 			<path
 				d={lineGenerator(topic, content, i)}
 				class={[colors.stroke[topic]]}
