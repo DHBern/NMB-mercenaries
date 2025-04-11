@@ -10,9 +10,9 @@
 	let { children } = $props();
 
 	listen({
-		timer: 5000, //uncomment to test the modal
-		// timer: 60_000 * 3, // 3 minutes
-		cycle: 1500
+		// timer: 5000, //uncomment to test the modal
+		timer: 60_000 * 3, // 3 minutes
+		cycle: 5000
 	});
 
 	function handleGoBack() {
@@ -25,13 +25,13 @@
 	let isMap = $derived(page.url.pathname.includes('/map') ? true : false);
 	let isDetail = $derived(page.url.pathname.includes('/detail') ? true : false);
 
-	let openState = $state(false);
+	let isModalOpen = $state(false);
 	let remaining = $state(10);
 	let intervalID: number | undefined = undefined;
 	let timerToHome: number | undefined = undefined;
 
 	function modalClose() {
-		openState = false;
+		isModalOpen = false;
 		clearInterval(intervalID);
 		clearTimeout(timerToHome);
 	}
@@ -41,12 +41,12 @@
 			clearInterval(intervalID);
 			clearTimeout(timerToHome);
 			remaining = 10;
-			openState = true;
+			isModalOpen = true;
 			intervalID = setInterval(() => {
 				remaining -= 1;
 			}, 1000);
 			timerToHome = setTimeout(() => {
-				openState = false;
+				isModalOpen = false;
 				clearInterval(remaining);
 				goto(base + '/intro/1', { replaceState: true });
 			}, 10000);
@@ -55,8 +55,8 @@
 </script>
 
 <Modal
-	open={openState}
-	onOpenChange={(e) => (openState = e.open)}
+	open={isModalOpen}
+	onOpenChange={(e) => (isModalOpen = e.open)}
 	triggerBase="btn preset-tonal"
 	contentBase="card bg-surface-100-900 p-4 space-y-4 shadow-xl max-w-screen-sm"
 	backdropClasses="backdrop-blur-sm"
