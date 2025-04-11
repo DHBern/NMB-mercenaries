@@ -16,7 +16,7 @@
 	<!-- Image -->
 	<div class="">
 		{#if data.content?.Bild}
-			<a href="{base}#">
+			<a href="{base}/#">
 				{#if data.type === 'anderswo'}
 					<img
 						class="h-full max-h-96 w-full object-contain object-right"
