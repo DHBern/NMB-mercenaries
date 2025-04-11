@@ -10,8 +10,8 @@
 	let { children } = $props();
 
 	listen({
-		// timer: 5000, //uncomment to test the modal
-		timer: 60_000 * 3, // 3 minutes
+		timer: 5000, //uncomment to test the modal
+		// timer: 60_000 * 3, // 3 minutes
 		cycle: 1500
 	});
 
@@ -27,18 +27,22 @@
 
 	let openState = $state(false);
 	let remaining = $state(10);
+	let intervalID: number | undefined = undefined;
 	let timerToHome: number | undefined = undefined;
 
 	function modalClose() {
 		openState = false;
-		clearInterval(remaining);
+		clearInterval(intervalID);
 		clearTimeout(timerToHome);
 	}
 
 	onIdle(() => {
 		if (!page.url.pathname.includes('/intro/1')) {
+			clearInterval(intervalID);
+			clearTimeout(timerToHome);
+			remaining = 10;
 			openState = true;
-			setInterval(() => {
+			intervalID = setInterval(() => {
 				remaining -= 1;
 			}, 1000);
 			timerToHome = setTimeout(() => {
