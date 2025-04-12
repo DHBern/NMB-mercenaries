@@ -2,7 +2,6 @@
 	import '../app.css';
 	import { locales, setLocale } from '$lib/paraglide/runtime';
 	import { page } from '$app/state';
-	import { base } from '$app/paths';
 
 	function handleGoBack() {
 		history.back();
@@ -27,7 +26,7 @@
 		<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="/intro/1"
 			>Zum Start</a
 		>
-		{#if isMap || isDetail}
+		{#if isMap }
 			<button
 				class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold"
 				onclick={handleGoBack}>Zurück</button

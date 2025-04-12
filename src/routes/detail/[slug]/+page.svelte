@@ -14,26 +14,34 @@
 		data.type === 'anderswo'
 			? `/src/lib/images/anderswo/${data.year}/${data.content?.Bild}.jpg`
 			: `/src/lib/images/timeline/${data.content?.Bild}.jpg`;
+
+	function handleGoBack() {
+		history.back();
+	}
 </script>
 
 <!-- Content Box -->
-<div class="bottom-0 pb-30 px-20 absolute h-[90%] grid grid-cols-[5fr_3fr] gap-10 p-10 pr-50">
+<div class="absolute bottom-0 grid h-[90%] grid-cols-[5fr_3fr] gap-10 p-10 px-20 pr-50 pb-30">
 	<!-- Image -->
-	<div class="h-full flex flex-col justify-end overflow-y-auto">
+	<div class="flex h-full flex-col justify-end overflow-y-auto">
 		{#if data.content?.Bild}
-		<div class="flex flex-col justify-center content-center">
-			<img
-			class="max-h-full w-full max-w-full object-contain object-right"
-			src={images[imgPath]}
-			alt={altText}
-			/>
-			<p class="h-10 ml-10 text-sm">{@html data.content?.Eckdaten}</p>
-		</div>
+			<div class="flex flex-col content-center justify-center">
+				<img
+					class="max-h-full w-full max-w-full object-contain object-right"
+					src={images[imgPath]}
+					alt={altText}
+				/>
+				<p class="ml-10 h-10 text-sm">{@html data.content?.Eckdaten}</p>
+			</div>
 		{/if}
 	</div>
 
 	<!-- Content -->
-	<div class="max-h-full flex flex-col justify-end overflow-y-auto pb-15">
+	<div class="flex max-h-full flex-col justify-end overflow-y-auto pb-15">
+		<button
+			class="btn btn-lg preset-outlined-primary-500 mb-10 h-12 w-40 font-semibold"
+			onclick={handleGoBack}>Zurück</button
+		>
 		<h1 class="h1 mb-4">{@html data.content?.Titel}</h1>
 		{#if data.content?.Text}
 			<p>{@html data.content?.Text}</p>
