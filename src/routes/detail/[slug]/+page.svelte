@@ -17,7 +17,7 @@
 </script>
 
 <!-- Content Box -->
-<div class="bottom-0 pb-20 px-20 absolute h-[90%] grid grid-cols-[5fr_3fr] gap-10 p-10 pr-50">
+<div class="bottom-0 pb-30 px-20 absolute h-[90%] grid grid-cols-[5fr_3fr] gap-10 p-10 pr-50">
 	<!-- Image -->
 	<div class="h-full flex flex-col justify-end overflow-y-auto">
 		{#if data.content?.Bild}
