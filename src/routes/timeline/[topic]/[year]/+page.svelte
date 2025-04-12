@@ -35,7 +35,7 @@
 		<div class="max-h-full overflow-y-auto">
 			<!-- Content -->
 			<h1 class="h1 mb-4">{data.content?.Titel}</h1>
-			<p class="">
+			<p>
 				{@html data.content?.Text}
 			</p>
 
