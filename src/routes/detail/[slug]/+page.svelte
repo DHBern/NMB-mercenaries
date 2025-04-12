@@ -21,16 +21,19 @@
 	<!-- Image -->
 	<div class="h-full flex flex-col justify-end overflow-y-auto">
 		{#if data.content?.Bild}
+		<div class="flex flex-col justify-center content-center">
 			<img
-				class="max-h-full w-full max-w-full object-contain object-right"
-				src={images[imgPath]}
-				alt={altText}
+			class="max-h-full w-full max-w-full object-contain object-right"
+			src={images[imgPath]}
+			alt={altText}
 			/>
+			<p class="h-10 ml-10 text-sm">{@html data.content?.Eckdaten}</p>
+		</div>
 		{/if}
 	</div>
 
 	<!-- Content -->
-	<div class="max-h-full flex flex-col justify-end overflow-y-auto">
+	<div class="max-h-full flex flex-col justify-end overflow-y-auto pb-15">
 		<h1 class="h1 mb-4">{@html data.content?.Titel}</h1>
 		{#if data.content?.Text}
 			<p>{@html data.content?.Text}</p>
