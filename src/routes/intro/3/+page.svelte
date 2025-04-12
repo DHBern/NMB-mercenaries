@@ -1,9 +1,11 @@
 <script lang="ts">
 	import colors from '$lib/colors.json';
-	import heilmann from '$lib/images/timeline/Heilmann_intro.jpg';
-	import neuhaus from '$lib/images/timeline/Neuhaus_intro.jpg';
-	import brunnen from '$lib/images/timeline/Biel_intro provisorisch.jpg';
+	import heilmann from '$lib/images/portrait-heilmann-raster.png';
+	import neuhaus from '$lib/images/portrait-neuhaus-raster.png';
+	import brunnen from '$lib/images/portrait-brunnen-raster.png';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import { onMount } from 'svelte';
+
 </script>
 
 <div class="mx-auto pt-30 w-full">
