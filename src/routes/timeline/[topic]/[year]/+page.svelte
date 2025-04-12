@@ -5,7 +5,8 @@
 	import Map from './Map.svelte';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
-	import Dot from './Dot.svelte'
+	import Dot from './Dot.svelte';
+	import MovingBox from './MovingBox.svelte';
 	import colors from '$lib/colors.json';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
@@ -25,19 +26,20 @@
 		<div class="my-2">
 			<span class="text-5xl font-bold">{data.content?.Jahr}</span>
 			<span class="text-4xl font-bold">in {data.content?.Ort}</span>
-			{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}>({data.topic_label})</span>{/if}
+			{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
+					>({data.topic_label})</span
+				>{/if}
 		</div>
 
 		<!-- Gleichzeitig anderswo -->
-		<div class="rounded ml-5 pl-5 pt-8 mt-0 border-l-2 border-surface-200">
-			<h2 class="text-lg">{m.close_livid_lemur_pull()}</h2>
-			{#each data.anderswo as item}
-				<div class="flex gap-4 items-center h-10 p-0">
-					<Dot size={24} color='black' />
-					<a class="anchor text-lg" href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
-						>{@html item}</a
-					>
-				</div>
+		<div class="border-surface-200 h-60 ml-5 border-l-2 pt-4 pl-5">
+			<h2 class="text-lg font-bold">{m.close_livid_lemur_pull()}</h2>
+			{#each data.anderswo as item, idx}
+				<MovingBox {idx}>
+						<a class="h-14 p-0 anchor text-lg flex items-center gap-2" href="{base}/detail/{encodeURIComponent(item)}_{data.year}">
+							<Dot size={24} color="black" />{@html item}
+						</a>
+				</MovingBox>
 			{/each}
 		</div>
 	</div>
