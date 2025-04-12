@@ -23,16 +23,15 @@
 <!-- Content Box -->
 <div class="absolute bottom-0 grid h-[90%] grid-cols-[5fr_3fr] gap-10 p-10 px-20 pr-50 pb-30">
 	<!-- Image -->
-	<div class="flex h-full flex-col justify-end overflow-y-auto">
+	 <!-- //! overflow-y-hidden is a hack to restrict the image to the height of the container. Somehow it is not working otherwise... -->
+	<div class="flex h-full flex-col justify-end overflow-y-hidden">
 		{#if data.content?.Bild}
-			<div class="flex flex-col content-center justify-center">
-				<img
-					class="max-h-full w-full max-w-full object-contain object-right"
-					src={images[imgPath]}
-					alt={altText}
-				/>
-				<p class="ml-10 h-10 text-sm">{@html data.content?.Eckdaten}</p>
-			</div>
+			<img
+				class="max-h-full w-full max-w-full object-contain object-right"
+				src={images[imgPath]}
+				alt={altText}
+			/>
+			<p class="ml-10 h-10 text-right text-sm">{@html data.content?.Eckdaten}</p>
 		{/if}
 	</div>
 
