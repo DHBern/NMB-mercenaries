@@ -18,7 +18,6 @@
 		// el?.style.setProperty('stroke', `var(--color-${color}-600)`);
 		// el?.style.setProperty('stroke-width', 2);
 		el?.addEventListener('click', () => {
-			console.log(url);
 			goto(url);
 		});
 	}
