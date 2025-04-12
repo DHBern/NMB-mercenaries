@@ -26,12 +26,12 @@
 		<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="/intro/1"
 			>Zum Start</a
 		>
-		{#if isMap }
+		<!-- {#if isMap }
 			<button
 				class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold"
 				onclick={handleGoBack}>Zurück</button
 			>
-		{/if}
+		{/if} -->
 		<div class="flex gap-4">
 			{#each locales as locale}
 				<button

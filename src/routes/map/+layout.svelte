@@ -11,7 +11,7 @@
 	{@render children()}
 
 	<button
-	class="absolute bottom-10 right-20 btn btn-lg preset-filled-primary-50 h-12 font-semibold"
+	class="absolute bottom-6 left-20 btn w-50 h-15 text-2xl preset-outlined-primary-500 h-12 font-semibold"
 	onclick={handleGoBack}>Zurück</button
 	>
 
