@@ -1,13 +1,9 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import colors from '$lib/colors.json';
 	import heilmann from '$lib/images/timeline/Heilmann_intro.jpg';
 	import neuhaus from '$lib/images/timeline/Neuhaus_intro.jpg';
 	import brunnen from '$lib/images/timeline/Biel_intro provisorisch.jpg';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-
-
-	let { data }: { data: PageData } = $props();
 </script>
 
 <div class="mx-auto pt-30 w-full">
