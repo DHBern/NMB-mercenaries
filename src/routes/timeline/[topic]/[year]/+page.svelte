@@ -27,7 +27,7 @@
 			<span class="text-5xl font-bold">{data.content?.Jahr}</span>
 			<span class="text-4xl font-bold">in {data.content?.Ort}</span>
 			{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
-					>({data.topic_label})</span
+					>({@html data.topic_label})</span
 				>{/if}
 		</div>
 
