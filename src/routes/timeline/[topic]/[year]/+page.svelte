@@ -23,10 +23,9 @@
 			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} topic={data.topic} />
 		</a>
 		<div class="my-2">
-			<span class="text-5xl font-bold">{data.content?.Jahr}</span> in
-			<!-- <br /> -->
-			<!-- <span class={['h3 font-bold', colors['text'][data.topic]]}>{data.topic_label},</span> -->
-			<span class="text-4xl font-bold">{data.content?.Ort}</span>
+			<span class="text-5xl font-bold">{data.content?.Jahr}</span>
+			<span class="text-4xl font-bold">in {data.content?.Ort}</span>
+			{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}>({data.topic_label})</span>{/if}
 		</div>
 
 		<!-- Gleichzeitig anderswo -->
