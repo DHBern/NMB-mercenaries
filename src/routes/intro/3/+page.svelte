@@ -17,7 +17,7 @@
 		</p>
 		<div class="flex-cols-3 my-5 mb-15 flex justify-around gap-10">
 			<div class="flex flex-col items-center gap-3">
-				<img class="max-h-50 max-w-50" src={heilmann} alt="heilmann" />
+				<a href="../timeline/Heilmann/1785"><img class="max-h-50 max-w-50" src={heilmann} alt="heilmann" /></a>
 				<a
 					class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Heilmann']]}
 					href="../timeline/Heilmann/1785"
@@ -28,7 +28,7 @@
 				>
 			</div>
 			<div class="flex flex-col items-center gap-3">
-				<img class="max-h-50 max-w-50" src={neuhaus} alt="neuhaus" />
+				<a href="../timeline/Neuhaus/1794"><img class="max-h-50 max-w-50" src={neuhaus} alt="neuhaus" /></a>
 				<a
 					class={['btn btn-lg text-xl', colors['preset-filled']['Neuhaus']]}
 					href="../timeline/Neuhaus/1794">
@@ -36,7 +36,9 @@
 				>
 			</div>
 			<div class="flex flex-col items-center gap-3">
-				<img class="max-h-50 max-w-50" src={brunnen} alt="brunnen" />
+				<a href="../timeline/Brunnen/1798">
+					<img class="max-h-50 max-w-50" src={brunnen} alt="brunnen" />
+				</a>
 				<a
 					class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Brunnen']]}
 					href="../timeline/Brunnen/1798"><ArrowRight class="mr-3" /><span>Ich bleibe in Biel</span></a
