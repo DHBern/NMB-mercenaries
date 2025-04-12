@@ -10,10 +10,10 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<div class="mx-auto">
-	<p class="text-3xl">Entscheide dich!</p>
+<div class="mx-auto pt-30 w-full">
+	<p class="text-3xl font-bold">Wie hättest du entschieden?</p>
 	<div>
-		<p class="pt-5 text-2xl">
+		<p class="text-2xl mb-30 pt-5 w-250">
 			Folge einem der beiden Bieler Söldner und erfahre mehr über die Folgen seiner Entscheide. Oder
 			bleib in Biel und lass den Vennerbrunnen in der Altstadt erzählen.
 		</p>
@@ -46,7 +46,7 @@
 			</div>
 		</div>
 	</div>
-	<p class="pt-5 text-lg">
+	<p class="text-lg mb-30 pt-5 pl-50 w-300">
 		Du kannst jederzeit zwischen Zeit, Mensch und Ort wechseln. Denn es gibt nicht den vorgegebenen
 		Lebenslauf, sondern Lebensrealitäten, die sich je nach Ort und getroffenem Entscheid voneinander
 		unterscheiden.
