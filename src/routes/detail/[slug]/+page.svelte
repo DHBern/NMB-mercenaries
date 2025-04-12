@@ -17,12 +17,12 @@
 </script>
 
 <!-- Content Box -->
-<div class="grid grid-cols-[1fr_1fr] gap-10 p-10 pr-50">
+<div class="bottom-0 pb-20 px-20 absolute h-[90%] grid grid-cols-[5fr_3fr] gap-10 p-10 pr-50">
 	<!-- Image -->
-	<div class="max-h-full h-full flex justify-center items-center">
+	<div class="h-full flex flex-col justify-end overflow-y-auto">
 		{#if data.content?.Bild}
 			<img
-				class="h-full max-h-170 w-full max-w-full object-contain object-right"
+				class="max-h-full w-full max-w-full object-contain object-right"
 				src={images[imgPath]}
 				alt={altText}
 			/>
@@ -30,8 +30,10 @@
 	</div>
 
 	<!-- Content -->
-	<div class="max-h-full overflow-y-auto">
+	<div class="max-h-full flex flex-col justify-end overflow-y-auto">
 		<h1 class="h1 mb-4">{@html data.content?.Titel}</h1>
-		<p>{@html data.content?.Text}</p>
+		{#if data.content?.Text}
+			<p>{@html data.content?.Text}</p>
+		{/if}
 	</div>
 </div>
