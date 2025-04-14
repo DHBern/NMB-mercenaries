@@ -39,7 +39,7 @@
 					href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
 				>
 					<Dot size={24} color="black" />
-					<span class="pb-3">{item}</span>
+					<span>{item}</span>
 				</a>
 			{/each}
 		</div>
