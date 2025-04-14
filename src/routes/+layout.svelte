@@ -24,7 +24,7 @@
 	]}
 >
 	<header class="flex justify-between gap-4 p-4">
-		<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="/intro/1"
+		<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="{base}/intro/1"
 			>Zum Start</a
 		>
 		{#if isMap || isDetail}
