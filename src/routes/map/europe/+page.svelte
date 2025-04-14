@@ -5,7 +5,7 @@
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
 	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
 	import { base } from '$app/paths';
-	import colors from '$lib/colors.json';
+	import { colors } from '$lib/metadata.json';
 
 	let { data }: { data: PageData } = $props();
 	let color = $state();
