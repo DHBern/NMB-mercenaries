@@ -38,7 +38,13 @@
 					class="anchor flex h-12 items-center gap-2 p-0 text-lg"
 					href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
 				>
-					<Dot size={24} color="black" />
+					<span class="relative flex size-3">
+						<span
+							class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-75"
+						></span>
+						<span class="relative inline-flex size-3 rounded-full bg-black"></span>
+					</span>
+					<!-- <Dot size={24} color="black" /> -->
 					<span>{item}</span>
 				</a>
 			{/each}
