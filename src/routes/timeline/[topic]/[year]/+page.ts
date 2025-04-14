@@ -30,7 +30,7 @@ export const load = (async ({ params }) => {
 	const nextYear = data[topic][contentIndex + 1]?.Jahr;
 	const prevYear = data[topic][contentIndex - 1]?.Jahr;
 
-	let anderswo = anderswoAll.filter((item) => item.Jahr === year).map((item) => parse(item.Titel));
+	const anderswo = anderswoAll.filter((item) => item.Jahr === year).map((item) => item.Titel);
 
 	if (content?.Text) {
 		content.Text = await parse(content.Text);
