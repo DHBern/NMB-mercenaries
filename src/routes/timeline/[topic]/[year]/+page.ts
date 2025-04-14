@@ -13,13 +13,13 @@ export const load = (async ({ params }) => {
 	let topic_label;
 	switch (topic) {
 		case 'Heilmann':
-			topic_label = 'G. F. Heilmann';
+			topic_label = 'G.&nbsp;F.&nbsp;Heilmann';
 			break;
 		case 'Brunnen':
 			topic_label = '';
 			break;
 		case 'Neuhaus':
-			topic_label = 'F. E. Neuhaus';
+			topic_label = 'F.&nbsp;E.&nbsp;Neuhaus';
 			break;
 	}
 

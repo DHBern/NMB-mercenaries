@@ -5,7 +5,7 @@
 	import Map from './Map.svelte';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
-	import { Dot } from '@lucide/svelte';
+	import Dot from './Dot.svelte';
 	import { colors } from '$lib/metadata.json';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
@@ -16,17 +16,32 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-10">
+<div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-15">
 	<!-- Orientation Box -->
 	<div>
 		<a href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
-			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} topic={data.topic}/>
+			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} topic={data.topic} />
 		</a>
-		<div class="my-12">
-			<span class={['h3 mr-4 font-bold', colors['text'][data.topic]]}>{data.topic_label}</span>
-			<br />
-			<span class="h1 mr-4 font-bold">{data.content?.Ort}</span>
-			<span class="h2 font-bold">{data.content?.Jahr}</span>
+		<div class="my-2">
+			<span class="text-5xl font-bold">{data.content?.Jahr}</span>
+			<span class="text-4xl font-bold">in {data.content?.Ort}</span>
+			{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
+					>({@html data.topic_label})</span
+				>{/if}
+		</div>
+
+		<!-- Gleichzeitig anderswo -->
+		<div class="border-surface-200 ml-5 h-60 border-l-2 pt-4 pl-5">
+			<h2 class="text-lg font-bold">{m.close_livid_lemur_pull()}</h2>
+			{#each data.anderswo as item}
+				<a
+					class="anchor flex h-12 items-center gap-2 p-0 text-lg"
+					href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
+				>
+					<Dot size={24} color="black" />
+					<span>{item}</span>
+				</a>
+			{/each}
 		</div>
 	</div>
 
@@ -35,22 +50,9 @@
 		<div class="max-h-full overflow-y-auto">
 			<!-- Content -->
 			<h1 class="h1 mb-4">{data.content?.Titel}</h1>
-			<p class="">
+			<p>
 				{@html data.content?.Text}
 			</p>
-
-			<!-- Gleichzeitig anderswo -->
-			<h2 class="h2 mt-6 mb-4">{m.close_livid_lemur_pull()}</h2>
-			<ul class="list-inside list-disc space-y-2">
-				{#each data.anderswo as item}
-					<div class="m-0 block h-10 p-0">
-						<Dot class="inline" size="120px" />
-						<a class="anchor" href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
-							>{@html item}</a
-						>
-					</div>
-				{/each}
-			</ul>
 		</div>
 
 		<!-- Image -->
@@ -58,7 +60,7 @@
 			{#if data.content?.Bild}
 				<a href="{base}/detail/{data.content?.Bild}">
 					<img
-						class="h-full max-h-96 w-full object-contain object-right"
+						class="h-full max-h-180 w-full object-contain object-right"
 						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
 						alt="Detailbild"
 					/>

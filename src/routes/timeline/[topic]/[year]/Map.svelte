@@ -6,7 +6,6 @@
 
 	let { region, place, topic } = $props();
 	let elPlace = $state();
-	console.log(region, place, topic)
 
 	// Style highlighted circles
 	$effect(() => {

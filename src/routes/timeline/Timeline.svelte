@@ -57,7 +57,7 @@
 		]);
 		if (topic === 'Brunnen') {
 			coords = [
-				[x(x.domain()[0]), y(topic) as number],
+				[x(x.domain()[0]) + 40, y(topic) as number],
 				...coords,
 				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
 			];
@@ -95,12 +95,12 @@
 		stroke-width="1"
 	/>
 	{#each ['Up', 'Down'] as wrapper}
-		<foreignObject x="1" y={(y(wrapper) || 0) - 11} width="100" height="22">
-			<div class={['text-sm', 'text-gray-500']}>Global</div>
+		<foreignObject x="1" y={(y(wrapper) || 0) - 11} width="100" height="30">
+			<div class={['text-sm text-gray-500']}>Global</div>
 		</foreignObject>
 	{/each}
-	<foreignObject x="1" y={(y('Brunnen') || 0) - 11} width="100" height="22">
-		<div class={['text-sm', 'text-gray-500']}>Lokal</div>
+	<foreignObject x="1" y={(y('Brunnen') || 0) - 11} width="100" height="30">
+		<div class={['text-sm text-gray-500']}>Lokal</div>
 	</foreignObject>
 
 	{#each Object.entries(data) as [topic, content], i}
@@ -109,7 +109,7 @@
 				x="70"
 				y={(yLocal(topic) || 0) + 5}
 				class={[
-					'stroke-error-contrast-50 stroke-[0.4] text-lg',
+					'text-lg font-bold',
 					colors.fill[topic],
 					topic === currenttopic && 'animate-pulse font-bold'
 				]}>{labels[topic]}</text
