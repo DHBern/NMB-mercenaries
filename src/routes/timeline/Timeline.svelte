@@ -55,6 +55,15 @@
 			x(datapoint.Jahr),
 			(datapoint.Ort === 'Biel' ? yLocal(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
 		]);
+		
+		// Hack to avoid immediate slope at the beginning of the Heilmann-line
+		if (topic === 'Heilmann') {
+			coords = [
+				coords[0],
+				[coords[1][0]-20, coords[0][1]],
+				...coords.splice(1)
+			];
+		}
 		if (topic === 'Brunnen') {
 			coords = [
 				[x(x.domain()[0]) + 40, y(topic) as number],
