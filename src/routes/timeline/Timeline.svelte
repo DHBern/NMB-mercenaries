@@ -109,7 +109,7 @@
 				x="70"
 				y={(yLocal(topic) || 0) + 5}
 				class={[
-					'stroke-error-contrast-50 stroke-[0.4] text-lg',
+					'text-lg font-bold',
 					colors.fill[topic],
 					topic === currenttopic && 'animate-pulse font-bold'
 				]}>{labels[topic]}</text
