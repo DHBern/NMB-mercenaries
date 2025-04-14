@@ -57,7 +57,7 @@
 		]);
 		if (topic === 'Brunnen') {
 			coords = [
-				[x(x.domain()[0]), y(topic) as number],
+				[x(x.domain()[0]) + 40, y(topic) as number],
 				...coords,
 				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
 			];
