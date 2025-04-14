@@ -6,6 +6,12 @@
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
+	let xcoordslabel = {
+		Heilmann: '90',
+		Brunnen: '180',
+		Neuhaus: '290'
+	};
+
 	const PADDING = 30;
 	const GUTTER = 220;
 
@@ -66,7 +72,7 @@
 		}
 		if (topic === 'Brunnen') {
 			coords = [
-				[x(x.domain()[0]) + 40, y(topic) as number],
+				[x(x.domain()[0]) + 140, y(topic) as number],
 				...coords,
 				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
 			];
@@ -112,10 +118,17 @@
 		<div class={['text-sm text-gray-500']}>Lokal</div>
 	</foreignObject>
 
+	<path
+		d={line()([[100,yLocal('Brunnen')], [170,yLocal('Brunnen')]])}
+		class={[colors.stroke['Brunnen']]}
+		stroke-width="2"
+		fill="none"
+		stroke-linecap="round"
+	/>
 	{#each Object.entries(data) as [topic, content], i}
 		<g>
 			<text
-				x="70"
+				x={xcoordslabel[topic]}
 				y={(yLocal(topic) || 0) + 5}
 				class={[
 					'text-lg font-bold',
