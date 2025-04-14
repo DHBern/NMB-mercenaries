@@ -6,7 +6,6 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import Dot from './Dot.svelte';
-	import MovingBox from './MovingBox.svelte';
 	import colors from '$lib/colors.json';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
@@ -35,11 +34,10 @@
 		<div class="border-surface-200 h-60 ml-5 border-l-2 pt-4 pl-5">
 			<h2 class="text-lg font-bold">{m.close_livid_lemur_pull()}</h2>
 			{#each data.anderswo as item, idx}
-				<MovingBox {idx}>
-						<a class="h-14 p-0 anchor text-lg flex items-center gap-2" href="{base}/detail/{encodeURIComponent(item)}_{data.year}">
-							<Dot size={24} color="black" />{@html item}
-						</a>
-				</MovingBox>
+				<a class="h-12 p-0 anchor text-lg flex items-center gap-2" href="{base}/detail/{encodeURIComponent(item)}_{data.year}">
+					<Dot size={24} color="black" />
+					<span class="pb-3">{@html item}</span>
+				</a>
 			{/each}
 		</div>
 	</div>
