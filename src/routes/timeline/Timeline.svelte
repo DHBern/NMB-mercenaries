@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { scaleLinear, scalePoint, line, axisBottom, select } from 'd3';
 	import data from '$lib/data/main.json';
-	import colors from '$lib/colors.json';
+	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
-	const PADDING = 20;
+	const PADDING = 30;
 	const GUTTER = 220;
 
 	const years = [
@@ -15,47 +15,107 @@
 	let x = $derived(
 		scaleLinear()
 			.domain([years[0], years[years.length - 1]])
-			.range([PADDING + GUTTER, width - PADDING])
+			.range([GUTTER, width - PADDING])
 	);
 	let y = $derived(
 		scalePoint()
 			.domain(['Up', 'Heilmann', 'Brunnen', 'Neuhaus', 'Down'])
-			.range([0, height - PADDING])
-			.padding(0.4)
+			.range([PADDING, height - PADDING])
+			.padding(0.2)
+	);
+	let yLocal = $derived(
+		scalePoint()
+			.domain(['Up', 'Heilmann', 'Brunnen', 'Neuhaus', 'Down'])
+			.range([PADDING, height - PADDING])
+			.padding(1.5)
 	);
 	let svgElement: SVGSVGElement;
 	let gx: SVGGElement;
+	const generateTickValues = (current: number) => {
+		let returnvalues = [];
+		for (let i = Math.ceil(years[0] / 10) * 10; i <= years[years.length - 1]; i += 10) {
+			if (Math.abs(i - current) > 3) {
+				returnvalues.push(i);
+			}
+		}
+		return returnvalues;
+	};
 	$effect(() => {
 		if (gx) {
-			select(gx).call(axisBottom(x).tickFormat((d) => `${d}`));
+			select(gx).call(
+				axisBottom(x)
+					.tickFormat((d) => `${d}`)
+					.tickValues(generateTickValues(currentyear))
+			);
 		}
 	});
+
+	const lineGenerator = (topic: string, content: any[], index: number) => {
+		let coords = content.map((datapoint) => [
+			x(datapoint.Jahr),
+			(datapoint.Ort === 'Biel' ? yLocal(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
+		]);
+		if (topic === 'Brunnen') {
+			coords = [
+				[x(x.domain()[0]), y(topic) as number],
+				...coords,
+				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
+			];
+		}
+		return line()(coords);
+	};
 </script>
 
 <svg {width} {height} bind:this={svgElement}>
+	<defs>
+		<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+			<stop offset="0%" style="stop-color: #fff; stop-opacity: 0" />
+			<stop offset="5%" style="stop-color: var(--color-error-500); stop-opacity: 0.3" />
+			<stop offset="98%" style="stop-color: var(--color-error-500); stop-opacity: 0.3" />
+			<stop offset="100%" style="stop-color: #fff; stop-opacity: 0" />
+		</linearGradient>
+	</defs>
+	<rect
+		x={0}
+		y={(yLocal('Heilmann') as number) - 20}
+		width={width - PADDING + 18}
+		height={yLocal.step() * 3}
+		fill="url(#gradient)"
+	/>
+	<g bind:this={gx} transform="translate(0,{height - PADDING})" class="x-axis text-sm" />
+	<text class="translate-x-[-2ch] font-sans text-xl font-black" x={x(currentyear)} y={height - 5}>
+		{currentyear}
+	</text>
+	<line
+		x1={x(currentyear)}
+		y1={0}
+		x2={x(currentyear)}
+		y2={height - PADDING + 6}
+		stroke="black"
+		stroke-width="1"
+	/>
 	{#each ['Up', 'Down'] as wrapper}
 		<foreignObject x="1" y={(y(wrapper) || 0) - 11} width="100" height="22">
-			<div class={['text-sm', 'text-gray-500']}>Andernorts</div>
+			<div class={['text-sm', 'text-gray-500']}>Global</div>
 		</foreignObject>
 	{/each}
 	<foreignObject x="1" y={(y('Brunnen') || 0) - 11} width="100" height="22">
-		<div class={['text-sm', 'text-gray-500']}>Biel</div>
+		<div class={['text-sm', 'text-gray-500']}>Lokal</div>
 	</foreignObject>
 
 	{#each Object.entries(data) as [topic, content], i}
 		<g>
-			<foreignObject x="70" y={(y(topic) || 0) - 11} width="100" height="22">
-				<div class={['text-sm', topic === currenttopic ? colors.text[topic] : 'text-gray-500']}>
-					{topic}
-				</div>
-			</foreignObject>
+			<text
+				x="70"
+				y={(yLocal(topic) || 0) + 5}
+				class={[
+					'stroke-error-contrast-50 stroke-[0.4] text-lg',
+					colors.fill[topic],
+					topic === currenttopic && 'animate-pulse font-bold'
+				]}>{labels[topic]}</text
+			>
 			<path
-				d={line()(
-					content.map((datapoint) => [
-						x(datapoint.Jahr),
-						(datapoint.Ort === 'Biel' ? y(topic) : y(i === 0 ? 'Up' : 'Down')) || 0
-					])
-				)}
+				d={lineGenerator(topic, content, i)}
 				class={[colors.stroke[topic]]}
 				stroke-width="2"
 				fill="none"
@@ -68,13 +128,12 @@
 					<circle
 						class:animate-pulse={current}
 						cx={x(datapoint.Jahr)}
-						cy={(datapoint.Ort === 'Biel' ? y(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
-						r={current ? 12 : 6}
+						cy={(datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
+						r={current ? 18 : 8}
 						class={[colors.fill[topic]]}
 					/>
 				</a>
 			{/each}
 		</g>
 	{/each}
-	<g bind:this={gx} transform="translate(0,{height - PADDING})" class="x-axis" />
 </svg>

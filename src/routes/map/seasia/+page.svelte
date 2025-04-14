@@ -23,9 +23,9 @@
 	}
 
 	onMount(() => {
-		applyStyles(document.querySelector('#seasia-batavia'), 'success', '../timeline/Neuhaus/1840');
-		applyStyles(document.querySelector('#seasia-banjarmasin'), 'success', '../timeline/Neuhaus/1836');
-		applyStyles(document.querySelector('#seasia-padangse'), 'success', '../timeline/Neuhaus/1829');
+		applyStyles(document.querySelector('#seasia-batavia'), 'success', '{base}/timeline/Neuhaus/1840');
+		applyStyles(document.querySelector('#seasia-banjarmasin'), 'success', '{base}/timeline/Neuhaus/1836');
+		applyStyles(document.querySelector('#seasia-padangse'), 'success', '{base}/timeline/Neuhaus/1829');
 	});
 </script>
 
@@ -49,19 +49,19 @@
 		<CirclesSeasia />
 		<foreignObject x="170" y="520" width="300" height="40">
 			<a
-				href="../timeline/Neuhaus/1840"
+				href="{base}/timeline/Neuhaus/1840"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Padangse Bovenlanden</a
 			>
 		</foreignObject>
 		<foreignObject x="565" y="420" width="300" height="40">
 			<a
-				href="../timeline/Neuhaus/1836"
+				href="{base}/timeline/Neuhaus/1836"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Banjarmasin</a
 			>
 		</foreignObject>
 		<foreignObject x="440" y="630" width="150" height="40">
 			<a
-				href="../timeline/Neuhaus/1829"
+				href="{base}/timeline/Neuhaus/1829"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia</a
 			>
 		</foreignObject>

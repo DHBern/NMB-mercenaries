@@ -5,7 +5,7 @@
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
 	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
 	import { base } from '$app/paths';
-	import colors from '$lib/colors.json';
+	import { colors } from '$lib/metadata.json';
 
 	let { data }: { data: PageData } = $props();
 	let color = $state();
@@ -26,52 +26,52 @@
 		applyStyles(
 			document.querySelector('#europe-biel'),
 			'error',
-			'../timeline/Brunnen/1798'
+			'{base}/timeline/Brunnen/1798'
 		);
 		applyStyles(
 			document.querySelector('#europe-neapel'),
 			'warning',
-			'../timeline/Heilmann/1829'
+			'{base}/timeline/Heilmann/1829'
 		);
 		applyStyles(
 			document.querySelector('#europe-heidelberg'),
 			'warning',
-			'../timeline/Heilmann/1804'
+			'{base}/timeline/Heilmann/1804'
 		);
 		applyStyles(
 			document.querySelector('#europe-wien'),
 			'warning',
-			'../timeline/Heilmann/1814'
+			'{base}/timeline/Heilmann/1814'
 		);
 		applyStyles(
 			document.querySelector('#europe-halle'),
 			'warning',
-			'../timeline/Heilmann/1829'
+			'{base}/timeline/Heilmann/1829'
 		);
 		applyStyles(
 			document.querySelector('#europe-baryssau'),
 			'success',
-			'../timeline/Neuhaus/1812'
+			'{base}/timeline/Neuhaus/1812'
 		);
 		applyStyles(
 			document.querySelector('#europe-franche'),
 			'success',
-			'../timeline/Neuhaus/1815'
+			'{base}/timeline/Neuhaus/1815'
 		);
 		applyStyles(
 			document.querySelector('#europe-hertogenbosch'),
 			'success',
-			'../timeline/Neuhaus/1816'
+			'{base}/timeline/Neuhaus/1816'
 		);
 		applyStyles(
 			document.querySelector('#europe-hulst'),
 			'success',
-			'../timeline/Neuhaus/1831'
+			'{base}/timeline/Neuhaus/1831'
 		);
 		applyStyles(
 			document.querySelector('#europe-rotterdam'),
 			'success',
-			'../timeline/Neuhaus/1843'
+			'{base}/timeline/Neuhaus/1843'
 		);
 	});
 </script>
@@ -97,61 +97,61 @@
 
 		<foreignObject x="460" y="450" width="150" height="40">
 			<a
-				href="../timeline/Brunnen/1798"
+				href="{base}/timeline/Brunnen/1798"
 				class={['btn font-semibold', colors['preset-filled']['Brunnen']]}>Biel, Hofwil</a
 			>
 		</foreignObject>
 		<foreignObject x="445" y="585" width="150" height="40">
 			<a
-				href="../timeline/Heilmann/1829"
+				href="{base}/timeline/Heilmann/1829"
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Neapel, Nola</a
 			>
 		</foreignObject>
 		<foreignObject x="490" y="350" width="150" height="40">
 			<a
-				href="../timeline/Heilmann/1804"
+				href="{base}/timeline/Heilmann/1804"
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Heidelberg</a
 			>
 		</foreignObject>
 		<foreignObject x="680" y="415" width="100" height="40">
 			<a
-				href="../timeline/Heilmann/1814"
+				href="{base}/timeline/Heilmann/1814"
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Wien</a
 			>
 		</foreignObject>
 		<foreignObject x="570" y="240" width="100" height="40">
 			<a
-				href="../timeline/Heilmann/1829"
+				href="{base}/timeline/Heilmann/1829"
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Halle</a
 			>
 		</foreignObject>
 		<foreignObject x="790" y="140" width="100" height="40">
 			<a
-				href="../timeline/Neuhaus/1812"
+				href="{base}/timeline/Neuhaus/1812"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Baryssau</a
 			>
 		</foreignObject>
 		<foreignObject x="230" y="390" width="180" height="40">
 			<a
-				href="../timeline/Neuhaus/1815"
+				href="{base}/timeline/Neuhaus/1815"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Franche-Comté</a
 			>
 		</foreignObject>
 		<foreignObject x="380" y="290" width="180" height="40">
 			<a
-				href="../timeline/Neuhaus/1816"
+				href="{base}/timeline/Neuhaus/1816"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>‘s-Hertogenbosch</a
 			>
 		</foreignObject>
 		<foreignObject x="270" y="300" width="100" height="40">
 			<a
-				href="../timeline/Neuhaus/1831"
+				href="{base}/timeline/Neuhaus/1831"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Hulst</a
 			>
 		</foreignObject>
 		<foreignObject x="370" y="230" width="150" height="40">
 			<a
-				href="../timeline/Neuhaus/1843"
+				href="{base}/timeline/Neuhaus/1843"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Rotterdam</a
 			>
 		</foreignObject>

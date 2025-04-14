@@ -6,7 +6,7 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import Dot from './Dot.svelte';
-	import colors from '$lib/colors.json';
+	import { colors } from '$lib/metadata.json';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,

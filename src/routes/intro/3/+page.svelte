@@ -1,5 +1,6 @@
 <script lang="ts">
-	import colors from '$lib/colors.json';
+	import type { PageData } from './$types';
+	import { colors } from '$lib/metadata.json';
 	import heilmann from '$lib/images/portrait-heilmann.jpg';
 	import neuhaus from '$lib/images/portrait-neuhaus.jpg';
 	import brunnen from '$lib/images/portrait-brunnen.jpg';
