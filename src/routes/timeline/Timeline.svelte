@@ -27,7 +27,7 @@
 		scalePoint()
 			.domain(['Up', 'Heilmann', 'Brunnen', 'Neuhaus', 'Down'])
 			.range([PADDING, height - PADDING])
-			.padding(2)
+			.padding(1.5)
 	);
 	let svgElement: SVGSVGElement;
 	let gx: SVGGElement;
@@ -77,12 +77,12 @@
 	</defs>
 	<rect
 		x={0}
-		y={(yLocal('Heilmann') as number) - 13}
+		y={(yLocal('Heilmann') as number) - 20}
 		width={width - PADDING + 18}
 		height={yLocal.step() * 3}
 		fill="url(#gradient)"
 	/>
-	<g bind:this={gx} transform="translate(0,{height - PADDING})" class="x-axis" />
+	<g bind:this={gx} transform="translate(0,{height - PADDING})" class="x-axis text-sm" />
 	<text class="translate-x-[-2ch] font-sans text-xl font-black" x={x(currentyear)} y={height - 5}>
 		{currentyear}
 	</text>
@@ -109,7 +109,7 @@
 				x="70"
 				y={(yLocal(topic) || 0) + 5}
 				class={[
-					'stroke-error-contrast-50 stroke-[0.2] text-sm',
+					'stroke-error-contrast-50 stroke-[0.4] text-lg',
 					colors.fill[topic],
 					topic === currenttopic && 'animate-pulse font-bold'
 				]}>{labels[topic]}</text
