@@ -57,7 +57,7 @@
 		]);
 		if (topic === 'Brunnen') {
 			coords = [
-				[x(x.domain()[0]) + 40, y(topic) as number],
+				[x(x.domain()[0]) + 90, y(topic) as number],
 				...coords,
 				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
 			];
@@ -109,9 +109,10 @@
 				x="70"
 				y={(yLocal(topic) || 0) + 5}
 				class={[
-					'text-lg font-bold',
+					'font-bold',
 					colors.fill[topic],
-					topic === currenttopic && 'animate-pulse font-bold'
+					topic === currenttopic && 'font-black text-2xl',
+					topic !== currenttopic && 'text-lg'
 				]}>{labels[topic]}</text
 			>
 			<path
@@ -126,10 +127,16 @@
 				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<a href="{base}/timeline/{topic}/{datapoint.Jahr}">
 					<circle
-						class:animate-pulse={current}
+						class:animate-pulse={!current}
 						cx={x(datapoint.Jahr)}
 						cy={(datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
-						r={current ? 18 : 8}
+						r={current ? 18 : 10}
+						class={[colors.fill[topic], current ? '' : 'origin-center animate-ping opacity-75']}
+					/>
+					<circle
+						cx={x(datapoint.Jahr)}
+						cy={(datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
+						r={current ? 18 : 6}
 						class={[colors.fill[topic]]}
 					/>
 				</a>
