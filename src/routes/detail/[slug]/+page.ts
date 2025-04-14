@@ -14,6 +14,12 @@ export const load = (async ({ params }) => {
 		if (anderswoData?.Eckdaten) {
 			anderswoData.Eckdaten = await parse(anderswoData.Eckdaten);
 		}
+		if (anderswoData?.Titel) {
+			anderswoData.Titel = await parse(anderswoData.Titel);
+		}
+		if (anderswoData?.Text) {
+			anderswoData.Text = await parse(anderswoData.Text);
+		}
 		return {
 			type: 'anderswo',
 			year,
@@ -27,6 +33,12 @@ export const load = (async ({ params }) => {
 		}
 		if (imgData?.Eckdaten) {
 			imgData.Eckdaten = await parse(imgData.Eckdaten);
+		}
+		if (imgData?.Titel) {
+			imgData.Titel = await parse(imgData.Titel);
+		}
+		if (imgData?.Text) {
+			imgData.Text = await parse(imgData.Text);
 		}
 		if (imgData) {
 			return {
