@@ -1,8 +1,8 @@
 <script lang="ts">
 	import colors from '$lib/colors.json';
-	import heilmann from '$lib/images/portrait-heilmann-raster.png';
-	import neuhaus from '$lib/images/portrait-neuhaus-raster.png';
-	import brunnen from '$lib/images/portrait-brunnen-raster.png';
+	import heilmann from '$lib/images/portrait-heilmann.jpg';
+	import neuhaus from '$lib/images/portrait-neuhaus.jpg';
+	import brunnen from '$lib/images/portrait-brunnen.jpg';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import { onMount } from 'svelte';
 
@@ -17,7 +17,7 @@
 		</p>
 		<div class="flex-cols-3 my-5 mb-15 flex justify-around gap-10">
 			<div class="flex flex-col items-center gap-3">
-				<a href="../timeline/Heilmann/1785"><img class="max-h-50 max-w-50" src={heilmann} alt="heilmann" /></a>
+				<a href="../timeline/Heilmann/1785"><img class="opacity-70 max-h-50 max-w-50" src={heilmann} alt="heilmann" /></a>
 				<a
 					class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Heilmann']]}
 					href="../timeline/Heilmann/1785"
@@ -28,7 +28,7 @@
 				>
 			</div>
 			<div class="flex flex-col items-center gap-3">
-				<a href="../timeline/Neuhaus/1794"><img class="max-h-50 max-w-50" src={neuhaus} alt="neuhaus" /></a>
+				<a href="../timeline/Neuhaus/1794"><img class="opacity-70 max-h-50 max-w-50" src={neuhaus} alt="neuhaus" /></a>
 				<a
 					class={['btn btn-lg text-xl', colors['preset-filled']['Neuhaus']]}
 					href="../timeline/Neuhaus/1794">
@@ -37,7 +37,7 @@
 			</div>
 			<div class="flex flex-col items-center gap-3">
 				<a href="../timeline/Brunnen/1798">
-					<img class="max-h-50 max-w-50" src={brunnen} alt="brunnen" />
+					<img class="opacity-70 max-h-50 max-w-50" src={brunnen} alt="brunnen" />
 				</a>
 				<a
 					class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Brunnen']]}
