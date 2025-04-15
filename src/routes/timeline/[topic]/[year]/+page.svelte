@@ -31,7 +31,7 @@
 					topic={data.topic}
 				/>
 			</a>
-			<Ping classes="absolute bottom-10 right-20 flex size-4 opacity-100" />
+			<Ping classes="absolute bottom-10 right-20 size-4" />
 		</div>
 		<div class="my-2">
 			<span class="text-5xl font-bold">{data.content?.Jahr}</span>
@@ -82,7 +82,7 @@
 						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
 						alt="Detailbild"
 					/>
-					<Ping classes="absolute bottom-10 left-20 flex size-4 opacity-100" />
+					<Ping classes="absolute bottom-10 left-20 size-4" />
 				</a>
 			{/if}
 		</div>
