@@ -1,19 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
-	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
 	import { base } from '$app/paths';
-	import { colors } from '$lib/metadata.json';
-	import Ping from '$lib/components/Ping.svelte';
+	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
+	import colors from '$lib/colors.json';
+	import FullMap from '../FullMap.svelte';
 
 	// Style circles
 	function applyStyles(el, color, url) {
 		el?.classList.add('marked');
 		el?.style.setProperty('r', '8px');
 		el?.style.setProperty('fill', `var(--color-${color}-500)`);
-		// el?.style.setProperty('stroke', `var(--color-${color}-600)`);
-		// el?.style.setProperty('stroke-width', 2);
 		el?.addEventListener('click', () => {
 			goto(url);
 		});
@@ -62,80 +59,68 @@
 </script>
 
 <div class="flex h-screen items-center justify-center">
-	<!-- Full Map -->
-	<a href="{base}/map" class="absolute w-90 top-[19vh] left-[20vw]">
-		<svg
-			class="fullmap border-4 border-white"
-			viewBox="0 0 1000 840"
-		>
-			<rect x="0" y="0" width="1000" height="840" fill="white" class="cursor-pointer" />
-			<CirclesFull />
-			<foreignObject x="0" y="0" width="2000" height="80">
-				<span class="bg-white text-black px-4 py-10 text-5xl">Auszoomen</span>
-			</foreignObject>
-		</svg>
-		<Ping classes="absolute top-5 left-10 size-4" setWhite = {true}/>
-	</a>
+
+	<FullMap />
 
 	<!-- Region Map -->
 	<svg class="map max-h-[calc(100vh/12*10)]" viewBox="0 0 1000 840">
 		<CirclesEurope />
 
-		<foreignObject x="460" y="450" width="150" height="40">
+		<foreignObject x="460" y="450" width="150" height="50">
 			<a
 				href="{base}/timeline/Brunnen/1798"
 				class={['btn font-semibold', colors['preset-filled']['Brunnen']]}>Biel, Hofwil</a
 			>
 		</foreignObject>
-		<foreignObject x="445" y="585" width="150" height="40">
+		<foreignObject x="445" y="585" width="150" height="50">
 			<a
 				href="{base}/timeline/Heilmann/1829"
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Neapel, Nola</a
 			>
 		</foreignObject>
-		<foreignObject x="490" y="350" width="150" height="40">
+		<foreignObject x="490" y="350" width="150" height="50">
 			<a
 				href="{base}/timeline/Heilmann/1804"
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Heidelberg</a
 			>
 		</foreignObject>
-		<foreignObject x="680" y="415" width="100" height="40">
+		<foreignObject x="680" y="415" width="100" height="50">
 			<a
 				href="{base}/timeline/Heilmann/1814"
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Wien</a
 			>
 		</foreignObject>
-		<foreignObject x="570" y="240" width="100" height="40">
+		<foreignObject x="570" y="240" width="100" height="50">
 			<a
 				href="{base}/timeline/Heilmann/1829"
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Halle</a
 			>
 		</foreignObject>
-		<foreignObject x="790" y="140" width="100" height="40">
+		<foreignObject x="790" y="140" width="100" height="50">
 			<a
 				href="{base}/timeline/Neuhaus/1812"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Baryssau</a
 			>
 		</foreignObject>
-		<foreignObject x="230" y="390" width="180" height="40">
+		<foreignObject x="230" y="390" width="180" height="50">
 			<a
 				href="{base}/timeline/Neuhaus/1815"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Franche-Comté</a
 			>
 		</foreignObject>
-		<foreignObject x="380" y="290" width="180" height="40">
+		<foreignObject x="380" y="290" width="180" height="50">
 			<a
 				href="{base}/timeline/Neuhaus/1816"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>‘s-Hertogenbosch</a
 			>
 		</foreignObject>
-		<foreignObject x="270" y="300" width="100" height="40">
+		<foreignObject x="270" y="300" width="100" height="50">
 			<a
 				href="{base}/timeline/Neuhaus/1831"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Hulst</a
 			>
 		</foreignObject>
-		<foreignObject x="370" y="230" width="150" height="40">
+		<foreignObject x="370" y="230" width="150" height="50">
 			<a
 				href="{base}/timeline/Neuhaus/1843"
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Rotterdam</a
