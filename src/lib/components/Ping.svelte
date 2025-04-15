@@ -4,11 +4,11 @@
 	if (setWhite) {
 		color = ['bg-white', 'bg-white', 'bg-white', 'border-white'];
 	} else {
-		color = ['bg-surface-500', 'bg-surface-900', 'bg-surface-100', 'border-surface-900'];
+		color = ['bg-surface-100', 'bg-surface-900', 'bg-white', 'border-surface-900'];
 	}
 </script>
 
-<span class={[classes, 'opacity-100 z-100']}>
+<span class={[classes, 'opacity-75 z-100']}>
 	<span class={[color, 'absolute inline-flex h-full w-full animate-ping rounded-full']}>
 		<span class={[color, 'absolute inline-flex h-full w-full animate-ping rounded-full']}>
 			<span class={[color, 'absolute inline-flex h-full w-full animate-ping rounded-full']}> </span>
