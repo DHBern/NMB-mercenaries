@@ -9,9 +9,9 @@
 	// Style circles
 	function applyStyles(el, color, url) {
 		el?.classList.add('marked');
-		// el?.classList.add('origin-center');
-		// el?.classList.add('animate-ping');
-		// el?.classList.add('opacity-75');
+		el?.classList.add('origin-center');
+		el?.classList.add('animate-pulse');
+		el?.classList.add('opacity-100');
 		el?.style.setProperty('r', '8px');
 		el?.style.setProperty('fill', `var(--color-${color}-500)`);
 		el?.addEventListener('click', () => {
