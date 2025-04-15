@@ -131,7 +131,7 @@
 						cx={x(datapoint.Jahr)}
 						cy={(datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
 						r={current ? 18 : 10}
-						class={[colors.fill[topic], current ? '' : 'origin-center animate-ping opacity-75']}
+						class={[colors.fill[topic], !current && 'origin-center animate-ping opacity-75']}
 					/>
 					<circle
 						cx={x(datapoint.Jahr)}
