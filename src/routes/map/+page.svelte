@@ -1,10 +1,6 @@
 <script lang="ts">
-	import type { PageData } from '../$types';
 	import { base } from '$app/paths';
 	import Circles_full from '$lib/circle-components/Circles-full.svelte';
-	import colors from '$lib/colors.json';
-
-	let { data }: { data: PageData } = $props();
 </script>
 
 <div class="flex h-screen items-center justify-center">

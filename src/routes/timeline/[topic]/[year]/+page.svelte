@@ -30,8 +30,8 @@
 					place={data.content?.MapPlace}
 					topic={data.topic}
 				/>
+				<Ping classes="absolute bottom-10 right-20 size-4" />
 			</a>
-			<Ping classes="absolute bottom-10 right-20 size-4" />
 		</div>
 		<div class="my-2">
 			<span class="text-5xl font-bold">{data.content?.Jahr}</span>

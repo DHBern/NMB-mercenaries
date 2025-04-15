@@ -1,14 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import type { PageData } from '../$types';
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
 	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
 	import { base } from '$app/paths';
 	import { colors } from '$lib/metadata.json';
-
-	let { data }: { data: PageData } = $props();
-	let color = $state();
+	import Ping from '$lib/components/Ping.svelte';
 
 	// Style circles
 	function applyStyles(el, color, url) {
@@ -23,11 +20,7 @@
 	}
 
 	onMount(() => {
-		applyStyles(
-			document.querySelector('#europe-biel'),
-			'error',
-			'{base}/timeline/Brunnen/1798'
-		);
+		applyStyles(document.querySelector('#europe-biel'), 'error', '{base}/timeline/Brunnen/1798');
 		applyStyles(
 			document.querySelector('#europe-neapel'),
 			'warning',
@@ -38,11 +31,7 @@
 			'warning',
 			'{base}/timeline/Heilmann/1804'
 		);
-		applyStyles(
-			document.querySelector('#europe-wien'),
-			'warning',
-			'{base}/timeline/Heilmann/1814'
-		);
+		applyStyles(document.querySelector('#europe-wien'), 'warning', '{base}/timeline/Heilmann/1814');
 		applyStyles(
 			document.querySelector('#europe-halle'),
 			'warning',
@@ -63,11 +52,7 @@
 			'success',
 			'{base}/timeline/Neuhaus/1816'
 		);
-		applyStyles(
-			document.querySelector('#europe-hulst'),
-			'success',
-			'{base}/timeline/Neuhaus/1831'
-		);
+		applyStyles(document.querySelector('#europe-hulst'), 'success', '{base}/timeline/Neuhaus/1831');
 		applyStyles(
 			document.querySelector('#europe-rotterdam'),
 			'success',
@@ -78,18 +63,19 @@
 
 <div class="flex h-screen items-center justify-center">
 	<!-- Full Map -->
-	<svg
-		class="fullmap absolute top-[19vh] left-[20vw] max-h-50 border-4 border-white"
-		viewBox="0 0 1000 840"
-	>
-		<a href="{base}/map" class="">
+	<a href="{base}/map" class="absolute w-90 top-[19vh] left-[20vw]">
+		<svg
+			class="fullmap border-4 border-white"
+			viewBox="0 0 1000 840"
+		>
 			<rect x="0" y="0" width="1000" height="840" fill="white" class="cursor-pointer" />
 			<CirclesFull />
-			<!-- <foreignObject x="0" y="0" width="2000" height="100">
-				<span class="bg-white px-4 py-10 text-7xl">Zurück</span>
-			</foreignObject> -->
-		</a>
-	</svg>
+			<foreignObject x="0" y="0" width="2000" height="80">
+				<span class="bg-white text-black px-4 py-10 text-5xl">Auszoomen</span>
+			</foreignObject>
+		</svg>
+		<Ping classes="absolute top-5 left-10 size-4" setWhite = {true}/>
+	</a>
 
 	<!-- Region Map -->
 	<svg class="map max-h-[calc(100vh/12*10)]" viewBox="0 0 1000 840">
