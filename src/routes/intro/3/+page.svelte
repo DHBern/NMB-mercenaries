@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { colors } from '$lib/metadata.json';
-	import heilmann from '$lib/images/portrait-heilmann.jpg';
-	import neuhaus from '$lib/images/portrait-neuhaus.jpg';
-	import brunnen from '$lib/images/portrait-brunnen.jpg';
+	import heilmann from '$lib/images/portrait-heilmann-mono.jpg';
+	import neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
+	import brunnen from '$lib/images/portrait-brunnen-mono.jpg';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import { onMount } from 'svelte';
 
