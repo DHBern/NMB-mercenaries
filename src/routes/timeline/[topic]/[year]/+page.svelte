@@ -5,7 +5,7 @@
 	import Map from './Map.svelte';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
-	import Dot from './Dot.svelte';
+	import Ping from '$lib/components/Ping.svelte';
 	import { colors } from '$lib/metadata.json';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
@@ -62,14 +62,16 @@
 		</div>
 
 		<!-- Image -->
-		<div class="col-start-2">
+		<div class="relative col-start-2">
 			{#if data.content?.Bild}
-				<a href="{base}/detail/{data.content?.Bild}">
+				<a class="absolute top-0 left-0" href="{base}/detail/{data.content?.Bild}">
 					<img
-						class="h-full max-h-180 w-full object-contain object-right"
+						class="h-full max-h-140 w-full object-contain object-right"
 						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
 						alt="Detailbild"
 					/>
+					<!-- Ping -->
+					 <Ping classes="absolute bottom-10 left-10 flex size-4 opacity-100"/>
 				</a>
 			{/if}
 		</div>
