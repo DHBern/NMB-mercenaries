@@ -19,9 +19,20 @@
 <div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-15">
 	<!-- Orientation Box -->
 	<div>
-		<a href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
-			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} topic={data.topic} />
-		</a>
+		<div class="relative">
+			<a
+				class=""
+				href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}"
+			>
+				<Map
+					classes=""
+					region={data.content?.MapRegion}
+					place={data.content?.MapPlace}
+					topic={data.topic}
+				/>
+			</a>
+			<Ping classes="absolute bottom-10 right-20 flex size-4 opacity-100" />
+		</div>
 		<div class="my-2">
 			<span class="text-5xl font-bold">{data.content?.Jahr}</span>
 			<span class="text-4xl font-bold">in {data.content?.Ort}</span>
@@ -52,7 +63,8 @@
 	</div>
 
 	<!-- Content Box -->
-	<div class="grid h-full grid-cols-[2fr_1fr] grid-rows-[auto-90px] gap-4">
+	<!-- //! As soon as screen arrives, replace auto in grid-rows with fixed height -->
+	<div class="grid h-full grid-cols-[2fr_1fr] grid-rows-[200px-90px] gap-4">
 		<div class="max-h-full overflow-y-auto">
 			<!-- Content -->
 			<h1 class="h1 mb-4">{data.content?.Titel}</h1>
@@ -70,8 +82,7 @@
 						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
 						alt="Detailbild"
 					/>
-					<!-- Ping -->
-					 <Ping classes="absolute bottom-10 left-10 flex size-4 opacity-100"/>
+					<Ping classes="absolute bottom-10 left-20 flex size-4 opacity-100" />
 				</a>
 			{/if}
 		</div>

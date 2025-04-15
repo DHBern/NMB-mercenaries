@@ -4,7 +4,7 @@
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
 	import CirclesJava from '$lib/circle-components/Circles-java.svelte';
 
-	let { region, place, topic } = $props();
+	let { classes="", region, place, topic } = $props();
 	let elPlace = $state();
 
 	// Style highlighted circles
@@ -69,7 +69,7 @@
 	});
 </script>
 
-<svg class="map" viewBox="0 0 1000 840" data-topic={topic}>
+<svg class={["map", classes]} viewBox="0 0 1000 840" data-topic={topic}>
 	<!-- South East Asia -->
 	{#if region == 'seasia'}
 		{#if place == 'batavia'}
