@@ -20,6 +20,12 @@
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
+	let xcoordslabel = $derived({
+		Heilmann: currenttopic === 'Heilmann' ? '10' : '100',
+		Brunnen: currenttopic === 'Brunnen' ? '180' : '180',
+		Neuhaus: currenttopic === 'Neuhaus' ? '220' : '290'
+	});
+
 	const PADDING = 30;
 	const GUTTER = 220;
 
@@ -69,9 +75,14 @@
 			x(datapoint.Jahr),
 			(datapoint.Ort === 'Biel' ? yLocal(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
 		]);
+
+		// Hack to avoid immediate slope at the beginning of the Heilmann-line
+		if (topic === 'Heilmann') {
+			coords = [coords[0], [coords[1][0] - 20, coords[0][1]], ...coords.splice(1)];
+		}
 		if (topic === 'Brunnen') {
 			coords = [
-				[x(x.domain()[0]) + 90, y(topic) as number],
+				[x(x.domain()[0]) + 140, y(topic) as number],
 				...coords,
 				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
 			];
@@ -117,16 +128,25 @@
 		<div class={['text-sm text-gray-500']}>Lokal</div>
 	</foreignObject>
 
+	<path
+		d={line()([
+			[100, yLocal('Brunnen')],
+			[170, yLocal('Brunnen')]
+		])}
+		class={[colors.stroke['Brunnen']]}
+		stroke-width="2"
+		fill="none"
+		stroke-linecap="round"
+	/>
 	{#each Object.entries(data) as [topic, content], i}
 		<g>
 			<text
-				x="70"
+				x={xcoordslabel[topic]}
 				y={(yLocal(topic) || 0) + 5}
 				class={[
-					'font-bold',
 					colors.fill[topic],
-					topic === currenttopic && 'font-black text-2xl',
-					topic !== currenttopic && 'text-lg'
+					topic === currenttopic && 'text-right text-3xl font-black',
+					topic !== currenttopic && 'text-right text-lg'
 				]}>{labels[topic]}</text
 			>
 			<path
