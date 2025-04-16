@@ -27,3 +27,23 @@ p {
 .map[data-topic='Brunnen'] circle {
     fill: var(--color-error-400);
 }
+
+
+/* Animations */
+@keyframes ping-once {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    10%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  @layer utilities {
+    .animate-ping {
+      animation: ping-once 8s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+  }
