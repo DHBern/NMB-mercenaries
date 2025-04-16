@@ -61,14 +61,10 @@
 			x(datapoint.Jahr),
 			(datapoint.Ort === 'Biel' ? yLocal(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
 		]);
-		
+
 		// Hack to avoid immediate slope at the beginning of the Heilmann-line
 		if (topic === 'Heilmann') {
-			coords = [
-				coords[0],
-				[coords[1][0]-20, coords[0][1]],
-				...coords.splice(1)
-			];
+			coords = [coords[0], [coords[1][0] - 20, coords[0][1]], ...coords.splice(1)];
 		}
 		if (topic === 'Brunnen') {
 			coords = [
@@ -119,7 +115,10 @@
 	</foreignObject>
 
 	<path
-		d={line()([[100,yLocal('Brunnen')], [170,yLocal('Brunnen')]])}
+		d={line()([
+			[100, yLocal('Brunnen')],
+			[170, yLocal('Brunnen')]
+		])}
 		class={[colors.stroke['Brunnen']]}
 		stroke-width="2"
 		fill="none"
@@ -131,9 +130,9 @@
 				x={xcoordslabel[topic]}
 				y={(yLocal(topic) || 0) + 5}
 				class={[
-					'text-lg font-bold',
 					colors.fill[topic],
-					topic === currenttopic && 'animate-pulse font-bold'
+					topic === currenttopic && 'font-black text-3xl',
+					topic !== currenttopic && 'text-lg'
 				]}>{labels[topic]}</text
 			>
 			<path
