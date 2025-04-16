@@ -2,11 +2,21 @@
 	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
 	import { base } from '$app/paths';
 	import Ping from '$lib/components/Ping.svelte';
+	import { onNavigate } from '$app/navigation';
 
 	let isPulsating = $state(false);
-	setTimeout(() => {
+	let timerPing = setTimeout(() => {
 		isPulsating = true;
 	}, 2000);
+
+	onNavigate(()=>{
+		isPulsating = false;
+		clearTimeout(timerPing);
+		timerPing = setTimeout(() => {
+			isPulsating = true;
+		}, 2000);
+	});
+	
 </script>
 
 <a href="{base}/map" class="absolute top-[19vh] left-[20vw] w-90">

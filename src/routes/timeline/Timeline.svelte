@@ -3,12 +3,21 @@
 	import data from '$lib/data/main.json';
 	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
+	import { onNavigate } from '$app/navigation';
 
 	let isPulsating = $state(false);
-	setTimeout(() => {
+	let timerPing = setTimeout(() => {
 		isPulsating = true;
 	}, 15000);
-	
+
+	onNavigate(()=>{
+		isPulsating = false;
+		clearTimeout(timerPing);
+		timerPing = setTimeout(() => {
+			isPulsating = true;
+		}, 15000);
+	});
+
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
 	const PADDING = 30;

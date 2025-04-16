@@ -5,12 +5,20 @@
 	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
 	import colors from '$lib/colors.json';
 	import FullMap from '../FullMap.svelte';
+	import { onNavigate } from '$app/navigation';
 
 	let isPulsating = $state(false);
-	setTimeout(() => {
+	let timerPing = setTimeout(() => {
 		isPulsating = true;
 	}, 2000);
 
+	onNavigate(()=>{
+		isPulsating = false;
+		clearTimeout(timerPing);
+		timerPing = setTimeout(() => {
+			isPulsating = true;
+		}, 2000);
+	});
 	// Style circles
 	function applyStyles(elements, color, url) {
 		elements.forEach((el) => {

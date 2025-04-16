@@ -7,6 +7,7 @@
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import Ping from '$lib/components/Ping.svelte';
 	import { colors } from '$lib/metadata.json';
+	import { onNavigate } from '$app/navigation';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -16,9 +17,17 @@
 	let { data }: { data: PageData } = $props();
 
 	let isPulsating = $state(false);
-	setTimeout(() => {
+	let timerPing = setTimeout(() => {
 		isPulsating = true;
 	}, 15000);
+
+	onNavigate(()=>{
+		isPulsating = false;
+		clearTimeout(timerPing);
+		timerPing = setTimeout(() => {
+			isPulsating = true;
+		}, 15000);
+	});
 </script>
 
 <div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-15">
