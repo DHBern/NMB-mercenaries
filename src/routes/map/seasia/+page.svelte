@@ -7,31 +7,29 @@
 	import FullMap from '../FullMap.svelte';
 
 	// Style circles
-	function applyStyles(el, color, url) {
-		el?.classList.add('marked');
-		el?.classList.add('origin-center');
-		el?.classList.add('animate-pulse');
-		el?.classList.add('opacity-100');
-		el?.style.setProperty('r', '8px');
-		el?.style.setProperty('fill', `var(--color-${color}-500)`);
-		el?.addEventListener('click', () => {
-			goto(url);
+	function applyStyles(elements, color, url) {
+		elements.forEach((el) => {
+			el?.style.setProperty('r', '8px');
+			el?.style.setProperty('fill', `var(--color-${color}-500)`);
+			el?.addEventListener('click', () => {
+				goto(url);
+			});
 		});
 	}
 
 	onMount(() => {
 		applyStyles(
-			document.querySelector('#seasia-batavia'),
+			document.querySelectorAll('.seasia-batavia'),
 			'success',
 			'{base}/timeline/Neuhaus/1840'
 		);
 		applyStyles(
-			document.querySelector('#seasia-banjarmasin'),
+			document.querySelectorAll('.seasia-banjarmasin'),
 			'success',
 			'{base}/timeline/Neuhaus/1836'
 		);
 		applyStyles(
-			document.querySelector('#seasia-padangse'),
+			document.querySelectorAll('.seasia-padangse'),
 			'success',
 			'{base}/timeline/Neuhaus/1829'
 		);
@@ -39,7 +37,6 @@
 </script>
 
 <div class="flex h-screen items-center justify-center">
-
 	<FullMap />
 
 	<!-- Region Map -->
@@ -68,6 +65,9 @@
 		<use xlink:href="#seasia-batavia" />
 		<use xlink:href="#seasia-banjarmasin" />
 		<use xlink:href="#seasia-padangse" />
+		<use xlink:href="#seasia-batavia-ping" />
+		<use xlink:href="#seasia-banjarmasin-ping" />
+		<use xlink:href="#seasia-padangse-ping" />
 	</svg>
 </div>
 

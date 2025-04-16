@@ -124,19 +124,21 @@
 			/>
 			{#each content as datapoint, j}
 				{@const current = datapoint.Jahr === currentyear && topic === currenttopic}
+				{@const cx = x(datapoint.Jahr)}
+				{@const cy = (datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
 				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<a href="{base}/timeline/{topic}/{datapoint.Jahr}">
 					<circle
-						class:animate-pulse={!current}
-						cx={x(datapoint.Jahr)}
-						cy={(datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
+						cx={cx}
+						cy={cy}
 						r={current ? 18 : 10}
-						class={[colors.fill[topic], !current && 'origin-center animate-ping opacity-75']}
-					/>
-					<circle
+						class={[colors.fill[topic], !current && 'origin-center animate-ping opacity-50']}
+						style="transform-origin: {cx}px {cy}px"
+						/>
+						<circle
 						cx={x(datapoint.Jahr)}
-						cy={(datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
-						r={current ? 18 : 6}
+						cy={cy}
+						r={current ? 18 : 10}
 						class={[colors.fill[topic]]}
 					/>
 				</a>

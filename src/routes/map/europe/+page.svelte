@@ -7,54 +7,60 @@
 	import FullMap from '../FullMap.svelte';
 
 	// Style circles
-	function applyStyles(el, color, url) {
-		el?.classList.add('marked');
-		el?.classList.add('origin-center');
-		el?.classList.add('animate-pulse');
-		el?.classList.add('opacity-100');
-		el?.style.setProperty('r', '8px');
-		el?.style.setProperty('fill', `var(--color-${color}-500)`);
-		el?.addEventListener('click', () => {
-			goto(url);
+	function applyStyles(elements, color, url) {
+		elements.forEach((el) => {
+			el?.style.setProperty('r', '8px');
+			el?.style.setProperty('fill', `var(--color-${color}-500)`);
+			el?.addEventListener('click', () => {
+				goto(url);
+			});
 		});
 	}
 
 	onMount(() => {
-		applyStyles(document.querySelector('#europe-biel'), 'error', '{base}/timeline/Brunnen/1798');
+		applyStyles(document.querySelectorAll('.europe-biel'), 'error', '{base}/timeline/Brunnen/1798');
 		applyStyles(
-			document.querySelector('#europe-neapel'),
+			document.querySelectorAll('.europe-neapel'),
 			'warning',
 			'{base}/timeline/Heilmann/1829'
 		);
 		applyStyles(
-			document.querySelector('#europe-heidelberg'),
+			document.querySelectorAll('.europe-heidelberg'),
 			'warning',
 			'{base}/timeline/Heilmann/1804'
 		);
-		applyStyles(document.querySelector('#europe-wien'), 'warning', '{base}/timeline/Heilmann/1814');
 		applyStyles(
-			document.querySelector('#europe-halle'),
+			document.querySelectorAll('.europe-wien'),
+			'warning',
+			'{base}/timeline/Heilmann/1814'
+		);
+		applyStyles(
+			document.querySelectorAll('.europe-halle'),
 			'warning',
 			'{base}/timeline/Heilmann/1829'
 		);
 		applyStyles(
-			document.querySelector('#europe-baryssau'),
+			document.querySelectorAll('.europe-baryssau'),
 			'success',
 			'{base}/timeline/Neuhaus/1812'
 		);
 		applyStyles(
-			document.querySelector('#europe-franche'),
+			document.querySelectorAll('.europe-franche'),
 			'success',
 			'{base}/timeline/Neuhaus/1815'
 		);
 		applyStyles(
-			document.querySelector('#europe-hertogenbosch'),
+			document.querySelectorAll('.europe-hertogenbosch'),
 			'success',
 			'{base}/timeline/Neuhaus/1816'
 		);
-		applyStyles(document.querySelector('#europe-hulst'), 'success', '{base}/timeline/Neuhaus/1831');
 		applyStyles(
-			document.querySelector('#europe-rotterdam'),
+			document.querySelectorAll('.europe-hulst'),
+			'success',
+			'{base}/timeline/Neuhaus/1831'
+		);
+		applyStyles(
+			document.querySelectorAll('.europe-rotterdam'),
 			'success',
 			'{base}/timeline/Neuhaus/1843'
 		);
@@ -62,7 +68,6 @@
 </script>
 
 <div class="flex h-screen items-center justify-center">
-
 	<FullMap />
 
 	<!-- Region Map -->
@@ -140,16 +145,20 @@
 		<use xlink:href="#europe-hertogenbosch" />
 		<use xlink:href="#europe-hulst" />
 		<use xlink:href="#europe-rotterdam" />
+		<use xlink:href="#europe-biel-ping" />
+		<use xlink:href="#europe-neapel-ping" />
+		<use xlink:href="#europe-heidelberg-ping" />
+		<use xlink:href="#europe-wien-ping" />
+		<use xlink:href="#europe-halle-ping" />
+		<use xlink:href="#europe-baryssau-ping" />
+		<use xlink:href="#europe-franche-ping" />
+		<use xlink:href="#europe-hertogenbosch-ping" />
+		<use xlink:href="#europe-hulst-ping" />
+		<use xlink:href="#europe-rotterdam-ping" />
 	</svg>
 </div>
 
 <style>
-	/* @reference "tailwindcss";
-
-	:global(.marked) {
-		@apply origin-center animate-ping opacity-75;
-	} */
-
 	img.hidden {
 		display: none;
 	}

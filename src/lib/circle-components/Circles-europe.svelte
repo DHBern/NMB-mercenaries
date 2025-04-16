@@ -1888,7 +1888,8 @@
 <circle class="circle-18-87" cx="875" cy="185" r="4.3961" />
 <circle class="circle-18-88" cx="885" cy="185" r="4.3961" />
 <circle class="circle-18-89" cx="895" cy="185" r="4.3961" />
-<circle id="europe-baryssau" class="circle-18-90" cx="905" cy="185" r="4.3961" style="transform-origin: 905px 185px;"/>
+<circle id="europe-baryssau" class="marked europe-baryssau circle-18-90" cx="905" cy="185" r="4.3961" style="transform-origin: 905px 185px;"/>
+<circle id="europe-baryssau-ping" class="marked europe-baryssau origin-center animate-ping opacity-100 circle-18-90" cx="905" cy="185" r="4.3961" style="transform-origin: 905px 185px;"/>
 <circle class="circle-18-91" cx="915" cy="185" r="4.3961" />
 <circle class="circle-18-92" cx="925" cy="185" r="4.3961" />
 <circle class="circle-18-93" cx="935" cy="185" r="4.3529" />
@@ -2734,7 +2735,8 @@
 <circle class="circle-27-33" cx="335" cy="275" r="2.8" />
 <circle class="circle-27-34" cx="345" cy="275" r="2.8" />
 <circle class="circle-27-35" cx="355" cy="275" r="2.7569" />
-<circle id="europe-rotterdam" class="circle-27-36" cx="365" cy="275" r="3.4039" style="transform-origin: 365px 275px;"/>
+<circle id="europe-rotterdam" class="marked europe-rotterdam circle-27-36" cx="365" cy="275" r="3.4039" style="transform-origin: 365px 275px;"/>
+<circle id="europe-rotterdam-ping" class="marked europe-rotterdam origin-center animate-ping opacity-100 circle-27-36" cx="365" cy="275" r="3.4039" style="transform-origin: 365px 275px;"/>
 <circle class="circle-27-37" cx="375" cy="275" r="4.2667" />
 <circle class="circle-27-38" cx="385" cy="275" r="4.2235" />
 <circle class="circle-27-39" cx="395" cy="275" r="4.2235" />
@@ -2835,7 +2837,8 @@
 <circle class="circle-28-34" cx="345" cy="285" r="2.7137" />
 <circle class="circle-28-35" cx="355" cy="285" r="3.1882" />
 <circle class="circle-28-36" cx="365" cy="285" r="3.6627" />
-<circle id="europe-hertogenbosch" class="circle-28-37" cx="375" cy="285" r="4.2667" style="transform-origin: 375px 285px;"/>
+<circle id="europe-hertogenbosch" class="marked europe-hertogenbosch circle-28-37" cx="375" cy="285" r="4.2667" style="transform-origin: 375px 285px;"/>
+<circle id="europe-hertogenbosch-ping" class="marked europe-hertogenbosch origin-center animate-ping opacity-100 circle-28-37" cx="375" cy="285" r="4.2667" style="transform-origin: 375px 285px;"/>
 <circle class="circle-28-38" cx="385" cy="285" r="4.3961" />
 <circle class="circle-28-39" cx="395" cy="285" r="4.3961" />
 <circle class="circle-28-40" cx="405" cy="285" r="4.3961" />
@@ -2853,7 +2856,8 @@
 <circle class="circle-28-52" cx="525" cy="285" r="4.3961" />
 <circle class="circle-28-53" cx="535" cy="285" r="4.3961" />
 <circle class="circle-28-54" cx="545" cy="285" r="4.3961" />
-<circle id="europe-halle" class="circle-28-55" cx="555" cy="285" r="4.3529" style="transform-origin: 555px 285px;"/>
+<circle id="europe-halle" class="marked europe-halle circle-28-55" cx="555" cy="285" r="4.3529" style="transform-origin: 555px 285px;"/>
+<circle id="europe-halle-ping" class="marked europe-halle origin-center animate-ping opacity-100 circle-28-55" cx="555" cy="285" r="4.3529" style="transform-origin: 555px 285px;"/>
 <circle class="circle-28-56" cx="565" cy="285" r="4.3098" />
 <circle class="circle-28-57" cx="575" cy="285" r="4.3961" />
 <circle class="circle-28-58" cx="585" cy="285" r="4.3961" />
@@ -2933,7 +2937,8 @@
 <circle class="circle-29-32" cx="325" cy="295" r="2.7137" />
 <circle class="circle-29-33" cx="335" cy="295" r="2.9294" />
 <circle class="circle-29-34" cx="345" cy="295" r="3.6627" />
-<circle id="europe-hulst" class="circle-29-35" cx="355" cy="295" r="4.1804" style="transform-origin: 355px 295px;"/>
+<circle id="europe-hulst" class="marked europe-hulst circle-29-35" cx="355" cy="295" r="4.1804" style="transform-origin: 355px 295px;"/>
+<circle id="europe-hulst-ping" class="marked europe-hulst origin-center animate-ping opacity-100 circle-29-35" cx="355" cy="295" r="4.1804" style="transform-origin: 355px 295px;"/>
 <circle class="circle-29-36" cx="365" cy="295" r="4.1804" />
 <circle class="circle-29-37" cx="375" cy="295" r="4.3961" />
 <circle class="circle-29-38" cx="385" cy="295" r="4.3961" />
@@ -3545,7 +3550,8 @@
 <circle class="circle-35-44" cx="445" cy="355" r="4.3961" />
 <circle class="circle-35-45" cx="455" cy="355" r="4.3529" />
 <circle class="circle-35-46" cx="465" cy="355" r="4.3098" />
-<circle id="europe-heidelberg" class="circle-35-47" cx="475" cy="355" r="4.3961" style="transform-origin: 475px 355px;"/>
+<circle id="europe-heidelberg" class="marked europe-heidelberg circle-35-47" cx="475" cy="355" r="4.3961" style="transform-origin: 475px 355px;"/>
+<circle id="europe-heidelberg-ping" class="marked europe-heidelberg origin-center animate-ping opacity-100 circle-35-47" cx="475" cy="355" r="4.3961" style="transform-origin: 475px 355px;"/>
 <circle class="circle-35-48" cx="485" cy="355" r="4.3961" />
 <circle class="circle-35-49" cx="495" cy="355" r="4.3961" />
 <circle class="circle-35-50" cx="505" cy="355" r="4.3961" />
@@ -4064,7 +4070,8 @@
 <circle class="circle-40-63" cx="635" cy="405" r="4.3961" />
 <circle class="circle-40-64" cx="645" cy="405" r="4.3098" />
 <circle class="circle-40-65" cx="655" cy="405" r="4.2667" />
-<circle id="europe-wien" class="circle-40-66" cx="665" cy="405" r="4.3529" style="transform-origin: 665px 405px;"/>
+<circle id="europe-wien" class="marked europe-wien circle-40-66" cx="665" cy="405" r="4.3529" style="transform-origin: 665px 405px;"/>
+<circle id="europe-wien-ping" class="marked europe-wien origin-center animate-ping opacity-100 circle-40-66" cx="665" cy="405" r="4.3529" style="transform-origin: 665px 405px;"/>
 <circle class="circle-40-67" cx="675" cy="405" r="4.3961" />
 <circle class="circle-40-68" cx="685" cy="405" r="4.3529" />
 <circle class="circle-40-69" cx="695" cy="405" r="4.3961" />
@@ -4337,12 +4344,14 @@
 <circle class="circle-43-36" cx="365" cy="435" r="4.3961" />
 <circle class="circle-43-37" cx="375" cy="435" r="4.3961" />
 <circle class="circle-43-38" cx="385" cy="435" r="4.3961" />
-<circle id="europe-franche" class="circle-43-39" cx="395" cy="435" r="4.3961" style="transform-origin: 395px 435px;"/>
+<circle id="europe-franche" class="marked europe-franche circle-43-39" cx="395" cy="435" r="4.3961" style="transform-origin: 395px 435px;"/>
+<circle id="europe-franche-ping" class="marked europe-franche origin-center animate-ping opacity-100 circle-43-39" cx="395" cy="435" r="4.3961" style="transform-origin: 395px 435px;"/>
 <circle class="circle-43-40" cx="405" cy="435" r="4.3961" />
 <circle class="circle-43-41" cx="415" cy="435" r="4.3961" />
 <circle class="circle-43-42" cx="425" cy="435" r="4.3961" />
 <circle class="circle-43-43" cx="435" cy="435" r="4.3961" />
-<circle id="europe-biel" class="circle-43-44" cx="445" cy="435" r="4.3961" style="transform-origin: 445px 435px;"/>
+<circle id="europe-biel" class="marked europe-biel circle-43-44" cx="445" cy="435" r="4.3961" style="transform-origin: 445px 435px;"/>
+<circle id="europe-biel-ping" class="marked europe-biel origin-center animate-ping opacity-100 circle-43-44" cx="445" cy="435" r="4.3961" style="transform-origin: 445px 435px;"/>
 <circle class="circle-43-45" cx="455" cy="435" r="4.3961" />
 <circle class="circle-43-46" cx="465" cy="435" r="4.3961" />
 <circle class="circle-43-47" cx="475" cy="435" r="4.3961" />
@@ -6257,7 +6266,8 @@
 <circle class="circle-62-56" cx="565" cy="625" r="2.7569" />
 <circle class="circle-62-57" cx="575" cy="625" r="2.7137" />
 <circle class="circle-62-58" cx="585" cy="625" r="3.2745" />
-<circle id="europe-neapel" class="circle-62-59" cx="595" cy="625" r="4.1373" style="transform-origin: 595px 625px;"/>
+<circle id="europe-neapel" class="marked europe-neapel circle-62-59" cx="595" cy="625" r="4.1373" style="transform-origin: 595px 625px;"/>
+<circle id="europe-neapel-ping" class="marked europe-neapel origin-center animate-ping opacity-100 circle-62-59" cx="595" cy="625" r="4.1373" style="transform-origin: 595px 625px;"/>
 <circle class="circle-62-60" cx="605" cy="625" r="4.3961" />
 <circle class="circle-62-61" cx="615" cy="625" r="4.3961" />
 <circle class="circle-62-62" cx="625" cy="625" r="4.3961" />
