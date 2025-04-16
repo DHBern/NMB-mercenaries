@@ -2,6 +2,12 @@
 	import { base } from '$app/paths';
 	import Circles_full from '$lib/circle-components/Circles-full.svelte';
 	import Ping from '$lib/components/Ping.svelte';
+	
+	let isPulsating = $state(false);
+	setTimeout(() => {
+		isPulsating = true;
+	}, 2000);
+
 </script>
 
 <div class="flex h-screen items-center justify-center">
@@ -58,10 +64,10 @@
 			class="btn btn-lg"
 		>
 			<foreignObject x="60" y="240" width="90" height="35">
-				<span class="text-md rounded bg-white px-2 text-surface-900 font-semibold">Europa</span>
+				<span class="text-base rounded bg-white px-2 text-surface-900 font-semibold">Europa</span>
 			</foreignObject>
 			<foreignObject x="0" y="180" width="120" height="120">
-				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} />
+				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} {isPulsating}/>
 			</foreignObject>
 		</a>
 
@@ -70,10 +76,10 @@
 			class="btn btn-lg"
 		>
 			<foreignObject x="540" y="500" width="140" height="50">
-				<span class="text-md rounded bg-white px-2 text-surface-900 font-semibold">Südostasien</span>
+				<span class="text-base rounded bg-white px-2 text-surface-900 font-semibold">Südostasien</span>
 			</foreignObject>
 			<foreignObject x="480" y="440" width="120" height="120">
-				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} />
+				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} {isPulsating}/>
 			</foreignObject>
 		</a>
 	</svg>

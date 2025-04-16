@@ -2,6 +2,11 @@
 	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
 	import { base } from '$app/paths';
 	import Ping from '$lib/components/Ping.svelte';
+
+	let isPulsating = $state(false);
+	setTimeout(() => {
+		isPulsating = true;
+	}, 2000);
 </script>
 
 <a href="{base}/map" class="absolute top-[19vh] left-[20vw] w-90">
@@ -10,8 +15,8 @@
 		<CirclesFull />
 	</svg>
 	<div class="btn btn-lg absolute left-9 -top-3 w-10 h-10">
-		<span class="text-md rounded bg-white px-2 text-black font-semibold">Auszoomen</span>
-		<Ping classes="absolute top-2 -left-11 size-4" setWhite={true} />
+		<span class="text-base rounded bg-white px-2 text-black font-semibold">Auszoomen</span>
+		<Ping classes="absolute top-2 -left-11 size-4" setWhite={true} {isPulsating}/>
 	</div>
 </a>
 

@@ -6,6 +6,11 @@
 	import colors from '$lib/colors.json';
 	import FullMap from '../FullMap.svelte';
 
+	let isPulsating = $state(false);
+	setTimeout(() => {
+		isPulsating = true;
+	}, 2000);
+
 	// Style circles
 	function applyStyles(elements, color, url) {
 		elements.forEach((el) => {
@@ -72,7 +77,7 @@
 
 	<!-- Region Map -->
 	<svg class="map max-h-[calc(100vh/12*10)]" viewBox="0 0 1000 840">
-		<CirclesEurope />
+		<CirclesEurope {isPulsating}/>
 
 		<foreignObject x="460" y="450" width="150" height="50">
 			<a

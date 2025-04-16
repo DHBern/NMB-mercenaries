@@ -14,6 +14,11 @@
 		import: 'default'
 	});
 	let { data }: { data: PageData } = $props();
+
+	let isPulsating = $state(false);
+	setTimeout(() => {
+		isPulsating = true;
+	}, 5000);
 </script>
 
 <div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-15">
@@ -30,7 +35,7 @@
 					place={data.content?.MapPlace}
 					topic={data.topic}
 				/>
-				<Ping classes="absolute bottom-10 right-20 size-4" />
+				<Ping classes="absolute bottom-10 right-20 size-4" {isPulsating}/>
 			</a>
 		</div>
 		<div class="my-2">
@@ -51,7 +56,7 @@
 				>
 					<span class="relative flex size-3">
 						<span
-							class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black"
+							class={["absolute inline-flex h-full w-full rounded-full bg-black", isPulsating && "animate-ping"]}
 						></span>
 						<span class="relative inline-flex size-3 rounded-full bg-black"></span>
 					</span>
@@ -82,7 +87,7 @@
 						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
 						alt="Detailbild"
 					/>
-					<Ping classes="absolute bottom-10 left-20 size-4" />
+					<Ping classes="absolute bottom-10 left-20 size-4" {isPulsating}/>
 				</a>
 			{/if}
 		</div>

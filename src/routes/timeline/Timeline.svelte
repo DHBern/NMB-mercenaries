@@ -4,6 +4,11 @@
 	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
 
+	let isPulsating = $state(false);
+	setTimeout(() => {
+		isPulsating = true;
+	}, 5000);
+	
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
 	const PADDING = 30;
@@ -132,7 +137,7 @@
 						cx={cx}
 						cy={cy}
 						r={current ? 18 : 10}
-						class={[colors.fill[topic], !current && 'origin-center animate-ping opacity-50']}
+						class={[colors.fill[topic], !current && isPulsating && 'origin-center animate-ping opacity-50']}
 						style="transform-origin: {cx}px {cy}px"
 						/>
 						<circle
