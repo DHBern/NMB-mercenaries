@@ -6,11 +6,11 @@
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
-	let xcoordslabel = {
-		Heilmann: '90',
-		Brunnen: '180',
-		Neuhaus: '290'
-	};
+	let xcoordslabel = $derived({
+		Heilmann: currenttopic === 'Heilmann' ? '10' : '100',
+		Brunnen: currenttopic === 'Brunnen' ? '180' : '180',
+		Neuhaus: currenttopic === 'Neuhaus' ? '220' : '290'
+	});
 
 	const PADDING = 30;
 	const GUTTER = 220;
@@ -131,8 +131,8 @@
 				y={(yLocal(topic) || 0) + 5}
 				class={[
 					colors.fill[topic],
-					topic === currenttopic && 'font-black text-3xl',
-					topic !== currenttopic && 'text-lg'
+					topic === currenttopic && 'text-right text-3xl font-black',
+					topic !== currenttopic && 'text-right text-lg'
 				]}>{labels[topic]}</text
 			>
 			<path
