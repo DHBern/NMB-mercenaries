@@ -23,7 +23,7 @@
 	}
 
 	onMount(() => {
-		applyStyles(document.querySelectorAll('.europe-biel'), 'error', '{base}/timeline/Brunnen/1798');
+		applyStyles(document.querySelectorAll('.europe-biel'), 'error', `${base}/timeline/Brunnen/1798`);
 		applyStyles(
 			document.querySelectorAll('.europe-neapel'),
 			'warning',
