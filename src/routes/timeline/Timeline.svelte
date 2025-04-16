@@ -7,7 +7,7 @@
 	let isPulsating = $state(false);
 	setTimeout(() => {
 		isPulsating = true;
-	}, 5000);
+	}, 15000);
 	
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 

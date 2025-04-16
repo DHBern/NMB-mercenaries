@@ -18,7 +18,7 @@
 	let isPulsating = $state(false);
 	setTimeout(() => {
 		isPulsating = true;
-	}, 5000);
+	}, 15000);
 </script>
 
 <div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-15">
