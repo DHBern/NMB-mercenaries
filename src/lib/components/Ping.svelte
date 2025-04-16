@@ -6,12 +6,6 @@
 	} else {
 		color = ['bg-surface-400', 'bg-surface-900', 'bg-white', 'border-surface-900'];
 	}
-
-	// let isPulsating = $state(false);
-	// setTimeout(() => {
-	// 	isPulsating = true;
-	// }, 5000);
-
 </script>
 
 {#if isPulsating}
