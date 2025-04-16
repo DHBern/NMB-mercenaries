@@ -27,47 +27,47 @@
 		applyStyles(
 			document.querySelectorAll('.europe-neapel'),
 			'warning',
-			'{base}/timeline/Heilmann/1829'
+			`${base}/timeline/Heilmann/1829`
 		);
 		applyStyles(
 			document.querySelectorAll('.europe-heidelberg'),
 			'warning',
-			'{base}/timeline/Heilmann/1804'
+			`${base}/timeline/Heilmann/1804`
 		);
 		applyStyles(
 			document.querySelectorAll('.europe-wien'),
 			'warning',
-			'{base}/timeline/Heilmann/1814'
+			`${base}/timeline/Heilmann/1814`
 		);
 		applyStyles(
 			document.querySelectorAll('.europe-halle'),
 			'warning',
-			'{base}/timeline/Heilmann/1829'
+			`${base}/timeline/Heilmann/1829`
 		);
 		applyStyles(
 			document.querySelectorAll('.europe-baryssau'),
 			'success',
-			'{base}/timeline/Neuhaus/1812'
+			`${base}/timeline/Neuhaus/1812`
 		);
 		applyStyles(
 			document.querySelectorAll('.europe-franche'),
 			'success',
-			'{base}/timeline/Neuhaus/1815'
+			`${base}/timeline/Neuhaus/1815`
 		);
 		applyStyles(
 			document.querySelectorAll('.europe-hertogenbosch'),
 			'success',
-			'{base}/timeline/Neuhaus/1816'
+			`${base}/timeline/Neuhaus/1816`
 		);
 		applyStyles(
 			document.querySelectorAll('.europe-hulst'),
 			'success',
-			'{base}/timeline/Neuhaus/1831'
+			`${base}/timeline/Neuhaus/1831`
 		);
 		applyStyles(
 			document.querySelectorAll('.europe-rotterdam'),
 			'success',
-			'{base}/timeline/Neuhaus/1843'
+			`${base}/timeline/Neuhaus/1843`
 		);
 	});
 </script>
