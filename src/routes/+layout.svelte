@@ -32,9 +32,13 @@
 
 	function modalClose() {
 		isModalOpen = false;
-		clearInterval(intervalID);
-		clearTimeout(timerToHome);
 	}
+	$effect(()=>{
+		if (isModalOpen === false){
+			clearInterval(intervalID);
+			clearTimeout(timerToHome);
+		}
+	})
 
 	onIdle(() => {
 		if (!page.url.pathname.includes('/intro/1')) {
