@@ -131,8 +131,8 @@
 				y={(yLocal(topic) || 0) + 5}
 				class={[
 					colors.fill[topic],
-					topic === currenttopic && 'text-right text-3xl font-black',
-					topic !== currenttopic && 'text-right text-lg'
+					topic === currenttopic && 'text-3xl font-black',
+					topic !== currenttopic && 'text-lg font-bold'
 				]}>{labels[topic]}</text
 			>
 			<path
