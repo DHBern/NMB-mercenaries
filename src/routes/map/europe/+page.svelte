@@ -25,9 +25,7 @@
 		elements.forEach((el) => {
 			el?.style.setProperty('r', '8px');
 			el?.style.setProperty('fill', `var(--color-${color}-500)`);
-			console.log('attaching event listener')
 			el?.addEventListener('click', () => {
-				console.log('dot clicked')
 				goto(url);
 			});
 		});
