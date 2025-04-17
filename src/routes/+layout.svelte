@@ -15,15 +15,9 @@
 		cycle: 5000
 	});
 
-	function handleGoBack() {
-		history.back();
-	}
-
 	let isDark = $derived(
 		page.url.pathname.includes('/map') || page.url.pathname.includes('/detail') ? true : false
 	);
-	let isMap = $derived(page.url.pathname.includes('/map') ? true : false);
-	let isDetail = $derived(page.url.pathname.includes('/detail') ? true : false);
 
 	let isModalOpen = $state(false);
 	let remaining = $state(10);
