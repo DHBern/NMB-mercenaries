@@ -8,6 +8,7 @@
 	import Ping from '$lib/components/Ping.svelte';
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
+	import { parse } from 'marked';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -63,13 +64,7 @@
 					class="anchor flex h-12 items-center gap-2 p-0 text-lg"
 					href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
 				>
-					<span class="relative flex size-3">
-						<span
-							class={["absolute inline-flex h-full w-full rounded-full bg-black", isPulsating && "animate-ping"]}
-						></span>
-						<span class="relative inline-flex size-3 rounded-full bg-black"></span>
-					</span>
-					<!-- <Dot size={24} color="black" /> -->
+					<Dot size={24} color="black" />
 					<span>{item}</span>
 				</a>
 			{/each}
