@@ -4,7 +4,7 @@
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import { listen, onIdle } from 'svelte-idle';
-	import { goto, onNavigate } from '$app/navigation';
+	import { goto } from '$app/navigation';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
 
 	let { children } = $props();
@@ -52,24 +52,6 @@
 			}, 10000);
 		}
 	});
-
-	let pulseDelay;
-	if (page.url.pathname.includes('map')) pulseDelay = 2000;
-	else pulseDelay = 2000;
-	
-	let isPulsating = $state(false);
-	let timerPing = setTimeout(() => {
-		isPulsating = true;
-	}, pulseDelay);
-
-	onNavigate(()=>{
-		isPulsating = false;
-		clearTimeout(timerPing);
-		timerPing = setTimeout(() => {
-			isPulsating = true;
-		}, pulseDelay);
-	});
-
 </script>
 
 <Modal
