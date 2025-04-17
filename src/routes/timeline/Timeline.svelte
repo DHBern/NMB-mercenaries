@@ -3,6 +3,20 @@
 	import data from '$lib/data/main.json';
 	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
+	import { onNavigate } from '$app/navigation';
+
+	let isPulsating = $state(false);
+	let timerPing = setTimeout(() => {
+		isPulsating = true;
+	}, 15000);
+
+	onNavigate(()=>{
+		isPulsating = false;
+		clearTimeout(timerPing);
+		timerPing = setTimeout(() => {
+			isPulsating = true;
+		}, 15000);
+	});
 
 	let { width, height, topic: currenttopic, year: currentyear } = $props();
 
@@ -144,13 +158,21 @@
 			/>
 			{#each content as datapoint, j}
 				{@const current = datapoint.Jahr === currentyear && topic === currenttopic}
+				{@const cx = x(datapoint.Jahr)}
+				{@const cy = (datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
 				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<a href="{base}/timeline/{topic}/{datapoint.Jahr}">
 					<circle
-						class:animate-pulse={current}
+						cx={cx}
+						cy={cy}
+						r={current ? 18 : 10}
+						class={[colors.fill[topic], !current && isPulsating && 'origin-center animate-ping opacity-50']}
+						style="transform-origin: {cx}px {cy}px"
+						/>
+						<circle
 						cx={x(datapoint.Jahr)}
-						cy={(datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
-						r={current ? 18 : 8}
+						cy={cy}
+						r={current ? 18 : 10}
 						class={[colors.fill[topic]]}
 					/>
 				</a>

@@ -5,8 +5,9 @@
 	import Map from './Map.svelte';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
-	import Dot from './Dot.svelte';
+	import Ping from '$lib/components/Ping.svelte';
 	import { colors } from '$lib/metadata.json';
+	import { onNavigate } from '$app/navigation';
 	import { parse } from 'marked';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
@@ -15,14 +16,38 @@
 		import: 'default'
 	});
 	let { data }: { data: PageData } = $props();
+
+	let isPulsating = $state(false);
+	let timerPing = setTimeout(() => {
+		isPulsating = true;
+	}, 15000);
+
+	onNavigate(()=>{
+		isPulsating = false;
+		clearTimeout(timerPing);
+		timerPing = setTimeout(() => {
+			isPulsating = true;
+		}, 15000);
+	});
 </script>
 
 <div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-15">
 	<!-- Orientation Box -->
 	<div>
-		<a href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
-			<Map region={data.content?.MapRegion} place={data.content?.MapPlace} topic={data.topic} />
-		</a>
+		<div class="relative">
+			<a
+				class=""
+				href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}"
+			>
+				<Map
+					classes=""
+					region={data.content?.MapRegion}
+					place={data.content?.MapPlace}
+					topic={data.topic}
+				/>
+				<Ping classes="absolute bottom-10 right-20 size-4" {isPulsating}/>
+			</a>
+		</div>
 		<div class="my-2">
 			<span class="text-5xl font-bold">{data.content?.Jahr}</span>
 			<span class="text-4xl font-bold">in {data.content?.Ort}</span>
@@ -40,14 +65,15 @@
 					href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
 				>
 					<Dot size={24} color="black" />
-					<span>{@html parse(item)}</span>
+					<span>{item}</span>
 				</a>
 			{/each}
 		</div>
 	</div>
 
 	<!-- Content Box -->
-	<div class="grid h-full grid-cols-[2fr_1fr] grid-rows-[auto-90px] gap-4">
+	<!-- //! As soon as screen arrives, replace auto in grid-rows with fixed height -->
+	<div class="grid h-full grid-cols-[2fr_1fr] grid-rows-[200px-90px] gap-4">
 		<div class="max-h-full overflow-y-auto">
 			<!-- Content -->
 			<h1 class="h1 mb-4">{data.content?.Titel}</h1>
@@ -57,14 +83,15 @@
 		</div>
 
 		<!-- Image -->
-		<div class="col-start-2">
+		<div class="relative col-start-2">
 			{#if data.content?.Bild}
-				<a href="{base}/detail/{data.content?.Bild}">
+				<a class="absolute top-0 left-0" href="{base}/detail/{data.content?.Bild}">
 					<img
-						class="h-full max-h-180 w-full object-contain object-right"
+						class="h-full max-h-140 w-full object-contain object-right"
 						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
 						alt="Detailbild"
 					/>
+					<Ping classes="absolute bottom-10 left-20 size-4" {isPulsating}/>
 				</a>
 			{/if}
 		</div>
