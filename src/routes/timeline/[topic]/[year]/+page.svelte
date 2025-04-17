@@ -9,6 +9,7 @@
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
 	import Dot from './Dot.svelte'
+	import {parse} from 'marked'
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -65,7 +66,7 @@
 					href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
 				>
 					<Dot size={24} color="black" />
-					<span>{item}</span>
+					<span>{@html parse(item)}</span>
 				</a>
 			{/each}
 		</div>
