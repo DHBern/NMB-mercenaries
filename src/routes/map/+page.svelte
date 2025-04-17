@@ -2,20 +2,6 @@
 	import { base } from '$app/paths';
 	import Circles_full from '$lib/circle-components/Circles-full.svelte';
 	import Ping from '$lib/components/Ping.svelte';
-	import { onNavigate } from '$app/navigation';
-
-	let isPulsating = $state(false);
-	let timerPing = setTimeout(() => {
-		isPulsating = true;
-	}, 2000);
-
-	onNavigate(()=>{
-		isPulsating = false;
-		clearTimeout(timerPing);
-		timerPing = setTimeout(() => {
-			isPulsating = true;
-		}, 2000);
-	});
 
 </script>
 
