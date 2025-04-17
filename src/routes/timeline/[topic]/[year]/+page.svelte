@@ -8,7 +8,7 @@
 	import Ping from '$lib/components/Ping.svelte';
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
-	import { parse } from 'marked';
+	import Dot from './Dot.svelte'
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
