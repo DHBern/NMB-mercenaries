@@ -95,6 +95,15 @@
 
 	// Start flipping
 	setTimeout(() => flipTrue(), Math.random() * 500 + 1000);
+
+	// Indices where states is true
+	let trueIndices = $derived.by(() => {
+		let trueIndices = [];
+		states.forEach((state, index) => {
+			if (state) trueIndices.push(index);
+		});
+		return trueIndices;
+	});
 </script>
 
 <div class="absolute ml-10">
@@ -117,7 +126,7 @@
 			{@const cx = x(datapoint.Jahr)}
 			{@const cy = y(datapoint.yPos || Math.floor(Math.random() * nRandomSlots))}
 			<!-- svelte-ignore a11y_consider_explicit_label -->
-			<g class={['z-10', states[j] && 'z-20']}>
+			<g id="anderswo_{j}" class={['z-10', states[j] && 'z-20']}>
 				<a href="{base}/detail/{encodeURIComponent(datapoint.Titel)}_{datapoint.Jahr}">
 					<foreignObject
 						x={cx - 250}
@@ -155,6 +164,13 @@
 					/>
 				</a>
 			</g>
+		{/each}
+
+		<!-- Workaround to bring nodes to front whose state is currently true 
+		 (needed, since z-index does not work inside svg) 
+		 -->
+		{#each trueIndices as idx}
+			<use xlink:href="#anderswo_{idx}" />
 		{/each}
 	</svg>
 </div>
