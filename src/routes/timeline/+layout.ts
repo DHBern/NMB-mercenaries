@@ -3,6 +3,6 @@ import type { LayoutLoad } from './$types';
 export const load = (async ({ params }) => {
 	return {
 		topic: params.topic,
-		year: Number(params.year)
+		currentyear: Number(params.year)
 	};
 }) satisfies LayoutLoad;

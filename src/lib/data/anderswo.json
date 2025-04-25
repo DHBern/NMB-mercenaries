@@ -1,540 +1,630 @@
 [
 	{
 		"Jahr": 1785,
+		"yPos": null,
 		"Titel": "Dampfmaschine",
 		"Text": "Am 23. August wird im sachsen-anhaltinischen Hettstedt die erste Watts-Dampfmaschine im deutschsprachigen Raum in Betrieb genommen.",
 		"Bild": "Dampfmaschine"
 	},
 	{
 		"Jahr": 1785,
+		"yPos": null,
 		"Titel": "Ode An die Freude",
 		"Text": "Friedrich Schiller verfasst in Leipzig die erste Version der Ode *An die Freude*. Später wird das Gedicht in der 9. Sinfonie von Beethoven vertont.",
 		"Bild": "Ode An die Freude"
 	},
 	{
 		"Jahr": 1785,
+		"yPos": null,
 		"Titel": "Erster toter Luftfahrer",
 		"Text": "Jean-François Pilâtre de Rozier wird am 15. Juni das erste Todesopfer in der Luftfahrtsgeschichte, als sein Luftballon Feuer fängt und abstürzt.",
 		"Bild": "Erster toter Luftfahrer"
 	},
 	{
 		"Jahr": 1798,
+		"yPos": null,
 		"Titel": "Ägyptische Expedition",
 		"Text": "Napoleon Bonaparte begibt sich auf die Ägyptische Expedition.",
 		"Bild": "Ägyptische Expedition"
 	},
 	{
 		"Jahr": 1798,
+		"yPos": null,
 		"Titel": "Irische Rebellion",
 		"Text": "In Irland kommt es zu einem mehrmonatigen Aufstand gegen die britischen Kolonialherren. Ziel der erfolglosen Rebellion ist die irische Unabhängigkeit.",
 		"Bild": "Irische Rebellion"
 	},
 	{
 		"Jahr": 1798,
+		"yPos": null,
 		"Titel": "Auflösung Niederländische Ostindien-Kompanie",
 		"Text": "Nach ihrem Bankrott und zunehmender britischer Konkurrenz wird mit der Niederländischen Ostindien-Kompanie (VOC) eines der grössten Handelsunternehmen aufgelöst und in den niederländischen Staat integriert.",
 		"Bild": "Auflösung Niederländische Ostindien-Kompanie"
 	},
 	{
 		"Jahr": 1804,
+		"yPos": null,
 		"Titel": "Kaiserkrönung in Frankreich",
 		"Text": "Napoleon krönt sich am 02. Dezember im Notre Dame in Paris zum Kaiser.",
 		"Bild": "Kaiserkrönung in Frankreich"
 	},
 	{
 		"Jahr": 1804,
+		"yPos": null,
 		"Titel": "Kaiserkrönung in Haiti",
 		"Text": "Am 8. November lässt sich der ehemalige Sklave und haitianische Revolutionsführer Jean-Jacques Dessalines zum ersten Kaiser von Haiti ausrufen.",
 		"Bild": "Kaiserkrönung in Haiti"
 	},
 	{
 		"Jahr": 1804,
+		"yPos": null,
 		"Titel": "Dampflokomotive",
 		"Text": "Der Brite Richard Trevithick baut die erste Dampflokomotive der Welt.",
 		"Bild": "Dampflokomotive"
 	},
 	{
 		"Jahr": 1806,
+		"yPos": null,
 		"Titel": "Napoleon marschiert in Berlin ein",
 		"Text": "Am 27. Oktober zieht Napoleon mit seinen Truppen in Berlin ein und läutet damit das Ende des Heiligen Römischen Reiches Deutscher Nation ein.",
 		"Bild": "Napoleon marschiert in Berlin ein"
 	},
 	{
 		"Jahr": 1806,
+		"yPos": null,
 		"Titel": "Bergsturz von Goldau",
 		"Text": "Am 2. September kommen beim Bergsturz von Goldau im Kanton Schwyz 457 Menschen ums Leben. Es handelt sich um eine der bisher grössten Naturkatastrophen der Schweiz.",
 		"Bild": "Bergsturz von Goldau"
 	},
 	{
 		"Jahr": 1806,
+		"yPos": null,
 		"Titel": "Faust",
 		"Text": "Johann Wolfgang von Goethe vollendet *Faust. Eine Tragödie*, die als eines der bedeutendsten Werke der deutschsprachigen Literatur gilt.",
 		"Bild": "Faust"
 	},
 	{
 		"Jahr": 1813,
+		"yPos": null,
 		"Titel": "Völkerschlacht",
 		"Text": "Napoleon verliert die Völkerschlacht bei Leipzig, an der rund 600'000 Soldaten teilnahmen und muss sich aus Deutschland zurückziehen.",
 		"Bild": "Völkerschlacht"
 	},
 	{
 		"Jahr": 1813,
+		"yPos": null,
 		"Titel": "Britisch-Amerikanischer Krieg",
 		"Text": "In Amerika tobt der Britisch-Amerikanische Krieg, nachdem Amerika Grossbritannien im Vorjahr aufgrund verschiedenster Streitigkeiten den Krieg erklärt hat.",
 		"Bild": "Britisch-Amerikanischer Krieg"
 	},
 	{
 		"Jahr": 1813,
+		"yPos": null,
 		"Titel": "Lichtbogen",
 		"Text": "Am 17. Januar entdeckt Humphry Davy den Lichtbogen und legt damit den Grundstein für die elektrische Beleuchtung.",
 		"Bild": "Lichtbogen"
 	},
 	{
 		"Jahr": 1814,
+		"yPos": null,
 		"Titel": "Frieden von Gent",
 		"Text": "Der Frieden von Gent beendet am 24. Dezember 1814 den Britisch-Amerikanischen Krieg.",
 		"Bild": "Frieden von Gent"
 	},
 	{
 		"Jahr": 1814,
+		"yPos": null,
 		"Titel": "Napoleon dankt ab",
 		"Text": "Am 12. April dankt Napoleon Bonaparte auf Zwang seiner Gegner als Kaiser Frankreichs ab und wird nach Elba verbannt.",
 		"Bild": "Napolen dankt ab"
 	},
 	{
 		"Jahr": 1814,
+		"yPos": null,
 		"Titel": "Verfassung von Eidsvoll",
 		"Text": "Im norwegischen Eidsvoll wird am 17. Mai die heute noch gültige Verfassung unterzeichnet. Mit Gewaltentrennung und weitrechender Volkssouveränität gilt sie in dieser Zeit trotz antisemitischer Paragraphen als eine der liberalsten Verfassungen Europas.",
 		"Bild": "Verfassung von Eidsvoll"
 	},
 	{
 		"Jahr": 1816,
+		"yPos": null,
 		"Titel": "Untergang der *Méduse*",
 		"Text": "Am 2. Juli sinkt vor Westafrika die französische Fregatte *Méduse*. Théodore Gèricaults Gemälde *Le Radeau de la Méduse* macht den Untergang weltweit berühmt",
 		"Bild": "Untergang der Méduse"
 	},
 	{
 		"Jahr": 1816,
+		"yPos": null,
 		"Titel": "Jahr ohne Sommer",
 		"Text": "Aufgrund eines Vulkanausbruchs im heutigen Indonesien kommt es zu sommerlichen Eisstürmen, Frost und Schnee in Teilen der Nordhalbkugel. Diese sorgen in Teilen Europas für einen grossen Anstieg der Nahrungsmittelpreise und Hungersnöte. Das Jahr geht als «Jahr ohne Sommer» in die Geschichte ein.",
 		"Bild": "Jahr ohne Sommer"
 	},
 	{
 		"Jahr": 1816,
+		"yPos": null,
 		"Titel": "Argentinische Unabhängigkeit",
 		"Text": "Am 9. Juli erklärt Argentinien die Unabhängigkeit von Spanien.",
 		"Bild": "Argentinische Unabhängigkeit"
 	},
 	{
 		"Jahr": 1826,
+		"yPos": null,
 		"Titel": "Erste Fotographie",
 		"Text": "Joseph Nicéphore Nièpce fertigt die erste Fotographie der Welt an.",
 		"Bild": "Erste Fotographie"
 	},
 	{
 		"Jahr": 1826,
+		"yPos": null,
 		"Titel": "Letzte US-Gründerväter sterben",
 		"Text": "Mit John Adams und Thomas Jefferson sterben die letzten beiden Gründungsväter der USA.",
 		"Bild": "Letzte amerikanische Gründerväter sterben"
 	},
 	{
 		"Jahr": 1826,
+		"yPos": null,
 		"Titel": "Spanische Inquisition",
 		"Text": "In Valencia wird das letzte Todesurteil der spanischen Inquisition vollstreckt. Acht Jahre später wird die Inquisition offiziell abgeschafft.",
 		"Bild": "Spanische Inquisition"
 	},
 	{
 		"Jahr": 1829,
+		"yPos": null,
 		"Titel": "Akkordeon",
 		"Text": "Cyrill Demian und seine Söhne erhalten das Patent für das Akkordeon.",
 		"Bild": "Akkordeon"
 	},
 	{
 		"Jahr": 1829,
+		"yPos": null,
 		"Titel": "Roman Catholic Relief Act",
 		"Text": "Mit dem *Roman Catholic Relief Act*, der es Katholiken erlaubt, politische und juristische Ämter zu übernehmen, gelingt der Katholikenemanzipation in Grossbritannien ein letzter grosser Schritt.",
 		"Bild": "Roman Catholic Relief Act"
 	},
 	{
 		"Jahr": 1829,
+		"yPos": null,
 		"Titel": "Boat Race",
 		"Text": "In England findet erstmals das *Boat Race*, ein Ruderrennen zwischen den beiden Universitäten Cambridge und Oxford, statt.",
 		"Bild": "Boat Race"
 	},
 	{
 		"Jahr": 1830,
+		"yPos": null,
 		"Titel": "Julirevolution",
 		"Text": "In verschiedensten europäischen Staaten kam es in diesem Jahr zu republikanischen Revolutionsversuchen. Als bedeutendste gilt die Julirevolution in Frankreich, die die Herrschaft der Bourbonen beendet.",
 		"Bild": "Julirevolution"
 	},
 	{
 		"Jahr": 1830,
+		"yPos": null,
 		"Titel": "Indian Removal Act",
 		"Text": "Mit dem *Indian Removal Act* wird in den USA die zwangsweise Umsiedlung indigener Völker in Reservate beschlossen.",
 		"Bild": "Indian Removal Act"
 	},
 	{
 		"Jahr": 1830,
+		"yPos": null,
 		"Titel": "Eröffnung LMR",
 		"Text": "Am 15. September wird die Liverpool and Manchester Railway (LMR) eröffnet. Mit ihrem Fahrplanbetrieb und ihrer durchgehenden Zweigleisigkeit diente sie später weltweit als Vorbild für den entstehenden Eisenbahnverkehr.",
 		"Bild": "Eröffnung LMR"
 	},
 	{
 		"Jahr": 1831,
+		"yPos": null,
 		"Titel": "HMS Beagle",
 		"Text": "Charles Darwin bricht mit dem Schiff *HMS Beagle* zur zweiten Vermessungsfahrt nach Südamerika auf. Auf der rund fünfjährigen Reise vertieft Darwin die Forschung zu seiner Evolutionstheorie.",
 		"Bild": "HMS Beagle"
 	},
 	{
 		"Jahr": 1831,
+		"yPos": null,
 		"Titel": "Oktoberaufstand",
 		"Text": "In Polen wird der antizaristische Novemberaufstand polnischer Nationalisten endgültig niedergeschlagen und Kongress-Polen verliert seine Autonomie und wird dem russischen Zarenreich angegliedert.",
 		"Bild": "Novemberaufstand"
 	},
 	{
 		"Jahr": 1831,
+		"yPos": null,
 		"Titel": "Fremdenlegion",
 		"Text": "Am 10. März wird in Frankreich die Fremdenlegion, die aus ausländischen Söldnern besteht, gegründet.",
 		"Bild": "Fremdenlegion"
 	},
 	{
 		"Jahr": 1835,
+		"yPos": null,
 		"Titel": "Junges Deutschland",
 		"Text": "In Deutschland werden die Schriften des *Jungen Deutschlands*, einer literarischen Bewegung liberaler und antimonarchistischer Jungautoren, verboten. Als bekanntester Vertreter gilt Heinrich Heine.",
 		"Bild": "Junges Deutschland"
 	},
 	{
 		"Jahr": 1835,
+		"yPos": null,
 		"Titel": "Attentat auf Louis-Philippe I",
 		"Text": "Der «Bürgerkönig» Louis-Philippe I überlebt am 28. Juli in Paris ein Sprengstoffanschlag.",
 		"Bild": "Attentat auf Louis-Philippe I"
 	},
 	{
 		"Jahr": 1835,
+		"yPos": null,
 		"Titel": "Goldener Hut",
 		"Text": "Im deutschen Schifferstadt wird der erste bronzezeitliche Goldene Hut gefunden. Noch heute ist die Funktion des Goldhutes, der zwischen 1400 v.Chr. und 1300 v.Chr. hergestellt wurde, nicht geklärt.",
 		"Bild": "Goldener Hut"
 	},
 	{
 		"Jahr": 1841,
+		"yPos": null,
 		"Titel": "Aargauer Klosterstreit",
 		"Text": "Im Kanton Aargau führt die Aufhebung aller Kloster zum Aargauer Klosterstreit. Dieser stellt eine wichtige Etappe im sogenannten Kulturkampf, der später zum Sonderbundskrieg führen wird, dar.",
 		"Bild": "Aargauer Klosterstreit"
 	},
 	{
 		"Jahr": 1841,
+		"yPos": null,
 		"Titel": "Kürzeste US-Präsidentschaft",
 		"Text": "Monat, der bisher kürzesten Amtszeit als US-Präsident stirbt William Henry Harrison am 04. April.",
 		"Bild": "Kürzeste US-Präsidentschaft"
 	},
 	{
 		"Jahr": 1841,
+		"yPos": null,
 		"Titel": "Anglo-Afghanischer Krieg",
 		"Text": "In Afghanistan tobt der erste Anglo-Afghanische Krieg. Es ist der erste einer sich bis 1919 hinziehenden Reihe von Kriegen, bei denen die Briten ihre Vormacht in der Region sichern wollen.",
 		"Bild": "Anglo-Afghanischer Krieg"
 	},
 	{
 		"Jahr": 1845,
+		"yPos": null,
 		"Titel": "Sonderbund",
 		"Text": "Innerschweizer Kantone schliessen sich am 11. Dezember zum Sonderbund zusammen. Sie vertreten die Interesse der katholisch-konservativen Minderheit im Schweizer Staatbund der Regeneration.",
 		"Bild": "Sonderbund"
 	},
 	{
 		"Jahr": 1845,
+		"yPos": null,
 		"Titel": "Erster Bahnhof der Schweiz",
 		"Text": "Am 11. Dezember wird mit dem Französischen Bahnhof in Basel der erste Bahnhof der Schweiz eröffnet.",
 		"Bild": "Erster Bahnhof der Schweiz"
 	},
 	{
 		"Jahr": 1845,
+		"yPos": null,
 		"Titel": "Tannhäuser",
 		"Text": "In Dresden wird am 19. Oktober Richard Wagners Oper *Tannhäuser* uraufgeführt.",
 		"Bild": "Tannhäuser"
 	},
 	{
 		"Jahr": 1846,
+		"yPos": null,
 		"Titel": "Mexikanisch-Amerikanischer Krieg",
 		"Text": "Am 13. Mai erklärt die USA Mexiko den Krieg. Ziel der Vereinigten Staaten ist es, ihr Staatsgebiet nach Süden auszudehnen.",
 		"Bild": "Mexikanisch-Amerikanischer Krieg"
 	},
 	{
 		"Jahr": 1846,
+		"yPos": null,
 		"Titel": "Great Famine",
 		"Text": "In Irland sorgt die zweite Kartoffelmissernte in Folge zu einer Verschärfung der Grossen Hungersnot. Der *Great Famine* sorgte für mehr als eine Million Tote und eine irische Massenemigration nach Amerika, Kanada und Australien.",
 		"Bild": "Great Famine"
 	},
 	{
 		"Jahr": 1846,
+		"yPos": null,
 		"Titel": "Saxophon",
 		"Text": "Am 21. März erhält Adolphe Sax das Patent auf das Saxophon.",
 		"Bild": "Saxophone"
 	},
 	{
 		"Jahr": 1862,
+		"yPos": null,
 		"Titel": "Sezessionskrieg",
 		"Text": "In Amerika ist der Sezessionskrieg in vollem Gange. Ursache für den Bürgerkrieg zwischen den Nordstaaten und den konföderierten Südstaaten ist eine tiefe wirtschaftliche Spaltung, die sich am stärksten in der Ablehnung der Abschaffung der Sklaverei durch die Südstaaten zeigt.",
 		"Bild": "Sezessionskrieg"
 	},
 	{
 		"Jahr": 1862,
+		"yPos": null,
 		"Titel": "Les Misérables",
 		"Text": "Victor Hugo veröffentlicht *Les Misérables* in fünf Bänden.",
 		"Bild": "Les Misérables"
 	},
 	{
 		"Jahr": 1862,
+		"yPos": null,
 		"Titel": "Henry Dunant",
 		"Text": "Der Genfer und spätere Begründer des Roten Kreuzes Henry Dunant veröffentlicht *Eine Erinnerung an Solferino*.",
 		"Bild": "Henry Dunant"
 	},
 	{
 		"Jahr": 1794,
+		"yPos": null,
 		"Titel": "Hinrichtung von Robespierre",
 		"Text": "In Paris werden am 28. Juli Maximilien de Robespierre und 21 seiner Anhänger hingerichtet. Bei den sogenannten ‘Jakobinern’ handelt es sich um einen radikalen Flügel der Französischen Revolution.",
 		"Bild": "Hinrichtung von Robespierre"
 	},
 	{
 		"Jahr": 1794,
+		"yPos": null,
 		"Titel": "Kościuszko-Aufstand",
 		"Text": "In Polen kommt es zum *Kościuszko-Aufstand*. In dieser fehlgeschlagenen Rebellion versuchten polnische Patrioten die Teilung des Landes zwischen Preussen, Österreich und Russland zu bekämpfen.",
 		"Bild": "Kościuszko-Aufstand"
 	},
 	{
 		"Jahr": 1794,
+		"yPos": null,
 		"Titel": "Französischer Einmarsch in die Niederlande",
 		"Text": "Ende Dezember dringt die französische Revolutionsarmee in die Vereinigte Niederlande ein. Es wird die Batavische Republik als napoleonische Tochterrepublik ausgerufen.",
 		"Bild": "Französischer Einmarsch in die Niederlande"
 	},
 	{
 		"Jahr": 1811,
+		"yPos": null,
 		"Titel": "Koalitionskriege auf der iberischen Halbinsel",
 		"Text": "Auf der iberischen Halbinsel toben die Koalitionskriege. Darin wehren sich Portugal und Spanien mit Hilfe Grossbritanniens gegen die napoleonische Besetzung der Halbinsel.",
 		"Bild": "Koalitionskriege auf der iberischen Halbinsel"
 	},
 	{
 		"Jahr": 1811,
+		"yPos": null,
 		"Titel": "Sklavenaufstand",
 		"Text": "An der German Coast kommt er zum grössten Sklavenaufstand der Vereinigten Staaten.",
 		"Bild": "Sklavenaufstand"
 	},
 	{
 		"Jahr": 1811,
+		"yPos": null,
 		"Titel": "Java wird besetzt",
 		"Text": "Britische Truppen besetzen die Insel Java. Die Briten nutzen dabei die eingeschränkte Handlungsfähigkeiten der napoleonisch besetzten Niederlande aus. In Folge des Wiener Kongress wird 1816 die Kolonie wieder an die Niederlande zurückgegeben.",
 		"Bild": "Java wird besetzt"
 	},
 	{
 		"Jahr": 1812,
+		"yPos": null,
 		"Titel": "Maschinenstürmer",
 		"Text": "In England sorgen die Maschinenstürmer für Aufsehen. Dabei handelt es sich um Textilarbeiter, die aus Angst vor Verelendung im Zuge der Industriellen Revolution gezielt Maschinen zerstörten.",
 		"Bild": "Maschinenstürmer"
 	},
 	{
 		"Jahr": 1812,
+		"yPos": null,
 		"Titel": "Britisch-Amerikanischer Krieg",
 		"Text": "Die USA erklärt Grossbritannien den Krieg und versucht im Juni in Kanada einzumarschieren.",
 		"Bild": "Britisch-Amerikanischer Krieg"
 	},
 	{
 		"Jahr": 1812,
+		"yPos": null,
 		"Titel": "Gebrüder Grimm",
 		"Text": "Im Dezember geben die Gebrüder Grimm ihre ersten Märchenbände heraus. ",
 		"Bild": "Gebrüder Grimm"
 	},
 	{
 		"Jahr": 1815,
+		"yPos": null,
 		"Titel": "Waterloo",
 		"Text": "Am 18. Juni wird bei der Schlacht von Waterloo der aus dem Exil zurückgekehrte Napoleon endgültig geschlagen.",
 		"Bild": "Waterloo"
 	},
 	{
 		"Jahr": 1815,
+		"yPos": null,
 		"Titel": "Deutscher Bund",
 		"Text": "Mit der Unterzeichnung der Deutschen Bundesakte wird am 08. Juni der Deutsche Bund gegründet.",
 		"Bild": "Deutscher Bund"
 	},
 	{
 		"Jahr": 1815,
+		"yPos": null,
 		"Titel": "Erneute Verbannung Napoleons",
 		"Text": "Am 22. Juni wird Napoleon wird Napoleon nach St. Helena verbannt.",
 		"Bild": "Erneute Verbannung"
 	},
 	{
 		"Jahr": 1833,
+		"yPos": null,
 		"Titel": "Abschffung Sklaverei",
 		"Text": "Am 28. August schafft das britische Empire die Sklaverei ab.",
 		"Bild": "Abschaffung Sklaverei"
 	},
 	{
 		"Jahr": 1833,
+		"yPos": null,
 		"Titel": "Morseapparat",
 		"Text": "Samuel Morse baut den ersten brauchbaren Schreibtelegraphen. Dieser geht als Morseapparat in die Geschichte ein.",
 		"Bild": "Morseapparat"
 	},
 	{
 		"Jahr": 1833,
+		"yPos": null,
 		"Titel": "Auftrennung Kanton Basel",
 		"Text": "Die Tagsatzung verfügt per 26. August die Trennung des Kanton Basels in Basel-Landschaft und Basel-Stadt. Der Trennung waren Konflikte zwischen dem liberal ausgerichteten Umland und der konservativ ausgerichteten Stadt  vorausgegangen.",
 		"Bild": "Auftrennung Kanton Basel"
 	},
 	{
 		"Jahr": 1836,
+		"yPos": null,
 		"Titel": "Texanischer Unabhängigkeitskrieg",
 		"Text": "US-amerikanische Siedler in Texas erklären am 02. März die Unabhängigkeit von Mexiko und es kommt zum Texanischen Unabhängigkeitskrieg.",
 		"Bild": "Texanischer Unabhängigkeitskrieg"
 	},
 	{
 		"Jahr": 1836,
+		"yPos": null,
 		"Titel": "Colt",
 		"Text": "Samuel Colt erhält am 23. Februar das Patent für den Revolver.",
 		"Bild": "Colt"
 	},
 	{
 		"Jahr": 1836,
+		"yPos": null,
 		"Titel": "Arc de Triomphe",
 		"Text": "In Paris wird nach 30-jähriger Bauzeit die Arc de Triomphe eröffnet. Der Triumphbogen wurde noch von Napoleon für seinen Sieg bei der Schlacht bei Austerlitz in Auftrag gegeben",
 		"Bild": "Arc de Triomphe"
 	},
 	{
 		"Jahr": 1840,
+		"yPos": null,
 		"Titel": "Hörerinnen an der Universität",
 		"Text": "An der Universität Zürich werden erstmals Frauen als Hörerinnen zugelassen.  Erst mehr als 20 Jahre später wird es Frauen möglich sein, ein Studium an der Universität Zürich zu absolvieren.",
 		"Bild": "Hörerinnen an der Universität"
 	},
 	{
 		"Jahr": 1840,
+		"yPos": null,
 		"Titel": "Damaskus-Affäre",
 		"Text": "In Damaskus kommt es zur Damaskus-Affäre. Anlass der diplomatischen Krise ist eine Ritualmordklage gegen die jüdische Gemeinde in Damaskus. Die Affäre führt vielen jüdischen Gemeinschaften weltweit ihre Gefährdung und Isolation vor Augen und wirkt so bis heute nach.",
 		"Bild": "Damaskus-Affäre"
 	},
 	{
 		"Jahr": 1840,
+		"yPos": null,
 		"Titel": "One Penny Black",
 		"Text": "Am 01. Mai wird mit der One Penny Black in Grossbritannien die erste Briefmarke der Welt eingeführt.",
 		"Bild": "One Penny Black"
 	},
 	{
 		"Jahr": 1843,
+		"yPos": null,
 		"Titel": "Opiumkrieg",
 		"Text": "Der Vertrag von Nanking beendet im August den ersten Opiumkrieg. Der Krieg, den Grossbritannien gegen das chinesische Kaiserreich ausfechtet, läutet den Beginn der kolonialistischen Fremdbestimmung in China, die erst ein Jahrhundert später enden wird, ein.",
 		"Bild": "Opiumkrieg"
 	},
 	{
 		"Jahr": 1843,
+		"yPos": null,
 		"Titel": "Tageslichtkomet",
 		"Text": "Im Frühjahr ist mehrfach ein Komet zu sehen, der heute als einer der hellsten je gesehenen gilt. Er ist so hell, dass er sogar bei Tageslicht gut sichtbar ist.",
 		"Bild": "Tageslichtkomet"
 	},
 	{
 		"Jahr": 1843,
+		"yPos": null,
 		"Titel": "Thames Tunnel",
 		"Text": "Am 25. März wird mit dem Thames Tunnel, der erste flussquerende Tunnel eröffnet.",
 		"Bild": "Thames Tunnel"
 	},
 	{
 		"Jahr": 1848,
+		"yPos": null,
 		"Titel": "Revolutionsjahr",
 		"Text": "In verschiedensten Staaten Europas kommt es zu liberalen, nationalen und republikanischen revolutionären Erhebungen.",
 		"Bild": "Revolutionsjahr"
 	},
 	{
 		"Jahr": 1848,
+		"yPos": null,
 		"Titel": "Kommunistisches Manifest",
 		"Text": "Karl Marx und Friedrich Engels verfassen das *Manifest der kommunistischen Partei*.",
 		"Bild": "Kommunistisches Manifest"
 	},
 	{
 		"Jahr": 1848,
+		"yPos": null,
 		"Titel": "Goldrausch",
 		"Text": "In Kalifornien beginnt der Goldrausch und führt zu einer massiven Zuwanderung. Noch heute trägt der amerikanische Bundesstaat den Beinahmen *Golden State*.",
 		"Bild": "Goldrausch"
 	},
 	{
 		"Jahr": 1854,
+		"yPos": null,
 		"Titel": "Krimkrieg",
 		"Text": "An der russischen Südgrenze tobt der Krimkrieg. Der Krieg zwischen Russland auf der einen und dem osmanischen Reich und seinen Verbündeten auf der anderen Seite gilt als einer der ersten modernen Kriege.",
 		"Bild": "Krimkrieg"
 	},
 	{
 		"Jahr": 1854,
+		"yPos": null,
 		"Titel": "Erster Bundespräsident",
 		"Text": "Friedrich Frey-Herosé wird erster  Schweizer Bundespräsident.",
 		"Bild": "Erster Bundespräsident"
 	},
 	{
 		"Jahr": 1854,
+		"yPos": null,
 		"Titel": "Moderne Krankenpflege",
 		"Text": "Florence Nightingale begründet in einem britischen Militärkrankenhaus in der  Türkei die moderne Krankenpflege.",
 		"Bild": "Moderne Krankenpflege"
 	},
 	{
 		"Jahr": 1871,
+		"yPos": null,
 		"Titel": "Deutsches Kaiserreich",
 		"Text": "Am 18. Januar wird das Deutsche Kaiserreich proklamiert.",
 		"Bild": "Deutsches Kaiserreich"
 	},
 	{
 		"Jahr": 1871,
+		"yPos": null,
 		"Titel": "Pariser Kommune",
 		"Text": "In Frankreich wird am 18. März die Pariser Kommune ausgerufen. Es handelt sich um einen weltweit ersten Versuche eines Gemeindesozialismus. Französische Truppen erobern nach gut 2 Monaten Paris zurück. Es kommt zu Massenexekutionen in Europa bisher noch nie gesehenen Ausmasse: insgesamt 35'000 Kommunarden verlieren ihr Leben, tausende werden nach Neu-Kaledonien in Strafkolonien verbannt.",
 		"Bild": "Pariser Kommune"
 	},
 	{
 		"Jahr": 1871,
+		"yPos": null,
 		"Titel": "Zirkular von Sonvilier",
 		"Text": "Am 11. November verfassen anarchistische Uhrmacher im Hôtel de la Balance im bernischen Sonvilier das *Zirkular von Sonvilier*, ein Manifest, das die Erste Arbeiterinternationale spalten wird. Die anarchistische Bewegung wird daraus entstehen. ",
 		"Bild": "Zirkular von Sonvilier"
 	},
 	{
 		"Jahr": 1817,
+		"yPos": null,
 		"Titel": "Wartburgfest",
 		"Text": "Im sächsischen Eisenach findet im Oktober das erste Wartburgfest statt. Die Teilnehmer fordern eine Vereinigung Deutschlands und bürgerliche Freiheitsrechte.",
 		"Bild": "Wartburgfest"
 	},
 	{
 		"Jahr": 1817,
+		"yPos": null,
 		"Titel": "Kaukasuskrieg",
 		"Text": "Im Kaukasus beginnt das russische Zarenreich die erste vieler militärischer Massnahmen mit dem Ziel, den Nordkaukasus zu kontrollieren. Das militärische Ziel kann erst in den 1860er-Jahren erreicht werden.",
 		"Bild": "Kaukasuskrieg"
 	},
 	{
 		"Jahr": 1817,
+		"yPos": null,
 		"Titel": "Draisine",
 		"Text": "Karl Drais unternimmt in Mannheim die erste öffentliche Fahrt mit einer Draisine, aus der später das Fahrrad entstehen soll. ",
 		"Bild": "Draisine"
 	},
 	{
 		"Jahr": 1849,
+		"yPos": null,
 		"Titel": "Niederschlagung der Revolutionen",
 		"Text": "Die liberalen Revolutionen in Deutschland, Österreich und Italien, die im Vorjahr ausgebrochen sind, werden endgültig niedergeschlagen.",
 		"Bild": "Niederschlagung der Revolutionen"
 	},
 	{
 		"Jahr": 1849,
+		"yPos": null,
 		"Titel": "Dostojewski wird begnadigt",
 		"Text": "Fjodor Dostojewski wird durch den Zaren begnadigt und entgeht so knapp einer Todesstrafe wegen revolutionärer Umtriebe.",
 		"Bild": "Dostojewski wird begnadigt"
 	},
 	{
 		"Jahr": 1849,
+		"yPos": null,
 		"Titel": "Sicherheitsnadel",
 		"Text": "Walter Hunt erhält das Patent auf die Sicherheitsnadel.",
 		"Bild": "Sicherheitsnadel"
 	},
 	{
 		"Jahr": 1857,
+		"yPos": null,
 		"Titel": "Sepoy-Aufstand",
 		"Text": "In Indien kommt es nach einer Meuterei hinduistischer und muslimischer Soldaten zum Sepoy-Aufstand gegen die britischen Kolonialherren. Als Folge wird 1858 die East India Company aufgelöst und Indien formell zur britischen Kronkolonie.",
 		"Bild": "Sepoy-Aufstand"
 	},
 	{
 		"Jahr": 1857,
+		"yPos": null,
 		"Titel": "Neuenburgerhandel",
 		"Text": "Der Vertrag von Paris beendet den als Neuenburgerhandel bezeichneten diplomatischen Konflikt zwischen Preussen und der Schweiz. Dieser bricht aus, als es im Fürstentum Neuenburg, das unter preussisch-schweizerischer Doppelherrschaft steht, zu einem Sturz der konservativen Regierung kommt. Sowohl Preussen wie auch der junge Bundesstaat mobilisieren Truppen, die jedoch nicht zum Einsatz kommen.",
 		"Bild": "Neuenburgerhandel"
 	},
 	{
 		"Jahr": 1857,
+		"yPos": null,
 		"Titel": "Erster Fussballverein",
 		"Text": "Mit dem FC Sheffield wird der erste Fussballverein der Welt gegründet.",
 		"Bild": "Erster Fussballverein"

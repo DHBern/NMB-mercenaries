@@ -51,28 +51,21 @@
 					<Ping classes="absolute bottom-0 -right-5 size-4" {isPulsating}/>
 				</div>
 			</a>
-		</div>
-		<div class="my-2">
-			<span class="text-5xl font-bold">{data.content?.Jahr}</span>
-			<span class="text-4xl font-bold">in {data.content?.Ort}</span>
-			{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
-					>({@html data.topic_label})</span
-				>{/if}
+			<div class="absolute flex flex-col justify-start items-start grow-0 top-[100%] left-[38%]">
+				<div>
+				<span class="text-5xl font-bold">{data.content?.Jahr}</span>
+				<span class="text-4xl font-bold">in {data.content?.Ort}</span>
+				{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
+						>({@html data.topic_label})</span
+					>{/if}					
+				</div>
+				<a
+				class="btn btn-lg mt-10 font-bold {colors['preset-filled'][data.topic]}"
+				href="{base}/timeline/anderswo/{data.currentyear}"><ArrowRight />Was sonst noch war</a
+					>
+				</div>
 		</div>
 
-		<!-- Gleichzeitig anderswo -->
-		<div class="border-surface-200 ml-5 h-60 border-l-2 pt-4 pl-5">
-			<h2 class="text-lg font-bold">{m.close_livid_lemur_pull()}</h2>
-			{#each data.anderswo as item}
-				<a
-					class="anchor flex h-12 items-center gap-2 p-0 text-lg"
-					href="{base}/detail/{encodeURIComponent(item)}_{data.year}"
-				>
-					<Dot size={24} color="black" />
-					<span>{@html parse(item)}</span>
-				</a>
-			{/each}
-		</div>
 	</div>
 
 	<!-- Content Box -->

@@ -13,7 +13,9 @@
 		"fill": {
 			"Heilmann": "fill-warning-500",
 			"Brunnen": "fill-error-500",
-			"Neuhaus": "fill-success-500"
+			"Neuhaus": "fill-success-500",
+			"anderswoDark": "fill-surface-700",
+			"anderswoLight": "fill-surface-100"
 		},
 		"text": {
 			"Heilmann": "text-warning-500",
