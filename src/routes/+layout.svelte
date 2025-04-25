@@ -5,6 +5,7 @@
 	import { base } from '$app/paths';
 	import { listen, onIdle } from 'svelte-idle';
 	import { goto } from '$app/navigation';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
 
 	let { children } = $props();
@@ -27,12 +28,12 @@
 	function modalClose() {
 		isModalOpen = false;
 	}
-	$effect(()=>{
-		if (isModalOpen === false){
+	$effect(() => {
+		if (isModalOpen === false) {
 			clearInterval(intervalID);
 			clearTimeout(timerToHome);
 		}
-	})
+	});
 
 	onIdle(() => {
 		if (!page.url.pathname.includes('/intro/1')) {
@@ -83,9 +84,21 @@
 	]}
 >
 	<header class="flex justify-between gap-4 p-4">
-		<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="{base}/intro/1"
-			>Zum Start</a
-		>
+		{#if (!page.url.pathname.includes('/intro'))}
+		<div class="flex gap-4">
+			<button
+				class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold"
+				onclick={() => {
+					history.back();
+				}}><ArrowLeft /></button
+			>
+			<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="{base}/intro/1"
+				>Zum Start</a
+			>
+		</div>
+		{:else}
+		<div class="flex gap-4"></div>
+		{/if}
 		<div class="flex gap-4">
 			{#each locales as locale}
 				<button
