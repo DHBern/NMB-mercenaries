@@ -55,19 +55,18 @@
 	<!-- Orientation Box -->
 	<div>
 		<div class="relative">
-			<a
-				class=""
-				href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}"
-			>
+			<a class="" href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
 				<Map
 					classes=""
 					region={data.content?.MapRegion}
 					place={data.content?.MapPlace}
 					topic={data.topic}
 				/>
-				<div class="btn btn-lg absolute left-7 -top-2 w-10 h-10">
-					<span class="text-base rounded bg-white px-2 text-lg text-black font-semibold">Zur Karte</span>
-					<Ping classes="absolute bottom-0 -right-5 size-4" {isPulsating}/>
+				<div class="btn btn-lg absolute -top-2 left-7 h-10 w-10">
+					<span class="rounded bg-white px-2 text-base text-lg font-semibold text-black"
+						>Zur Karte</span
+					>
+					<Ping classes="absolute bottom-0 -right-5 size-4" {isPulsating} />
 				</div>
 			</a>
 			<div class="absolute flex flex-col justify-start items-start grow-0 top-[100%] left-[38%]">
