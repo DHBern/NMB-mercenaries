@@ -3,7 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
-	import colors from '$lib/colors.json';
+	import {colors} from '$lib/metadata.json';
 	import FullMap from '../FullMap.svelte';
 	import { onNavigate } from '$app/navigation';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import colors from '$lib/colors.json';
+	import {colors} from '$lib/metadata.json';
 </script>
 
 <div class="mx-auto pt-30 w-[80%]">
