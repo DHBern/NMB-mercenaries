@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages.js';
+	import portrait_heilmann from '$lib/images/portrait-heilmann-mono.jpg';
+	import portrait_neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
+	import portrait_brunnen from '$lib/images/portrait-brunnen-mono.jpg';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
 	import Map from './Map.svelte';
@@ -8,8 +11,8 @@
 	import Ping from '$lib/components/Ping.svelte';
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
-	import Dot from './Dot.svelte'
-	import {parse} from 'marked'
+	import Dot from './Dot.svelte';
+	import { parse } from 'marked';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -18,12 +21,28 @@
 	});
 	let { data }: { data: PageData } = $props();
 
+	let portrait = $derived.by(() => {
+		let portrait;
+		switch (data.topic) {
+			case 'Heilmann':
+				portrait = portrait_heilmann;
+				break;
+			case 'Neuhaus':
+				portrait = portrait_neuhaus;
+				break;
+			case 'Brunnen':
+				portrait = portrait_brunnen;
+				break;
+		}
+		return portrait;
+	});
+
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
 		isPulsating = true;
 	}, 15000);
 
-	onNavigate(()=>{
+	onNavigate(() => {
 		isPulsating = false;
 		clearTimeout(timerPing);
 		timerPing = setTimeout(() => {
@@ -88,7 +107,7 @@
 						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
 						alt="Detailbild"
 					/>
-					<Ping classes="absolute bottom-10 left-20 size-4" {isPulsating}/>
+					<Ping classes="absolute bottom-10 left-20 size-4" {isPulsating} />
 				</a>
 			{/if}
 		</div>
