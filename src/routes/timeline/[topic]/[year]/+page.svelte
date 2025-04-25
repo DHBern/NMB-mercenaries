@@ -46,7 +46,10 @@
 					place={data.content?.MapPlace}
 					topic={data.topic}
 				/>
-				<Ping classes="absolute bottom-10 right-20 size-4" {isPulsating}/>
+				<div class="btn btn-lg absolute left-7 -top-2 w-10 h-10">
+					<span class="text-base rounded bg-white px-2 text-lg text-black font-semibold">Zur Karte</span>
+					<Ping classes="absolute bottom-0 -right-5 size-4" {isPulsating}/>
+				</div>
 			</a>
 		</div>
 		<div class="my-2">
