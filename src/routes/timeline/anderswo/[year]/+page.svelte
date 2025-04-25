@@ -11,16 +11,6 @@
 		isPulsating = true;
 	}, 100);
 
-	let trueIndices = $state([]);
-	$inspect(trueIndices);
-	function addToIndex(idx) {
-		// add idx to list for 1 second (which is enough to run svg-<use>)
-		trueIndices.push(idx);
-		setTimeout(() => {
-			trueIndices = trueIndices.filter((value) => value !== idx);
-		}, 1000);
-	}
-
 	onNavigate(() => {
 		clearTimeout(timerPing);
 	});
@@ -77,8 +67,6 @@
 	for (let i = 0; i < nTrue; i++) {
 		const randomIndex = Math.floor(Math.random() * states.length);
 		states[randomIndex] = true;
-		addToIndex(randomIndex);
-
 		// flip back to false
 		setTimeout(
 			() => {
@@ -92,7 +80,6 @@
 		// flip a random state to true
 		const randomIndex = Math.floor(Math.random() * states.length);
 		states[randomIndex] = true;
-		addToIndex(randomIndex);
 
 		// flip back to false
 		setTimeout(
@@ -108,6 +95,15 @@
 
 	// Start flipping
 	setTimeout(() => flipTrue(), Math.random() * 500 + 1000);
+
+	// Indices where states is true
+	let trueIndices = $derived.by(() => {
+		let trueIndices = [];
+		states.forEach((state, index) => {
+			if (state) trueIndices.push(index);
+		});
+		return trueIndices;
+	});
 </script>
 
 <div class="absolute ml-10">
@@ -156,7 +152,7 @@
 						class={[
 							colors.fill.anderswoLight,
 							states[j] && colors.fill.anderswoDark,
-							states[j] && isPulsating && 'animate-ping-once origin-center opacity-50'
+							states[j] && isPulsating && 'origin-center animate-ping opacity-50'
 						]}
 						style="transform-origin: {cx}px {cy}px"
 					/>
