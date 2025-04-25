@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { colors } from '$lib/metadata.json';
-	import heilmann from '$lib/images/portrait-heilmann-mono.jpg';
-	import neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
-	import brunnen from '$lib/images/portrait-brunnen-mono.jpg';
+	import portrait_heilmann from '$lib/images/portrait-heilmann-mono.jpg';
+	import portrait_neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
+	import portrait_brunnen from '$lib/images/portrait-brunnen-mono.jpg';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import { onMount } from 'svelte';
 
@@ -18,7 +18,7 @@
 		</p>
 		<div class="flex-cols-3 my-5 mb-15 flex justify-around gap-10">
 			<div class="flex flex-col items-center gap-3">
-				<a href="../timeline/Heilmann/1785"><img class="opacity-70 max-h-50 max-w-50" src={heilmann} alt="heilmann" /></a>
+				<a href="../timeline/Heilmann/1785"><img class="opacity-70 max-h-50 max-w-50" src={portrait_heilmann} alt="heilmann" /></a>
 				<a
 					class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Heilmann']]}
 					href="../timeline/Heilmann/1785"
@@ -29,7 +29,7 @@
 				>
 			</div>
 			<div class="flex flex-col items-center gap-3">
-				<a href="../timeline/Neuhaus/1794"><img class="opacity-70 max-h-50 max-w-50" src={neuhaus} alt="neuhaus" /></a>
+				<a href="../timeline/Neuhaus/1794"><img class="opacity-70 max-h-50 max-w-50" src={portrait_neuhaus} alt="neuhaus" /></a>
 				<a
 					class={['btn btn-lg text-xl', colors['preset-filled']['Neuhaus']]}
 					href="../timeline/Neuhaus/1794">
@@ -38,7 +38,7 @@
 			</div>
 			<div class="flex flex-col items-center gap-3">
 				<a href="../timeline/Brunnen/1798">
-					<img class="opacity-70 max-h-50 max-w-50" src={brunnen} alt="brunnen" />
+					<img class="opacity-70 max-h-50 max-w-50" src={portrait_brunnen} alt="brunnen" />
 				</a>
 				<a
 					class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Brunnen']]}
