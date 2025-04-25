@@ -127,8 +127,9 @@
 >
 	<svg {width} {height} bind:this={svgElement}>
 		{#each contentAnderswo as datapoint, j}
-			{@const cx = x(datapoint.Jahr)}
-			{@const cy = y(datapoint.yPos || Math.floor(Math.random() * nRandomSlots))}
+			{@const cx = x(datapoint.Jahr) || 0}
+			{@const cy =
+				(datapoint.yPos ? y(datapoint.yPos) : y(Math.floor(Math.random() * nRandomSlots))) || 0}
 			<!-- svelte-ignore a11y_consider_explicit_label -->
 			<g id="anderswo_{j}" class={['z-10', states[j] && 'z-20']}>
 				<a href="{base}/detail/{encodeURIComponent(datapoint.Titel)}_{datapoint.Jahr}">
