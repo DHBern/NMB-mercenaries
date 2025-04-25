@@ -152,15 +152,8 @@
 						class={[
 							colors.fill.anderswoLight,
 							states[j] && colors.fill.anderswoDark,
-							states[j] && isPulsating && 'origin-center animate-ping opacity-50'
+							states[j] && isPulsating && 'origin-center opacity-50'
 						]}
-						style="transform-origin: {cx}px {cy}px"
-					/>
-					<circle
-						{cx}
-						{cy}
-						r={states[j] ? 13 : 10}
-						class={[colors.fill.anderswoLight, states[j] && colors.fill.anderswoDark]}
 						style="transform-origin: {cx}px {cy}px"
 					/>
 				</a>
