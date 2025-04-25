@@ -69,6 +69,11 @@
 					<Ping classes="absolute bottom-0 -right-5 size-4" {isPulsating} />
 				</div>
 			</a>
+			<img
+				class="absolute top-[80%] left-[2%] max-h-[50%] max-w-[60%] opacity-100"
+				src={portrait}
+				alt="portrait"
+			/>
 			<div class="absolute flex flex-col justify-start items-start grow-0 top-[100%] left-[38%]">
 				<div>
 				<span class="text-5xl font-bold">{data.content?.Jahr}</span>
