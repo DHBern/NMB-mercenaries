@@ -11,8 +11,12 @@
 		isPulsating = true;
 	}, 100);
 
+	let timers = $state([]);
 	onNavigate(() => {
 		clearTimeout(timerPing);
+		timers.forEach((timer) => {
+			clearTimeout(timer);
+		});
 	});
 
 	let width = $state();
@@ -68,12 +72,13 @@
 		const randomIndex = Math.floor(Math.random() * states.length);
 		states[randomIndex] = true;
 		// flip back to false
-		setTimeout(
+		let timer = setTimeout(
 			() => {
 				states[randomIndex] = false;
 			},
 			Math.random() * 15000 + 2000
 		);
+		timers.push(timer);
 	}
 
 	function flipTrue() {
@@ -82,19 +87,22 @@
 		states[randomIndex] = true;
 
 		// flip back to false
-		setTimeout(
+		let timer1 = setTimeout(
 			() => {
 				states[randomIndex] = false;
 			},
 			Math.random() * 2000 + 8000
 		);
+		timers.push(timer1);
 
 		// flip next state to true
-		setTimeout(() => flipTrue(), Math.random() * 2000 + 1000);
+		let timer2 = setTimeout(() => flipTrue(), Math.random() * 2000 + 1000);
+		timers.push(timer2);
 	}
 
 	// Start flipping
-	setTimeout(() => flipTrue(), Math.random() * 500 + 1000);
+	let timer = setTimeout(() => flipTrue(), Math.random() * 500 + 1000);
+	timers.push(timer);
 
 	// Indices where states is true
 	let trueIndices = $derived.by(() => {
@@ -162,6 +170,9 @@
 
 		<!-- Workaround to bring nodes to front whose state is currently true 
 		 (needed, since z-index does not work inside svg) 
+		 Unfortunately, this will re-add the ping-animation ever-again, leading to non-stop pinging, 
+		 which is why ping is removed from the circles.
+		 
 		 -->
 		{#each trueIndices as idx}
 			<use xlink:href="#anderswo_{idx}" />
