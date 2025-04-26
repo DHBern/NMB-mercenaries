@@ -1,51 +1,51 @@
 import type { PageLoad } from './$types';
-import anderswo from '$lib/data/anderswo.json';
-import imgInfo from '$lib/data/img_info.json';
+import anderswoContentAll from '$lib/data/anderswo.json';
+import imgContentAll from '$lib/data/img_info.json';
 import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
 	const { slug } = params;
 	const [topic, yearString] = slug.split('_');
 	const year = Number(yearString);
-	const anderswoData = anderswo.find((item) => item.Jahr === year && item.Titel === topic);
+	const anderswoContent = anderswoContentAll.find((item) => item.Jahr === year && item.Titel === topic);
 	
 	
-	if (anderswoData) {
-		if (anderswoData?.Eckdaten) {
-			anderswoData.Eckdaten = await parse(anderswoData.Eckdaten);
+	if (anderswoContent) {
+		if (anderswoContent?.Eckdaten) {
+			anderswoContent.Eckdaten = await parse(anderswoContent.Eckdaten);
 		}
-		if (anderswoData?.Titel) {
-			anderswoData.Titel = await parse(anderswoData.Titel);
+		if (anderswoContent?.Titel) {
+			anderswoContent.Titel = await parse(anderswoContent.Titel);
 		}
-		if (anderswoData?.Text) {
-			anderswoData.Text = await parse(anderswoData.Text);
+		if (anderswoContent?.Text) {
+			anderswoContent.Text = await parse(anderswoContent.Text);
 		}
 		return {
 			type: 'anderswo',
 			year,
 			topic,
-			content: anderswoData
+			detailContent: anderswoContent
 		};
 	} else {
-		const imgData = imgInfo.info.find((item) => item.Bild === slug);
-		if (imgData?.Metatext) {
-			imgData.Metatext = imgInfo.metatext[imgData.Metatext - 1];
+		const imgContent = imgContentAll.info.find((item) => item.Bild === slug);
+		if (imgContent?.Metatext) {
+			imgContent.Metatext = imgContentAll.metatext[imgContent.Metatext - 1];
 		}
-		if (imgData?.Eckdaten) {
-			imgData.Eckdaten = await parse(imgData.Eckdaten);
+		if (imgContent?.Eckdaten) {
+			imgContent.Eckdaten = await parse(imgContent.Eckdaten);
 		}
-		if (imgData?.Titel) {
-			imgData.Titel = await parse(imgData.Titel);
+		if (imgContent?.Titel) {
+			imgContent.Titel = await parse(imgContent.Titel);
 		}
-		if (imgData?.Text) {
-			imgData.Text = await parse(imgData.Text);
+		if (imgContent?.Text) {
+			imgContent.Text = await parse(imgContent.Text);
 		}
-		if (imgData) {
+		if (imgContent) {
 			return {
 				type: 'img',
 				year,
 				topic,
-				content: imgData
+				detailContent: imgContent
 			};
 		} else {
 			return {

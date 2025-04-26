@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
-import mainContent from '$lib/data/main.json';
-import anderswoAll from '$lib/data/anderswo.json';
+import mainContentAll from '$lib/data/main.json';
+import anderswoContentAll from '$lib/data/anderswo.json';
 import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
@@ -23,17 +23,17 @@ export const load = (async ({ params }) => {
 			break;
 	}
 
-	const contentIndex = mainContent[params.topic as 'Heilmann' | 'Brunnen' | 'Neuhaus'].findIndex(
+	const contentIndex = mainContentAll[params.topic as 'Heilmann' | 'Brunnen' | 'Neuhaus'].findIndex(
 		(item) => item.Jahr === currentyear
 	);
-	const content = mainContent[topic][contentIndex];
-	const nextYear = mainContent[topic][contentIndex + 1]?.Jahr;
-	const prevYear = mainContent[topic][contentIndex - 1]?.Jahr;
+	const mainContent = mainContentAll[topic][contentIndex];
+	const nextYear = mainContentAll[topic][contentIndex + 1]?.Jahr;
+	const prevYear = mainContentAll[topic][contentIndex - 1]?.Jahr;
 
-	const anderswo = anderswoAll.filter((item) => item.Jahr === currentyear).map((item) => item.Titel);
+	// const anderswo = anderswoContentAll.filter((item) => item.Jahr === currentyear).map((item) => item.Titel);
 
-	if (content?.Text) {
-		content.Text = await parse(content.Text);
+	if (mainContent?.Text) {
+		mainContent.Text = await parse(mainContent.Text);
 	}
 
 	return {
@@ -41,7 +41,7 @@ export const load = (async ({ params }) => {
 		topic_label,
 		nextYear,
 		prevYear,
-		content,
-		anderswo
+		mainContent,
+		// anderswo
 	};
 }) satisfies PageLoad;

@@ -55,11 +55,11 @@
 	<!-- Orientation Box -->
 	<div>
 		<div class="relative">
-			<a class="" href="{base}/map/{data.content?.MapRegion}?place={data.content?.MapPlace}">
+			<a class="" href="{base}/map/{data.mainContent?.MapRegion}?place={data.mainContent?.MapPlace}">
 				<Map
 					classes=""
-					region={data.content?.MapRegion}
-					place={data.content?.MapPlace}
+					region={data.mainContent?.MapRegion}
+					place={data.mainContent?.MapPlace}
 					topic={data.topic}
 				/>
 				<div class="btn btn-lg absolute -top-2 left-7 h-10 w-10">
@@ -76,8 +76,8 @@
 			/>
 			<div class="absolute flex flex-col justify-start items-start grow-0 top-[100%] left-[38%]">
 				<div>
-				<span class="text-5xl font-bold">{data.content?.Jahr}</span>
-				<span class="text-4xl font-bold">in {data.content?.Ort}</span>
+				<span class="text-5xl font-bold">{data.mainContent?.Jahr}</span>
+				<span class="text-4xl font-bold">in {data.mainContent?.Ort}</span>
 				{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
 						>({@html data.topic_label})</span
 					>{/if}					
@@ -96,19 +96,19 @@
 	<div class="grid h-full grid-cols-[2fr_1fr] grid-rows-[200px-90px] gap-4">
 		<div class="max-h-full overflow-y-auto">
 			<!-- Content -->
-			<h1 class="h1 mb-4">{data.content?.Titel}</h1>
+			<h1 class="h1 mb-4">{data.mainContent?.Titel}</h1>
 			<p>
-				{@html data.content?.Text}
+				{@html data.mainContent?.Text}
 			</p>
 		</div>
 
 		<!-- Image -->
 		<div class="relative col-start-2">
-			{#if data.content?.Bild}
-				<a class="absolute top-0 left-0" href="{base}/detail/{data.content?.Bild}">
+			{#if data.mainContent?.Bild}
+				<a class="absolute top-0 left-0" href="{base}/detail/{data.mainContent?.Bild}">
 					<img
 						class="h-full max-h-140 w-full object-contain object-right"
-						src={images['/src/lib/images/timeline/' + data.content?.Bild + '.jpg']}
+						src={images['/src/lib/images/timeline/' + data.mainContent?.Bild + '.jpg']}
 						alt="Detailbild"
 					/>
 					<Ping classes="absolute bottom-10 left-20 size-4" {isPulsating} />

@@ -12,8 +12,8 @@
 	const altText = data.type === 'anderswo' ? 'anderswo' : 'Kein Bild';
 	const imgPath =
 		data.type === 'anderswo'
-			? `/src/lib/images/anderswo/${data.year}/${data.content?.Bild}.jpg`
-			: `/src/lib/images/timeline/${data.content?.Bild}.jpg`;
+			? `/src/lib/images/anderswo/${data.year}/${data.detailContent?.Bild}.jpg`
+			: `/src/lib/images/timeline/${data.detailContent?.Bild}.jpg`;
 
 	function handleGoBack() {
 		history.back();
@@ -25,13 +25,13 @@
 	<!-- Image -->
 	 <!-- //! overflow-y-hidden is a hack to restrict the image to the height of the container. Somehow it is not working otherwise... -->
 	<div class="grid h-full grid-rows-[auto_80px] overflow-hidden">
-		{#if data.content?.Bild}
+		{#if data.detailContent?.Bild}
 			<img
 				class="h-full w-full max-w-full object-contain object-right"
 				src={images[imgPath]}
 				alt={altText}
 			/>
-			<p class="ml-10 text-right block text-sm">{@html data.content?.Eckdaten}</p>
+			<p class="ml-10 text-right block text-sm">{@html data.detailContent?.Eckdaten}</p>
 		{/if}
 	</div>
 
@@ -41,9 +41,9 @@
 			class="btn btn-lg preset-outlined-primary-500 mb-10 h-12 w-40 font-semibold"
 			onclick={handleGoBack}>Zurück</button
 		>
-		<h1 class="h1 mb-4">{@html data.content?.Titel}</h1>
-		{#if data.content?.Text}
-			<p>{@html data.content?.Text}</p>
+		<h1 class="h1 mb-4">{@html data.detailContent?.Titel}</h1>
+		{#if data.detailContent?.Text}
+			<p>{@html data.detailContent?.Text}</p>
 		{/if}
 	</div>
 </div>
