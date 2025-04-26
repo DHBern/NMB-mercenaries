@@ -7,7 +7,7 @@ export const load = (async ({ params }) => {
 	const { slug } = params;
 	const [topic, yearString] = slug.split('_');
 	const year = Number(yearString);
-	const anderswoContent = anderswoContentAll.find((item) => item.Jahr === year && item.Titel === topic);
+	let anderswoContent = anderswoContentAll.find((item) => item.Jahr === year && item.Titel === topic);
 	
 	
 	if (anderswoContent) {
@@ -27,7 +27,7 @@ export const load = (async ({ params }) => {
 			detailContent: anderswoContent
 		};
 	} else {
-		const imgContent = imgContentAll.info.find((item) => item.Bild === slug);
+		let imgContent = imgContentAll.info.find((item) => item.Bild === slug);
 		if (imgContent?.Metatext) {
 			imgContent.Metatext = imgContentAll.metatext[imgContent.Metatext - 1];
 		}

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { base } from '$app/paths';
 
 	let { data }: { data: PageData } = $props();
 
@@ -14,10 +13,6 @@
 		data.type === 'anderswo'
 			? `/src/lib/images/anderswo/${data.year}/${data.detailContent?.Bild}.jpg`
 			: `/src/lib/images/timeline/${data.detailContent?.Bild}.jpg`;
-
-	function handleGoBack() {
-		history.back();
-	}
 </script>
 
 <!-- Content Box -->
@@ -39,7 +34,7 @@
 	<div class="flex max-h-full flex-col justify-end overflow-y-auto pb-15">
 		<button
 			class="btn btn-lg preset-outlined-primary-500 mb-10 h-12 w-40 font-semibold"
-			onclick={handleGoBack}>Zurück</button
+			onclick={()=>{history.back()}}>Zurück</button
 		>
 		<h1 class="h1 mb-4">{@html data.detailContent?.Titel}</h1>
 		{#if data.detailContent?.Text}

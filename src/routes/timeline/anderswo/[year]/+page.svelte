@@ -19,8 +19,8 @@
 		});
 	});
 
-	let width = $state();
-	let height = $state();
+	let width = $state(3136);
+	let height = $state(1088);
 
 	let { data } = $props();
 
