@@ -4,6 +4,7 @@
 	import Ping from '$lib/components/Ping.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { localizeHref } from '$lib/paraglide/runtime';
+	import { m } from '$lib/paraglide/messages';
 
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
@@ -70,7 +71,9 @@
 
 		<a href={localizeHref(`${base}/map/europe`)} class="btn btn-lg">
 			<foreignObject x="60" y="240" width="90" height="35">
-				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold">Europa</span>
+				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold"
+					>{m.mad_icy_panther_hug()}</span
+				>
 			</foreignObject>
 			<foreignObject x="0" y="180" width="120" height="120">
 				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} {isPulsating} />
@@ -80,7 +83,7 @@
 		<a href={localizeHref(`${base}/map/seasia`)} class="btn btn-lg">
 			<foreignObject x="540" y="500" width="140" height="50">
 				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold"
-					>Südostasien</span
+					>{m.many_such_haddock_dream()}</span
 				>
 			</foreignObject>
 			<foreignObject x="480" y="440" width="120" height="120">

@@ -13,6 +13,7 @@
 				"countplural"
 			],
 			"match": {
+				"0": "L'application sera réinitialisée dans foo secondes si vous ne réagissez pas.",
 				"countplural=one": "L'application sera réinitialisée dans 1 seconde si vous ne répondez pas.",
 				"countplural=other": "L'application sera réinitialisée dans {count} secondes si vous ne répondez pas."
 			}
@@ -30,5 +31,7 @@
 	"ok_sunny_thrush_radiate": "Vers la carte",
 	"mild_still_moth_roam": "Revenir au début",
 	"safe_just_orangutan_play": "Globale",
-	"cool_odd_rook_jump": "Local"
+	"cool_odd_rook_jump": "Local",
+	"many_such_haddock_dream": "Asie du Sud-Est",
+	"mad_icy_panther_hug": "Europe"
 }
