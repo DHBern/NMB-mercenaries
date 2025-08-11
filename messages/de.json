@@ -1,4 +1,25 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"awake_only_mammoth_assure": "Verflochtene Leben"
+	"awake_only_mammoth_assure": "Verflochtene Leben",
+	"mild_still_moth_roam": "Zum Start",
+	"full_clean_swan_burn": "Sind Sie noch da?",
+	"drab_kind_lamb_feast": "Die Applikation wird in {remaining} Sekunden zurückgesetzt, wenn Sie nicht reagieren.",
+	"east_red_jay_strive": [
+		{
+			"declarations": [
+				"input count",
+				"input remaining",
+				"local countplural = count: plural"
+			],
+			"selectors": [
+				"count",
+				"countplural"
+			],
+			"match": {
+				"countplural=one": "Die Applikation wird in 1 Sekunde zurückgesetzt, wenn Sie nicht reagieren.",
+				"countplural=other": "Die Applikation wird in {count} Sekunden zurückgesetzt, wenn Sie nicht reagieren."
+			}
+		}
+	],
+	"witty_round_toad_charm": "Ich bin noch da!"
 }

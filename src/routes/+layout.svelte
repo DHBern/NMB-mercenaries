@@ -7,6 +7,7 @@
 	import { goto } from '$app/navigation';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
+	import { m } from '$lib/paraglide/messages';
 
 	let { children } = $props();
 
@@ -62,16 +63,16 @@
 >
 	{#snippet content()}
 		<header class="flex justify-between">
-			<h2 class="h2">Sind Sie noch da?</h2>
+			<h2 class="h2">{m.full_clean_swan_burn()}</h2>
 		</header>
 		<article>
 			<p class="opacity-60">
-				Die Applikation wird in {remaining} Sekunden zurückgesetzt, wenn Sie nicht reagieren.
+				{m.east_red_jay_strive({ count: remaining })}
 			</p>
 		</article>
 		<footer class="flex justify-around gap-4">
 			<button type="button" class="btn btn-lg preset-filled" onclick={modalClose}
-				>Ich bin noch da!</button
+				>{m.witty_round_toad_charm()}</button
 			>
 		</footer>
 	{/snippet}
@@ -84,20 +85,20 @@
 	]}
 >
 	<header class="flex justify-between gap-4 p-4">
-		{#if (!page.url.pathname.includes('/intro'))}
-		<div class="flex gap-4">
-			<button
-				class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold"
-				onclick={() => {
-					history.back();
-				}}><ArrowLeft /></button
-			>
-			<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="{base}/intro/1"
-				>Zum Start</a
-			>
-		</div>
+		{#if !page.url.pathname.includes('/intro')}
+			<div class="flex gap-4">
+				<button
+					class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold"
+					onclick={() => {
+						history.back();
+					}}><ArrowLeft /></button
+				>
+				<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="{base}/intro/1"
+					>{m.mild_still_moth_roam()}</a
+				>
+			</div>
 		{:else}
-		<div class="flex gap-4"></div>
+			<div class="flex gap-4"></div>
 		{/if}
 		<div class="flex gap-4">
 			{#each locales as locale}

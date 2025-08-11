@@ -1,4 +1,19 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"awake_only_mammoth_assure": "Destins croisés"
+	"awake_only_mammoth_assure": "Destins croisés",
+	"east_red_jay_strive": [
+		{
+			"declarations": [
+				"input count",
+				"input remaining",
+				"local countplural = count: plural"
+			],
+			"selectors": [],
+			"match": [
+				"L'application sera réinitialisée dans foo secondes si vous ne réagissez pas."
+			]
+		}
+	],
+	"full_clean_swan_burn": "Êtes-vous toujours là ?",
+	"witty_round_toad_charm": "Je suis toujours là."
 }
