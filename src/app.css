@@ -64,3 +64,13 @@ p {
 		animation: ping-twice 6s cubic-bezier(0, 0, 0.2, 1) infinite;
 	}
 }
+
+@layer base {
+	@font-face {
+		font-family: 'PTSansRegular';
+		src: url('/fonts/PTSans-Regular.ttf') format('truetype');
+		font-style: normal;
+		font-weight: normal;
+		font-display: swap;
+	}
+}
