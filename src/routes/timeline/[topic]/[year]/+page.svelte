@@ -11,6 +11,7 @@
 	import Ping from '$lib/components/Ping.svelte';
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
+	import { m } from '$lib/paraglide/messages.js';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -65,7 +66,7 @@
 				/>
 				<div class="btn btn-lg absolute -top-2 left-7 h-10 w-10">
 					<span class="rounded bg-white px-2 text-base text-lg font-semibold text-black"
-						>Zur Karte</span
+						>{m.ok_sunny_thrush_radiate()}</span
 					>
 					<Ping classes="absolute bottom-0 -right-5 size-4" {isPulsating} />
 				</div>
@@ -120,7 +121,7 @@
 					href="{base}/timeline/{data.topic}/{data.prevYear}"
 				>
 					<ArrowLeft class="mr-3" />
-					<span class="font-semibold">Vorherige Station</span>
+					<span class="font-semibold">{m.wise_extra_leopard_zip()}</span>
 				</a>
 			{/if}
 			{#if data.nextYear}
@@ -129,7 +130,7 @@
 					href="{base}/timeline/{data.topic}/{data.nextYear}"
 				>
 					<ArrowRight class="mr-3" />
-					<span class="font-semibold">Nächste Station</span>
+					<span class="font-semibold">{m.funny_long_cheetah_forgive()}</span>
 				</a>
 			{/if}
 		</div>
