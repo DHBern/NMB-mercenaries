@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { m } from '$lib/paraglide/messages.js';
 	import portrait_heilmann from '$lib/images/portrait-heilmann-mono.jpg';
 	import portrait_neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
 	import portrait_brunnen from '$lib/images/portrait-brunnen-mono.jpg';

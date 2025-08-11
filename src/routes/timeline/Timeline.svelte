@@ -4,6 +4,7 @@
 	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
 	import { onNavigate } from '$app/navigation';
+	import { m } from '$lib/paraglide/messages';
 
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
@@ -123,11 +124,11 @@
 	/>
 	{#each ['Up', 'Down'] as wrapper}
 		<foreignObject x="1" y={(y(wrapper) || 0) - 11} width="100" height="30">
-			<div class={['text-sm text-gray-500']}>Global</div>
+			<div class={['text-sm text-gray-500']}>{m.safe_just_orangutan_play()}</div>
 		</foreignObject>
 	{/each}
 	<foreignObject x="1" y={(y('Biel') || 0) - 11} width="100" height="30">
-		<div class={['text-sm text-gray-500']}>Lokal</div>
+		<div class={['text-sm text-gray-500']}>{m.cool_odd_rook_jump()}</div>
 	</foreignObject>
 
 	<path
