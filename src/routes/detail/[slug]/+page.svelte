@@ -10,6 +10,26 @@
 	});
 	const altText = 'Kein Bild';
 	const imgPath = `/src/lib/images/timeline/${data.detailContent?.image}.jpg`;
+
+	// Get language dependent data
+	let title_slug = $state('');
+	let source_slug = $state('');
+	let text_slug = $state('');
+	$effect(() => {
+		if (data.locale == 'de') {
+			title_slug = 'title_de';
+			source_slug = 'source_de';
+			text_slug = 'text_de';
+		} else if (data.locale == 'fr') {
+			title_slug = 'title_fr';
+			source_slug = 'source_fr';
+			text_slug = 'text_fr';
+		} else {
+			title_slug = 'title_de';
+			source_slug = 'source_de';
+			text_slug = 'text_de';
+		}
+	});
 </script>
 
 <!-- Content Box -->
@@ -23,7 +43,7 @@
 				src={images[imgPath]}
 				alt={altText}
 			/>
-			<p class="ml-10 block text-right text-sm">{@html data.detailContent?.Eckdaten}</p>
+			<p class="ml-10 block text-right text-sm">{@html data.detailContent?.[source_slug]}</p>
 		{/if}
 	</div>
 
@@ -35,9 +55,9 @@
 				history.back();
 			}}>Zurück</button
 		>
-		<h1 class="h1 mb-4">{@html data.detailContent?.Titel}</h1>
-		{#if data.detailContent?.Text}
-			<p>{@html data.detailContent?.Text}</p>
+		<h1 class="h1 mb-4">{@html data.detailContent?.[title_slug]}</h1>
+		{#if data.detailContent?.[text_slug]}
+			<p>{@html data.detailContent?.[text_slug]}</p>
 		{/if}
 	</div>
 </div>

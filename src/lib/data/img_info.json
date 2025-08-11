@@ -1,276 +1,383 @@
 {
 	"info": [
 		{
-			"Bild": "Heilmann_1785",
-			"Titel": "Georg Friedrich Heilmann als Kind",
-			"Eckdaten": "Quelle: Privatnachlass Heilmann, Datum: unbekannt"
+			"image": "Heilmann_1785",
+			"title_de": "Georg Friedrich Heilmann als Kind",
+			"text_de": "",
+			"source_de": "Quelle: Privatnachlass Heilmann, Datum: unbekannt",
+			"title_fr": "Georg Friedrich Heilmann enfant",
+			"text_fr": "",
+			"source_fr": "Source :  Collection privée Heilmann, Date :inconnu"
 		},
 		{
-			"Bild": "Heilmann_1804",
-			"Titel": "Hofwil bei Münchenbuchsee",
-			"Text": "In Hofwil eröffnet der Pädagoge Philipp Emanuel von Fellenberg nicht nur eine Landwirtschaftsschule, sondern auch eine Armenschule, die ein wichtiges Vorbild für die spätere Lehrerbildung werden sollte. In beiden wurde der Unterricht nach aufklärerischen Idealen abgehalten. ",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1818"
+			"image": "Heilmann_1804",
+			"title_de": "Hofwil bei Münchenbuchsee",
+			"text_de": "In Hofwil eröffnet der Pädagoge Philipp Emanuel von Fellenberg nicht nur eine Landwirtschaftsschule, sondern auch eine Armenschule – ein wichtiges Vorbild für die spätere Lehrerbildung. In beiden wird nach aufklärerischen Idealen unterrichtet.  ",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1818",
+			"title_fr": "Hofwil près de Münchenbuchsee",
+			"text_fr": "À Hofwil, le pédagogue Philipp Emanuel von Fellenberg fonde non seulement une école d’agriculture, mais aussi une école pour enfants pauvres – un modèle important pour la future formation des enseignant·e·s. Dans les deux institutions, l’enseignement est dispensé selon les idéaux des Lumières.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1818"
 		},
 		{
-			"Bild": "Heilmann_1806",
-			"Titel": "Fahne der Ehrengarde der Bieler Nationalgarde",
-			"Text": "Auf der Fahne ist ein gekrönter napoleonischer Fahnenadler abgebildet. Dieser wird 1804 für jedes Regiment der Grande Armée eingeführt.",
-			"Eckdaten": "Quelle: NMB, Datum: um 1811 "
+			"image": "Heilmann_1806",
+			"title_de": "Fahne der Ehrengarde der Bieler Nationalgarde",
+			"text_de": "Auf der Fahne ist ein gekrönter napoleonischer Fahnenadler abgebildet. Dieser wird 1804 für jedes Regiment der *Grande Armée* eingeführt.",
+			"source_de": "Quelle: NMB, Datum: um 1811 ",
+			"title_fr": "Drapeau de la garde d'honneur de la Garde  nationale biennoise",
+			"text_fr": "Le drapeau est orné d'un aigle napoléonien couronné. Celui-ci est  adopté en 1804 pour chaque régiment de la Grande Armée.",
+			"source_fr": "Source :  NMB, Date : vers 1811 "
 		},
 		{
-			"Bild": "Heilmann_1813",
-			"Titel": "Bieler Ehrengardist",
-			"Text": "Die Uniform der 1811 gegründeten Ehrengarde setzte sich aus einem blauen Rock, einer weissen Weste, dunkelblauen Hosen, schwarzen Gamaschen, einem Tschakko mit grüner Feder und grünen Epauletten zusammen.",
-			"Eckdaten": "Quelle: mémreg, Datum: um 1811"
+			"image": "Heilmann_1813",
+			"title_de": "Bieler Ehrengardist",
+			"text_de": "Die Uniform der 1811 gegründeten Ehrengarde setzt sich aus einem blauen Rock, einer weissen Weste, dunkelblauen Hosen, schwarzen Gamaschen, einem Tschako mit grüner Feder und grünen Epauletten zusammen.",
+			"source_de": "Quelle: mémreg, Datum: um 1811",
+			"title_fr": "Garde d'honneur biennois",
+			"text_fr": "L'uniforme de la garde d'honneur, fondée en 1811, se compose  d'un frac bleu, d'un gilet blanc, d'un pantalon bleu foncé, de guêtres noires, d'un shako à plume verte et d'épaulettes vertes.",
+			"source_fr": "Source :  mémreg, Date : vers 1811"
 		},
 		{
-			"Bild": "Heilmann_1814",
-			"Titel": "Vereinigungsurkunde Fürstbistum Basel und Kanton Bern",
-			"Text": "Einer der insgesamt 25 Artikel der Vereinigungsurkunde bezieht sich ausschliesslich auf die Stadt Biel und regelt die zukünftige Stellung der Stadt im Kanton Bern.",
-			"Eckdaten": "Quelle: mémreg, Datum: 1815"
+			"image": "Heilmann_1814",
+			"title_de": "Vereinigungsurkunde Fürstbistum Basel und Kanton Bern",
+			"text_de": "Einer der insgesamt 25 Artikel der Vereinigungsurkunde bezieht sich ausschliesslich auf die Stadt Biel und regelt die zukünftige Stellung der Stadt im Kanton Bern.",
+			"source_de": "Quelle: mémreg, Datum: 1815",
+			"title_fr": "Acte d'union de l'Evêché de Bâle et du canton  de Berne",
+			"text_fr": "L'un des 25 articles de l'acte d'unification se réfère exclusivement à  la ville de Bienne et règle la position future de la ville dans le canton  de Berne.",
+			"source_fr": "Source :  mémreg, Date : 1815"
 		},
 		{
-			"Bild": "Heilmann_1816",
-			"Titel": "Georg Friedrich Heilmann",
-			"Eckdaten": "Quelle: mémreg, Datum: um 1815"
+			"image": "Heilmann_1816",
+			"title_de": "Georg Friedrich Heilmann",
+			"text_de": "",
+			"source_de": "Quelle: mémreg, Datum: um 1815",
+			"title_fr": "Georg Friedrich Heilmann",
+			"text_fr": " ",
+			"source_fr": "Source :  mémreg, Date : vers 1815"
 		},
 		{
-			"Bild": "Heilmann_1826",
-			"Titel": "Pavillon Felseck",
-			"Text": "1893 fällt der Pavillon Felseck Brandstiftung zum Opfer und wird bis 1898 neu aufgebaut. In Texten von Müller von der Werra und Robert Walser wird der Pavillon literarisch verewigt.",
-			"Eckdaten": "Quelle: Bildarchiv der ETH-Bibliothek, Datum: vor 1906"
+			"image": "Heilmann_1826",
+			"title_de": "Pavillon Felseck",
+			"text_de": "1893 fällt der Pavillon Felseck Brandstiftung zum Opfer und wird bis 1898 neu aufgebaut. Müller von der Werra und Robert Walser verewigen den Pavillon literarisch in ihren Texten.",
+			"source_de": "Quelle: Bildarchiv der ETH-Bibliothek, Datum: vor 1906",
+			"title_fr": "Pavillon Felseck",
+			"text_fr": "En 1893, le pavillon Felseck est victime d'un incendie criminel et sera reconstruit jusqu'en 1898. Müller von der Werra et Robert Walser immortalisent littérairement le pavillon dans leurs textes.",
+			"source_fr": "Source :  Bildarchiv ETH-Bibliothek, Date : vor 1906"
 		},
 		{
-			"Bild": "Heilmann_1829",
-			"Titel": "Hauptmann und Feldweibel des 4. Schweizerregiments",
-			"Text": "Die beiden Offiziere auf dem Bild sind in ihrer Winter-Paradeuniform abgebildet.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: unbekannt"
+			"image": "Heilmann_1829",
+			"title_de": "Hauptmann und Feldweibel des 4. Schweizerregiments",
+			"text_de": "Die beiden Offiziere auf dem Bild tragen ihre Winter-Paradeuniform.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: unbekannt",
+			"title_fr": "Capitaine et sergent-major du 4e régiment suisse",
+			"text_fr": "Les deux officiers sur la photo portent leur uniforme de parade  d'hiver.",
+			"source_fr": "Source :  Wikimedia Commons, Date : inconnu"
 		},
 		{
-			"Bild": "Heilmann_1830",
-			"Titel": "Kantharos aus der Nola Sammlung",
-			"Text": "Der Kantharos diente den Etruskern als Weintrinkgefäss und wird auf die erste Hälfte des 6. Jahrhunderts v. Chr. datiert.",
-			"Eckdaten": "Quelle: NMB, Datum: 6. Jh. v. Chr."
+			"image": "Heilmann_1830",
+			"title_de": "Kantharos aus der Nola-Sammlung",
+			"text_de": "Der Kantharos dient den Etruskern als Weintrinkgefäss und wird auf die erste Hälfte des 6. Jahrhunderts v. Chr. datiert.",
+			"source_de": "Quelle: NMB, Datum: 6. Jh. v. Chr.",
+			"title_fr": "Canthare de la collection Niola",
+			"text_fr": "Le canthare sert de récipient pour boire le vin chez les Étrusques et  est daté de la première moitié du 6e siècle avant Jésus-Christ.",
+			"source_fr": "Source :  NMB, Date : 6e siècle av. J.-C."
 		},
 		{
-			"Bild": "Heilmann_1831",
-			"Titel": "König Ferdinand II beider Sizilien",
-			"Text": "Der Monarch folgt 1830 im Alter von nur 20 Jahren auf seinen Vater und hält trotz grossem innen- und aussenpolitischen Widerstand bis zu seinem Tod 1859 an seiner absolutistischen Politik fest. F. Martorelli, Ölgemälde, 1844.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1844"
+			"image": "Heilmann_1831",
+			"title_de": "König Ferdinand II beider Sizilien",
+			"text_de": "Der Monarch folgt 1830 im Alter von nur 20 Jahren auf seinen Vater und hält trotz grossem innen- und aussenpolitischen Widerstand bis zu seinem Tod 1859 an seiner absolutistischen Politik fest. F. Martorelli, Ölgemälde, 1844.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1844",
+			"title_fr": "Roi Ferdinand II des deux Siciles",
+			"text_fr": "Le monarque succède à son père en 1830, à l'âge de 20 ans  seulement, et maintient sa politique absolutiste jusqu'à sa mort  en 1859, malgré une forte opposition en politique intérieure et  extérieure. F. Martorelli, huile, 1844.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1844"
 		},
 		{
-			"Bild": "Heilmann_1835",
-			"Titel": "Cholera in Palermo 1835",
-			"Text": "Männer laden in Palermo Leichen der Cholerapandemie auf einen Wagen. Palermo ist das Zentrum der Cholerapandemie 1835-1837 und man geht von bis zu 24'000 Toten in der Stadt aus.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1864"
+			"image": "Heilmann_1835",
+			"title_de": "Cholera in Palermo 1835",
+			"text_de": "Männer laden Leichen der Cholerapandemie auf einen Wagen. Palermo ist das Zentrum der Cholerapandemie 1835–1837: Man geht von bis zu 24'000 Toten in der Stadt aus.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1864",
+			"title_fr": "Choléra à Palerme 1835",
+			"text_fr": "Des hommes chargent les dépouilles de victimes du choléra sur un chariot. Palerme est le centre de la pandémie de choléra de 1835-1837 : on estime qu'il y a eu jusqu'à 24 000 morts dans la ville.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1864"
 		},
 		{
-			"Bild": "Heilmann_1841",
-			"Titel": "Panorama des Naples et de ses environs pris depuis le fort de St. Elme",
-			"Text": "Georg Friedrich Heilmann, Lithographie, 1841.",
-			"Eckdaten": "Quelle: Privatnachlass Heilmann, Datum: 1841"
+			"image": "Heilmann_1841",
+			"title_de": "Panorama de Naples et de ses environs pris depuis le fort de St. Elme",
+			"text_de": "Georg Friedrich Heilmann, Lithographie, 1841.",
+			"source_de": "Quelle: Privatnachlass Heilmann, Datum: 1841",
+			"title_fr": "Panorama de Naples et de ses environs pris depuis le fort de St. Elme",
+			"text_fr": "",
+			"source_fr": "Source :  Collection privée Heilmann, Date : 1841"
 		},
 		{
-			"Bild": "Heilmann_1845",
-			"Titel": "Ansicht der Stadt Biel vom Rebberg",
-			"Text": "Johann Friedrich Wagner, Lithographie.",
-			"Eckdaten": "Quelle: mémreg, Datum: 1845"
+			"image": "Heilmann_1845",
+			"title_de": "Ansicht der Stadt Biel vom Rebberg",
+			"text_de": "Johann Friedrich Wagner, Lithographie.",
+			"source_de": "Quelle: mémreg, Datum: 1845",
+			"title_fr": "Vue de la ville de Bienne depuis les vignes",
+			"text_fr": "",
+			"source_fr": "Source :  mémreg, Date : 1845"
 		},
 		{
-			"Bild": "Heilmann_1846",
-			"Titel": "Rathaus Bern",
-			"Text": "Im Rathaus in der Stadt Bern tagt jeweils der Grosse Rat des Kantons Bern. Heilmann gehörte diesem von 1816-1829 und erneut ab 1846 an.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1824"
+			"image": "Heilmann_1846",
+			"title_de": "Rathaus Bern",
+			"text_de": "Im Rathaus in der Stadt Bern tagt jeweils der Grosse Rat des Kantons Bern. Heilmann gehört diesem von 1816–1829 und erneut ab 1846 an. ",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1824",
+			"title_fr": "Hôtel de ville de Berne",
+			"text_fr": "Le Grand Conseil du canton de Berne se réunit à l'Hôtel de ville de Berne. Heilmann y siège de 1816 à 1829 et à nouveau à partir de  1846.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1824"
 		},
 		{
-			"Bild": "Heilmann_1862",
-			"Titel": "Landgut Bellevue bei Port BE",
-			"Text": "Um 1900 fällt das Landgut einem Feuer zum Opfer und wird wieder aufgebaut. Danach verliert sich die Geschichte des Landguts. Friedrich Georg Heilmann, Lavierung, um 1850.",
-			"Eckdaten": "Quelle: mémreg, Datum: um 1850"
+			"image": "Heilmann_1862",
+			"title_de": "Landgut Bellevue bei Port BE",
+			"text_de": "Um 1900 fällt das Landgut einem Feuer zum Opfer und wird wieder aufgebaut. Danach verliert sich die Geschichte des Landguts. Friedrich Georg Heilmann, Lavierung, um 1850.",
+			"source_de": "Quelle: mémreg, Datum: um 1850",
+			"title_fr": "Domaine Bellevue près de Port BE",
+			"text_fr": "Vers 1900, le domaine est victime d'un incendie et est reconstruit. L'histoire du domaine se perd ensuite. Friedrich Georg Heilmann, lavis, vers 1850.",
+			"source_fr": "Source :  mémreg, Date : vers 1850"
 		},
 		{
-			"Bild": "Neuhaus_1794",
-			"Titel": "Haus der Familie Neuhaus",
-			"Text": "Ring mit Wohnhaus Neuhaus. Philippe Robert, Ölgemälde.",
-			"Eckdaten": "Quelle: NMB, Datum: unbekannt"
+			"image": "Neuhaus_1794",
+			"title_de": "Haus der Familie Neuhaus",
+			"text_de": "Ring mit Wohnhaus Neuhaus. Philippe Robert, Ölgemälde.",
+			"source_de": "Quelle: NMB, Datum: unbekannt",
+			"title_fr": "Maison de la famille Neuhaus",
+			"text_fr": "",
+			"source_fr": "Source :  NMB, Date : inconnu"
 		},
 		{
-			"Bild": "Neuhaus_1811",
-			"Titel": "Neuhaus in der Uniform des 2. Garderegiments",
-			"Text": "Neuhaus in französischer Uniform zu Pferd, Ölgemälde, undatiert (wahrscheinlich gemalt 1850er-Jahre).",
-			"Eckdaten": "Quelle: Alain Glauser und Roland Sauter: Petits secrets d’une grande famille. Tome 1 (unveröffentlicht), Datum: unbekannt",
-			"Metatext": 1,
-			"Fokus1_Titel": "General de Kock",
-			"Fokus1_Text": "General de Kock, Oberbefehlshaber der niederländischen Truppen, wird auf einem Truppenabsatz oberhalb von Diponegoro und seinen Anhängern dargestellt. Ausserdem weist er mit väterlicher Geste zur Kutsche, die Diponegoro in die Verbannung bringen soll. De Kock strahlt Macht und Entschlossenheit aus.",
-			"Fokus1_Wo": "Der auf der Treppe stehende Mann in Uniform",
-			"Fokus2_Titel": "Diponegoro",
-			"Fokus2_Text": "Prinz Diponegoro steht abwesend und unentschlossen unterhalb von General de Kock. Er scheint weder seine Anhänger noch den General wahrzunehmen und wirkt handlungsunfähig.",
-			"Fokus2_Wo": "Der Mann in der Bildmitte mit grüner Kopfbedeckung",
-			"Fokus3_Titel": "Die Anhänger Diponegoros",
-			"Fokus3_Text": "Die Anhänger Diponegoros haben sich von ihrem ehemaligen Anführer abgewandt, ihre volle Aufmerksamkeit gilt General de Kock, teilweise werfen sie sich gar vor ihm nieder. Ihre Waffen legen sie ohne Zwang nieder. Das legt nahe, dass die Anhänger Diponegoros einsichtig sind und die Unterwerfung unter die Kolonialherren frewillig geschieht.",
-			"Fokus3_Wo": "Die Personen um Diponegoro, die gespannt dem General zuhören"
+			"image": "Neuhaus_1811",
+			"title_de": "Neuhaus in der Uniform des 2. Garderegiments",
+			"text_de": "Neuhaus in französischer Uniform zu Pferd, Ölgemälde, undatiert (wahrscheinlich gemalt 1850er-Jahre).",
+			"source_de": "Quelle: Alain Glauser und Roland Sauter: Petits secrets d’une grande famille. Tome 1 (unveröffentlicht), Datum: unbekannt",
+			"title_fr": "Neuhaus en uniforme du 2e régiment de la garde",
+			"text_fr": "Neuhaus en uniforme français à cheval, huile, non datée (probablement peinte dans les années 1850).                                            ",
+			"source_fr": "Source :  Alain Glauser et Roland Sauter: Petits secrets d’une grande famille. Tome 1 (non publié), Date : inconnu"
 		},
 		{
-			"Bild": "Neuhaus_1812",
-			"Titel": "Mit der Schlacht an der Beresina endet der napoleonischen Russlandfeldzug im Desaster",
-			"Text": "Peter von Hess, *Die Schlacht an der Beresina im November 1812*, Ölgemälde, um 1844.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1844"
+			"image": "Neuhaus_1812",
+			"title_de": "Mit der Schlacht an der Beresina endet der napoleonische Russlandfeldzug im Desaster",
+			"text_de": "Peter von Hess, *Die Schlacht an der Beresina im November 1812*, Ölgemälde, um 1844.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1844",
+			"title_fr": "La bataille de la Bérézina marque la fin de la campagne napoléonienne en Russie.",
+			"text_fr": "Peter von Hess, *Die Schlacht an der Beresina im November 1812*, huile, vers 1844.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1844"
 		},
 		{
-			"Bild": "Neuhaus_1814",
-			"Titel": "Napoleon dankt als Kaiser ab",
-			"Text": "François Bouchot, *Napoleon unterschreibt seine Abdankung in Fontainebleau*, Ölgemälde, um 1843.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1843"
+			"image": "Neuhaus_1814",
+			"title_de": "Napoleon dankt als Kaiser ab",
+			"text_de": "François Bouchot, *Napoleon unterschreibt seine Abdankung in Fontainebleau*, Ölgemälde, um 1843.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1843",
+			"title_fr": "Napoléon abdique en tant qu'empereur",
+			"text_fr": "François Bouchot, *Napoleon unterschreibt seine Abdankung in Fontainebleau*, huile, vers 1843.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1843"
 		},
 		{
-			"Bild": "Neuhaus_1815",
-			"Titel": "Aufnahmeurkunde in den bernischen Militärdienst",
-			"Text": "Bis zur Gründung des Bundesstaats 1848 war das Militärwesen kantonal organisiert, während die Eidgenossenschaft die Koordination zwischen den Kantonen übernahm.",
-			"Eckdaten": "Quelle: Stadtarchiv Biel, Datum: 1815"
+			"image": "Neuhaus_1815",
+			"title_de": "Aufnahmeurkunde in den bernischen Militärdienst",
+			"text_de": "Bis zur Gründung des Bundesstaats 1848 ist das Militärwesen kantonal organisiert, während die Eidgenossenschaft die Koordination zwischen den Kantonen übernimmt.",
+			"source_de": "Quelle: Stadtarchiv Biel, Datum: 1815",
+			"title_fr": "Certificat d'admission au service militaire bernois",
+			"text_fr": "Jusqu'à la création de l'État fédéral en 1848, les affaires militaires sont organisées au niveau cantonal, tandis que la Confédération se charge de la coordination entre les cantons.",
+			"source_fr": "Source :  Archives municipales Bienne, Date : 1815"
 		},
 		{
-			"Bild": "Neuhaus_1816",
-			"Titel": "Uniformen Schweizer Regimenter in königlich-niederländischen Diensten ",
-			"Text": "Das Bild stammt aus einem Uniformkunde-Buch von Richard Knötel.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: unbekannt"
+			"image": "Neuhaus_1816",
+			"title_de": "Uniformen Schweizer Regimenter in königlich-niederländischen Diensten ",
+			"text_de": "Das Bild stammt aus einem Uniformkunde-Buch von Richard Knötel.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: unbekannt",
+			"title_fr": "Uniformes de régiments suisses au service royal néerlandais",
+			"text_fr": "L'image est tirée d'un livre d'uniformologie de Richard Knötel.",
+			"source_fr": "Source :  Wikimedia Commons, Date : inconnu"
 		},
 		{
-			"Bild": "Neuhaus_1829",
-			"Titel": "Die Abdankung von Diponegoro beendet den Javakrieg",
-			"Text": "Nicolaas Pieneman, *Die Unterwerfung von Prinz Diponegoro vor General de Kock*, Ölgemälde, 1835.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1835",
-			"Metatext": 2,
-			"Fokus1_Titel": "General De Kock"
+			"image": "Neuhaus_1829",
+			"title_de": "Die Abdankung von Diponegoro beendet den Javakrieg",
+			"text_de": "Nicolaas Pieneman, *Die Unterwerfung von Prinz Diponegoro vor General de Kock*, Ölgemälde, 1835.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1835",
+			"title_fr": "L'abdication du Diponegoro met fin à la guerre de Java",
+			"text_fr": "Nicolaas Pieneman, *Die Unterwerfung von Prinz Diponegoro vor General de Kock*, huile, 1835.                                                                         2",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1835"
 		},
 		{
-			"Bild": "Neuhaus_1831",
-			"Titel": "Karte der Festungsstadt Hulst und Umgebung",
-			"Text": "Aufgrund der vorgelagerten Position im niederländischen Teil Flanderns ist das Fort Hulst in der Phase nach der belgischen Unabhängigkeit für die Niederländer von besonderer Bedeutung.",
-			"Eckdaten": "Quelle: Stadtarchiv Biel, Datum: 1749"
+			"image": "Neuhaus_1831",
+			"title_de": "Karte der Festungsstadt Hulst und Umgebung",
+			"text_de": "Aufgrund der vorgelagerten Position im niederländischen Teil Flanderns ist das Fort Hulst in der Phase nach der belgischen Unabhängigkeit für die Niederländer von besonderer Bedeutung.",
+			"source_de": "Quelle: Stadtarchiv Biel, Datum: 1749",
+			"title_fr": "Carte de la ville fortifiée de Hulst et de ses environs",
+			"text_fr": "En raison de sa position avancée dans la partie néerlandaise de la Flandre, le fort de Hulst revêt une importance particulière pour les Néerlandais dans la phase qui suit l'indépendance de la Belgique.",
+			"source_fr": "Source :  Stadtarchiv Biel, Date : 1749"
 		},
 		{
-			"Bild": "Neuhaus_1833",
-			"Titel": "Thérèse-Delphine Neuhaus",
-			"Eckdaten": "Quelle: Alain Glauser und Roland Sauter: Petits secrets d’une grande famille. Tome 1 (unveröffentlicht), Datum: unbekannt"
+			"image": "Neuhaus_1833",
+			"title_de": "Thérèse-Delphine Neuhaus",
+			"text_de": "",
+			"source_de": "Quelle: Alain Glauser und Roland Sauter: Petits secrets d’une grande famille. Tome 1 (unveröffentlicht), Datum: unbekannt",
+			"title_fr": "Thérèse-Delphine Neuhaus",
+			"text_fr": "",
+			"source_fr": "Source :  Alain Glauser und Roland Sauter: Petits secrets d’une grande famille. Tome 1 (unveröffentlicht), Date : inconnu"
 		},
 		{
-			"Bild": "Neuhaus_1835",
-			"Titel": "Batavia im 19. Jahrhundert",
-			"Text": "Durch die Hauptstadt Niederländisch-Indiens fliessen mehrere Kanale und sie ist in Europa wegen ihrer Schönheit als «Perle des Ostens» bekannt.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: um 1830"
+			"image": "Neuhaus_1835",
+			"title_de": "Batavia im 19. Jahrhundert",
+			"text_de": "Durch die Hauptstadt Niederländisch-Indiens fliessen mehrere Kanäle. Sie ist in Europa wegen ihrer Schönheit als *Perle des Ostens* bekannt.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: um 1830",
+			"title_fr": "Batavia au 19ème siècle",
+			"text_fr": "Plusieurs canaux traversent la capitale des Indes néerlandaises. Elle est connue en Europe comme la \"perle de l'Orient\" en raison de sa beauté.",
+			"source_fr": "Source :  Wikimedia Commons, Date : vers 1830"
 		},
 		{
-			"Bild": "Neuhaus_1836",
-			"Titel": "Banjarmasin im 19. Jahrhundert",
-			"Text": "Banjarmasin auf Borneo wird ab 1787 zum niederländischen Protektorat erklärt und ist im 19. Jahrhundert einer der wichtigsten niederländischen Stützpunkte auf Borneo.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1862"
+			"image": "Neuhaus_1836",
+			"title_de": "Banjarmasin im 19. Jahrhundert",
+			"text_de": "Banjarmasin auf Borneo wird ab 1787 zum niederländischen Protektorat erklärt und ist im 19. Jahrhundert einer der wichtigsten niederländischen Stützpunkte auf Borneo.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1862",
+			"title_fr": "Banjarmasin au 19ème siècle",
+			"text_fr": "Banjarmasin, sur l'île de Bornéo, est déclarée protectorat néerlandais à partir de 1787 et constitue au 19e siècle l'une des principales bases néerlandaises à Bornéo.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1862"
 		},
 		{
-			"Bild": "Neuhaus_1840",
-			"Titel": "Karte von Javas Westküste",
-			"Text": "Die Präsenz der niederländischen Kolonialherren beschränkt sich in erster Linie auf die Küstengebiete, während das Hinterland durch ein Netz von militärischen Forts kontrolliert wird.",
-			"Eckdaten": "Quelle: Stadtarchiv Biel, Datum: unbekannt"
+			"image": "Neuhaus_1840",
+			"title_de": "Karte von Javas Westküste",
+			"text_de": "Die Präsenz der niederländischen Kolonialherren beschränkt sich in erster Linie auf die Küstengebiete, während das Hinterland durch ein Netz von militärischen Forts kontrolliert wird.",
+			"source_de": "Quelle: Stadtarchiv Biel, Datum: unbekannt",
+			"title_fr": "Carte de la côte ouest de Java",
+			"text_fr": "La présence des colons néerlandais se limite principalement aux zones côtières, tandis que l'arrière-pays est contrôlé par un réseau de forts militaires.",
+			"source_fr": "Source :  Stadtarchiv Biel, Date : inconnu"
 		},
 		{
-			"Bild": "Neuhaus_1841",
-			"Titel": "Haus des Herrschers von Batipuh",
-			"Text": "Der Herrscher von Batipuh Datuk Pamuncak führt die Rebellion gegen die niederländischen Kolonialherren an. Nach der Niederschlagung des Aufstands wird er verbannt und sein Haus niedergebrannt.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1841"
+			"image": "Neuhaus_1841",
+			"title_de": "Haus des Herrschers von Batipuh",
+			"text_de": "Der Herrscher von Batipuh Datuk Pamuncak führt die Rebellion gegen die niederländischen Kolonialherren an. Nach der Niederschlagung des Aufstands wird er verbannt und sein Haus niedergebrannt.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1841",
+			"title_fr": "Maison du souverain de Batipuh",
+			"text_fr": "Le souverain de Batipuh Datuk Pamuncak mène la rébellion contre les colons néerlandais. Après l'écrasement de la révolte, il est banni et sa maison est incendiée.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1841"
 		},
 		{
-			"Bild": "Neuhaus_1843",
-			"Titel": "Passierschein für die Überfahrt nach Europa",
-			"Text": "Im Passierschein werden die Behörden angewiesen, Neuhaus und seine Familie, die an Bord des Schiffes Emanuel nach Europa zurückkehren, ungehindert passieren zu lassen. ",
-			"Eckdaten": "Quelle: Stadtarchiv Biel, Datum: 1843"
+			"image": "Neuhaus_1843",
+			"title_de": "Passierschein für die Überfahrt nach Europa",
+			"text_de": "Im Passierschein werden die Behörden angewiesen, Neuhaus und seine Familie ungehindert passieren zu lassen. Sie kehren an Bord des Schiffes *Emanuel* nach Europa zurück.",
+			"source_de": "Quelle: Stadtarchiv Biel, Datum: 1843",
+			"title_fr": "Laissez-passer pour la traversée vers l'Europe",
+			"text_fr": "Dans le laissez-passer, les autorités ont pour consigne de laisser passer Neuhaus et sa famille sans restriction. Ils retournent en Europe à bord du bateau *Emanuel*.",
+			"source_fr": "Source :  Archives municipales Bienne, Date : 1843"
 		},
 		{
-			"Bild": "Neuhaus_1848",
-			"Titel": "Gut Beaumont",
-			"Text": "Das Gut Beaumont befindet sich zu dieser Zeit alleine auf weiter Flur in den Weinbergen. Später wird es Teil des Spitalzentrums Biel. ",
-			"Eckdaten": "Quelle: mémreg, Datum: 1951\/1952"
+			"image": "Neuhaus_1848",
+			"title_de": "Gut Beaumont",
+			"text_de": "Das Gut Beaumont befindet sich zu dieser Zeit alleine auf weiter Flur in den Weinbergen. Später wird es Teil des Spitalzentrums Biel. ",
+			"source_de": "Quelle: mémreg, Datum: 1951/1952",
+			"title_fr": "Domaine de Beaumont",
+			"text_fr": "Le domaine de Beaumont se trouve alors seul au milieu des vignes. Plus tard, il fera partie du Centre hospitalier de Bienne.",
+			"source_fr": "Source :  mémreg, Date : 1951/1952"
 		},
 		{
-			"Bild": "Neuhaus_1854",
-			"Titel": "Ernennungsschreiben zum Offizier der französischen Ehrenlegion",
-			"Eckdaten": "Quelle: Stadtarchiv Biel, Datum: 1854"
+			"image": "Neuhaus_1854",
+			"title_de": "Ernennungsschreiben zum Offizier der französischen Ehrenlegion",
+			"text_de": "",
+			"source_de": "Quelle: Stadtarchiv Biel, Datum: 1854",
+			"title_fr": "Lettre de nomination au grade d'officier de la Légion d'honneur française",
+			"text_fr": "",
+			"source_fr": "Source :  Archives municipales Bienne, Date : 1854"
 		},
 		{
-			"Bild": "Neuhaus_1871",
-			"Titel": "François Emile Neuhaus",
-			"Text": "Das Foto ist von Jakob Häuselmann, der ab 1853 ein Fotostudio im Pasquartquartier betreibt und dessen Dienste von vielen angesehenen Bielern in Anspruch genommen werden.",
-			"Eckdaten": "Quelle: Stadtarchiv Biel, Datum: nach 1853"
+			"image": "Neuhaus_1871",
+			"title_de": "François Emile Neuhaus",
+			"text_de": "Das Foto ist von Jakob Häuselmann, der ab 1853 ein Fotostudio im Pasquartquartier betreibt und dessen Dienste von vielen angesehenen Bielern in Anspruch genommen werden.",
+			"source_de": "Quelle: Stadtarchiv Biel, Datum: nach 1853",
+			"title_fr": "François Emile Neuhaus",
+			"text_fr": "La photo est de Jakob Häuselmann, qui exploite un studio photo dans le quartier du Pasquart à partir de 1853 et dont les services sont utilisés par de nombreux Biennois de renom.",
+			"source_fr": "Source :  Archives municipales Bienne, Date : après 1853"
 		},
 		{
-			"Bild": "Biel_1798",
-			"Titel": "Polizeiregiment Kanton Biel",
-			"Text": "Das Reglement ist auf den *9 Vendémiaire l’an sept de la République Française, une & indivisible* datiert. Dabei handelt es sich um eine Datumsangabe nach dem französischen Revolutionskalender. ",
-			"Eckdaten": "Quelle: NMB, Datum: 1798"
+			"image": "Biel_1798",
+			"title_de": "Polizeiregiment Kanton Biel",
+			"text_de": "Das Reglement ist auf den *9 Vendémiaire l’an sept de la République Française, une & indivisible* datiert. Dabei handelt es sich um eine Datumsangabe nach dem französischen Revolutionskalender. ",
+			"source_de": "Quelle: NMB, Datum: 1798",
+			"title_fr": "Régiment de police du canton de Bienne",
+			"text_fr": "Le règlement est daté du *9 Vendémiaire l'an sept de la République Française, une & indivisible*. Il s'agit d'une indication de date selon le calendrier révolutionnaire français.",
+			"source_fr": "Source :  NMB, Date : 1798"
 		},
 		{
-			"Bild": "Biel_1813",
-			"Titel": "Erklärung des Feldmarschalls Fürst Schwarzenberg",
-			"Text": "Erklärung des österreichischen Befehlshabers, dass Biel vor der französischen Besetzung zur Eidgenossenschaft gehört hat. Dadurch wird Biel nicht als besetztes Feindesgebiet betrachtet und erhält so gewisse Privilegien durch die Besatzer.",
-			"Eckdaten": "Quelle: Stadtarchiv Biel, Datum: 1814"
+			"image": "Biel_1813",
+			"title_de": "Erklärung des Feldmarschalls Fürst Schwarzenberg",
+			"text_de": "Erklärung des österreichischen Befehlshabers, dass Biel vor der französischen Besetzung zur Eidgenossenschaft gehört hat. Dadurch wird Biel nicht als besetztes Feindesgebiet betrachtet und erhält so gewisse Privilegien durch die Besatzer.",
+			"source_de": "Quelle: Stadtarchiv Biel, Datum: 1814",
+			"title_fr": "Déclaration du feld-maréchal prince Schwarzenberg",
+			"text_fr": "Déclaration du commandant autrichien selon laquelle Bienne faisait partie de la Confédération avant l'occupation française. De ce fait, Bienne n'est pas considérée comme un territoire ennemi occupé et obtient ainsi certains privilèges de la part de l'occupant.",
+			"source_fr": "Source :  Archives municipales Bienne, Date : 1814"
 		},
 		{
-			"Bild": "Biel_1815",
-			"Titel": "Vereinigung des Kanton Berns mit dem Fürstbistum Basel",
-			"Text": "Feierliche Übergabe des Fürstbistums Basel an den Kanton Bern durch den eidgenössischen Kommissar von Escher in Delsberg am 20. Dezember 1815. Johann Rudolf Weiss, Ölgemälde.",
-			"Eckdaten": "Quelle: NMB, Datum: unbekannt"
+			"image": "Biel_1815",
+			"title_de": "Vereinigung des Kantons Bern mit dem Fürstbistum Basel",
+			"text_de": "Feierliche Übergabe des Fürstbistums Basel an den Kanton Bern durch den eidgenössischen Kommissar von Escher in Delsberg am 20. Dezember 1815. Johann Rudolf Weiss, Ölgemälde.",
+			"source_de": "Quelle: NMB, Datum: unbekannt",
+			"title_fr": "Union du canton de Berne et de l'Evêché de Bâle",
+			"text_fr": "Cérémonie de remise de l'Evêché de Bâle au canton de Berne par le commissaire fédéral von Escher à Delémont le 20 décembre 1815. Johann Rudolf Weiss, huile.",
+			"source_fr": "Source :  NMB, Date : inconnu"
 		},
 		{
-			"Bild": "Biel_1817",
-			"Titel": "Erstes Bieler Gymnasium",
-			"Text": "Auf dem Bild ist im Hintergrund der ehemalige Klosterturm des Johanniterklosters zu erkennen. Das Schulgebäude wurde zuvor als  Spital benutzt.",
-			"Eckdaten": "Quelle: Wikimedia Commons Datum: 1818"
+			"image": "Biel_1817",
+			"title_de": "Erstes Bieler Gymnasium",
+			"text_de": "Auf dem Bild ist im Hintergrund der ehemalige Klosterturm des Johanniterklosters zu erkennen. Das Schulgebäude wird zuvor als Spital genutzt.",
+			"source_de": "Quelle: Wikimedia Commons Datum: 1818",
+			"title_fr": "Premier gymnase biennois",
+			"text_fr": "Sur la photo, on reconnaît en arrière-plan l'ancienne tour du couvent de Saint-Jean. Le bâtiment scolaire était auparavant utilisé comme hôpital.",
+			"source_fr": "Source :  Wikimedia Commons Date : 1818"
 		},
 		{
-			"Bild": "Biel_1829",
-			"Titel": "Das Untertor vor dem Abriss",
-			"Text": "Die Zeichnung zeigt das Untertor und die Altstadt vom heutigen Juraplatz her gesehen.",
-			"Eckdaten": "Quelle: mémreg, Datum: 1829"
+			"image": "Biel_1829",
+			"title_de": "Das Untertor vor dem Abriss",
+			"text_de": "Die Zeichnung zeigt das Untertor und die Altstadt vom heutigen Juraplatz her gesehen.",
+			"source_de": "Quelle: mémreg, Datum: 1829",
+			"title_fr": "Démolition de la Porte du Bas",
+			"text_fr": "Le dessin montre la Porte du Bas et la vieille ville vues depuis l'actuelle place du Jura.",
+			"source_fr": "Source :  mémreg, Date : 1829"
 		},
 		{
-			"Bild": "Biel_1831",
-			"Titel": "Abschiedsproklamation des Ancién Regime",
-			"Text": "Mit der Proklamation geht die Regierungsverantwortung offiziell an die neue liberale Regierung über und das Patriziat endet endgültig. ",
-			"Eckdaten": "Quelle: mémreg, Datum: 1831"
+			"image": "Biel_1831",
+			"title_de": "Abschiedsproklamation des Ancien Regime",
+			"text_de": "Mit der Proklamation geht die Regierungsverantwortung offiziell an die neue liberale Regierung über – das Patriziat endet endgültig. ",
+			"source_de": "Quelle: mémreg, Datum: 1831",
+			"title_fr": "Proclamation de la fin de l'Ancien Régime",
+			"text_fr": "Avec cette proclamation, la responsabilité du gouvernement passe officiellement au nouveau gouvernement libéral - le patriciat prend définitivement fin.",
+			"source_fr": "Source :  mémreg, Date : 1831"
 		},
 		{
-			"Bild": "Biel_1843",
-			"Titel": "Tischuhr aus Ernst Schülers Uhrenatelier",
-			"Text": "Bei der Uhr handelt es sich um eine Tischuhr, wie sie zu dieser Zeit in Deutschland üblich ist. Erst ab 1846 beginnt die Firma mit der Produktion von Taschenuhren.",
-			"Eckdaten": "Quelle: NMB, Datum: unbekannt"
+			"image": "Biel_1843",
+			"title_de": "Tischuhr aus Ernst Schülers Uhrenatelier",
+			"text_de": "Bei der Uhr handelt es sich um eine Tischuhr, wie sie zu dieser Zeit in Deutschland üblich ist. Erst ab 1846 beginnt die Firma mit der Produktion von Taschenuhren.",
+			"source_de": "Quelle: NMB, Datum: unbekannt",
+			"title_fr": "Horloge de l'atelier d'horlogerie d'Ernst Schüler",
+			"text_fr": "Ce genre d'horloge est commune en Allemagne à cette époque. Ce n'est qu'à partir de 1846 que l'entreprise commence à produire des montres de poche.",
+			"source_fr": "Source :  NMB, Date : inconnu"
 		},
 		{
-			"Bild": "Biel_1848",
-			"Titel": "Allegorische Darstellung zur Bundesverfassung",
-			"Text": "Die in der Mitte sitzende Helvetia wird von einem alten Eidgenossen gekrönt. Umringt wird sie von Bürgern in Zivil und als Soldaten in Uniform. Währenddessen verbreitet ein Engel das Ereignis mit Fanfaren.",
-			"Eckdaten": "Quelle: Wikimedia Commons, Datum: 1848"
+			"image": "Biel_1848",
+			"title_de": "Allegorische Darstellung zur Bundesverfassung",
+			"text_de": "Ein alter Eidgenosse krönt die in der Mitte sitzende Helvetia, umringt von Bürgern in Zivil und Soldaten in Uniform. Währenddessen verkündet ein Engel das Ereignis mit Fanfaren.",
+			"source_de": "Quelle: Wikimedia Commons, Datum: 1848",
+			"title_fr": "Représentation allégorique de la Constitution fédérale",
+			"text_fr": "Un ancien confédéré couronne l'Helvetia assise au centre, entourée de civils et de soldats en uniforme. Pendant ce temps, un ange annonce l'événement en fanfare.",
+			"source_fr": "Source :  Wikimedia Commons, Date : 1848"
 		},
 		{
-			"Bild": "Biel_1849",
-			"Titel": "Le Grutli",
-			"Text": "Ausgabe der Genossenschaftszeitung *Le Grutli*. Sitz der Redaktion der ab 1861 erscheinenden französischsprachigen Version des Zentralorgans *Der Grütlianer*  ist Biel.",
-			"Eckdaten": "Quelle: Schweizerisches Sozialarchiv, Datum: 1867"
+			"image": "Biel_1849",
+			"title_de": "Le Grutli",
+			"text_de": "Ausgabe der Genossenschaftszeitung *Le Grutli*. Biel ist Sitz der Redaktion der ab 1861 erscheinenden französischsprachigen Version des Zentralorgans *Der Grütlianer*.",
+			"source_de": "Quelle: Schweizerisches Sozialarchiv, Datum: 1867",
+			"title_fr": "Le Grutli",
+			"text_fr": "Le journal de la coopérative *Le Grutli* en est à sa 7e édition. Bienne est le siège de la rédaction de la version francophone de l'organe central *Le Grütlianer* qui paraît à partir de 1861.",
+			"source_fr": "Source :  Archives Sociales Suisses, Date : 1867"
 		},
 		{
-			"Bild": "Biel_1857",
-			"Titel": "Ehemaliger Bieler Bahnhof",
-			"Text": "Der ehemalige Bahnhof am heutigen General-Guisan-Platz wird von 1864-1923 betrieben. Ebenfalls auf dem Foto ist die Bieler Strassenbahn zu sehen, die von 1877 bis 1948 existiert.",
-			"Eckdaten": "Quelle: mémreg, Datum: um 1900"
-		}
-	],
-	"metatext": [
-		{
-			"ID": 1,
-			"Titel": "Ein kritischer Blick aufs Bild",
-			"Text": "Obwohl das Bild François Emile Neuhaus als jungen Erwachsenen zeigt, ist davon auszugehen, dass das Gemälde erst später entsteht. Neuhaus inszeniert dabei seine Teilnahme an den napoleonischen Feldzügen."
+			"image": "Biel_1857Bie",
+			"title_de": "Ehemaliger Bieler Bahnhof",
+			"text_de": "Der ehemalige Bahnhof am heutigen General-Guisan-Platz wird von 1864–1923 betrieben. Ebenfalls auf dem Foto ist die Bieler Strassenbahn zu sehen, die von 1877–1948 existiert.",
+			"source_de": "Quelle: mémreg, Datum: um 1900",
+			"title_fr": "Ancienne gare de Bienne",
+			"text_fr": "L'ancienne gare, située sur l'actuelle place du Général-Guisan, est exploitée de 1864 à 1923. On peut également voir sur la photo le tram de Bienne, qui circulait entre 1877 et 1948.",
+			"source_fr": "Source :  mémreg, Date : vers 1900"
 		},
-		{
-			"ID": 2,
-			"Titel": "Ein kritischer Blick aufs Bild",
-			"Text": "Das Bild stellt die Abdankung von Diponegoro aus niederländisch-kolonialer Perspektive dar. Dass es sich bei der dargestellten Situation um eine Falle der Niederländer handelt, wird nicht ansatzweise dargestellt. Diponegoro und sein Gefolge sind unter dem Vorwand von Friedensgesprächen zum Haus des niederländischen Generals gelockt worden. Hier wird Diponegoro festgenommen, zur Abdankung gezwungen und verbannt. Klicke auf das Bild, um genaueres zur Bildsprache zu erfahren."
-		}
+		{}
 	]
 }

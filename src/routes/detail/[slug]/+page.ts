@@ -3,25 +3,34 @@ import imgContentAll from '$lib/data/img_info.json';
 import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
-	const { slug } = params;
+
+	const { locale, slug } = params;
 	const [topic, yearString] = slug.split('_');
 	const year = Number(yearString);
 	
 		let imgContent = imgContentAll.info.find((item) => item.image === slug);
-		if (imgContent?.Metatext) {
-			imgContent.Metatext = imgContentAll.metatext[imgContent.Metatext - 1];
+
+		if (imgContent?.title_de) {
+			imgContent.title_de = await parse(imgContent.title_de);
 		}
-		if (imgContent?.Eckdaten) {
-			imgContent.Eckdaten = await parse(imgContent.Eckdaten);
+		if (imgContent?.title_fr) {
+			imgContent.title_fr = await parse(imgContent.title_fr);
 		}
-		if (imgContent?.Titel) {
-			imgContent.Titel = await parse(imgContent.Titel);
+		if (imgContent?.text_de) {
+			imgContent.text_de = await parse(imgContent.text_de);
 		}
-		if (imgContent?.Text) {
-			imgContent.Text = await parse(imgContent.Text);
+		if (imgContent?.text_fr) {
+			imgContent.text_fr = await parse(imgContent.text_fr);
+		}
+		if (imgContent?.source_de) {
+			imgContent.source_de = await parse(imgContent.source_de);
+		}
+		if (imgContent?.source_fr) {
+			imgContent.source_fr = await parse(imgContent.source_fr);
 		}
 		if (imgContent) {
 			return {
+				locale,
 				type: 'img',
 				year,
 				topic,
@@ -29,6 +38,7 @@ export const load = (async ({ params }) => {
 			};
 		} else {
 			return {
+				locale,
 				type: 'not-found'
 			};
 		}

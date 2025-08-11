@@ -50,6 +50,7 @@
 		}, 15000);
 	});
 
+	// Get language dependent data
 	let title_slug = $state('');
 	let place_slug = $state('');
 	let text_slug = $state('');
