@@ -103,10 +103,8 @@
 			<div class="absolute top-[100%] left-[38%] flex grow-0 flex-col items-start justify-start">
 				<div>
 					<span class="text-5xl font-bold">{data.mainContent?.year}</span>
-					<span class="text-4xl font-bold">in {data.mainContent?.[place_slug]}</span>
-					{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
-							>({@html data.topic_label})</span
-						>{/if}
+					<br />
+					<span class="text-4xl font-bold">{data.mainContent?.[place_slug]}</span>
 				</div>
 			</div>
 		</div>

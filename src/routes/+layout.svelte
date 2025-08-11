@@ -80,7 +80,7 @@
 
 <div
 	class={[
-		'bg-surface-50 grid h-screen max-h-screen grid-rows-[1fr_11fr]',
+		'bg-surface-50 m-0 grid h-screen max-h-screen w-screen grid-rows-[1fr_11fr] p-0',
 		isDark && 'bg-surface-900 text-surface-50'
 	]}
 >
