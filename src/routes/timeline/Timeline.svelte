@@ -77,7 +77,7 @@
 	const lineGenerator = (topic: string, content: any[], index: number) => {
 		let coords = content.map((datapoint) => [
 			x(datapoint.year),
-			(datapoint.Ort === 'Biel' ? yLocal(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
+			(datapoint['place_de'] === 'Biel' ? yLocal(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
 		]);
 
 		// Hack to avoid immediate slope at the beginning of the Heilmann-line
@@ -163,7 +163,8 @@
 			{#each content as datapoint, j}
 				{@const current = datapoint.year === currentyear && topic === currenttopic}
 				{@const cx = x(datapoint.year)}
-				{@const cy = (datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
+				{@const cy =
+					(datapoint['place_de'] === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
 				<!-- svelte-ignore a11y_consider_explicit_label -->
 				<a href={localizeHref(`${base}/timeline/${topic}/${datapoint.Jahr}`)}>
 					<circle
