@@ -33,11 +33,7 @@
 	}
 
 	onMount(() => {
-		applyStyles(
-			document.querySelectorAll('.europe-biel'),
-			'error',
-			`${base}/timeline/Brunnen/1798`
-		);
+		applyStyles(document.querySelectorAll('.europe-biel'), 'error', `${base}/timeline/Biel/1798`);
 		applyStyles(
 			document.querySelectorAll('.europe-neapel'),
 			'warning',
@@ -95,7 +91,7 @@
 
 		<foreignObject x="460" y="450" width="150" height="50">
 			<a
-				href={localizeHref(`${base}/timeline/Brunnen/1798`)}
+				href={localizeHref(`${base}/timeline/Biel/1798`)}
 				class={['btn font-semibold', colors['preset-filled']['Biel']]}>Biel, Hofwil</a
 			>
 		</foreignObject>
