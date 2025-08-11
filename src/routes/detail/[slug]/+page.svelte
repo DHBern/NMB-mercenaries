@@ -16,11 +16,11 @@
 	let source_slug = $state('');
 	let text_slug = $state('');
 	$effect(() => {
-		if (data.locale == 'de') {
+		if (getLocale() == 'de') {
 			title_slug = 'title_de';
 			source_slug = 'source_de';
 			text_slug = 'text_de';
-		} else if (data.locale == 'fr') {
+		} else if (getLocale() == 'fr') {
 			title_slug = 'title_fr';
 			source_slug = 'source_fr';
 			text_slug = 'text_fr';

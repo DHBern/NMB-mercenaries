@@ -12,7 +12,7 @@
 	import { onNavigate } from '$app/navigation';
 	import { m } from '$lib/paraglide/messages.js';
 	import { onMount } from 'svelte';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -55,15 +55,16 @@
 	let place_slug = $state('');
 	let text_slug = $state('');
 	$effect(() => {
-		if (data.locale == 'de') {
+		if (getLocale() == 'de') {
 			title_slug = 'title_de';
 			place_slug = 'place_de';
 			text_slug = 'text_de';
-		} else if (data.locale == 'fr') {
+		} else if (getLocale() == 'fr') {
 			title_slug = 'title_fr';
 			place_slug = 'place_fr';
 			text_slug = 'text_fr';
 		} else {
+			console.log('LOCALE = ', getLocale());
 			title_slug = 'title_de';
 			place_slug = 'place_de';
 			text_slug = 'text_de';

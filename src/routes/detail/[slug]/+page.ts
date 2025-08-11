@@ -4,7 +4,7 @@ import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
 
-	const { locale, slug } = params;
+	const { slug } = params;
 	const [topic, yearString] = slug.split('_');
 	const year = Number(yearString);
 	
@@ -30,7 +30,6 @@ export const load = (async ({ params }) => {
 		}
 		if (imgContent) {
 			return {
-				locale,
 				type: 'img',
 				year,
 				topic,
@@ -38,7 +37,6 @@ export const load = (async ({ params }) => {
 			};
 		} else {
 			return {
-				locale,
 				type: 'not-found'
 			};
 		}

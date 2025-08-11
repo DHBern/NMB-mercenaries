@@ -4,7 +4,6 @@ import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
 
-	const { locale } = params;
 	const currentyear = Number(params.year);
 	const topic: 'Heilmann' | 'Biel' | 'Neuhaus' = params.topic as 'Heilmann' | 'Biel' | 'Neuhaus';
 	
@@ -37,7 +36,6 @@ export const load = (async ({ params }) => {
 	}
 
 	return {
-		locale,
 		topic,
 		topic_label,
 		nextYear,
