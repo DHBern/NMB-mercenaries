@@ -123,11 +123,11 @@
 
 		<!-- Image -->
 		<div class="relative col-start-2">
+			{#if data.mainContent?.image}
 				<a
 					class="absolute top-0 left-0"
 					href={localizeHref(`${base}/detail/${data.mainContent?.image}`)}
 				>
-			{#if data.mainContent?.image}
 					<img
 						class="h-full max-h-140 w-full object-contain object-right"
 						src={images['/src/lib/images/timeline/' + data.mainContent?.image + '.jpg']}
