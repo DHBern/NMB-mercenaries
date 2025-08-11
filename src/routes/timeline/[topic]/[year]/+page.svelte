@@ -11,6 +11,7 @@
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
 	import { m } from '$lib/paraglide/messages.js';
+	import { onMount } from 'svelte';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -47,6 +48,25 @@
 			isPulsating = true;
 		}, 15000);
 	});
+
+	let title_slug = $state('');
+	let place_slug = $state('');
+	let text_slug = $state('');
+	$effect(() => {
+		if (data.locale == 'de') {
+			title_slug = 'title_de';
+			place_slug = 'place_de';
+			text_slug = 'text_de';
+		} else if (data.locale == 'fr') {
+			title_slug = 'title_fr';
+			place_slug = 'place_fr';
+			text_slug = 'text_fr';
+		} else {
+			title_slug = 'title_de';
+			place_slug = 'place_de';
+			text_slug = 'text_de';
+		}
+	});
 </script>
 
 <div class="grid h-full max-h-full grid-cols-[1fr_3fr] gap-15">
@@ -77,8 +97,8 @@
 			/>
 			<div class="absolute top-[100%] left-[38%] flex grow-0 flex-col items-start justify-start">
 				<div>
-					<span class="text-5xl font-bold">{data.mainContent?.Jahr}</span>
-					<span class="text-4xl font-bold">in {data.mainContent?.Ort}</span>
+					<span class="text-5xl font-bold">{data.mainContent?.year}</span>
+					<span class="text-4xl font-bold">in {data.mainContent?.[place_slug]}</span>
 					{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
 							>({@html data.topic_label})</span
 						>{/if}
@@ -92,19 +112,19 @@
 	<div class="grid h-full grid-cols-[2fr_1fr] grid-rows-[200px-90px] gap-4">
 		<div class="max-h-full overflow-y-auto">
 			<!-- Content -->
-			<h1 class="h1 mb-4">{data.mainContent?.Titel}</h1>
+			<h1 class="h1 mb-4">{data.mainContent?.[title_slug]}</h1>
 			<p>
-				{@html data.mainContent?.Text}
+				{@html data.mainContent?.[text_slug]}
 			</p>
 		</div>
 
 		<!-- Image -->
 		<div class="relative col-start-2">
-			{#if data.mainContent?.Bild}
-				<a class="absolute top-0 left-0" href="{base}/detail/{data.mainContent?.Bild}">
+			{#if data.mainContent?.image}
+				<a class="absolute top-0 left-0" href="{base}/detail/{data.mainContent?.image}">
 					<img
 						class="h-full max-h-140 w-full object-contain object-right"
-						src={images['/src/lib/images/timeline/' + data.mainContent?.Bild + '.jpg']}
+						src={images['/src/lib/images/timeline/' + data.mainContent?.image + '.jpg']}
 						alt="Detailbild"
 					/>
 					<Ping classes="absolute bottom-10 left-20 size-4" {isPulsating} />

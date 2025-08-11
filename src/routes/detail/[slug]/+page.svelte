@@ -9,7 +9,7 @@
 		import: 'default'
 	});
 	const altText = 'Kein Bild';
-	const imgPath = `/src/lib/images/timeline/${data.detailContent?.Bild}.jpg`;
+	const imgPath = `/src/lib/images/timeline/${data.detailContent?.image}.jpg`;
 </script>
 
 <!-- Content Box -->
@@ -17,7 +17,7 @@
 	<!-- Image -->
 	<!-- //! overflow-y-hidden is a hack to restrict the image to the height of the container. Somehow it is not working otherwise... -->
 	<div class="grid h-full grid-rows-[auto_80px] overflow-hidden">
-		{#if data.detailContent?.Bild}
+		{#if data.detailContent?.image}
 			<img
 				class="h-full w-full max-w-full object-contain object-right"
 				src={images[imgPath]}

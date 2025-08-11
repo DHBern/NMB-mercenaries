@@ -3,11 +3,10 @@ import mainContentAll from '$lib/data/main.json';
 import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
+
+	const { locale } = params;
 	const currentyear = Number(params.year);
-	const topic: 'Heilmann' | 'Biel' | 'Neuhaus' = params.topic as
-		| 'Heilmann'
-		| 'Biel'
-		| 'Neuhaus';
+	const topic: 'Heilmann' | 'Biel' | 'Neuhaus' = params.topic as 'Heilmann' | 'Biel' | 'Neuhaus';
 
 	let topic_label;
 	switch (topic) {
@@ -22,22 +21,29 @@ export const load = (async ({ params }) => {
 			break;
 	}
 
+	console.log(mainContentAll.Heilmann[0], params.topic, currentyear)
 	const contentIndex = mainContentAll[params.topic as 'Heilmann' | 'Biel' | 'Neuhaus'].findIndex(
-		(item) => item.Jahr === currentyear
+		(item) => Number(item.year) === Number(currentyear)
 	);
-	const mainContent = mainContentAll[topic][contentIndex];
-	const nextYear = mainContentAll[topic][contentIndex + 1]?.Jahr;
-	const prevYear = mainContentAll[topic][contentIndex - 1]?.Jahr;
 
-	if (mainContent?.Text) {
-		mainContent.Text = await parse(mainContent.Text);
+	console.log(contentIndex)
+	const mainContent = mainContentAll[topic][contentIndex];
+	const nextYear = mainContentAll[topic][contentIndex + 1]?.year;
+	const prevYear = mainContentAll[topic][contentIndex - 1]?.year;
+
+	if (mainContent?.text_de) {
+		mainContent.text_de = await parse(mainContent.text_de);
+	}
+	if (mainContent?.text_fr) {
+		mainContent.text_fr = await parse(mainContent.text_fr);
 	}
 
 	return {
+		locale,
 		topic,
 		topic_label,
 		nextYear,
 		prevYear,
-		mainContent,
+		mainContent
 	};
 }) satisfies PageLoad;

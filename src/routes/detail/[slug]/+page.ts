@@ -7,7 +7,7 @@ export const load = (async ({ params }) => {
 	const [topic, yearString] = slug.split('_');
 	const year = Number(yearString);
 	
-		let imgContent = imgContentAll.info.find((item) => item.Bild === slug);
+		let imgContent = imgContentAll.info.find((item) => item.image === slug);
 		if (imgContent?.Metatext) {
 			imgContent.Metatext = imgContentAll.metatext[imgContent.Metatext - 1];
 		}

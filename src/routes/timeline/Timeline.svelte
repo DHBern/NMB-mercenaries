@@ -32,7 +32,7 @@
 
 	const years = [
 		...new Set(
-			Object.values(mainContent).flatMap((content) => content.map((datapoint) => datapoint.Jahr))
+			Object.values(mainContent).flatMap((content) => content.map((datapoint) => datapoint.year))
 		)
 	].sort((a, b) => a - b);
 	let x = $derived(
@@ -75,7 +75,7 @@
 
 	const lineGenerator = (topic: string, content: any[], index: number) => {
 		let coords = content.map((datapoint) => [
-			x(datapoint.Jahr),
+			x(datapoint.year),
 			(datapoint.Ort === 'Biel' ? yLocal(topic) : y(index === 0 ? 'Up' : 'Down')) || 0
 		]);
 
@@ -160,11 +160,11 @@
 				stroke-linecap="round"
 			/>
 			{#each content as datapoint, j}
-				{@const current = datapoint.Jahr === currentyear && topic === currenttopic}
-				{@const cx = x(datapoint.Jahr)}
+				{@const current = datapoint.year === currentyear && topic === currenttopic}
+				{@const cx = x(datapoint.year)}
 				{@const cy = (datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
 				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href="{base}/timeline/{topic}/{datapoint.Jahr}">
+				<a href="{base}/timeline/{topic}/{datapoint.year}">
 					<circle
 						{cx}
 						{cy}
