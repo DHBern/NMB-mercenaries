@@ -3,7 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
-	import {colors} from '$lib/metadata.json';
+	import { colors } from '$lib/metadata.json';
 	import FullMap from '../FullMap.svelte';
 	import { onNavigate } from '$app/navigation';
 
@@ -12,7 +12,7 @@
 		isPulsating = true;
 	}, 2000);
 
-	onNavigate(()=>{
+	onNavigate(() => {
 		isPulsating = false;
 		clearTimeout(timerPing);
 		timerPing = setTimeout(() => {
@@ -32,7 +32,11 @@
 	}
 
 	onMount(() => {
-		applyStyles(document.querySelectorAll('.europe-biel'), 'error', `${base}/timeline/Brunnen/1798`);
+		applyStyles(
+			document.querySelectorAll('.europe-biel'),
+			'error',
+			`${base}/timeline/Brunnen/1798`
+		);
 		applyStyles(
 			document.querySelectorAll('.europe-neapel'),
 			'warning',
@@ -86,12 +90,12 @@
 
 	<!-- Region Map -->
 	<svg class="map max-h-[calc(100vh/12*10)]" viewBox="0 0 1000 840">
-		<CirclesEurope {isPulsating}/>
+		<CirclesEurope {isPulsating} />
 
 		<foreignObject x="460" y="450" width="150" height="50">
 			<a
 				href="{base}/timeline/Brunnen/1798"
-				class={['btn font-semibold', colors['preset-filled']['Brunnen']]}>Biel, Hofwil</a
+				class={['btn font-semibold', colors['preset-filled']['Biel']]}>Biel, Hofwil</a
 			>
 		</foreignObject>
 		<foreignObject x="445" y="585" width="150" height="50">

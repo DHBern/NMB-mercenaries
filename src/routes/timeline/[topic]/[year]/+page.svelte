@@ -11,8 +11,6 @@
 	import Ping from '$lib/components/Ping.svelte';
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
-	import Dot from './Dot.svelte';
-	import { parse } from 'marked';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -30,7 +28,7 @@
 			case 'Neuhaus':
 				portrait = portrait_neuhaus;
 				break;
-			case 'Brunnen':
+			case 'Biel':
 				portrait = portrait_brunnen;
 				break;
 		}

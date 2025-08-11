@@ -9,59 +9,58 @@
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 p {
-    margin-top: 15px;
+	margin-top: 15px;
 }
 
 .anchor {
-    color: black;
+	color: black;
 }
 
 .map[data-topic='Neuhaus'] circle {
-    fill: var(--color-success-400);
+	fill: var(--color-success-400);
 }
 .map[data-topic='Heilmann'] circle {
-    fill: var(--color-warning-400);
+	fill: var(--color-warning-400);
 }
-.map[data-topic='Brunnen'] circle {
-    fill: var(--color-error-400);
+.map[data-topic='Biel'] circle {
+	fill: var(--color-error-400);
 }
 
 /* Animations */
 @keyframes ping-twice {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  10% {
-    transform: scale(2);
-    opacity: 0;
-  }
-  14% {
-    transform: scale(1);
-    opacity: 0;
-  }
-  15% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  25% {
-    transform: scale(2);
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	10% {
+		transform: scale(2);
+		opacity: 0;
+	}
+	14% {
+		transform: scale(1);
+		opacity: 0;
+	}
+	15% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	25% {
+		transform: scale(2);
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
 }
 
 @layer utilities {
-  .animate-ping {
-    animation: ping-twice 6s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
+	.animate-ping {
+		animation: ping-twice 6s cubic-bezier(0, 0, 0.2, 1) infinite;
+	}
 }

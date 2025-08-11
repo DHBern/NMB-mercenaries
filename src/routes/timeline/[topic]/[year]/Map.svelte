@@ -4,7 +4,7 @@
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
 	import CirclesJava from '$lib/circle-components/Circles-java.svelte';
 
-	let { classes="", region, place, topic } = $props();
+	let { classes = '', region, place, topic } = $props();
 	let elPlace = $state();
 
 	// Style highlighted circles
@@ -62,14 +62,14 @@
 			case 'Neuhaus':
 				elPlace?.style.setProperty('fill', 'var(--color-success-900)');
 				break;
-			case 'Brunnen':
+			case 'Biel':
 				elPlace?.style.setProperty('fill', 'var(--color-error-900)');
 				break;
 		}
 	});
 </script>
 
-<svg class={["map", classes]} viewBox="0 0 1000 840" data-topic={topic}>
+<svg class={['map', classes]} viewBox="0 0 1000 840" data-topic={topic}>
 	<!-- South East Asia -->
 	{#if region == 'seasia'}
 		{#if place == 'batavia'}
@@ -122,7 +122,7 @@
 			<CirclesEurope />
 		{/if}
 	{/if}
-	
+
 	<!-- Pull marked circles to front -->
 	<use xlink:href="#seasia-batavia" />
 	<use xlink:href="#seasia-banjarmasin" />

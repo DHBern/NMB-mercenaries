@@ -4,9 +4,9 @@ import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
 	const currentyear = Number(params.year);
-	const topic: 'Heilmann' | 'Brunnen' | 'Neuhaus' = params.topic as
+	const topic: 'Heilmann' | 'Biel' | 'Neuhaus' = params.topic as
 		| 'Heilmann'
-		| 'Brunnen'
+		| 'Biel'
 		| 'Neuhaus';
 
 	let topic_label;
@@ -14,7 +14,7 @@ export const load = (async ({ params }) => {
 		case 'Heilmann':
 			topic_label = 'G.&nbsp;F.&nbsp;Heilmann';
 			break;
-		case 'Brunnen':
+		case 'Biel':
 			topic_label = '';
 			break;
 		case 'Neuhaus':
@@ -22,7 +22,7 @@ export const load = (async ({ params }) => {
 			break;
 	}
 
-	const contentIndex = mainContentAll[params.topic as 'Heilmann' | 'Brunnen' | 'Neuhaus'].findIndex(
+	const contentIndex = mainContentAll[params.topic as 'Heilmann' | 'Biel' | 'Neuhaus'].findIndex(
 		(item) => item.Jahr === currentyear
 	);
 	const mainContent = mainContentAll[topic][contentIndex];
