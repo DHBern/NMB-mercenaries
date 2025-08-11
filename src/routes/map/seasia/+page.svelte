@@ -35,17 +35,17 @@
 		applyStyles(
 			document.querySelectorAll('.seasia-batavia'),
 			'success',
-			'{base}/timeline/Neuhaus/1840'
+			`${base}/timeline/Neuhaus/1840`
 		);
 		applyStyles(
 			document.querySelectorAll('.seasia-banjarmasin'),
 			'success',
-			'{base}/timeline/Neuhaus/1836'
+			`${base}/timeline/Neuhaus/1836`
 		);
 		applyStyles(
 			document.querySelectorAll('.seasia-padangse'),
 			'success',
-			'{base}/timeline/Neuhaus/1829'
+			`${base}/timeline/Neuhaus/1829`
 		);
 	});
 </script>
