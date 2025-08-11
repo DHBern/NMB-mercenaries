@@ -166,7 +166,7 @@
 				{@const cy =
 					(datapoint['place_de'] === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
 				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href={localizeHref(`${base}/timeline/${topic}/${datapoint.Jahr}`)}>
+				<a href={localizeHref(`${base}/timeline/${topic}/${datapoint.year}`)}>
 					<circle
 						{cx}
 						{cy}
