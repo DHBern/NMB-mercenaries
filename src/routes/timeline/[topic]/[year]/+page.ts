@@ -1,6 +1,5 @@
 import type { PageLoad } from './$types';
 import mainContentAll from '$lib/data/main.json';
-import anderswoContentAll from '$lib/data/anderswo.json';
 import { parse } from 'marked';
 
 export const load = (async ({ params }) => {
@@ -30,8 +29,6 @@ export const load = (async ({ params }) => {
 	const nextYear = mainContentAll[topic][contentIndex + 1]?.Jahr;
 	const prevYear = mainContentAll[topic][contentIndex - 1]?.Jahr;
 
-	// const anderswo = anderswoContentAll.filter((item) => item.Jahr === currentyear).map((item) => item.Titel);
-
 	if (mainContent?.Text) {
 		mainContent.Text = await parse(mainContent.Text);
 	}
@@ -42,6 +39,5 @@ export const load = (async ({ params }) => {
 		nextYear,
 		prevYear,
 		mainContent,
-		// anderswo
 	};
 }) satisfies PageLoad;

@@ -55,7 +55,10 @@
 	<!-- Orientation Box -->
 	<div>
 		<div class="relative">
-			<a class="" href="{base}/map/{data.mainContent?.MapRegion}?place={data.mainContent?.MapPlace}">
+			<a
+				class=""
+				href="{base}/map/{data.mainContent?.MapRegion}?place={data.mainContent?.MapPlace}"
+			>
 				<Map
 					classes=""
 					region={data.mainContent?.MapRegion}
@@ -74,21 +77,16 @@
 				src={portrait}
 				alt="portrait"
 			/>
-			<div class="absolute flex flex-col justify-start items-start grow-0 top-[100%] left-[38%]">
+			<div class="absolute top-[100%] left-[38%] flex grow-0 flex-col items-start justify-start">
 				<div>
-				<span class="text-5xl font-bold">{data.mainContent?.Jahr}</span>
-				<span class="text-4xl font-bold">in {data.mainContent?.Ort}</span>
-				{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
-						>({@html data.topic_label})</span
-					>{/if}					
+					<span class="text-5xl font-bold">{data.mainContent?.Jahr}</span>
+					<span class="text-4xl font-bold">in {data.mainContent?.Ort}</span>
+					{#if data.topic_label}<span class={['text-3xl font-bold', colors['text'][data.topic]]}
+							>({@html data.topic_label})</span
+						>{/if}
 				</div>
-				<a
-				class="btn btn-lg mt-10 font-bold {colors['preset-filled'][data.topic]}"
-				href="{base}/timeline/anderswo/{data.currentyear}"><ArrowRight />Was sonst noch war</a
-					>
-				</div>
+			</div>
 		</div>
-
 	</div>
 
 	<!-- Content Box -->
