@@ -47,4 +47,9 @@
 			</div>
 		</div>
 	</div>
+	<p class="text-lg mb-30 pt-5 pl-50 w-300">
+		Du kannst jederzeit zwischen Zeit, Mensch und Ort wechseln. Denn es gibt nicht den vorgegebenen
+		Lebenslauf, sondern Lebensrealitäten, die sich je nach Ort und getroffenem Entscheid voneinander
+		unterscheiden.
+	</p>
 </div>

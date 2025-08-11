@@ -3,16 +3,17 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
-	import {colors} from '$lib/metadata.json';
+	import { colors } from '$lib/metadata.json';
 	import FullMap from '../FullMap.svelte';
 	import { onNavigate } from '$app/navigation';
+	import { localizeHref } from '$lib/paraglide/runtime';
 
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
 		isPulsating = true;
 	}, 2000);
 
-	onNavigate(()=>{
+	onNavigate(() => {
 		isPulsating = false;
 		clearTimeout(timerPing);
 		timerPing = setTimeout(() => {
@@ -57,19 +58,19 @@
 		<CirclesSeasia {isPulsating} />
 		<foreignObject x="170" y="520" width="300" height="50">
 			<a
-				href="{base}/timeline/Neuhaus/1840"
+				href={localizeHref(`${base}/timeline/Neuhaus/1840`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Padangse Bovenlanden</a
 			>
 		</foreignObject>
 		<foreignObject x="565" y="420" width="300" height="50">
 			<a
-				href="{base}/timeline/Neuhaus/1836"
+				href={localizeHref(`${base}/timeline/Neuhaus/1836`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Banjarmasin</a
 			>
 		</foreignObject>
 		<foreignObject x="440" y="630" width="150" height="50">
 			<a
-				href="{base}/timeline/Neuhaus/1829"
+				href={localizeHref(`${base}/timeline/Neuhaus/1829`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia</a
 			>
 		</foreignObject>

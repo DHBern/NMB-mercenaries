@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import { locales, setLocale } from '$lib/paraglide/runtime';
+	import { locales, localizeHref } from '$lib/paraglide/runtime';
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import { listen, onIdle } from 'svelte-idle';
@@ -102,12 +102,13 @@
 		{/if}
 		<div class="flex gap-4">
 			{#each locales as locale}
-				<button
+				<a
 					class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold"
-					onclick={() => setLocale(locale)}
+					data-sveltekit-reload
+					href={localizeHref(page.url.pathname, { locale })}
 				>
 					{locale}
-				</button>
+				</a>
 			{/each}
 		</div>
 	</header>

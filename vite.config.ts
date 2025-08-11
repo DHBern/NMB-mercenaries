@@ -9,7 +9,17 @@ export default defineConfig({
 		sveltekit(),
 		paraglideVitePlugin({
 			project: './project.inlang',
-			outdir: './src/lib/paraglide'
+			outdir: './src/lib/paraglide',
+			strategy: ['url', 'baseLocale'],
+			urlPatterns: [
+				{
+					pattern: '/:path(.*)?',
+					localized: [
+						['de', '/de/:path(.*)?'],
+						['fr', '/fr/:path(.*)?']
+					]
+				}
+			]
 		})
 	]
 });

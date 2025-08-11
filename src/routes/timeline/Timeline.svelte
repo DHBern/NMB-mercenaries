@@ -4,6 +4,7 @@
 	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
 	import { onNavigate } from '$app/navigation';
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages';
 
 	let isPulsating = $state(false);
@@ -164,7 +165,7 @@
 				{@const cx = x(datapoint.year)}
 				{@const cy = (datapoint.Ort === 'Biel' ? yLocal(topic) : y(i === 0 ? 'Up' : 'Down')) || 0}
 				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href="{base}/timeline/{topic}/{datapoint.year}">
+				<a href={localizeHref(`${base}/timeline/${topic}/${datapoint.Jahr}`)}>
 					<circle
 						{cx}
 						{cy}
