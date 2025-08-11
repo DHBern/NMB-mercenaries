@@ -24,8 +24,10 @@
 <button
 	onclick={() => {
 		toggleState();
-	}}>Toggle</button
+	}}
 >
+	Toggle
+</button>
 
 <style>
 	img.hidden {

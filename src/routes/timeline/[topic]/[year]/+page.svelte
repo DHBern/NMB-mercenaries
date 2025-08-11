@@ -12,6 +12,7 @@
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
 	import { m } from '$lib/paraglide/messages.js';
+	import { localizeHref } from '$lib/paraglide/runtime';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {
 		eager: true,
@@ -56,7 +57,9 @@
 		<div class="relative">
 			<a
 				class=""
-				href="{base}/map/{data.mainContent?.MapRegion}?place={data.mainContent?.MapPlace}"
+				href={localizeHref(
+					`${base}/map/${data.mainContent?.MapRegion}?place=${data.mainContent?.MapPlace}`
+				)}
 			>
 				<Map
 					classes=""
@@ -102,7 +105,10 @@
 		<!-- Image -->
 		<div class="relative col-start-2">
 			{#if data.mainContent?.Bild}
-				<a class="absolute top-0 left-0" href="{base}/detail/{data.mainContent?.Bild}">
+				<a
+					class="absolute top-0 left-0"
+					href={localizeHref(`${base}/detail/${data.mainContent?.Bild}`)}
+				>
 					<img
 						class="h-full max-h-140 w-full object-contain object-right"
 						src={images['/src/lib/images/timeline/' + data.mainContent?.Bild + '.jpg']}
@@ -118,7 +124,7 @@
 			{#if data.prevYear}
 				<a
 					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg', 'w-50']}
-					href="{base}/timeline/{data.topic}/{data.prevYear}"
+					href={localizeHref(`${base}/timeline/${data.topic}/${data.prevYear}`)}
 				>
 					<ArrowLeft class="mr-3" />
 					<span class="font-semibold">{m.wise_extra_leopard_zip()}</span>
@@ -127,7 +133,7 @@
 			{#if data.nextYear}
 				<a
 					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg', 'w-50']}
-					href="{base}/timeline/{data.topic}/{data.nextYear}"
+					href={localizeHref(`${base}/timeline/${data.topic}/${data.nextYear}`)}
 				>
 					<ArrowRight class="mr-3" />
 					<span class="font-semibold">{m.funny_long_cheetah_forgive()}</span>

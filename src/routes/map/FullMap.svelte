@@ -4,6 +4,7 @@
 	import Ping from '$lib/components/Ping.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { m } from '$lib/paraglide/messages';
+	import { localizeHref } from '$lib/paraglide/runtime';
 
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
@@ -19,7 +20,7 @@
 	});
 </script>
 
-<a href="{base}/map" class="absolute top-[19vh] left-[20vw] w-90">
+<a href={localizeHref(`${base}/map`)} class="absolute top-[19vh] left-[20vw] w-90">
 	<svg class="fullmap border-4 border-white" viewBox="0 0 1000 840">
 		<rect x="0" y="0" width="1000" height="840" fill="white" class="cursor-pointer" />
 		<CirclesFull />

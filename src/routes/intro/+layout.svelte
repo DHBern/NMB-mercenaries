@@ -5,6 +5,7 @@
 	import { onNavigate } from '$app/navigation';
 	import { ArrowLeft, ArrowRight } from '@lucide/svelte';
 	import { page } from '$app/state';
+	import { localizeHref } from '$lib/paraglide/runtime';
 
 	let { data, children }: { data: LayoutData; children: Snippet } = $props();
 
@@ -25,7 +26,7 @@
 	{#if slide > 1}
 		<a
 			class="btn-icon preset-filled-primary-500 m-15 h-20 w-20 rounded-full"
-			href="{base}/intro/{slide - 1}"><ArrowLeft class="h-10 w-10" /></a
+			href={localizeHref(`${base}/intro/${slide - 1}`)}><ArrowLeft class="h-10 w-10" /></a
 		>
 	{/if}
 	<div class="col-start-2 flex flex-col items-center justify-center gap-4">
@@ -34,7 +35,7 @@
 	{#if slide < 3}
 		<a
 			class="btn-icon preset-filled-primary-500 col-start-3 m-15 h-20 w-20 rounded-full"
-			href="{base}/intro/{slide + 1}"><ArrowRight class="h-10 w-10" /></a
+			href={localizeHref(`${base}/intro/${slide + 1}`)}><ArrowRight class="h-10 w-10" /></a
 		>
 	{/if}
 </div>

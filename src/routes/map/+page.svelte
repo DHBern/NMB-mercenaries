@@ -3,20 +3,20 @@
 	import Circles_full from '$lib/circle-components/Circles-full.svelte';
 	import Ping from '$lib/components/Ping.svelte';
 	import { onNavigate } from '$app/navigation';
+	import { localizeHref } from '$lib/paraglide/runtime';
 
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
 		isPulsating = true;
 	}, 2000);
 
-	onNavigate(()=>{
+	onNavigate(() => {
 		isPulsating = false;
 		clearTimeout(timerPing);
 		timerPing = setTimeout(() => {
 			isPulsating = true;
 		}, 2000);
 	});
-
 </script>
 
 <div class="flex h-screen items-center justify-center">
@@ -43,7 +43,7 @@
 		<Circles_full />
 
 		<!-- Rectangle for frame and link (must be over circles with transparent color) -->
-		<a href="{base}/map/europe">
+		<a href={localizeHref(`${base}/map/europe`)}>
 			<rect
 				x="70"
 				y="250"
@@ -55,7 +55,7 @@
 				class="cursor-pointer"
 			/>
 		</a>
-		<a href="{base}/map/seasia">
+		<a href={localizeHref(`${base}/map/seasia`)}>
 			<rect
 				x="550"
 				y="510"
@@ -68,34 +68,30 @@
 			/>
 		</a>
 
-		<a
-			href="{base}/map/europe"
-			class="btn btn-lg"
-		>
+		<a href={localizeHref(`${base}/map/europe`)} class="btn btn-lg">
 			<foreignObject x="60" y="240" width="90" height="35">
-				<span class="text-base rounded bg-white px-2 text-surface-900 font-semibold">Europa</span>
+				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold">Europa</span>
 			</foreignObject>
 			<foreignObject x="0" y="180" width="120" height="120">
-				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} {isPulsating}/>
+				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} {isPulsating} />
 			</foreignObject>
 		</a>
 
-		<a
-			href="{base}/map/seasia"
-			class="btn btn-lg"
-		>
+		<a href={localizeHref(`${base}/map/seasia`)} class="btn btn-lg">
 			<foreignObject x="540" y="500" width="140" height="50">
-				<span class="text-base rounded bg-white px-2 text-surface-900 font-semibold">Südostasien</span>
+				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold"
+					>Südostasien</span
+				>
 			</foreignObject>
 			<foreignObject x="480" y="440" width="120" height="120">
-				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} {isPulsating}/>
+				<Ping classes="absolute top-1/2 left-1/2 size-4" setWhite={true} {isPulsating} />
 			</foreignObject>
 		</a>
 	</svg>
 </div>
 
 <style>
-	img.hidden {
+	:global(img.hidden) {
 		display: none;
 	}
 	.map :global(circle) {
