@@ -7,7 +7,7 @@ export const load = (async ({ params }) => {
 	const { locale } = params;
 	const currentyear = Number(params.year);
 	const topic: 'Heilmann' | 'Biel' | 'Neuhaus' = params.topic as 'Heilmann' | 'Biel' | 'Neuhaus';
-
+	
 	let topic_label;
 	switch (topic) {
 		case 'Heilmann':
@@ -21,12 +21,10 @@ export const load = (async ({ params }) => {
 			break;
 	}
 
-	console.log(mainContentAll.Heilmann[0], params.topic, currentyear)
 	const contentIndex = mainContentAll[params.topic as 'Heilmann' | 'Biel' | 'Neuhaus'].findIndex(
 		(item) => Number(item.year) === Number(currentyear)
 	);
 
-	console.log(contentIndex)
 	const mainContent = mainContentAll[topic][contentIndex];
 	const nextYear = mainContentAll[topic][contentIndex + 1]?.year;
 	const prevYear = mainContentAll[topic][contentIndex - 1]?.year;
