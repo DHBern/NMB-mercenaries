@@ -1,1 +1,6 @@
-{"$schema":"https://inlang.com/schema/inlang-message-format","hello_world":"Hello, {name} from de!","close_livid_lemur_pull":"Gleichzeitig anderswo..."}
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from de!",
+	"close_livid_lemur_pull": "Gleichzeitig anderswo...",
+	"due_fun_florian_wish": "Verflochtene"
+}
