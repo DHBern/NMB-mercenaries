@@ -95,11 +95,11 @@
 				</div>
 			</a>
 			<img
-				class="absolute top-[80%] left-[2%] max-h-[50%] max-w-[60%] opacity-100"
+				class="absolute top-[83%] left-[2%] aspect-auto w-[40%] opacity-100"
 				src={portrait}
 				alt="portrait"
 			/>
-			<div class="absolute top-[100%] left-[38%] flex grow-0 flex-col items-start justify-start">
+			<div class="absolute top-[100%] left-[45%] flex grow-0 flex-col items-start justify-start">
 				<div>
 					<span class="text-5xl font-bold">{data.mainContent?.year}</span>
 					<br />
