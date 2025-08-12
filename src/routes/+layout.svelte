@@ -80,7 +80,7 @@
 
 <div
 	class={[
-		'bg-surface-50 m-0 grid h-screen max-h-screen w-screen grid-rows-[1fr_11fr] p-0',
+		'bg-surface-50 m-0 grid h-screen max-h-screen w-screen grid-rows-[1fr_11fr] overflow-hidden p-0 **:overflow-hidden',
 		isDark && 'bg-surface-900 text-surface-50'
 	]}
 >
