@@ -1,7 +1,7 @@
 <script lang="ts">
 	import portrait_heilmann from '$lib/images/portrait-heilmann-mono.jpg';
 	import portrait_neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
-	import portrait_brunnen from '$lib/images/portrait-brunnen-mono.jpg';
+	import portrait_brunnen from '$lib/images/portrait-biel-mono.jpg';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
 	import Map from './Map.svelte';
