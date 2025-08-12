@@ -112,7 +112,7 @@
 
 	<!-- Content Box -->
 	<!-- //! As soon as screen arrives, replace auto in grid-rows with fixed height -->
-	<div class="grid h-full grid-cols-[2fr_1fr] grid-rows-[200px-90px] gap-4">
+	<div class="relative grid h-full grid-cols-[2fr_1fr] gap-4">
 		<div class="max-h-full !overflow-y-auto">
 			<!-- Content -->
 			<h1 class="h1 mb-4">{data.mainContent?.[title_slug]}</h1>
@@ -139,25 +139,35 @@
 		</div>
 
 		<!-- Navigation along timeline -->
-		<div class="col-span-2 row-start-2 flex items-center justify-end gap-4">
-			{#if data.prevYear}
-				<a
-					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg', 'w-50']}
-					href={localizeHref(`${base}/timeline/${data.topic}/${data.prevYear}`)}
-				>
-					<ArrowLeft class="mr-3" />
-					<span class="font-semibold">{m.wise_extra_leopard_zip()}</span>
-				</a>
-			{/if}
-			{#if data.nextYear}
-				<a
-					class={['btn-icon', colors['preset-filled'][data.topic], 'm-4', 'btn-icon-lg', 'w-50']}
-					href={localizeHref(`${base}/timeline/${data.topic}/${data.nextYear}`)}
-				>
-					<ArrowRight class="mr-3" />
-					<span class="font-semibold">{m.funny_long_cheetah_forgive()}</span>
-				</a>
-			{/if}
+		<div class="absolute bottom-0 col-span-1 flex w-2/3 items-center justify-between gap-4">
+			<a
+				class={[
+					'btn-icon',
+					colors['preset-filled'][data.topic],
+					'm-4',
+					'btn-icon-lg',
+					'w-50',
+					!data.prevYear && 'pointer-events-none cursor-default opacity-30'
+				]}
+				href={localizeHref(`${base}/timeline/${data.topic}/${data.prevYear}`)}
+			>
+				<ArrowLeft class="mr-3" />
+				<span class="font-semibold">{m.wise_extra_leopard_zip()}</span>
+			</a>
+			<a
+				class={[
+					'btn-icon',
+					colors['preset-filled'][data.topic],
+					'm-4',
+					'btn-icon-lg',
+					'w-50',
+					!data.nextYear && 'pointer-events-none cursor-default opacity-30'
+				]}
+				href={localizeHref(`${base}/timeline/${data.topic}/${data.nextYear}`)}
+			>
+				<ArrowRight class="mr-3" />
+				<span class="font-semibold">{m.funny_long_cheetah_forgive()}</span>
+			</a>
 		</div>
 	</div>
 </div>
