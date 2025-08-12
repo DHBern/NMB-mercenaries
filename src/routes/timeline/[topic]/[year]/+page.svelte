@@ -1,7 +1,7 @@
 <script lang="ts">
 	import portrait_heilmann from '$lib/images/portrait-heilmann-mono.jpg';
 	import portrait_neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
-	import portrait_brunnen from '$lib/images/portrait-brunnen-mono.jpg';
+	import portrait_brunnen from '$lib/images/portrait-biel-mono.jpg';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
 	import Map from './Map.svelte';
@@ -113,7 +113,7 @@
 	<!-- Content Box -->
 	<!-- //! As soon as screen arrives, replace auto in grid-rows with fixed height -->
 	<div class="grid h-full grid-cols-[2fr_1fr] grid-rows-[200px-90px] gap-4">
-		<div class="max-h-full overflow-y-auto">
+		<div class="max-h-full !overflow-y-auto">
 			<!-- Content -->
 			<h1 class="h1 mb-4">{data.mainContent?.[title_slug]}</h1>
 			<p>

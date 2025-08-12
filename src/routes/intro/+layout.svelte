@@ -22,25 +22,25 @@
 	});
 </script>
 
-{#if slide > 1}
+{#if slide == 1}
+	<div class="absolute top-0 left-0 h-screen w-screen">
+		{@render children()}
+	</div>
+{:else}
 	<div class="grid h-full grid-cols-[1fr_14fr_1fr] place-items-center gap-4">
 		<a
-			class="btn-icon preset-filled-primary-500 m-15 h-20 w-20 rounded-full"
-			href={localizeHref(`${base}/intro/${slide - 1}`)}><ArrowLeft class="h-10 w-10" /></a
+			class="btn-icon m-15 h-35 w-35 rounded-full bg-gray-300 text-gray-800"
+			href={localizeHref(`${base}/intro/${slide - 1}`)}><ArrowLeft class="h-20 w-20" /></a
 		>
 		<div class="col-start-2 flex flex-col items-center justify-center gap-4">
 			{@render children()}
 		</div>
 		{#if slide < 3}
 			<a
-				class="btn-icon preset-filled-primary-500 col-start-3 m-15 h-20 w-20 rounded-full"
-				href={localizeHref(`${base}/intro/${slide + 1}`)}><ArrowRight class="h-10 w-10" /></a
+				class="btn-icon col-start-3 m-15 h-35 w-35 rounded-full bg-gray-300 text-gray-800"
+				href={localizeHref(`${base}/intro/${slide + 1}`)}><ArrowRight class="h-20 w-20" /></a
 			>
 		{/if}
-	</div>
-{:else if slide == 1}
-	<div class="h-screen w-screen">
-		{@render children()}
 	</div>
 {/if}
 

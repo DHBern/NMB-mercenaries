@@ -3,7 +3,7 @@
 	import { colors } from '$lib/metadata.json';
 	import portrait_heilmann from '$lib/images/portrait-heilmann-mono.jpg';
 	import portrait_neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
-	import portrait_brunnen from '$lib/images/portrait-brunnen-mono.jpg';
+	import portrait_brunnen from '$lib/images/portrait-biel-mono.jpg';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import { m } from '$lib/paraglide/messages';
 </script>
@@ -47,9 +47,4 @@
 			</div>
 		</div>
 	</div>
-	<p class="mb-30 w-300 pt-5 pl-50 text-lg">
-		Du kannst jederzeit zwischen Zeit, Mensch und Ort wechseln. Denn es gibt nicht den vorgegebenen
-		Lebenslauf, sondern Lebensrealitäten, die sich je nach Ort und getroffenem Entscheid voneinander
-		unterscheiden.
-	</p>
 </div>

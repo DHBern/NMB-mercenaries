@@ -48,7 +48,7 @@
 	</div>
 
 	<!-- Content -->
-	<div class="flex max-h-full flex-col justify-end overflow-y-auto pb-15">
+	<div class="flex max-h-full flex-col justify-end !overflow-y-auto pb-15">
 		<button
 			class="btn btn-lg preset-outlined-primary-500 mb-10 h-12 w-40 font-semibold"
 			onclick={() => {
