@@ -7,7 +7,7 @@
 	import { page } from '$app/state';
 	import { localizeHref } from '$lib/paraglide/runtime';
 
-	let { data, children }: { data: LayoutData; children: Snippet } = $props();
+	let { children }: { children: Snippet } = $props();
 
 	const slide = $derived(Number(page.route.id?.split('/')[2]));
 	onNavigate((navigation) => {
@@ -32,9 +32,7 @@
 			class="btn-icon m-15 h-35 w-35 rounded-full bg-gray-300 text-gray-800"
 			href={localizeHref(`${base}/intro/${slide - 1}`)}><ArrowLeft class="h-20 w-20" /></a
 		>
-		<div class="col-start-2 flex flex-col items-center justify-center gap-4">
-			{@render children()}
-		</div>
+		{@render children()}
 		{#if slide < 3}
 			<a
 				class="btn-icon col-start-3 m-15 h-35 w-35 rounded-full bg-gray-300 text-gray-800"
