@@ -4,15 +4,8 @@
 	"full_clean_swan_burn": "Sind Sie noch da?",
 	"east_red_jay_strive": [
 		{
-			"declarations": [
-				"input count",
-				"input remaining",
-				"local countplural = count: plural"
-			],
-			"selectors": [
-				"count",
-				"countplural"
-			],
+			"declarations": ["input count", "input remaining", "local countplural = count: plural"],
+			"selectors": ["count", "countplural"],
 			"match": {
 				"countplural=one": "Die Applikation wird in 1 Sekunde zurückgesetzt, wenn Sie nicht reagieren.",
 				"countplural=other": "Die Applikation wird in {count} Sekunden zurückgesetzt, wenn Sie nicht reagieren."
