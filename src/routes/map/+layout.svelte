@@ -1,13 +1,13 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	let { children }: { children: Snippet } = $props();
-	
+
 	function handleGoBack() {
 		history.back();
 	}
 </script>
 
-<div class="dark h-full w-full">
+<div class="dark h-full w-full overflow-hidden">
 	{@render children()}
 
 	<button
