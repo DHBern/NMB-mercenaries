@@ -3,7 +3,7 @@
 	import mainContent from '$lib/data/main.json';
 	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
-	import { onNavigate } from '$app/navigation';
+	import { goto, onNavigate } from '$app/navigation';
 	import { localizeHref } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages';
 
@@ -144,15 +144,29 @@
 	/>
 	{#each Object.entries(mainContent) as [topic, content], i}
 		<g>
-			<text
-				x={xcoordslabel[topic]}
-				y={(yLocal(topic) || 0) + 5}
+			<!-- <rect
+				x={xcoordslabel[topic] - 5}
+				y={(yLocal(topic) || 0) - 25}
+				width={topic === currenttopic ? 200 : 50}
+				height={50}
+				rx="10"
+				ry="10"
+				fill="white"
+				stroke="black"
+			/> -->
+			<a
+				href={localizeHref(`${base}/timeline/${topic}/${content[0].year}`)}
 				class={[
+					'cursor-pointer',
 					colors.fill[topic],
 					topic === currenttopic && 'text-3xl font-black',
 					topic !== currenttopic && 'text-lg font-bold'
-				]}>{labels[topic]}</text
+				]}
 			>
+				<text x={xcoordslabel[topic]} y={(yLocal(topic) || 0) + 5}>
+					{labels[topic]}
+				</text>
+			</a>
 			<path
 				d={lineGenerator(topic, content, i)}
 				class={[colors.stroke[topic]]}
