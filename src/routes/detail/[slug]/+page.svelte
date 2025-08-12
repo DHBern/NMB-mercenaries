@@ -35,7 +35,7 @@
 </script>
 
 <!-- Content Box -->
-<div class="absolute bottom-0 grid h-[90%] grid-cols-[5fr_3fr] gap-10 p-10 px-20 pr-50 pb-30">
+<div class="absolute bottom-0 grid h-[90%] grid-cols-[5fr_3fr] gap-10 p-10 px-20">
 	<!-- Image -->
 	<!-- //! overflow-y-hidden is a hack to restrict the image to the height of the container. Somehow it is not working otherwise... -->
 	<div class="grid h-full grid-rows-[auto_80px] overflow-hidden">
