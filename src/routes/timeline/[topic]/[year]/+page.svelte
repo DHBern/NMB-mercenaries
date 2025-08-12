@@ -11,7 +11,6 @@
 	import { colors } from '$lib/metadata.json';
 	import { onNavigate } from '$app/navigation';
 	import { m } from '$lib/paraglide/messages.js';
-	import { onMount } from 'svelte';
 	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 
 	const images: any = import.meta.glob(['$lib/images/timeline/**.jpg'], {

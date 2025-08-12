@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { m } from '$lib/paraglide/messages';
+	import { getLocale } from '$lib/paraglide/runtime';
 
 	let { data }: { data: PageData } = $props();
 
@@ -43,21 +45,19 @@
 				src={images[imgPath]}
 				alt={altText}
 			/>
-			<p class="ml-10 block text-right text-sm">{@html data.detailContent?.[source_slug]}</p>
 		{/if}
 	</div>
 
 	<!-- Content -->
-	<div class="flex max-h-full flex-col justify-end !overflow-y-auto pb-15">
+	<div class="flex max-h-full flex-col justify-end !overflow-y-auto pb-17">
+		<h1 class="h1 mb-4 text-6xl">{@html data.detailContent?.[title_slug]}</h1>
+		<p class="text-3xl">{@html data.detailContent?.[text_slug]}</p>
+		<p class="text-lg">{@html data.detailContent?.[source_slug]}</p>
 		<button
-			class="btn btn-lg preset-outlined-primary-500 mb-10 h-12 w-40 font-semibold"
+			class="btn preset-outlined-primary-500 mt-5 h-15 w-100 self-end overflow-hidden text-2xl font-semibold"
 			onclick={() => {
 				history.back();
-			}}>Zurück</button
+			}}>{m.watery_shy_porpoise_feel()}</button
 		>
-		<h1 class="h1 mb-4">{@html data.detailContent?.[title_slug]}</h1>
-		{#if data.detailContent?.[text_slug]}
-			<p>{@html data.detailContent?.[text_slug]}</p>
-		{/if}
 	</div>
 </div>
