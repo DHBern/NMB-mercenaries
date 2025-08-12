@@ -1,15 +1,14 @@
 <script lang="ts">
-	import type { Action } from 'svelte/action';
 	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
-	import CirclesJava from '$lib/circle-components/Circles-java.svelte';
 
 	let { classes = '', region, place, topic } = $props();
-	let elPlace = $state();
+	let elPlace: Element | null = $state(null);
 
 	// Style highlighted circles
 	$effect(() => {
 		// Get marked circles of place
+		elPlace?.classList?.remove('marked', 'bigger', `fill-Neuhaus`, `fill-Heilmann`, `fill-Biel`);
 		switch (place) {
 			case 'batavia':
 				elPlace = document.querySelector('#seasia-batavia');
@@ -53,74 +52,18 @@
 		}
 
 		// Style circles
-		elPlace?.classList.add('marked');
-		elPlace?.style.setProperty('r', '12px');
-		switch (topic) {
-			case 'Heilmann':
-				elPlace?.style.setProperty('fill', 'var(--color-warning-900)');
-				break;
-			case 'Neuhaus':
-				elPlace?.style.setProperty('fill', 'var(--color-success-900)');
-				break;
-			case 'Biel':
-				elPlace?.style.setProperty('fill', 'var(--color-error-900)');
-				break;
-		}
+		elPlace?.classList.add('marked', 'bigger', `fill-${topic}`);
 	});
 </script>
 
 <svg class={['map', classes]} viewBox="0 0 1000 840" data-topic={topic}>
 	<!-- South East Asia -->
 	{#if region == 'seasia'}
-		{#if place == 'batavia'}
-			<!-- <CirclesJava /> -->
-			<CirclesSeasia />
-		{:else if place == 'banjarmasin'}
-			<!-- <CirclesBanjarmasin /> -->
-			<CirclesSeasia />
-		{:else if place == 'padangse'}
-			<!-- <CirclesPadangse /> -->
-			<CirclesSeasia />
-		{:else}
-			<CirclesSeasia />
-		{/if}
+		<CirclesSeasia />
 
 		<!-- Europe -->
 	{:else if region == 'europe'}
-		<!-- <CirclesEurope /> -->
-		{#if place == 'biel' || place == 'hofwil'}
-			<!-- <CirclesBiel /> -->
-			<CirclesEurope />
-		{:else if place == 'neapel' || place == 'nola'}
-			<!-- <CirclesNeapel /> -->
-			<CirclesEurope />
-		{:else if place == 'heidelberg'}
-			<!-- <CirclesHeidelberg /> -->
-			<CirclesEurope />
-		{:else if place == 'wien'}
-			<!-- <CirclesWien /> -->
-			<CirclesEurope />
-		{:else if place == 'halle'}
-			<!-- <CirclesHalle /> -->
-			<CirclesEurope />
-		{:else if place == 'baryssau'}
-			<!-- <CirclesBaryssau /> -->
-			<CirclesEurope />
-		{:else if place == 'franche'}
-			<!-- <CirclesFranche /> -->
-			<CirclesEurope />
-		{:else if place == 'hertogenbosch'}
-			<!-- <CirclesHertogenbosch /> -->
-			<CirclesEurope />
-		{:else if place == 'hulst'}
-			<!-- <CirclesHulst /> -->
-			<CirclesEurope />
-		{:else if place == 'rotterdam'}
-			<!-- <CirclesRotterdam /> -->
-			<CirclesEurope />
-		{:else}
-			<CirclesEurope />
-		{/if}
+		<CirclesEurope />
 	{/if}
 
 	<!-- Pull marked circles to front -->
@@ -156,5 +99,17 @@
 			fill: 'red'
 			opacity: 1;
 		}
+	}
+	:global(.bigger) {
+		r: 12px;
+	}
+	:global(.fill-Heilmann) {
+		fill: var(--color-warning-900);
+	}
+	:global(.fill-Neuhaus) {
+		fill: var(--color-success-900);
+	}
+	:global(.fill-Biel) {
+		fill: var(--color-error-900);
 	}
 </style>
