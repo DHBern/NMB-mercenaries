@@ -17,16 +17,6 @@ p {
 	color: black;
 }
 
-.map[data-topic='Neuhaus'] circle {
-	fill: var(--color-success-400);
-}
-.map[data-topic='Heilmann'] circle {
-	fill: var(--color-warning-400);
-}
-.map[data-topic='Biel'] circle {
-	fill: var(--color-error-400);
-}
-
 /* Animations */
 @keyframes ping-twice {
 	0% {
