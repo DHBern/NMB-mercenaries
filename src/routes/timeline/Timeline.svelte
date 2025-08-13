@@ -86,7 +86,7 @@
 		}
 		if (topic === 'Biel') {
 			coords = [
-				[x(x.domain()[0]) + 140, y(topic) as number],
+				[x(x.domain()[0]) + 40, y(topic) as number],
 				...coords,
 				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
 			];
@@ -144,15 +144,23 @@
 	/>
 	{#each Object.entries(mainContent) as [topic, content], i}
 		<g>
-			<text
-				x={xcoordslabel[topic]}
-				y={(yLocal(topic) || 0) + 5}
+			<a
+				href={localizeHref(`${base}/timeline/${topic}/${content[0].year}`)}
 				class={[
+					'cursor-pointer',
 					colors.fill[topic],
 					topic === currenttopic && 'text-3xl font-black',
 					topic !== currenttopic && 'text-lg font-bold'
-				]}>{labels[topic]}</text
+				]}
 			>
+				<text x={xcoordslabel[topic]} y={(yLocal(topic) || 0) + 5}>
+					{#if topic === 'Biel'}
+						{m.spry_this_halibut_enjoy()}
+					{:else}
+						{labels[topic]}
+					{/if}
+				</text>
+			</a>
 			<path
 				d={lineGenerator(topic, content, i)}
 				class={[colors.stroke[topic]]}
@@ -170,14 +178,14 @@
 					<circle
 						{cx}
 						{cy}
-						r={current ? 18 : 10}
+						r={current ? 18 : 12}
 						class={[
 							colors.fill[topic],
 							!current && isPulsating && 'origin-center animate-ping opacity-50'
 						]}
 						style="transform-origin: {cx}px {cy}px"
 					/>
-					<circle {cx} {cy} r={current ? 18 : 10} class={[colors.fill[topic]]} />
+					<circle {cx} {cy} r={current ? 18 : 12} class={[colors.fill[topic]]} />
 				</a>
 			{/each}
 		</g>

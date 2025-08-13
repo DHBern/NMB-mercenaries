@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import { m } from '$lib/paraglide/messages';
 	let { children }: { children: Snippet } = $props();
 
 	function handleGoBack() {
@@ -11,8 +12,7 @@
 	{@render children()}
 
 	<button
-	class="absolute bottom-6 left-20 btn w-50 h-15 text-2xl preset-outlined-primary-500 h-12 font-semibold"
-	onclick={handleGoBack}>Zurück</button
+		class="btn preset-outlined-primary-500 absolute bottom-6 left-20 h-15 w-100 overflow-hidden text-2xl font-semibold"
+		onclick={handleGoBack}>{m.watery_shy_porpoise_feel()}</button
 	>
-
 </div>

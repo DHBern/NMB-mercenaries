@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { m } from '$lib/paraglide/messages';
+	import { getLocale } from '$lib/paraglide/runtime';
 
 	let { data }: { data: PageData } = $props();
 
@@ -33,31 +35,28 @@
 </script>
 
 <!-- Content Box -->
-<div class="absolute bottom-0 grid h-[90%] grid-cols-[5fr_3fr] gap-10 p-10 px-20 pr-50 pb-30">
+<div class="absolute bottom-0 m-10 mx-20 grid h-[90%] grid-cols-[5fr_3fr] gap-10">
 	<!-- Image -->
-	<!-- //! overflow-y-hidden is a hack to restrict the image to the height of the container. Somehow it is not working otherwise... -->
-	<div class="grid h-full grid-rows-[auto_80px] overflow-hidden">
+	<div class="grid h-full max-h-full min-h-0 min-w-0">
 		{#if data.detailContent?.image}
 			<img
-				class="h-full w-full max-w-full object-contain object-right"
+				class="max-h-full min-h-0 w-full max-w-full min-w-0 object-contain object-right"
 				src={images[imgPath]}
 				alt={altText}
 			/>
-			<p class="ml-10 block text-right text-sm">{@html data.detailContent?.[source_slug]}</p>
 		{/if}
 	</div>
 
 	<!-- Content -->
-	<div class="flex max-h-full flex-col justify-end !overflow-y-auto pb-15">
+	<div class="flex max-h-full flex-col justify-end !overflow-y-auto pb-17">
+		<h1 class="h1 mb-4 text-6xl">{@html data.detailContent?.[title_slug]}</h1>
+		<p class="text-3xl">{@html data.detailContent?.[text_slug]}</p>
+		<p class="text-lg">{@html data.detailContent?.[source_slug]}</p>
 		<button
-			class="btn btn-lg preset-outlined-primary-500 mb-10 h-12 w-40 font-semibold"
+			class="btn preset-outlined-primary-500 mt-5 h-15 w-100 self-end overflow-hidden text-2xl font-semibold"
 			onclick={() => {
 				history.back();
-			}}>Zurück</button
+			}}>{m.watery_shy_porpoise_feel()}</button
 		>
-		<h1 class="h1 mb-4">{@html data.detailContent?.[title_slug]}</h1>
-		{#if data.detailContent?.[text_slug]}
-			<p>{@html data.detailContent?.[text_slug]}</p>
-		{/if}
 	</div>
 </div>
