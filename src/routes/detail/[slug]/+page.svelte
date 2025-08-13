@@ -35,13 +35,12 @@
 </script>
 
 <!-- Content Box -->
-<div class="absolute bottom-0 grid h-[90%] grid-cols-[5fr_3fr] gap-10 p-10 px-20">
+<div class="absolute bottom-0 m-10 mx-20 grid h-[90%] grid-cols-[5fr_3fr] gap-10">
 	<!-- Image -->
-	<!-- //! overflow-y-hidden is a hack to restrict the image to the height of the container. Somehow it is not working otherwise... -->
-	<div class="grid h-full grid-rows-[auto_80px] overflow-hidden">
+	<div class="grid h-full max-h-full min-h-0 min-w-0">
 		{#if data.detailContent?.image}
 			<img
-				class="h-full w-full max-w-full object-contain object-right"
+				class="max-h-full min-h-0 w-full max-w-full min-w-0 object-contain object-right"
 				src={images[imgPath]}
 				alt={altText}
 			/>
