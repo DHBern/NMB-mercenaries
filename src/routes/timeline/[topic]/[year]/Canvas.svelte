@@ -60,7 +60,7 @@
 </script>
 
 <div class={['map', classes]} data-topic={topic} style="position: relative;">
-	<canvas bind:this={canvas} width="1000" height="840"></canvas>
+	<canvas bind:this={canvas} width="1000" height="840" class="max-w-full"></canvas>
 </div>
 
 <style>
