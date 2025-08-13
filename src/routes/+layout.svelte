@@ -4,7 +4,7 @@
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import { listen, onIdle } from 'svelte-idle';
-	import { goto } from '$app/navigation';
+	import { goto, onNavigate } from '$app/navigation';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
 	import { m } from '$lib/paraglide/messages';

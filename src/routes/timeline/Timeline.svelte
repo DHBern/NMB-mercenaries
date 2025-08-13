@@ -3,7 +3,7 @@
 	import mainContent from '$lib/data/main.json';
 	import { colors, labels } from '$lib/metadata.json';
 	import { base } from '$app/paths';
-	import { goto, onNavigate } from '$app/navigation';
+	import { onNavigate } from '$app/navigation';
 	import { localizeHref } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages';
 
@@ -86,7 +86,7 @@
 		}
 		if (topic === 'Biel') {
 			coords = [
-				[x(x.domain()[0]) + 140, y(topic) as number],
+				[x(x.domain()[0]) + 40, y(topic) as number],
 				...coords,
 				[x(x.domain()[x.domain().length - 1]), yLocal(topic) as number]
 			];
@@ -144,16 +144,6 @@
 	/>
 	{#each Object.entries(mainContent) as [topic, content], i}
 		<g>
-			<!-- <rect
-				x={xcoordslabel[topic] - 5}
-				y={(yLocal(topic) || 0) - 25}
-				width={topic === currenttopic ? 200 : 50}
-				height={50}
-				rx="10"
-				ry="10"
-				fill="white"
-				stroke="black"
-			/> -->
 			<a
 				href={localizeHref(`${base}/timeline/${topic}/${content[0].year}`)}
 				class={[
@@ -164,7 +154,11 @@
 				]}
 			>
 				<text x={xcoordslabel[topic]} y={(yLocal(topic) || 0) + 5}>
-					{labels[topic]}
+					{#if topic === 'Biel'}
+						{m.spry_this_halibut_enjoy()}
+					{:else}
+						{labels[topic]}
+					{/if}
 				</text>
 			</a>
 			<path
