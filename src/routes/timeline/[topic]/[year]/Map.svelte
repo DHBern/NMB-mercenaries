@@ -1,6 +1,7 @@
 <script lang="ts">
 	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
 	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
+	import CirclesAll from '$lib/circle-components/Circles-all.svelte';
 
 	let { classes = '', region, place, topic } = $props();
 	let elPlace: Element | null = $state(null);
@@ -57,6 +58,7 @@
 </script>
 
 <svg class={['map', classes]} viewBox="0 0 1000 840" data-topic={topic}>
+	<CirclesAll {region} />
 	<!-- South East Asia -->
 	{#if region == 'seasia'}
 		<CirclesSeasia />

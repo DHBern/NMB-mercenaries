@@ -1,5 +1,5 @@
 <script>
-    let {isPulsating=true} = $props();
+	let { isPulsating = true } = $props();
 </script>
 
 <circle class="circle-0-0" cx="5" cy="5" r="4.3961" />
@@ -4672,8 +4672,25 @@
 <circle class="circle-46-67" cx="675" cy="465" r="3.1882" />
 <circle class="circle-46-68" cx="685" cy="465" r="4.3098" />
 <circle class="circle-46-69" cx="695" cy="465" r="4.4392" />
-<circle id="seasia-banjarmasin" class="circle-46-70 marked seasia-banjarmasin" cx="705" cy="465" r="4.3961" style="transform-origin: 705px 465px"/>
-<circle id="seasia-banjarmasin-ping" class={["circle-46-70 marked seasia-banjarmasin", isPulsating && "origin-center animate-ping opacity-100"]} cx="705" cy="465" r="4.3961" style="transform-origin: 705px 465px"/>
+<circle
+	id="seasia-banjarmasin"
+	class="circle-46-70 marked seasia-banjarmasin"
+	cx="705"
+	cy="465"
+	r="4.3961"
+	style="transform-origin: 705px 465px"
+/>
+<circle
+	id="seasia-banjarmasin-ping"
+	class={[
+		'circle-46-70 marked seasia-banjarmasin',
+		isPulsating && 'origin-center animate-ping opacity-100'
+	]}
+	cx="705"
+	cy="465"
+	r="4.3961"
+	style="transform-origin: 705px 465px"
+/>
 <circle class="circle-46-71" cx="715" cy="465" r="4.3961" />
 <circle class="circle-46-72" cx="725" cy="465" r="4.3961" />
 <circle class="circle-46-73" cx="735" cy="465" r="4.3961" />
@@ -5643,8 +5660,25 @@
 <circle class="circle-56-37" cx="375" cy="565" r="3.1882" />
 <circle class="circle-56-38" cx="385" cy="565" r="2.7569" />
 <circle class="circle-56-39" cx="395" cy="565" r="2.7569" />
-<circle id="seasia-padangse" class="circle-56-40 marked seasia-padangse" cx="405" cy="565" r="3.9647" style="transform-origin: 405px 565px"/>
-<circle id="seasia-padangse-ping" class={["circle-56-40 marked seasia-padangse", isPulsating && "origin-center animate-ping opacity-100"]} cx="405" cy="565" r="3.9647" style="transform-origin: 405px 565px"/>
+<circle
+	id="seasia-padangse"
+	class="circle-56-40 marked seasia-padangse"
+	cx="405"
+	cy="565"
+	r="3.9647"
+	style="transform-origin: 405px 565px"
+/>
+<circle
+	id="seasia-padangse-ping"
+	class={[
+		'circle-56-40 marked seasia-padangse',
+		isPulsating && 'origin-center animate-ping opacity-100'
+	]}
+	cx="405"
+	cy="565"
+	r="3.9647"
+	style="transform-origin: 405px 565px"
+/>
 <circle class="circle-56-41" cx="415" cy="565" r="4.4392" />
 <circle class="circle-56-42" cx="425" cy="565" r="4.3961" />
 <circle class="circle-56-43" cx="435" cy="565" r="4.3961" />
@@ -6758,8 +6792,25 @@
 <circle class="circle-67-51" cx="515" cy="675" r="3.0157" />
 <circle class="circle-67-52" cx="525" cy="675" r="4.3529" />
 <circle class="circle-67-53" cx="535" cy="675" r="4.3098" />
-<circle id="seasia-batavia" class="circle-67-54 marked seasia-batavia" cx="545" cy="675" r="4.3529" style="transform-origin: 545px 675px"/>
-<circle id="seasia-batavia-ping" class={["circle-67-54 marked seasia-batavia", isPulsating && "origin-center animate-ping opacity-100"]} cx="545" cy="675" r="4.3529" style="transform-origin: 545px 675px"/>
+<circle
+	id="seasia-batavia"
+	class="circle-67-54 marked seasia-batavia"
+	cx="545"
+	cy="675"
+	r="4.3529"
+	style="transform-origin: 545px 675px"
+/>
+<circle
+	id="seasia-batavia-ping"
+	class={[
+		'circle-67-54 marked seasia-batavia',
+		isPulsating && 'origin-center animate-ping opacity-100'
+	]}
+	cx="545"
+	cy="675"
+	r="4.3529"
+	style="transform-origin: 545px 675px"
+/>
 <circle class="circle-67-55" cx="555" cy="675" r="4.1373" />
 <circle class="circle-67-56" cx="565" cy="675" r="3.7059" />
 <circle class="circle-67-57" cx="575" cy="675" r="3.2745" />
