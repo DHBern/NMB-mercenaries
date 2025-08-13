@@ -184,14 +184,14 @@
 					<circle
 						{cx}
 						{cy}
-						r={current ? 18 : 10}
+						r={current ? 18 : 12}
 						class={[
 							colors.fill[topic],
 							!current && isPulsating && 'origin-center animate-ping opacity-50'
 						]}
 						style="transform-origin: {cx}px {cy}px"
 					/>
-					<circle {cx} {cy} r={current ? 18 : 10} class={[colors.fill[topic]]} />
+					<circle {cx} {cy} r={current ? 18 : 12} class={[colors.fill[topic]]} />
 				</a>
 			{/each}
 		</g>
