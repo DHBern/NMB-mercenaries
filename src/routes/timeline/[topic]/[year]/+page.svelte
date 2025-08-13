@@ -148,7 +148,9 @@
 					'w-50',
 					!data.prevYear && 'pointer-events-none cursor-default opacity-30'
 				]}
-				href={localizeHref(`${base}/timeline/${data.topic}/${data.prevYear}`)}
+				href={localizeHref(
+					`${base}/timeline/${data.topic}/${data.prevYear || data.mainContent?.year}`
+				)}
 			>
 				<ArrowLeft class="mr-3" />
 				<span class="font-semibold">{m.wise_extra_leopard_zip()}</span>
@@ -162,7 +164,9 @@
 					'w-50',
 					!data.nextYear && 'pointer-events-none cursor-default opacity-30'
 				]}
-				href={localizeHref(`${base}/timeline/${data.topic}/${data.nextYear}`)}
+				href={localizeHref(
+					`${base}/timeline/${data.topic}/${data.nextYear || data.mainContent?.year}`
+				)}
 			>
 				<ArrowRight class="mr-3" />
 				<span class="font-semibold">{m.funny_long_cheetah_forgive()}</span>

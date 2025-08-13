@@ -1,6 +1,6 @@
 <script lang="ts">
-	import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
-	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
+	import Canvas from './Canvas.svelte';
+	import rValues from './rValues.json';
 
 	let { classes = '', region, place, topic } = $props();
 	let elPlace: Element | null = $state(null);
@@ -56,47 +56,45 @@
 	});
 </script>
 
+<Canvas {rValues} {region} {topic} classes={['map', classes]} />
+
 <svg class={['map', classes]} viewBox="0 0 1000 840" data-topic={topic}>
-	<!-- South East Asia -->
-	{#if region == 'seasia'}
-		<CirclesSeasia />
-
-		<!-- Europe -->
-	{:else if region == 'europe'}
-		<CirclesEurope />
-	{/if}
-
-	<!-- Pull marked circles to front -->
-	<use xlink:href="#seasia-batavia" />
-	<use xlink:href="#seasia-banjarmasin" />
-	<use xlink:href="#seasia-padangse" />
-	<use xlink:href="#europe-biel" />
-	<use xlink:href="#europe-neapel" />
-	<use xlink:href="#europe-heidelberg" />
-	<use xlink:href="#europe-wien" />
-	<use xlink:href="#europe-halle" />
-	<use xlink:href="#europe-baryssau" />
-	<use xlink:href="#europe-franche" />
-	<use xlink:href="#europe-hertogenbosch" />
-	<use xlink:href="#europe-hulst" />
-	<use xlink:href="#europe-rotterdam" />
+	<!-- Highlighted circles -->
+	{#if region === 'europe'}
+		<circle
+			id="europe-baryssau"
+			class="marked europe-baryssau circle-18-90"
+			cx="905"
+			cy="185"
+			r="4.3961"
+			style="transform-origin: 905px 185px;"
+		/>
+		<circle
+			id="europe-baryssau-ping"
+			class={['marked europe-baryssau circle-18-90', 'origin-center animate-ping opacity-100']}
+			cx="905"
+			cy="185"
+			r="4.3961"
+			style="transform-origin: 905px 185px;"
+		/>
+	{:else}{/if}
 </svg>
 
 <style>
 	@keyframes pulse {
 		0% {
 			r: 20;
-			fill: 'red'
+			fill: 'red';
 			opacity: 1;
 		}
 		50% {
 			r: 50;
-			fill: 'blue'
+			fill: 'blue';
 			opacity: 0.6;
 		}
 		100% {
 			r: 20;
-			fill: 'red'
+			fill: 'red';
 			opacity: 1;
 		}
 	}
