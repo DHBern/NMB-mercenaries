@@ -1,6 +1,6 @@
-<script>
-	let {  classes, isPulsating=true, setWhite = false } = $props();
-	let color;
+<script lang="ts">
+	let { classes, isPulsating = true, setWhite = false } = $props();
+	let color: string[] = $state([]);
 	if (setWhite) {
 		color = ['bg-white', 'bg-white', 'bg-white border-white', 'bg-white border-white'];
 	} else {
