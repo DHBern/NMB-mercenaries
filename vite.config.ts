@@ -2,6 +2,7 @@ import { paraglideVitePlugin } from '@inlang/paraglide-js';
 import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import svelteConfig from './svelte.config.js';
 
 export default defineConfig({
 	plugins: [
@@ -13,10 +14,10 @@ export default defineConfig({
 			strategy: ['url', 'baseLocale'],
 			urlPatterns: [
 				{
-					pattern: '/:path(.*)?',
+					pattern: svelteConfig.kit.paths.base + '/:path(.*)?',
 					localized: [
-						['de', '/de/:path(.*)?'],
-						['fr', '/fr/:path(.*)?']
+						['de', svelteConfig.kit.paths.base + '/de/:path(.*)?'],
+						['fr', svelteConfig.kit.paths.base + '/fr/:path(.*)?']
 					]
 				}
 			]
