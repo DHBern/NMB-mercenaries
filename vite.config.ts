@@ -14,10 +14,10 @@ export default defineConfig({
 			strategy: ['url', 'baseLocale'],
 			urlPatterns: [
 				{
-					pattern: `{${svelteConfig.kit.paths.base}}?/:path(.*)?`,
+					pattern: `{${svelteConfig.kit.paths.base || ''}}?/:path(.*)?`,
 					localized: [
-						['de', `{${svelteConfig.kit.paths.base}}?/de/:path(.*)?`],
-						['fr', `{${svelteConfig.kit.paths.base}}?/fr/:path(.*)?`]
+						['de', `{${svelteConfig.kit.paths.base || ''}/}?de/:path(.*)?`],
+						['fr', `{${svelteConfig.kit.paths.base || ''}/}?fr/:path(.*)?`]
 					]
 				}
 			]
