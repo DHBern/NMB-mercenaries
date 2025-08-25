@@ -48,7 +48,7 @@
 	</div>
 
 	<!-- Content -->
-	<div class="flex max-h-full flex-col justify-end !overflow-y-auto pb-17">
+	<div class="flex max-h-full flex-col justify-end pb-17">
 		<h1 class="h1 mb-4 text-6xl">{@html data.detailContent?.[title_slug]}</h1>
 		<p class="text-3xl">{@html data.detailContent?.[text_slug]}</p>
 		<p class="text-lg">{@html data.detailContent?.[source_slug]}</p>

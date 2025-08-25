@@ -112,7 +112,7 @@
 	<!-- Content Box -->
 	<!-- //! As soon as screen arrives, replace auto in grid-rows with fixed height -->
 	<div class="relative grid h-full grid-cols-[2fr_1fr] gap-20">
-		<div class="max-h-full !overflow-y-auto">
+		<div class="max-h-full">
 			<!-- Content -->
 			<h1 class="h1 mb-4">{data.mainContent?.[title_slug]}</h1>
 			<p>
