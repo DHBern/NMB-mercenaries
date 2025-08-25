@@ -21,13 +21,13 @@
 	});
 </script>
 
-<a href={localizeHref(`${base}/map`)} class="absolute right-5 bottom-5 w-120">
-	<svg class="fullmap border-4 border-white" viewBox="0 0 1500 840">
+<a href={localizeHref(`${base}/map`)} class="absolute right-7 bottom-5 w-120">
+	<svg class=" fullmap rounded-md border-2 border-black bg-white p-1" viewBox="0 0 1500 840">
 		<rect x="0" y="0" width="1500" height="840" fill="white" class="cursor-pointer" />
 		<CirclesFull />
 	</svg>
 	<div class="btn btn-lg absolute -top-3 left-9 h-10 w-10">
-		<span class="rounded bg-white px-2 text-base font-semibold text-black"
+		<span class="rounded bg-white px-2 text-xl font-semibold text-black"
 			>{m.moving_civil_fly_hunt()}</span
 		>
 		<Ping classes="absolute top-2 -left-11 size-4" setWhite={true} {isPulsating} />
