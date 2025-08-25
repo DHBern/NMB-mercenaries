@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	// import Circles_full from '$lib/circle-components/Circles-full.svelte';
 	import Circles_full from '$lib/circle-components/Circles-full-a-150.svelte';
 	import Ping from '$lib/components/Ping.svelte';
 	import { onNavigate } from '$app/navigation';
+	import { navigateWithoutHistory } from './navigateWithoutHistory';
 	import { localizeHref } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages';
 
@@ -45,7 +45,12 @@
 		<Circles_full />
 
 		<!-- Rectangle for frame and link (must be over circles with transparent color) -->
-		<a href={localizeHref(`${base}/map/europe`)}>
+		<a
+			href={localizeHref(`${base}/map/europe`)}
+			onclick={(ev) => {
+				navigateWithoutHistory(ev, localizeHref(`${base}/map/europe`));
+			}}
+		>
 			<rect
 				x="70"
 				y="250"
@@ -57,7 +62,12 @@
 				class="cursor-pointer"
 			/>
 		</a>
-		<a href={localizeHref(`${base}/map/seasia`)}>
+		<a
+			href={localizeHref(`${base}/map/seasia`)}
+			onclick={(ev) => {
+				navigateWithoutHistory(ev, localizeHref(`${base}/map/seasia`));
+			}}
+		>
 			<rect
 				x="550"
 				y="510"
@@ -70,7 +80,13 @@
 			/>
 		</a>
 
-		<a href={localizeHref(`${base}/map/europe`)} class="btn btn-lg">
+		<a
+			href={localizeHref(`${base}/map/europe`)}
+			onclick={(ev) => {
+				navigateWithoutHistory(ev, localizeHref(`${base}/map/europe`));
+			}}
+			class="btn btn-lg"
+		>
 			<foreignObject x="60" y="240" width="90" height="35">
 				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold"
 					>{m.mad_icy_panther_hug()}</span
@@ -81,7 +97,13 @@
 			</foreignObject>
 		</a>
 
-		<a href={localizeHref(`${base}/map/seasia`)} class="btn btn-lg">
+		<a
+			href={localizeHref(`${base}/map/seasia`)}
+			onclick={(ev) => {
+				navigateWithoutHistory(ev, localizeHref(`${base}/map/seasia`));
+			}}
+			class="btn btn-lg"
+		>
 			<foreignObject x="540" y="500" width="140" height="50">
 				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold"
 					>{m.many_such_haddock_dream()}</span
