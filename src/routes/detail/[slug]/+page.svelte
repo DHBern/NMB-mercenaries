@@ -53,7 +53,7 @@
 		<p class="text-3xl">{@html data.detailContent?.[text_slug]}</p>
 		<p class="text-lg">{@html data.detailContent?.[source_slug]}</p>
 		<button
-			class="btn preset-outlined-primary-500 mt-5 h-15 w-100 self-end overflow-hidden text-2xl font-semibold"
+			class="btn bg-surface-50 border-surface-950 text-surface-950 mt-5 h-15 w-100 self-end overflow-hidden border-2 text-2xl font-semibold"
 			onclick={() => {
 				history.back();
 			}}>{m.watery_shy_porpoise_feel()}</button

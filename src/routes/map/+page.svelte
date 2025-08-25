@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Circles_full from '$lib/circle-components/Circles-full.svelte';
+	// import Circles_full from '$lib/circle-components/Circles-full.svelte';
+	import Circles_full from '$lib/circle-components/Circles-full-a-150.svelte';
 	import Ping from '$lib/components/Ping.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { localizeHref } from '$lib/paraglide/runtime';
@@ -20,8 +21,8 @@
 	});
 </script>
 
-<div class="flex h-screen items-center justify-center">
-	<svg class="map max-h-[calc(100vh/12*10)]" viewBox="0 0 1000 840">
+<div class="absolute top-0 left-0 !z-10 h-screen w-screen items-center justify-center">
+	<svg class="map max-h-[calc(100vh)] w-screen p-[40px]" viewBox="0 0 1500 840">
 		<!-- Rectangle for fill color -->
 		<rect
 			x="70"

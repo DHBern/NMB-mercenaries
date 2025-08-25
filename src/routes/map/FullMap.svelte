@@ -1,5 +1,6 @@
 <script lang="ts">
-	import CirclesFull from '$lib/circle-components/Circles-full.svelte';
+	// import CirclesFull from '$lib/circle-components/Circles-full.svelte';
+	import CirclesFull from '$lib/circle-components/Circles-full-a-150.svelte';
 	import { base } from '$app/paths';
 	import Ping from '$lib/components/Ping.svelte';
 	import { onNavigate } from '$app/navigation';
@@ -20,9 +21,9 @@
 	});
 </script>
 
-<a href={localizeHref(`${base}/map`)} class="absolute top-[19vh] left-[20vw] w-90">
-	<svg class="fullmap border-4 border-white" viewBox="0 0 1000 840">
-		<rect x="0" y="0" width="1000" height="840" fill="white" class="cursor-pointer" />
+<a href={localizeHref(`${base}/map`)} class="absolute right-5 bottom-5 w-120">
+	<svg class="fullmap border-4 border-white" viewBox="0 0 1500 840">
+		<rect x="0" y="0" width="1500" height="840" fill="white" class="cursor-pointer" />
 		<CirclesFull />
 	</svg>
 	<div class="btn btn-lg absolute -top-3 left-9 h-10 w-10">

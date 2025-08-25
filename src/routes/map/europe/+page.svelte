@@ -2,7 +2,8 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
+	// import CirclesEurope from '$lib/circle-components/Circles-europe.svelte';
+	import CirclesEurope from '$lib/circle-components/Circles-europe-150.svelte';
 	import { colors } from '$lib/metadata.json';
 	import FullMap from '../FullMap.svelte';
 	import { onNavigate } from '$app/navigation';
@@ -82,68 +83,68 @@
 	});
 </script>
 
-<div class="flex h-screen items-center justify-center">
+<div class="absolute top-0 left-0 !z-10 h-screen w-full items-center justify-center">
 	<FullMap />
 
 	<!-- Region Map -->
-	<svg class="map max-h-[calc(100vh/12*10)]" viewBox="0 0 1000 840">
+	<svg class="map max-h-[calc(100vh)] w-screen p-[40px]" viewBox="0 0 1500 840">
 		<CirclesEurope {isPulsating} />
 
-		<foreignObject x="460" y="450" width="150" height="50">
+		<foreignObject x="625" y="415" width="150" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Biel/1798`)}
 				class={['btn font-semibold', colors['preset-filled']['Biel']]}>Biel, Hofwil</a
 			>
 		</foreignObject>
-		<foreignObject x="445" y="585" width="150" height="50">
+		<foreignObject x="775" y="570" width="150" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Heilmann/1829`)}
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Neapel, Nola</a
 			>
 		</foreignObject>
-		<foreignObject x="490" y="350" width="150" height="50">
+		<foreignObject x="625" y="325" width="150" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Heilmann/1804`)}
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Heidelberg</a
 			>
 		</foreignObject>
-		<foreignObject x="680" y="415" width="100" height="50">
+		<foreignObject x="840" y="395" width="100" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Heilmann/1814`)}
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Wien</a
 			>
 		</foreignObject>
-		<foreignObject x="570" y="240" width="100" height="50">
+		<foreignObject x="735" y="265" width="100" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Heilmann/1829`)}
 				class={['btn font-semibold', colors['preset-filled']['Heilmann']]}>Halle</a
 			>
 		</foreignObject>
-		<foreignObject x="790" y="140" width="100" height="50">
+		<foreignObject x="1115" y="165" width="100" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1812`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Baryssau</a
 			>
 		</foreignObject>
-		<foreignObject x="230" y="390" width="180" height="50">
+		<foreignObject x="415" y="415" width="185" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1815`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Franche-Comté</a
 			>
 		</foreignObject>
-		<foreignObject x="380" y="290" width="180" height="50">
+		<foreignObject x="545" y="265" width="180" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1816`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>‘s-Hertogenbosch</a
 			>
 		</foreignObject>
-		<foreignObject x="270" y="300" width="100" height="50">
+		<foreignObject x="440" y="205" width="100" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1831`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Hulst</a
 			>
 		</foreignObject>
-		<foreignObject x="370" y="230" width="150" height="50">
+		<foreignObject x="555" y="195" width="150" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1843`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Rotterdam</a

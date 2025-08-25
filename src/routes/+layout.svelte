@@ -86,24 +86,25 @@
 >
 	<header class="flex justify-between gap-4 p-4">
 		{#if !page.url.pathname.includes('/intro')}
-			<div class="flex gap-4">
+			<div class="z-90 flex gap-4">
 				<button
-					class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold"
+					class="btn btn-lg bg-surface-50 border-surface-950 text-surface-950 h-12 border-2 font-semibold"
 					onclick={() => {
 						history.back();
 					}}><ArrowLeft /></button
 				>
-				<a class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold" href="{base}/intro/1"
-					>{m.mild_still_moth_roam()}</a
+				<a
+					class="btn btn-lg bg-surface-50 border-surface-950 text-surface-950 h-12 border-2 font-semibold"
+					href="{base}/intro/1">{m.mild_still_moth_roam()}</a
 				>
 			</div>
 		{:else}
 			<div class="flex gap-4"></div>
 		{/if}
-		<div class="flex gap-4">
+		<div class="z-90 flex gap-4">
 			{#each locales as locale}
 				<a
-					class="btn btn-lg preset-outlined-primary-500 h-12 font-semibold"
+					class="btn btn-lg bg-surface-50 border-surface-950 text-surface-950 h-12 border-2 font-semibold"
 					data-sveltekit-reload
 					href={localizeHref(page.url.pathname, { locale })}
 				>
