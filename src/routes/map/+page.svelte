@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Circles_full from '$lib/circle-components/Circles-full-a-150.svelte';
 	import Ping from '$lib/components/Ping.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { navigateWithoutHistory } from './navigateWithoutHistory';
@@ -22,27 +21,32 @@
 </script>
 
 <div class="absolute top-0 left-0 !z-10 h-screen w-screen items-center justify-center">
-	<svg class="map max-h-[calc(100vh)] w-screen p-[40px]" viewBox="0 0 1500 840">
+	<svg
+		class="map max-h-[calc(100vh)] w-screen bg-[url(/src/lib/mapimages/Map_full.png)]"
+		viewBox="0 0 1500 840"
+	>
 		<!-- Rectangle for fill color -->
 		<rect
 			x="70"
 			y="250"
-			width="210"
-			height="170"
+			width="320"
+			height="180"
 			fill="var(--color-secondary-950)"
+			fill-opacity="0.4"
 			class="cursor-pointer"
 		/>
 		<rect
-			x="550"
-			y="510"
-			width="130"
-			height="110"
+			x="440"
+			y="460"
+			width="240"
+			height="135"
 			fill="var(--color-secondary-950)"
+			fill-opacity="0.4"
 			class="cursor-pointer"
 		/>
 
 		<!-- Circles -->
-		<Circles_full />
+		<!-- <Circles_full /> -->
 
 		<!-- Rectangle for frame and link (must be over circles with transparent color) -->
 		<a
@@ -54,8 +58,8 @@
 			<rect
 				x="70"
 				y="250"
-				width="210"
-				height="170"
+				width="320"
+				height="180"
 				fill="#ffffff00"
 				stroke="white"
 				stroke-width="4"
@@ -69,10 +73,10 @@
 			}}
 		>
 			<rect
-				x="550"
-				y="510"
-				width="130"
-				height="110"
+				x="440"
+				y="460"
+				width="240"
+				height="135"
 				fill="#ffffff00"
 				stroke="white"
 				stroke-width="4"
@@ -104,7 +108,7 @@
 			}}
 			class="btn btn-lg"
 		>
-			<foreignObject x="540" y="500" width="140" height="50">
+			<foreignObject x="430" y="450" width="140" height="50">
 				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold"
 					>{m.many_such_haddock_dream()}</span
 				>
