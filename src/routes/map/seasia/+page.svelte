@@ -7,6 +7,7 @@
 	import FullMap from '../FullMap.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { localizeHref } from '$lib/paraglide/runtime';
+	import { m } from '$lib/paraglide/messages.js';
 
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
@@ -62,19 +63,22 @@
 		<foreignObject x="280" y="510" width="380" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1840`)}
-				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Padangse Bovenlanden</a
+				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}
+				>{m.smug_quick_goldfish_promise()}</a
 			>
 		</foreignObject>
 		<foreignObject x="790" y="390" width="300" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1836`)}
-				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Banjarmasin</a
+				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}
+				>{m.north_shy_cow_shine()}</a
 			>
 		</foreignObject>
 		<foreignObject x="600" y="620" width="150" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1829`)}
-				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia</a
+				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}
+				>{m.low_wise_jaguar_hike()}</a
 			>
 		</foreignObject>
 
