@@ -27,19 +27,19 @@
 		{@render children()}
 	</div>
 {:else}
-	<div class="grid h-full grid-cols-[1fr_14fr_1fr] place-items-center gap-4">
-		<a
-			class="btn-icon m-35 h-35 w-35 place-self-end rounded-full bg-gray-300 text-gray-800"
-			href={localizeHref(`${base}/intro/${slide - 1}`)}><ArrowLeft class="h-20 w-20" /></a
-		>
+	<div class="relative mx-auto h-full w-full">
 		{@render children()}
-		{#if slide < 3}
-			<a
-				class="btn-icon col-start-3 m-35 h-35 w-35 place-self-end rounded-full bg-gray-300 text-gray-800"
-				href={localizeHref(`${base}/intro/${slide + 1}`)}><ArrowRight class="h-20 w-20" /></a
-			>
-		{/if}
 	</div>
+	<a
+		class="btn-icon fixed bottom-0 left-0 m-35 h-35 w-35 rounded-full bg-gray-300 text-gray-800"
+		href={localizeHref(`${base}/intro/${slide - 1}`)}><ArrowLeft class="h-20 w-20" /></a
+	>
+	{#if slide < 3}
+		<a
+			class="btn-icon fixed right-0 bottom-0 col-start-3 m-35 h-35 w-35 rounded-full bg-gray-300 text-gray-800"
+			href={localizeHref(`${base}/intro/${slide + 1}`)}><ArrowRight class="h-20 w-20" /></a
+		>
+	{/if}
 {/if}
 
 <style lang="postcss">
