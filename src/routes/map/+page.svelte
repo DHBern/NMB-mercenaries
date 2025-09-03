@@ -22,8 +22,8 @@
 	});
 </script>
 
-<div class="absolute top-0 left-0 !z-10 grid h-screen w-screen">
-	<svg class="map col-end-1 row-end-1 max-h-[calc(100vh)] w-screen p-[40px]" viewBox="0 0 1500 840">
+<div class="absolute top-0 left-0 !z-10 h-screen w-screen">
+	<svg class="map max-h-[calc(100vh)] w-screen p-[40px]" viewBox="0 0 1500 840">
 		<!--<foreignObject x="0" y="0" width="1500" height="840">
 			<CanvasFullMap {rValues} classes="h-full p-[40px]" />
 		</foreignObject>-->
@@ -34,6 +34,7 @@
 			width="210"
 			height="170"
 			fill="var(--color-secondary-950)"
+			fill-opacity="0.2"
 			class="cursor-pointer"
 		/>
 		<rect
@@ -42,6 +43,7 @@
 			width="130"
 			height="110"
 			fill="var(--color-secondary-950)"
+			fill-opacity="0.2"
 			class="cursor-pointer"
 		/>
 
@@ -116,14 +118,15 @@
 			</foreignObject>
 		</a>
 	</svg>
-	<CanvasFullMap {rValues} classes="h-full p-[40px] col-end-1 row-end-1" />
+	<CanvasFullMap
+		{rValues}
+		fill="--color-primary-500"
+		classes="h-full w-screen p-[40px] absolute top-0 z-[-10]"
+	/>
 </div>
 
 <style>
 	:global(img.hidden) {
 		display: none;
-	}
-	.map :global(circle) {
-		fill: var(--color-primary-500);
 	}
 </style>

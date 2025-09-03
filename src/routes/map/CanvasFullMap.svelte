@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { rValues, classes = '' } = $props();
+	let { rValues, classes = '', fill = 'black' } = $props();
 
 	const rows = 84;
 	const cols = 150;
@@ -19,7 +19,9 @@
 
 		if (!data) return;
 
-		ctx.fillStyle = 'black';
+		const computedColor =
+			fill !== 'black' ? getComputedStyle(canvas).getPropertyValue(fill).trim() : fill;
+		ctx.fillStyle = computedColor;
 
 		for (let i = 0; i < rows; i++) {
 			const cy = i * cell + 5;
@@ -44,7 +46,8 @@
 </script>
 
 <div class={['map', classes]} style="position: absolute;">
-	<canvas bind:this={canvas} width="1500" height="840" class="max-h-full max-w-full"></canvas>
+	<canvas bind:this={canvas} width="1500" height="840" class="m-auto max-h-full max-w-full"
+	></canvas>
 </div>
 
 <style>
