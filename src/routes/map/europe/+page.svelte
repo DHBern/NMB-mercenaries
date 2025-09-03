@@ -3,7 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { m } from '$lib/paraglide/messages.js';
-	import CirclesEurope from '$lib/circle-components/Circles-europe-150.svelte';
+	import CirclesEurope from '$lib/circle-components/Circles-europe-150-reduced.svelte';
 	import { colors } from '$lib/metadata.json';
 	import FullMap from '../FullMap.svelte';
 	import { onNavigate } from '$app/navigation';
@@ -88,7 +88,10 @@
 	<FullMap />
 
 	<!-- Region Map -->
-	<svg class="map max-h-[calc(100vh)] w-screen p-[40px]" viewBox="0 0 1500 840">
+	<svg
+		class="map max-h-[calc(100vh)] w-screen bg-[url(/src/lib/mapimages/Map_europe.png)]"
+		viewBox="0 0 1500 840"
+	>
 		<CirclesEurope {isPulsating} />
 
 		<foreignObject x="625" y="415" width="150" height="50">

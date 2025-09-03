@@ -2,8 +2,7 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	// import CirclesSeasia from '$lib/circle-components/Circles-seasia.svelte';
-	import CirclesSeasia from '$lib/circle-components/Circles-seasia-150.svelte';
+	import CirclesSeasia from '$lib/circle-components/Circles-seasia-150-reduced.svelte';
 	import { colors } from '$lib/metadata.json';
 	import FullMap from '../FullMap.svelte';
 	import { onNavigate } from '$app/navigation';
@@ -55,21 +54,24 @@
 	<FullMap />
 
 	<!-- Region Map -->
-	<svg class="map max-h-full w-full p-[40px]" viewBox="0 0 1500 840">
+	<svg
+		class="map max-h-full w-full bg-[url(/src/lib/mapimages/Map_seasia.png)]"
+		viewBox="0 0 1500 840"
+	>
 		<CirclesSeasia {isPulsating} />
-		<foreignObject x="400" y="510" width="300" height="50">
+		<foreignObject x="280" y="510" width="380" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1840`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Padangse Bovenlanden</a
 			>
 		</foreignObject>
-		<foreignObject x="785" y="390" width="300" height="50">
+		<foreignObject x="790" y="390" width="300" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1836`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Banjarmasin</a
 			>
 		</foreignObject>
-		<foreignObject x="660" y="620" width="150" height="50">
+		<foreignObject x="600" y="620" width="150" height="50">
 			<a
 				href={localizeHref(`${base}/timeline/Neuhaus/1829`)}
 				class={['btn font-semibold', colors['preset-filled']['Neuhaus']]}>Batavia</a
