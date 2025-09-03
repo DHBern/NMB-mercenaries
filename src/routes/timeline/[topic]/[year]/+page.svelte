@@ -130,7 +130,7 @@
 					<img
 						class="h-full max-h-140 w-full object-contain object-right"
 						src={images['/src/lib/images/timeline/' + data.mainContent?.image + '.jpg']}
-						alt="Detailbild"
+						alt=""
 					/>
 					<Ping classes="absolute bottom-10 left-20 size-4" {isPulsating} />
 				</a>
