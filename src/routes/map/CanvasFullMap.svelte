@@ -44,7 +44,7 @@
 </script>
 
 <div class={['map', classes]} style="position: absolute;">
-	<canvas bind:this={canvas} width="1500" height="840" class="max-w-full"></canvas>
+	<canvas bind:this={canvas} width="1500" height="840" class="max-h-full max-w-full"></canvas>
 </div>
 
 <style>

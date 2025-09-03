@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Circles_full from '$lib/circle-components/Circles-full-a-150.svelte';
 	import Ping from '$lib/components/Ping.svelte';
 	import { onNavigate } from '$app/navigation';
 	import { navigateWithoutHistory } from './navigateWithoutHistory';
 	import { localizeHref } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages';
+	import CanvasFullMap from './CanvasFullMap.svelte';
+	import rValues from './rValues_fullMap.json';
 
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
@@ -21,8 +22,11 @@
 	});
 </script>
 
-<div class="absolute top-0 left-0 !z-10 h-screen w-screen items-center justify-center">
-	<svg class="map max-h-[calc(100vh)] w-screen p-[40px]" viewBox="0 0 1500 840">
+<div class="absolute top-0 left-0 !z-10 grid h-screen w-screen">
+	<svg class="map col-end-1 row-end-1 max-h-[calc(100vh)] w-screen p-[40px]" viewBox="0 0 1500 840">
+		<!--<foreignObject x="0" y="0" width="1500" height="840">
+			<CanvasFullMap {rValues} classes="h-full p-[40px]" />
+		</foreignObject>-->
 		<!-- Rectangle for fill color -->
 		<rect
 			x="70"
@@ -41,9 +45,6 @@
 			class="cursor-pointer"
 		/>
 
-		<!-- Circles -->
-		<Circles_full />
-
 		<!-- Rectangle for frame and link (must be over circles with transparent color) -->
 		<a
 			href={localizeHref(`${base}/map/europe`)}
@@ -57,6 +58,7 @@
 				width="210"
 				height="170"
 				fill="#ffffff00"
+				fill-opacity="0.1"
 				stroke="white"
 				stroke-width="4"
 				class="cursor-pointer"
@@ -114,6 +116,7 @@
 			</foreignObject>
 		</a>
 	</svg>
+	<CanvasFullMap {rValues} classes="h-full p-[40px] col-end-1 row-end-1" />
 </div>
 
 <style>
