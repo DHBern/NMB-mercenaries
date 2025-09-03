@@ -17,7 +17,7 @@
 				><img class="max-h-120 max-w-120 opacity-70" src={portrait_heilmann} alt="heilmann" /></a
 			>
 			<a
-				class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Heilmann']]}
+				class={['btn btn-lg max-h-15 w-100 text-xl', colors['preset-filled']['Heilmann']]}
 				href="../timeline/Heilmann/1785"
 			>
 				<ArrowRight class="mr-3" />
@@ -29,7 +29,7 @@
 				><img class="max-h-120 max-w-120 opacity-70" src={portrait_neuhaus} alt="neuhaus" /></a
 			>
 			<a
-				class={['btn btn-lg text-xl', colors['preset-filled']['Neuhaus']]}
+				class={['btn btn-lg max-h-15 w-100 text-xl', colors['preset-filled']['Neuhaus']]}
 				href="../timeline/Neuhaus/1794"
 			>
 				<ArrowRight class="mr-3" /><span>François Emile Neuhaus</span></a
@@ -40,7 +40,7 @@
 				<img class="max-h-120 max-w-120 opacity-70" src={portrait_brunnen} alt="brunnen" />
 			</a>
 			<a
-				class={['btn btn-lg max-h-15 text-xl', colors['preset-filled']['Biel']]}
+				class={['btn btn-lg max-h-15 w-100 text-xl', colors['preset-filled']['Biel']]}
 				href="../timeline/Biel/1798"
 				><ArrowRight class="mr-3" /><span>{m.jolly_proud_nils_pop()}</span></a
 			>
