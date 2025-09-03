@@ -1,7 +1,3 @@
-<script>
-	let { isPulsating = true } = $props();
-</script>
-
 <circle class="circle-0-0" cx="5" cy="5" fill="black" r="4.3961" />
 <circle class="circle-0-1" cx="15" cy="5" fill="black" r="3.7059" />
 <circle class="circle-0-2" cx="25" cy="5" fill="black" r="2.8863" />
