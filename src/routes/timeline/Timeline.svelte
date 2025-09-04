@@ -6,6 +6,7 @@
 	import { onNavigate } from '$app/navigation';
 	import { localizeHref } from '$lib/paraglide/runtime';
 	import { m } from '$lib/paraglide/messages';
+	import { page } from '$app/state';
 
 	let isPulsating = $state(false);
 	let timerPing = setTimeout(() => {
@@ -23,9 +24,16 @@
 	let { width, height, topic: currenttopic, currentyear } = $props();
 
 	let xcoordslabel = $derived({
-		Heilmann: currenttopic === 'Heilmann' ? '10' : '100',
-		Biel: currenttopic === 'Biel' ? '180' : '180',
-		Neuhaus: currenttopic === 'Neuhaus' ? '220' : '290'
+		Heilmann: currenttopic === 'Heilmann' ? '20' : '100',
+		Biel:
+			currenttopic === 'Biel'
+				? page.url.pathname.includes('/fr/')
+					? '160'
+					: '180'
+				: page.url.pathname.includes('/fr/')
+					? '180'
+					: '200',
+		Neuhaus: currenttopic === 'Neuhaus' ? '275' : '340'
 	});
 
 	const PADDING = 30;
@@ -153,7 +161,7 @@
 					topic !== currenttopic && 'text-lg font-bold'
 				]}
 			>
-				<text x={xcoordslabel[topic]} y={(yLocal(topic) || 0) + 5}>
+				<text x={xcoordslabel[topic]} y={(yLocal(topic) + 7 || 0) + 1}>
 					{#if topic === 'Biel'}
 						{m.spry_this_halibut_enjoy()}
 					{:else}
