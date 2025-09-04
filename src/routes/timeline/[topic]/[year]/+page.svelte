@@ -113,7 +113,7 @@
 		<div class="max-h-full">
 			<!-- Content -->
 			<h1 class="mb-4 text-6xl">{data.mainContent?.[title_slug]}</h1>
-			<p class={['max-h-[700px] overflow-auto text-3xl']}>
+			<p class={['max-h-[700px] overflow-auto pr-2 text-3xl']}>
 				{@html data.mainContent?.[text_slug]}
 			</p>
 		</div>
