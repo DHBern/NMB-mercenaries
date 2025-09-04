@@ -29,8 +29,8 @@
 	}}
 	class="absolute right-7 bottom-5 w-120"
 >
-	<CanvasFullMap {rValues} classes="fullmap rounded-md border-2 border-black bg-white p-1" />
-	<svg class="fullmap rounded-md border-2 border-black bg-white p-1" viewBox="0 0 1500 840">
+	<CanvasFullMap {rValues} classes="rounded-md border-2 border-black bg-white p-1" />
+	<svg class="fullmap" viewBox="0 0 1500 840">
 		<rect x="0" y="0" width="1500" height="840" fill="white" class="cursor-pointer" />
 	</svg>
 	<div class="btn btn-lg absolute -top-3 left-9 h-10 w-10">
