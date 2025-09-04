@@ -37,7 +37,7 @@
 			</a>
 			<a
 				class={[
-					'btn absolute -bottom-10 -left-10 max-h-15 min-h-20 w-120 -rotate-1 p-8 text-2xl',
+					'btn absolute -bottom-10 -left-10 max-h-15 min-h-20 w-120 -rotate-0 p-8 text-2xl',
 					colors['preset-filled']['Biel']
 				]}
 				href="../timeline/Biel/1798"
@@ -50,7 +50,7 @@
 			>
 			<a
 				class={[
-					'btn absolute -bottom-6 -left-10 max-h-15 min-h-20 w-120 -rotate-1 p-8 text-2xl',
+					'btn absolute -bottom-0 -left-10 max-h-15 min-h-20 w-120 -rotate-1 p-8 text-2xl',
 					colors['preset-filled']['Neuhaus']
 				]}
 				href="../timeline/Neuhaus/1794"
