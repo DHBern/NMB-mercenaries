@@ -27,10 +27,10 @@
 	>
 		<!-- Rectangle for fill color -->
 		<rect
-			x="70"
-			y="250"
-			width="320"
-			height="180"
+			x="50"
+			y="255"
+			width="250"
+			height="140"
 			fill="var(--color-secondary-950)"
 			fill-opacity="0.4"
 			class="cursor-pointer"
@@ -38,8 +38,8 @@
 		<rect
 			x="440"
 			y="460"
-			width="240"
-			height="135"
+			width="250"
+			height="140"
 			fill="var(--color-secondary-950)"
 			fill-opacity="0.4"
 			class="cursor-pointer"
@@ -56,10 +56,10 @@
 			}}
 		>
 			<rect
-				x="70"
-				y="250"
-				width="320"
-				height="180"
+				x="50"
+				y="255"
+				width="250"
+				height="140"
 				fill="#ffffff00"
 				stroke="white"
 				stroke-width="4"
@@ -75,8 +75,8 @@
 			<rect
 				x="440"
 				y="460"
-				width="240"
-				height="135"
+				width="250"
+				height="140"
 				fill="#ffffff00"
 				stroke="white"
 				stroke-width="4"
@@ -91,7 +91,7 @@
 			}}
 			class="btn btn-lg"
 		>
-			<foreignObject x="60" y="240" width="90" height="35">
+			<foreignObject x="40" y="240" width="240" height="35">
 				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold"
 					>{m.mad_icy_panther_hug()}</span
 				>
@@ -108,7 +108,7 @@
 			}}
 			class="btn btn-lg"
 		>
-			<foreignObject x="430" y="450" width="140" height="50">
+			<foreignObject x="430" y="450" width="240" height="50">
 				<span class="text-surface-900 rounded bg-white px-2 text-base font-semibold"
 					>{m.many_such_haddock_dream()}</span
 				>
