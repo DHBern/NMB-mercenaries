@@ -14,11 +14,7 @@
 	<div class="flex-cols-3 my-5 mb-15 flex justify-around gap-10 pt-10 pl-50">
 		<div class="relative translate-y-[0px]">
 			<a href="../timeline/Heilmann/1785"
-				><img
-					class="border-warning-500 max-w-100 rounded-lg border-4 bg-white p-[0px] opacity-70"
-					src={portrait_heilmann}
-					alt="heilmann"
-				/></a
+				><img class="max-w-100 opacity-70" src={portrait_heilmann} alt="heilmann" /></a
 			>
 			<a
 				class={[
@@ -34,7 +30,7 @@
 		<div class="relative translate-y-[140px]">
 			<a href="../timeline/Biel/1798">
 				<img
-					class="border-error-500 max-w-100 translate-y-[140px] rounded-lg border-4 bg-white p-[0px] opacity-70"
+					class="max-w-100 translate-y-[140px] opacity-70"
 					src={portrait_brunnen}
 					alt="brunnen"
 				/>
@@ -51,7 +47,7 @@
 		<div class="relative translate-x-[20px] translate-y-[60px]">
 			<a href="../timeline/Neuhaus/1794"
 				><img
-					class=" border-success-500 max-w-100 translate-y-[0x] rounded-lg border-4 bg-white p-[0px] opacity-70"
+					class="max-w-100 translate-y-[0x] opacity-70"
 					src={portrait_neuhaus}
 					alt="neuhaus"
 				/></a
