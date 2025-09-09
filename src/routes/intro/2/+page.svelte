@@ -12,12 +12,24 @@
 </div>
 
 <style>
+	:global(.heilmann, .neuhaus, .biel) {
+		display: inline-block;
+		color: white;
+		padding: 0.35em 0.7em;
+		border-radius: 0.6rem;
+		line-height: 1;
+		font-size: 0.9em;
+	}
+	:global(.biel) {
+		background-color: var(--color-error-400);
+		color: var(--color-error-950);
+	}
 	:global(.heilmann) {
-		color: var(--color-warning-500);
-		font-weight: bold;
+		background-color: var(--color-warning-400);
+		color: var(--color-warning-50);
 	}
 	:global(.neuhaus) {
-		color: var(--color-success-500);
-		font-weight: bold;
+		background-color: var(--color-success-500);
+		color: var(--color-success-950);
 	}
 </style>
