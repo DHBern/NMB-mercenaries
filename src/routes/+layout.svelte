@@ -29,6 +29,7 @@
 	function modalClose() {
 		isModalOpen = false;
 	}
+
 	$effect(() => {
 		if (isModalOpen === false) {
 			clearInterval(intervalID);
@@ -101,17 +102,19 @@
 		{:else}
 			<div class="flex gap-4"></div>
 		{/if}
-		<div class="z-90 flex gap-4">
-			{#each locales as locale}
-				<a
-					class="btn btn-lg bg-surface-50 border-surface-950 text-surface-950 h-12 border-2 font-semibold"
-					data-sveltekit-reload
-					href={localizeHref(page.url.pathname, { locale })}
-				>
-					{locale}
-				</a>
-			{/each}
-		</div>
+		{#if !page.url.pathname.includes('/intro/1')}
+			<div class="z-90 flex gap-4">
+				{#each locales as locale}
+					<a
+						class="btn btn-lg bg-surface-50 border-surface-950 text-surface-950 h-12 border-2 font-semibold"
+						data-sveltekit-reload
+						href={localizeHref(page.url.pathname, { locale })}
+					>
+						{locale}
+					</a>
+				{/each}
+			</div>
+		{/if}
 	</header>
 
 	<div class="h-full max-h-full overflow-hidden">
