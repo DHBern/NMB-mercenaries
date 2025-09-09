@@ -3,7 +3,7 @@
 	import { colors } from '$lib/metadata.json';
 	import portrait_heilmann from '$lib/images/portrait-heilmann-mono.jpg';
 	import portrait_neuhaus from '$lib/images/portrait-neuhaus-mono.jpg';
-	import portrait_brunnen from '$lib/images/portrait-biel-mono.jpg';
+	import portrait_brunnen from '$lib/images/portrait-biel-mono-gray.jpg';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import { m } from '$lib/paraglide/messages';
 </script>
@@ -18,7 +18,7 @@
 			>
 			<a
 				class={[
-					'btn absolute -bottom-10 -left-10 h-10 max-h-15 min-h-20 w-120 -rotate-1 p-8 text-2xl',
+					'btn absolute -bottom-15 -left-20 h-10 max-h-15 min-h-20 w-135 -rotate-0 p-3 text-3xl',
 					colors['preset-filled']['Heilmann']
 				]}
 				href="../timeline/Heilmann/1785"
@@ -37,7 +37,7 @@
 			</a>
 			<a
 				class={[
-					'btn absolute -bottom-10 -left-10 max-h-15 min-h-20 w-120 -rotate-0 p-8 text-2xl',
+					'btn absolute -bottom-15 -left-20 max-h-15 min-h-20 w-135 -rotate-0 p-3 text-3xl',
 					colors['preset-filled']['Biel']
 				]}
 				href="../timeline/Biel/1798"
@@ -46,11 +46,15 @@
 		</div>
 		<div class="relative translate-x-[20px] translate-y-[60px]">
 			<a href="../timeline/Neuhaus/1794"
-				><img class="max-w-100 opacity-70" src={portrait_neuhaus} alt="neuhaus" /></a
+				><img
+					class="max-w-100 translate-y-[0x] opacity-70"
+					src={portrait_neuhaus}
+					alt="neuhaus"
+				/></a
 			>
 			<a
 				class={[
-					'btn absolute -bottom-0 -left-10 max-h-15 min-h-20 w-120 -rotate-1 p-8 text-2xl',
+					'btn absolute -bottom-10 -left-20 max-h-15 min-h-20 w-135 rotate-0 p-3 text-3xl',
 					colors['preset-filled']['Neuhaus']
 				]}
 				href="../timeline/Neuhaus/1794"
