@@ -22,7 +22,7 @@
 		}, 2000);
 	});
 	// Style circles
-	function applyStyles(elements, color, url) {
+	function applyStyles(elements, color) {
 		elements.forEach((el) => {
 			el?.style.setProperty('r', '8px');
 			el?.style.setProperty('fill', `var(--color-${color}-500)`);
@@ -31,22 +31,31 @@
 			});
 		});
 	}
+	function addClickListener(elements, url) {
+		elements.forEach((el) => {
+			el?.addEventListener('click', () => {
+				goto(url);
+			});
+		});
+	}
 
 	onMount(() => {
-		applyStyles(
-			document.querySelectorAll('.seasia-batavia'),
-			'success',
-			`${base}/timeline/Neuhaus/1840`
+		applyStyles(document.querySelectorAll('.seasia-batavia'), 'success');
+		applyStyles(document.querySelectorAll('.seasia-banjarmasin'), 'success');
+		applyStyles(document.querySelectorAll('.seasia-padangse'), 'success');
+
+		// add to pings
+		addClickListener(
+			document.querySelectorAll('use.seasia-batavia-ping'),
+			`${base}/timeline/Neuhaus/1829`
 		);
-		applyStyles(
-			document.querySelectorAll('.seasia-banjarmasin'),
-			'success',
+		addClickListener(
+			document.querySelectorAll('use.seasia-banjarmasin-ping'),
 			`${base}/timeline/Neuhaus/1836`
 		);
-		applyStyles(
-			document.querySelectorAll('.seasia-padangse'),
-			'success',
-			`${base}/timeline/Neuhaus/1829`
+		addClickListener(
+			document.querySelectorAll('use.seasia-padangse-ping'),
+			`${base}/timeline/Neuhaus/1840`
 		);
 	});
 </script>
@@ -83,12 +92,12 @@
 		</foreignObject>
 
 		<!-- Pull marked circles to front -->
-		<use xlink:href="#seasia-batavia" />
-		<use xlink:href="#seasia-banjarmasin" />
-		<use xlink:href="#seasia-padangse" />
-		<use xlink:href="#seasia-batavia-ping" />
-		<use xlink:href="#seasia-banjarmasin-ping" />
-		<use xlink:href="#seasia-padangse-ping" />
+		<use class="seasia-batavia" xlink:href="#seasia-batavia" />
+		<use class="seasia-banjarmasin" xlink:href="#seasia-banjarmasin" />
+		<use class="seasia-padangse" xlink:href="#seasia-padangse" />
+		<use class="seasia-batavia-ping" xlink:href="#seasia-batavia-ping" />
+		<use class="seasia-banjarmasin-ping" xlink:href="#seasia-banjarmasin-ping" />
+		<use class="seasia-padangse-ping" xlink:href="#seasia-padangse-ping" />
 	</svg>
 </div>
 
