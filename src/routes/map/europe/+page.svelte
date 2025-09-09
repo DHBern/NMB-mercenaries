@@ -24,13 +24,18 @@
 	});
 
 	// Style circles
-	function applyStyles(elements, color) {
+	function applyStyles(qSel, color) {
+		const elements = document.querySelectorAll(qSel);
 		elements.forEach((el) => {
 			el?.style.setProperty('r', '8px');
 			el?.style.setProperty('fill', `var(--color-${color}-500)`);
+			el?.addEventListener('click', () => {
+				goto(url);
+			});
 		});
 	}
-	function addClickListener(elements, url) {
+	function addClickListener(qSel, url) {
+		const elements = document.querySelectorAll(qSel);
 		elements.forEach((el) => {
 			el?.addEventListener('click', () => {
 				goto(url);
@@ -39,58 +44,28 @@
 	}
 
 	onMount(() => {
-		applyStyles(document.querySelectorAll('.europe-biel'), 'error');
-		applyStyles(document.querySelectorAll('.europe-neapel'), 'warning');
-		applyStyles(document.querySelectorAll('.europe-heidelberg'), 'warning');
-		applyStyles(document.querySelectorAll('.europe-wien'), 'warning');
-		applyStyles(document.querySelectorAll('.europe-halle'), 'warning');
-		applyStyles(document.querySelectorAll('.europe-baryssau'), 'success');
-		applyStyles(document.querySelectorAll('.europe-franche'), 'success');
-		applyStyles(document.querySelectorAll('.europe-hertogenbosch'), 'success');
-		applyStyles(document.querySelectorAll('.europe-hulst'), 'success');
-		applyStyles(document.querySelectorAll('.europe-rotterdam'), 'success');
+		applyStyles('.europe-biel', 'error');
+		applyStyles('.europe-neapel', 'warning');
+		applyStyles('.europe-heidelberg', 'warning');
+		applyStyles('.europe-wien', 'warning');
+		applyStyles('.europe-halle', 'warning');
+		applyStyles('.europe-baryssau', 'success');
+		applyStyles('.europe-franche', 'success');
+		applyStyles('.europe-hertogenbosch', 'success');
+		applyStyles('.europe-hulst', 'success');
+		applyStyles('.europe-rotterdam', 'success');
 
 		// add to pings
-		addClickListener(
-			document.querySelectorAll('use.europe-biel-ping'),
-			`${base}/timeline/Biel/1798`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-neapel-ping'),
-			`${base}/timeline/Heilmann/1829`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-heidelberg-ping'),
-			`${base}/timeline/Heilmann/1804`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-wien-ping'),
-			`${base}/timeline/Heilmann/1814`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-halle-ping'),
-			`${base}/timeline/Heilmann/1829`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-baryssau-ping'),
-			`${base}/timeline/Neuhaus/1812`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-franche-ping'),
-			`${base}/timeline/Neuhaus/1815`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-hertogenbosch-ping'),
-			`${base}/timeline/Neuhaus/1816`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-hulst-ping'),
-			`${base}/timeline/Neuhaus/1831`
-		);
-		addClickListener(
-			document.querySelectorAll('use.europe-rotterdam-ping'),
-			`${base}/timeline/Neuhaus/1843`
-		);
+		addClickListener('use.europe-biel-ping', `${base}/timeline/Biel/1798`);
+		addClickListener('use.europe-neapel-ping', `${base}/timeline/Heilmann/1829`);
+		addClickListener('use.europe-heidelberg-ping', `${base}/timeline/Heilmann/1804`);
+		addClickListener('use.europe-wien-ping', `${base}/timeline/Heilmann/1814`);
+		addClickListener('use.europe-halle-ping', `${base}/timeline/Heilmann/1829`);
+		addClickListener('use.europe-baryssau-ping', `${base}/timeline/Neuhaus/1812`);
+		addClickListener('use.europe-franche-ping', `${base}/timeline/Neuhaus/1815`);
+		addClickListener('use.europe-hertogenbosch-ping', `${base}/timeline/Neuhaus/1816`);
+		addClickListener('use.europe-hulst-ping', `${base}/timeline/Neuhaus/1831`);
+		addClickListener('use.europe-rotterdam-ping', `${base}/timeline/Neuhaus/1843`);
 	});
 </script>
 

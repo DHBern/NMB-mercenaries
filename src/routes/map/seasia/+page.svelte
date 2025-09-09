@@ -22,7 +22,8 @@
 		}, 2000);
 	});
 	// Style circles
-	function applyStyles(elements, color) {
+	function applyStyles(qSel, color) {
+		const elements = document.querySelectorAll(qSel);
 		elements.forEach((el) => {
 			el?.style.setProperty('r', '8px');
 			el?.style.setProperty('fill', `var(--color-${color}-500)`);
@@ -31,7 +32,8 @@
 			});
 		});
 	}
-	function addClickListener(elements, url) {
+	function addClickListener(qSel, url) {
+		const elements = document.querySelectorAll(qSel);
 		elements.forEach((el) => {
 			el?.addEventListener('click', () => {
 				goto(url);
@@ -40,23 +42,14 @@
 	}
 
 	onMount(() => {
-		applyStyles(document.querySelectorAll('.seasia-batavia'), 'success');
-		applyStyles(document.querySelectorAll('.seasia-banjarmasin'), 'success');
-		applyStyles(document.querySelectorAll('.seasia-padangse'), 'success');
+		applyStyles('.seasia-batavia', 'success');
+		applyStyles('.seasia-banjarmasin', 'success');
+		applyStyles('.seasia-padangse', 'success');
 
 		// add to pings
-		addClickListener(
-			document.querySelectorAll('use.seasia-batavia-ping'),
-			`${base}/timeline/Neuhaus/1829`
-		);
-		addClickListener(
-			document.querySelectorAll('use.seasia-banjarmasin-ping'),
-			`${base}/timeline/Neuhaus/1836`
-		);
-		addClickListener(
-			document.querySelectorAll('use.seasia-padangse-ping'),
-			`${base}/timeline/Neuhaus/1840`
-		);
+		addClickListener('use.seasia-batavia-ping', `${base}/timeline/Neuhaus/1829`);
+		addClickListener('use.seasia-banjarmasin-ping', `${base}/timeline/Neuhaus/1836`);
+		addClickListener('use.seasia-padangse-ping', `${base}/timeline/Neuhaus/1840`);
 	});
 </script>
 
