@@ -22,17 +22,17 @@
 	style="transform-origin: 1105px 165px;"
 />
 <circle
-	id="europe-hulst"
-	class="marked europe-hulst circle-24-54"
+	id="europe-rotterdam"
+	class="marked europe-rotterdam circle-24-54"
 	cx="545"
 	cy="245"
 	r="4.5"
 	style="transform-origin: 545px 245px;"
 />
 <circle
-	id="europe-hulst-ping"
+	id="europe-rotterdam-ping"
 	class={[
-		'marked europe-hulst circle-24-54',
+		'marked europe-rotterdam circle-24-54',
 		isPulsating && 'origin-center animate-ping opacity-100'
 	]}
 	cx="545"
@@ -41,17 +41,17 @@
 	style="transform-origin: 545px 245px;"
 />
 <circle
-	id="europe-rotterdam"
-	class="marked europe-rotterdam circle-25-52"
+	id="europe-hulst"
+	class="marked europe-hulst circle-25-52"
 	cx="525"
 	cy="255"
 	r="4.5"
 	style="transform-origin: 525px 255px;"
 />
 <circle
-	id="europe-rotterdam-ping"
+	id="europe-hulst-ping"
 	class={[
-		'marked europe-rotterdam circle-25-52',
+		'marked europe-hulst circle-25-52',
 		isPulsating && 'origin-center animate-ping opacity-100'
 	]}
 	cx="525"
