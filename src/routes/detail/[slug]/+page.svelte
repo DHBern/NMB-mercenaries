@@ -40,7 +40,7 @@
 	<div class="grid h-full max-h-full min-h-0 min-w-0">
 		{#if data.detailContent?.image}
 			<img
-				class="max-h-full min-h-0 w-full max-w-full min-w-0 object-contain object-right"
+				class="max-h-full min-h-0 w-full max-w-full min-w-0 self-end object-contain object-right pr-20 pb-40"
 				src={images[imgPath]}
 				alt={altText}
 			/>
