@@ -11,16 +11,16 @@ export default defineConfig({
 		paraglideVitePlugin({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide',
-			strategy: ['url', 'baseLocale']
-			// urlPatterns: [
-			// 	{
-			// 		pattern: `{${svelteConfig.kit.paths.base || ''}}?/:path(.*)?`,
-			// 		localized: [
-			// 			['de', `{${svelteConfig.kit.paths.base || ''}/}?de/:path(.*)?`],
-			// 			['fr', `{${svelteConfig.kit.paths.base || ''}/}?fr/:path(.*)?`]
-			// 		]
-			// 	}
-			// ]
+			strategy: ['url', 'baseLocale'],
+			urlPatterns: [
+				{
+					pattern: `{${svelteConfig.kit.paths.base || ''}}?/:path(.*)?`,
+					localized: [
+						['de', `{${svelteConfig.kit.paths.base || ''}/}?de/:path(.*)?`],
+						['fr', `{${svelteConfig.kit.paths.base || ''}/}?fr/:path(.*)?`]
+					]
+				}
+			]
 		})
 	]
 });

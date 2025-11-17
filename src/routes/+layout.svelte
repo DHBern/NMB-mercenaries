@@ -2,7 +2,7 @@
 	import '../app.css';
 	import { locales, localizeHref } from '$lib/paraglide/runtime';
 	import { page } from '$app/state';
-	import { base } from '$app/paths';
+	import { base, resolve } from '$app/paths';
 	import { listen, onIdle } from 'svelte-idle';
 	import { goto, onNavigate } from '$app/navigation';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
@@ -96,7 +96,7 @@
 				>
 				<a
 					class="btn btn-lg bg-surface-50 border-surface-950 text-surface-950 h-12 border-2 font-semibold"
-					href="{base}/intro/1">{m.mild_still_moth_roam()}</a
+					href={resolve('/intro/1')}>{m.mild_still_moth_roam()}</a
 				>
 			</div>
 		{:else}
